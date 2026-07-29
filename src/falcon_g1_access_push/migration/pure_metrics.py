@@ -266,4 +266,3 @@ def symmetric_mirror_error(left: Any, right: Any) -> np.ndarray:
     if left_arr.shape != right_arr.shape or left_arr.shape[-1] != 3:
         raise ValueError("left/right must share (..., 3) shape")
     return np.linalg.norm(left_arr - right_arr * np.asarray([1.0, -1.0, 1.0]), axis=-1)
-

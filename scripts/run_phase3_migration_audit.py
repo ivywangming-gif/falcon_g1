@@ -138,7 +138,7 @@ def main() -> int:
     atomic_write(REPORT_DIR / "phase3_migration_audit.json", json.dumps(report, indent=2, sort_keys=True) + "\n")
     temp_csv = REPORT_DIR / "phase3_migration_matrix.csv.tmp"
     with temp_csv.open("w", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(matrix[0]))
+        writer = csv.DictWriter(handle, fieldnames=list(matrix[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(matrix)
     temp_csv.replace(REPORT_DIR / "phase3_migration_matrix.csv")
