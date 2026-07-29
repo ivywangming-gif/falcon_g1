@@ -1,6 +1,8 @@
 runs/
 videos/
 cache/
+.cache/
+third_party/IsaacLab/
 __pycache__/
 *.pyc
 *.pyo
