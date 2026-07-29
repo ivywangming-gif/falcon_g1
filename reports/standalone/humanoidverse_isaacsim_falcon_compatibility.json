@@ -1,0 +1,90 @@
+{
+  "audit": "HumanoidVerse/FALCON Isaac Sim compatibility",
+  "upstream_repository": "/root/autodl-tmp/robotics/falcon_sandbox/FALCON",
+  "upstream_commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+  "audited_at_utc": "2026-07-29",
+  "selected_branch": "BRANCH_S2",
+  "selected_implementation": "STANDALONE_ISAACLAB_PORT",
+  "overall": "FALCON特有任务不能仅通过把 simulator=isaacgym 改成 simulator=isaacsim 来构造",
+  "criteria": {
+    "isaac_sim_backend_exists": {
+      "result": "PARTIAL_PASS",
+      "evidence": [
+        "humanoidverse/simulator/isaacsim/isaacsim.py",
+        "humanoidverse/config/simulator/isaacsim.yaml",
+        "humanoidverse/simulator/isaacsim/isaaclab_cfg.py"
+      ],
+      "note": "通用入口存在，但其 articulation 配置仍指向 H1 USD。"
+    },
+    "falcon_exp_isaacgym_dependency": {
+      "result": "FAIL",
+      "evidence": [
+        "humanoidverse/envs/decoupled_locomotion/decoupled_locomotion_stand_height_waist_wbc_ma_diff_force.py:1",
+        "humanoidverse/envs/decoupled_locomotion/decoupled_locomotion_stand_ma.py:3-4",
+        "humanoidverse/train_agent.py:36-40"
+      ],
+      "note": "FALCON force task和父类直接导入 isaacgym.torch_utils/gymapi/gymtorch；不能只换配置。"
+    },
+    "multi_agent_runner_simulator_independent": {
+      "result": "PASS_WITH_CAVEAT",
+      "evidence": [
+        "humanoidverse/agents/decouple/ppo_decoupled_wbc_ma.py:1-20",
+        "humanoidverse/agents/decouple/ppo_decoupled_wbc_ma.py:58-90"
+      ],
+      "note": "runner本身只依赖抽象 BaseTask 和 torch，但 task construction 仍被 simulator-specific env 阻断。"
+    },
+    "falcon_g1_isaacsim_usd_asset": {
+      "result": "FAIL",
+      "evidence": [
+        "humanoidverse/data/robots/g1/g1_29dof_fakehand.urdf",
+        "humanoidverse/data/robots/g1/g1_29dof_fakehand_freebase.urdf",
+        "humanoidverse/config/robot/g1/g1_29dof_waist_fakehand.yaml:254-256",
+        "humanoidverse/simulator/isaacsim/isaacsim_articulation_cfg.py:9-11"
+      ],
+      "note": "当前 G1 目录没有 USD；IsaacSim articulation 文件默认是不存在的 H1 USD，因此需要独立 USD/asset port。"
+    },
+    "force_curriculum_isaacsim": {
+      "result": "FAIL",
+      "evidence": [
+        "humanoidverse/config/env/decoupled_locomotion_stand_height_waist_wbc_ma_diff_force.yaml:52-67",
+        "humanoidverse/envs/decoupled_locomotion/decoupled_locomotion_stand_height_waist_wbc_ma_diff_force.py:148-234",
+        "humanoidverse/envs/decoupled_locomotion/decoupled_locomotion_stand_height_waist_wbc_ma_diff_force.py:326-331"
+      ],
+      "note": "curriculum依赖 simulator.jacobian 和 apply_rigid_body_force_at_pos_tensor；IsaacLab port尚未实现。"
+    },
+    "unified_state_interface": {
+      "result": "PARTIAL_PASS",
+      "evidence": [
+        "humanoidverse/simulator/base_simulator/base_simulator.py:20-31",
+        "humanoidverse/simulator/isaacsim/isaacsim.py:647-660"
+      ],
+      "note": "IsaacSim backend暴露 root/dof/contact/rigid-body字段并统一四元数顺序，但jacobian、force write和body ordering仍需契约化验证。"
+    },
+    "reward_observation_abstract_task_api": {
+      "result": "FAIL",
+      "evidence": [
+        "humanoidverse/envs/decoupled_locomotion/decoupled_locomotion_stand_ma.py:479-602",
+        "humanoidverse/envs/decoupled_locomotion/decoupled_locomotion_stand_height_waist_wbc_ma_diff_force.py:615-672"
+      ],
+      "note": "reward/observation直接访问 simulator tensors、body indices、jacobian和force tensors，并非纯抽象 task API。"
+    },
+    "simulator_override_only": {
+      "result": "FAIL_NOT_RUN",
+      "evidence": [
+        "humanoidverse/config/exp/decoupled_locomotion_stand_height_waist_wbc_diff_force_ma_ppo_ma_env.yaml:4-6",
+        "humanoidverse/config/simulator/isaacsim.yaml:4-6"
+      ],
+      "note": "未执行 Hydra resolve/task construction：独立环境和IsaacSim installation尚未就绪；静态依赖已证明仅改 override 不足。"
+    }
+  },
+  "decision": {
+    "branch_s1": "rejected",
+    "branch_s2": "selected",
+    "reason": "需要独立迁移 dual-agent action split、force observations/curriculum、rewards、reset/history、G1 USD asset 和 deployment contract。"
+  },
+  "training": {
+    "ppo_started": false,
+    "config_resolve": "NOT_RUN_ENV_MISSING",
+    "task_construction": "NOT_RUN_ENV_MISSING"
+  }
+}

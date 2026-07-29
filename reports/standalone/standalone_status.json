@@ -1,0 +1,16 @@
+{
+  "FALCON_TO_AGILE_INTEGRATION": "CANCELLED",
+  "AGILE_TRAINING_BACKEND_SELECTED": "NO",
+  "STANDALONE_FALCON_ISAACLAB_BACKEND": "SELECTED",
+  "PHASE3_STANDALONE_FALCON_MATH_EXTRACTION": "PASS",
+  "PPO_STARTED": "NO",
+  "selected_implementation": "STANDALONE_ISAACLAB_PORT",
+  "branch": "BRANCH_S2",
+  "status": "BLOCKED",
+  "blocking_reason": "独立环境不存在，IsaacSim 仅发现于现有环境的 pip package，且估算安装需求超过当前可用磁盘。",
+  "runtime": {
+    "one_env_smoke": "NOT_RUN",
+    "thirty_two_env_capacity_smoke": "NOT_RUN",
+    "g1_ground_contact_reset_action_contract": "NOT_RUN"
+  }
+}

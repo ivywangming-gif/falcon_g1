@@ -1,0 +1,29 @@
+{
+  "audited_at_utc": "2026-07-29",
+  "personal_project": "/root/autodl-tmp/robotics/falcon-g1-access-push",
+  "target_environment": "/root/autodl-tmp/conda/envs/falcon_isaaclab",
+  "environment_exists": false,
+  "isaac_sim_install_type": "B_ONLY_IN_EXISTING_ENVIRONMENT",
+  "external_shared_binary_found": false,
+  "read_only_evidence": {
+    "existing_package_root": "/root/autodl-tmp/conda/envs/agile_env/lib/python3.11/site-packages/isaacsim",
+    "existing_package_bytes": 19071563405,
+    "physx_gpu_library": ".../isaacsim/extscache/omni.physx.foundation-107.3.26+107.3.3.lx64.r.cp311.u353/bin/libPhysXGpu_64.so",
+    "shared_isaaclab_checkout_bytes": 83479175
+  },
+  "disk": {
+    "filesystem_available_bytes": 6398156800,
+    "minimum_payload_bytes": 19155042580,
+    "safety_reserve_bytes": 2000000000,
+    "estimated_required_bytes": 21155042580,
+    "estimate_basis": "IsaacSim package + IsaacLab checkout + 2GB reserve; excludes additional independent Python/Torch wheels and build caches",
+    "sufficient": false,
+    "installation_attempted": false
+  },
+  "policy": {
+    "copy_or_link_existing_environment": false,
+    "modify_system_cuda_or_driver": false,
+    "use_shared_isaaclab_as_writable_checkout": false
+  },
+  "result": "BLOCKED_INDEPENDENT_INSTALL_STORAGE"
+}

@@ -1,0 +1,22 @@
+# Standalone S2 construction plan.  This is declarative metadata only; it does
+# not launch a simulator or resolve a training config.
+project: falcon_g1
+implementation: standalone_isaaclab_port
+task: falcon_g1_grounded_chest_stand_locomotion
+simulator: isaaclab
+num_envs: 1
+asset:
+  source: to_be_converted_from_pinned_falcon_g1_urdf
+  format: usd
+action:
+  total_dofs: 29
+  lower_body: 15
+  upper_body: 14
+observations:
+  force_conditioned: true
+  history: true
+curriculum:
+  force: required
+runtime:
+  ppo_started: false
+  isaac_sim_required: true
