@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "domain_id": 0,
+  "interface": "lo",
+  "model_path": "/root/autodl-tmp/robotics/falcon_sandbox/FALCON/sim2real/models/falcon/g1_29dof.onnx",
+  "state_received": true,
+  "first_state_shape": [
+    1,
+    141
+  ],
+  "final_state_shape": [
+    1,
+    141
+  ],
+  "final_state_finite": true,
+  "initialization_cycles": 520,
+  "policy_cycles": 3000,
+  "policy_action_shape": [
+    1,
+    29
+  ],
+  "all_actions_finite": true,
+  "action_min": -5.430417060852051,
+  "action_max": 10.757865905761719,
+  "max_abs_action": 10.757865905761719,
+  "command_sender_type": "UnitreeCommandSender",
+  "state_processor_type": "UnitreeStateProcessor"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "error": null,
+  "video_path": "/root/autodl-tmp/falcon_videos/s1_01t_chest_stand_video_20260729_133514.mp4",
+  "video_size_bytes": 18594710,
+  "width": 640,
+  "height": 480,
+  "fps": 20.0,
+  "frame_count": 1469,
+  "steps": 14687,
+  "sim_time": 73.4350000000057,
+  "wall_time": 79.43773170560598,
+  "state_finite": true,
+  "base_z_min": 0.7930843048312215,
+  "base_z_max": 1.3226736259824146,
+  "base_z_final": 1.30521024989323,
+  "max_abs_torque": 139.0,
+  "tracking_body_id": 1,
+  "mujoco_gl": "egl"
+}
