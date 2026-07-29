@@ -1,0 +1,11 @@
+runs/
+videos/
+cache/
+__pycache__/
+*.pyc
+*.pyo
+*.log
+*.mp4
+*.avi
+.env
+.DS_Store

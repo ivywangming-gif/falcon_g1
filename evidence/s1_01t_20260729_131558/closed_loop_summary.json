@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "checks": {
+    "policy_process_rc_zero": true,
+    "simulator_process_rc_zero": true,
+    "policy_report_pass": true,
+    "simulator_report_pass": true,
+    "state_received": true,
+    "policy_actions_finite": true,
+    "policy_action_shape": true,
+    "mujoco_state_finite": true,
+    "dds_lowcmd_effect": true,
+    "simulator_steps": true,
+    "base_height_noncollapsed": true,
+    "falcon_head_unchanged": true,
+    "falcon_worktree_unchanged": true
+  },
+  "policy": {
+    "status": "PASS",
+    "domain_id": 0,
+    "interface": "lo",
+    "model_path": "/root/autodl-tmp/robotics/falcon_sandbox/FALCON/sim2real/models/falcon/g1_29dof.onnx",
+    "state_received": true,
+    "first_state_shape": [
+      1,
+      141
+    ],
+    "final_state_shape": [
+      1,
+      141
+    ],
+    "final_state_finite": true,
+    "initialization_cycles": 520,
+    "policy_cycles": 3000,
+    "policy_action_shape": [
+      1,
+      29
+    ],
+    "all_actions_finite": true,
+    "action_min": -100.0,
+    "action_max": 100.0,
+    "max_abs_action": 100.0,
+    "command_sender_type": "UnitreeCommandSender",
+    "state_processor_type": "UnitreeStateProcessor"
+  },
+  "simulator": {
+    "status": "PASS",
+    "error": null,
+    "domain_id": 0,
+    "interface": "lo",
+    "scene": "/root/autodl-tmp/robotics/falcon_sandbox/FALCON/humanoidverse/data/robots/g1/scene_g1_29dof_freebase.xml",
+    "steps": 15037,
+    "sim_time": 75.18500000000411,
+    "wall_time": 78.48695707693696,
+    "state_finite": true,
+    "base_z_initial": 0.7930843048312215,
+    "base_z_min": 0.7930843048312215,
+    "base_z_max": 1.4078941208115479,
+    "base_z_final": 1.3851286016386635,
+    "quat_norm_min": 0.9999999999999988,
+    "quat_norm_max": 1.000000000000001,
+    "quat_norm_final": 1.0,
+    "max_abs_torque": 139.0,
+    "max_abs_ctrl": 139.0,
+    "lowcmd_effect_detected": true,
+    "nq": 36,
+    "nv": 35,
+    "nu": 35
+  },
+  "agile_head_before": "789a487f93f13abf9ea176eacb38876d8dcc4e4f",
+  "agile_head_after": "789a487f93f13abf9ea176eacb38876d8dcc4e4f"
+}
