@@ -21,8 +21,8 @@ VIDEO_PATH = Path(os.environ["VIDEO_PATH"])
 STOP_FILE = RUN_ROOT / "stop_requested"
 REPORT_PATH = RUN_ROOT / "video_simulator_report.json"
 
-WIDTH = 960
-HEIGHT = 540
+WIDTH = 640
+HEIGHT = 480
 FPS = 20.0
 MAX_STEPS = 24000
 
