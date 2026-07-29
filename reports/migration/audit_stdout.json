@@ -1,0 +1,165 @@
+{
+  "AGILE_ENV_MODIFIED": "NO",
+  "AGILE_GLOBAL_STATUS_CHANGED_DURING_SESSION": "NO",
+  "AGILE_PROJECT_WRITTEN_BY_THIS_SESSION": "NO",
+  "G1_ACCESS_PUSH_WRITTEN_BY_SESSION": "NO",
+  "ISAACLAB_CHECKOUT_MODIFIED": "NO",
+  "OFFICIAL_FALCON_MODIFIED": "NO",
+  "WBC_AGILE_MODIFIED": "NO",
+  "agile_after": {
+    "branch": "stage2/s2-03t-pelvis-contact-path-recovery",
+    "head": "b5b08d14a4478a20b73fa6d3ae4f331d476ac753",
+    "origin": "ssh://git@ssh.github.com:443/ivywangming-gif/g1_access_push.git",
+    "path": "/root/autodl-tmp/robotics/projects/g1_access_push",
+    "remote_v": "origin\tssh://git@ssh.github.com:443/ivywangming-gif/g1_access_push.git (fetch)\norigin\tssh://git@ssh.github.com:443/ivywangming-gif/g1_access_push.git (push)",
+    "status": "M src/g1_access_push/sim/stage1/__init__.py\n M tests/test_recurrent_student_action_contract.py\n?? AGENTS.md\n?? configs/stage1/active_controller_manifest.json\n?? configs/stage1/s1_08_virtual_box_collision.yaml\n?? configs/stage1/s1_08_virtual_box_collision_qualification.yaml\n?? configs/stage1/s1_08c_grounded_contact_screen.yaml\n?? configs/stage1/stage1_wbc_regression_suite.yaml\n?? docs/codex/CODEX_PROMPTS.md\n?? docs/codex/CODEX_WORKFLOW.md\n?? docs/research/CLAIM_BOUNDARIES.md\n?? docs/research/PROJECT_PLAN.md\n?? docs/research/STAGE_GATES.yaml\n?? docs/research/STAGE_STATUS.md\n?? docs/research/reference/research_plan_2026-07-15.pdf\n?? reports/stage2/SAFE_PAUSE_STATUS.json\n?? reports/stage2/s2_03t_pelvis_contact_pair_audit.json\n?? scripts/research/verify_codex_context.sh\n?? scripts/stage1/check_stage1_controller_regression.py\n?? scripts/stage1/eval_s1_08t_arm_forward_pose.py\n?? scripts/stage1/eval_s1_08t_arm_forward_pose.py.s1_08t_fix_backup_20260727\n?? scripts/stage1/run_s1_06a_case_e_recurrent_reset.py\n?? scripts/stage1/run_s1_06a_case_f_factorial.py\n?? scripts/stage1/run_s1_06a_single_case.py\n?? scripts/stage1/run_s1_08_collision_backend_calibration.py\n?? scripts/stage1/run_s1_08_virtual_box_collision_case.py\n?? scripts/stage1/run_s1_08_virtual_box_collision_suite.py\n?? scripts/stage1/run_s1_08_visual_replay.py\n?? scripts/stage1/run_s1_08c_grounded_contact_case.py\n?? scripts/stage1/run_s1_08c_grounded_contact_suite.py\n?? scripts/stage1/run_s1_08c_ik_axis_diagnostic.py\n?? scripts/stage1/run_s1_08c_position_only_vertical_diagnostic.py\n?? scripts/stage1/run_s1_08d_pink_precontact_diagnostic.py\n?? scripts/stage1/run_s1_08p_joint_push_prepose.py\n?? scripts/stage1/run_s1_08t_arm_forward_training_pipeline.sh\n?? scripts/stage1/run_s1_08t_arm_forward_training_pipeline.sh.s1_08t_fix_backup_20260727\n?? scripts/stage1/run_stage1_wbc_regression_suite.py\n?? scripts/stage1/s1_08t_pipeline_terminal_status.py\n?? scripts/stage1/screen_recurrent_student_turn.py\n?? src/g1_access_push/sim/stage1/__init__.py.s1_08t_backup_20260727\n?? src/g1_access_push/sim/stage1/arm_forward_training_action.py\n?? src/g1_access_push/sim/stage1/arm_forward_training_action.py.s1_08t_fix_backup_20260727\n?? src/g1_access_push/sim/stage1/arm_forward_training_agent_cfg.py\n?? src/g1_access_push/sim/stage1/arm_forward_training_env_cfg.py\n?? src/g1_access_push/sim/stage1/arm_forward_training_env_cfg.py.s1_08t_backup_20260727\n?? src/g1_access_push/sim/stage1/arm_forward_training_env_cfg.py.s1_08t_fix_backup_20260727\n?? src/g1_access_push/sim/stage1/arm_forward_training_mdp.py\n?? src/g1_access_push/sim/stage1/arm_forward_training_mdp.py.s1_08t_backup_20260727\n?? src/g1_access_push/sim/stage1/virtual_box_collision.py\n?? src/g1_access_push/sim/stage1/virtual_box_collision_env_cfg.py\n?? tests/test_s1_08t_corrected_scale_source_contract.py\n?? tests/test_s1_08t_pipeline_terminal_status.py\n?? tests/test_stage1_grounded_contact_geometry.py\n?? tests/test_stage1_s1_08_qualification_contract.py\n?? tests/test_stage1_virtual_box_collision.py\n?? tests/test_stage1_wbc_regression_contract.py"
+  },
+  "agile_before_from_t0": {
+    "branch": "stage2/s2-03t-pelvis-contact-path-recovery",
+    "head": "b5b08d14a4478a20b73fa6d3ae4f331d476ac753",
+    "status": "M src/g1_access_push/sim/stage1/__init__.py\n M tests/test_recurrent_student_action_contract.py\n?? AGENTS.md\n?? configs/stage1/active_controller_manifest.json\n?? configs/stage1/s1_08_virtual_box_collision.yaml\n?? configs/stage1/s1_08_virtual_box_collision_qualification.yaml\n?? configs/stage1/s1_08c_grounded_contact_screen.yaml\n?? configs/stage1/stage1_wbc_regression_suite.yaml\n?? docs/codex/CODEX_PROMPTS.md\n?? docs/codex/CODEX_WORKFLOW.md\n?? docs/research/CLAIM_BOUNDARIES.md\n?? docs/research/PROJECT_PLAN.md\n?? docs/research/STAGE_GATES.yaml\n?? docs/research/STAGE_STATUS.md\n?? docs/research/reference/research_plan_2026-07-15.pdf\n?? reports/stage2/SAFE_PAUSE_STATUS.json\n?? reports/stage2/s2_03t_pelvis_contact_pair_audit.json\n?? scripts/research/verify_codex_context.sh\n?? scripts/stage1/check_stage1_controller_regression.py\n?? scripts/stage1/eval_s1_08t_arm_forward_pose.py\n?? scripts/stage1/eval_s1_08t_arm_forward_pose.py.s1_08t_fix_backup_20260727\n?? scripts/stage1/run_s1_06a_case_e_recurrent_reset.py\n?? scripts/stage1/run_s1_06a_case_f_factorial.py\n?? scripts/stage1/run_s1_06a_single_case.py\n?? scripts/stage1/run_s1_08_collision_backend_calibration.py\n?? scripts/stage1/run_s1_08_virtual_box_collision_case.py\n?? scripts/stage1/run_s1_08_virtual_box_collision_suite.py\n?? scripts/stage1/run_s1_08_visual_replay.py\n?? scripts/stage1/run_s1_08c_grounded_contact_case.py\n?? scripts/stage1/run_s1_08c_grounded_contact_suite.py\n?? scripts/stage1/run_s1_08c_ik_axis_diagnostic.py\n?? scripts/stage1/run_s1_08c_position_only_vertical_diagnostic.py\n?? scripts/stage1/run_s1_08d_pink_precontact_diagnostic.py\n?? scripts/stage1/run_s1_08p_joint_push_prepose.py\n?? scripts/stage1/run_s1_08t_arm_forward_training_pipeline.sh\n?? scripts/stage1/run_s1_08t_arm_forward_training_pipeline.sh.s1_08t_fix_backup_20260727\n?? scripts/stage1/run_stage1_wbc_regression_suite.py\n?? scripts/stage1/s1_08t_pipeline_terminal_status.py\n?? scripts/stage1/screen_recurrent_student_turn.py\n?? src/g1_access_push/sim/stage1/__init__.py.s1_08t_backup_20260727\n?? src/g1_access_push/sim/stage1/arm_forward_training_action.py\n?? src/g1_access_push/sim/stage1/arm_forward_training_action.py.s1_08t_fix_backup_20260727\n?? src/g1_access_push/sim/stage1/arm_forward_training_agent_cfg.py\n?? src/g1_access_push/sim/stage1/arm_forward_training_env_cfg.py\n?? src/g1_access_push/sim/stage1/arm_forward_training_env_cfg.py.s1_08t_backup_20260727\n?? src/g1_access_push/sim/stage1/arm_forward_training_env_cfg.py.s1_08t_fix_backup_20260727\n?? src/g1_access_push/sim/stage1/arm_forward_training_mdp.py\n?? src/g1_access_push/sim/stage1/arm_forward_training_mdp.py.s1_08t_backup_20260727\n?? src/g1_access_push/sim/stage1/virtual_box_collision.py\n?? src/g1_access_push/sim/stage1/virtual_box_collision_env_cfg.py\n?? tests/test_s1_08t_corrected_scale_source_contract.py\n?? tests/test_s1_08t_pipeline_terminal_status.py\n?? tests/test_stage1_grounded_contact_geometry.py\n?? tests/test_stage1_s1_08_qualification_contract.py\n?? tests/test_stage1_virtual_box_collision.py\n?? tests/test_stage1_wbc_regression_contract.py"
+  },
+  "authenticated_github_user": "UNVERIFIED (gh CLI unavailable; no push attempted)",
+  "campaign": "FALCON_S1_GROUNDED_CHEST_STAND_AND_LOCOMOTION",
+  "checkpoint_loaded": false,
+  "dependency_scan": {
+    "files": {
+      "src/falcon_g1_access_push/migration/pure_metrics.py": {
+        "checkpoint_load_tokens": [],
+        "isaac_imports": []
+      },
+      "tests/test_phase3_pure_metrics.py": {
+        "checkpoint_load_tokens": [],
+        "isaac_imports": []
+      }
+    },
+    "pass": true
+  },
+  "isaaclab_snapshot": {
+    "branch": "",
+    "head": "5c2ec81cb17532d32f7922dd7fcaae40d123b71a",
+    "origin": "https://github.com/isaac-sim/IsaacLab.git",
+    "path": "/root/autodl-tmp/robotics/third_party/IsaacLab",
+    "remote_v": "origin\thttps://github.com/isaac-sim/IsaacLab.git (fetch)\norigin\thttps://github.com/isaac-sim/IsaacLab.git (push)",
+    "status": "?? scripts/autodl_finite_smoke.py\n?? scripts/autodl_finite_smoke_v3.py"
+  },
+  "migration_matrix": [
+    {
+      "license": "FALCON root MIT; NVIDIA-restricted helper code is clean-room re-derived",
+      "local_adaptation": "body_frame_vectors; explicit xyzw and caller-side IsaacLab wxyz boundary",
+      "local_symbol": "body_frame_vectors",
+      "original_formula_or_logic": "body-frame v/w/gravity via quat_rotate_inverse",
+      "upstream_commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+      "upstream_file_path": "humanoidverse/envs/legged_base_task/legged_robot_base_ma.py:280-285"
+    },
+    {
+      "license": "FALCON root MIT; NVIDIA-restricted helper code is clean-room re-derived",
+      "local_adaptation": "gravity_xy_penalty; raw metric without reward scale",
+      "local_symbol": "gravity_xy_penalty",
+      "original_formula_or_logic": "sum(projected_gravity[..., :2] ** 2)",
+      "upstream_commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+      "upstream_file_path": "humanoidverse/envs/legged_base_task/legged_robot_base_ma.py:647-649"
+    },
+    {
+      "license": "FALCON root MIT; NVIDIA-restricted helper code is clean-room re-derived",
+      "local_adaptation": "torso_orientation_penalty exposes masks and flags",
+      "local_symbol": "torso_orientation_penalty",
+      "original_formula_or_logic": "stance abs(g_y)+g_x^2; walking sum(g_xy^2)",
+      "upstream_commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+      "upstream_file_path": "humanoidverse/envs/decoupled_locomotion/decoupled_locomotion_stand_ma.py:489-495"
+    },
+    {
+      "license": "FALCON root MIT; NVIDIA-restricted helper code is clean-room re-derived",
+      "local_adaptation": "base_height_penalty/base_height_tracking accept explicit masks and force sum",
+      "local_symbol": "base_height_penalty, base_height_tracking",
+      "original_formula_or_logic": "height squared error and exp(abs error / sigma), optional stance scale/force gate",
+      "upstream_commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+      "upstream_file_path": "humanoidverse/envs/decoupled_locomotion/decoupled_locomotion_stand_height_waist_wbc_ma.py:424-436; ...diff_force.py:621-630"
+    },
+    {
+      "license": "FALCON root MIT; NVIDIA-restricted helper code is clean-room re-derived",
+      "local_adaptation": "exp_squared_tracking and upper_dof_tracking are NumPy-only",
+      "local_symbol": "exp_squared_tracking, upper_dof_tracking",
+      "original_formula_or_logic": "exp(-sum((command-measured)^2)/sigma), DOF sum-not-mean",
+      "upstream_commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+      "upstream_file_path": "humanoidverse/envs/locomotion/locomotion_ma.py:140-148; decoupled_locomotion_stand_height_waist_wbc_ma.py:528-532"
+    },
+    {
+      "license": "FALCON root MIT; NVIDIA-restricted helper code is clean-room re-derived",
+      "local_adaptation": "feet_contact_metrics returns masks/fractions; sensor binding deferred",
+      "local_symbol": "feet_contact_metrics",
+      "original_formula_or_logic": "contact_i=(F_i,z > 1), count both feet",
+      "upstream_commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+      "upstream_file_path": "humanoidverse/envs/decoupled_locomotion/decoupled_locomotion_stand_ma.py:504-528"
+    },
+    {
+      "license": "FALCON root MIT; NVIDIA-restricted helper code is clean-room re-derived",
+      "local_adaptation": "feet_slip_penalty keeps threshold and units explicit",
+      "local_symbol": "feet_slip_penalty",
+      "original_formula_or_logic": "sum(||v_foot|| * 1[||F|| > 1])",
+      "upstream_commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+      "upstream_file_path": "humanoidverse/envs/legged_base_task/legged_robot_base_ma.py:683-686"
+    },
+    {
+      "license": "FALCON root MIT; NVIDIA-restricted helper code is clean-room re-derived",
+      "local_adaptation": "dynamics_penalties returns raw terms; qualification ratios stay evaluator-owned",
+      "local_symbol": "dynamics_penalties",
+      "original_formula_or_logic": "sum(torque^2), velocity^2, acceleration^2, action-rate^2",
+      "upstream_commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+      "upstream_file_path": "humanoidverse/envs/legged_base_task/legged_robot_base_ma.py:631-649"
+    },
+    {
+      "license": "FALCON root MIT; NVIDIA-restricted helper code is clean-room re-derived",
+      "local_adaptation": "forward_kinematics_batch is clean-room NumPy FK without motion/simulator classes",
+      "local_symbol": "forward_kinematics_batch",
+      "original_formula_or_logic": "p_i=p_parent+R_parent o_i; q_i=q_parent*q_local",
+      "upstream_commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+      "upstream_file_path": "humanoidverse/utils/motion_lib/torch_humanoid_batch.py:227-266"
+    },
+    {
+      "license": "FALCON root MIT; NVIDIA-restricted helper code is clean-room re-derived",
+      "local_adaptation": "upper_arm_and_elbow_metrics and symmetric_mirror_error; no upstream success claim",
+      "local_symbol": "upper_arm_and_elbow_metrics, symmetric_mirror_error",
+      "original_formula_or_logic": "upper-arm elevation, elbow flexion, mirrored-pose error",
+      "upstream_commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+      "upstream_file_path": "Local Phase 3 addition"
+    }
+  ],
+  "personal_branch": "audit/falcon-to-existing-isaaclab",
+  "personal_head": "5401ca85784718365dcfeccd7ab54b01ce2ecce0",
+  "personal_origin": "https://github.com/ivywangming-gif/falcon_g1.git",
+  "personal_repository": "/root/autodl-tmp/robotics/falcon-g1-access-push",
+  "phase": "Phase 3 pure-function migration audit",
+  "pure_tests": {
+    "command": "/root/autodl-tmp/conda/envs/agile_env/bin/python -m pytest -q /root/autodl-tmp/robotics/falcon-g1-access-push/tests/test_phase3_pure_metrics.py",
+    "returncode": 0,
+    "simulator_imports_allowed": false,
+    "status": "PASS",
+    "stderr": "",
+    "stdout": ".........                                                                [100%]\n9 passed in 0.17s\n"
+  },
+  "push_status": "NOT_ATTEMPTED",
+  "simulator_started": false,
+  "status": "PASS",
+  "timestamp_utc": "2026-07-29T08:47:45Z",
+  "upstream": {
+    "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+    "path": "/root/autodl-tmp/robotics/falcon_sandbox/FALCON",
+    "snapshot": {
+      "branch": "main",
+      "head": "a967a6d8494f57777cf8d266a644ac8e45833301",
+      "origin": "https://github.com/LeCAR-Lab/FALCON.git",
+      "path": "/root/autodl-tmp/robotics/falcon_sandbox/FALCON",
+      "remote_v": "origin\thttps://github.com/LeCAR-Lab/FALCON.git (fetch)\norigin\thttps://github.com/LeCAR-Lab/FALCON.git (push)",
+      "status": ""
+    }
+  },
+  "wbc_agile_snapshot": {
+    "branch": "",
+    "head": "ad4ff6ee6b38da207592b3e71dcee4c118049f6d",
+    "origin": "https://github.com/nvidia-isaac/WBC-AGILE.git",
+    "path": "/root/autodl-tmp/robotics/third_party/WBC-AGILE",
+    "remote_v": "origin\thttps://github.com/nvidia-isaac/WBC-AGILE.git (fetch)\norigin\thttps://github.com/nvidia-isaac/WBC-AGILE.git (push)",
+    "status": ""
+  }
+}
