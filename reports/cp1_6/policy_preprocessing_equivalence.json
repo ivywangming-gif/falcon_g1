@@ -1,0 +1,219 @@
+{
+  "actor_observation_shape": [
+    1,
+    575
+  ],
+  "dof_order_ambiguity": "deployment YAML names list hip yaw/roll/pitch while DEFAULT_DOF_ANGLES comments and pinned training contract are pitch/roll/yaw; personal and trainer map by pinned joint names rather than unnamed indices",
+  "field_order": [
+    "actions",
+    "base_ang_vel",
+    "command_ang_vel",
+    "command_base_height",
+    "command_lin_vel",
+    "command_stand",
+    "command_waist_dofs",
+    "dof_pos",
+    "dof_vel",
+    "projected_gravity",
+    "ref_upper_dof_pos"
+  ],
+  "fields": [
+    {
+      "field_name": "actions",
+      "final_slice_indices": [
+        0,
+        29
+      ],
+      "flatten_order": "sorted_field_name",
+      "history_order": "oldest_to_newest",
+      "raw_shape": [
+        29
+      ],
+      "raw_values_hashes": [
+        "b18b1789b1a93e777ff0897430072c4735484d13fc1773961344923ab234784c",
+        "7302d6abcf0ab7b4d74c365fab5a033e6573ab966adae0a88afcd5d24180ae9a"
+      ],
+      "scale": 1.0
+    },
+    {
+      "field_name": "base_ang_vel",
+      "final_slice_indices": [
+        29,
+        32
+      ],
+      "flatten_order": "sorted_field_name",
+      "history_order": "oldest_to_newest",
+      "raw_shape": [
+        3
+      ],
+      "raw_values_hashes": [
+        "ca486db22642d9bff78fbf896d0adbd41b6456159ff1d285583fce0bc3e21471",
+        "1b0ebc0bf80c283e1c4cbb3beedfc9c47426685cd6b6a555e85d06431795bb52"
+      ],
+      "scale": 0.25
+    },
+    {
+      "field_name": "command_ang_vel",
+      "final_slice_indices": [
+        32,
+        33
+      ],
+      "flatten_order": "sorted_field_name",
+      "history_order": "oldest_to_newest",
+      "raw_shape": [
+        1
+      ],
+      "raw_values_hashes": [
+        "9c4da20e3892728d59c1707b0889b5a6191e64f44cef2e5aafe19d730b2d63f1",
+        "3bff857daf1c246b3ba79bff08805f403b65b0e2a5cffb40b078a383eb861514"
+      ],
+      "scale": 1.0
+    },
+    {
+      "field_name": "command_base_height",
+      "final_slice_indices": [
+        33,
+        34
+      ],
+      "flatten_order": "sorted_field_name",
+      "history_order": "oldest_to_newest",
+      "raw_shape": [
+        1
+      ],
+      "raw_values_hashes": [
+        "d1dd0229e1cc0c6e4bbb59cdb94cf100fb4dda1094e93d5e1d9fa9734b6c6626",
+        "a46b12535853860575cf75776e6a7b2e3ba740b373f9327f3b1252effc3f1836"
+      ],
+      "scale": 2.0
+    },
+    {
+      "field_name": "command_lin_vel",
+      "final_slice_indices": [
+        34,
+        36
+      ],
+      "flatten_order": "sorted_field_name",
+      "history_order": "oldest_to_newest",
+      "raw_shape": [
+        2
+      ],
+      "raw_values_hashes": [
+        "6c2ce5e54705c5eea74cce78fae1b0b4ac63943e92038b6f80777972676f10f4",
+        "4c65e80e28628fb08da83acf143407758971bc089966e60c1ab1cc7e0042bec5"
+      ],
+      "scale": 1.0
+    },
+    {
+      "field_name": "command_stand",
+      "final_slice_indices": [
+        36,
+        37
+      ],
+      "flatten_order": "sorted_field_name",
+      "history_order": "oldest_to_newest",
+      "raw_shape": [
+        1
+      ],
+      "raw_values_hashes": [
+        "6f1f7a7e137d01c137fd7ec7ab14603d09613ccbaa07e6f9c6692198403e79f8",
+        "bfee249739261e574824173d513cafbea5a4fbc480dff083f068d9dcd99c322c"
+      ],
+      "scale": 1.0
+    },
+    {
+      "field_name": "command_waist_dofs",
+      "final_slice_indices": [
+        37,
+        40
+      ],
+      "flatten_order": "sorted_field_name",
+      "history_order": "oldest_to_newest",
+      "raw_shape": [
+        3
+      ],
+      "raw_values_hashes": [
+        "1b38a671ddcfed0cb3de1ee78d7416719312e5b963c67dfd606d04cc098f23ae",
+        "fdf8ea625d31a0cb849c52eb0ff9247b5df14821f80608d9e2dca0d113e9ef49"
+      ],
+      "scale": 1.0
+    },
+    {
+      "field_name": "dof_pos",
+      "final_slice_indices": [
+        40,
+        69
+      ],
+      "flatten_order": "sorted_field_name",
+      "history_order": "oldest_to_newest",
+      "raw_shape": [
+        29
+      ],
+      "raw_values_hashes": [
+        "a10ec48c5d1af859172bcec5d3118b4a0babadd5fd55c63a37876c6f7e729702",
+        "867d78eaa3d221fefe427356bd65602b4f27f7c37b770c8400461a172105f08c"
+      ],
+      "scale": 1.0
+    },
+    {
+      "field_name": "dof_vel",
+      "final_slice_indices": [
+        69,
+        98
+      ],
+      "flatten_order": "sorted_field_name",
+      "history_order": "oldest_to_newest",
+      "raw_shape": [
+        29
+      ],
+      "raw_values_hashes": [
+        "a23678d5531960ed05c4cf81a00371eb10ec7d10370d60052c0382e4ff44ef60",
+        "2bf62e84515fef14ad4779f7d639c8723734c56380df9267e5b6b4581d19d9d9"
+      ],
+      "scale": 0.05
+    },
+    {
+      "field_name": "projected_gravity",
+      "final_slice_indices": [
+        98,
+        101
+      ],
+      "flatten_order": "sorted_field_name",
+      "history_order": "oldest_to_newest",
+      "raw_shape": [
+        3
+      ],
+      "raw_values_hashes": [
+        "c12030ecfd1bb12e793d67a58c315fa92fcfefc57017f1ef0081d3d294efb00c",
+        "d5cc14ead58c9cb65222834aab136a44e282a9d79c8aba8d3f4b04475deb934f"
+      ],
+      "scale": 1.0
+    },
+    {
+      "field_name": "ref_upper_dof_pos",
+      "final_slice_indices": [
+        101,
+        115
+      ],
+      "flatten_order": "sorted_field_name",
+      "history_order": "oldest_to_newest",
+      "raw_shape": [
+        14
+      ],
+      "raw_values_hashes": [
+        "529b7318729f7d98b15be458523b9494d583200302b8a2fd95e9f7b4d02afc34",
+        "3bb713a969571a84b7349676bed3b60593d8d7897898407456008f3776e112c3"
+      ],
+      "scale": 1.0
+    }
+  ],
+  "float32_input_tolerance_one_ulp": 1.1920928955078125e-07,
+  "history_length": 5,
+  "history_order": "oldest_to_newest",
+  "isaaclab_frames": 1000,
+  "isaaclab_observations_finite": true,
+  "official_sim2sim_frames": 1049,
+  "official_vs_personal_max_abs_difference": 1.1920928955078125e-07,
+  "official_vs_training_max_abs_difference": 1.1920928955078125e-07,
+  "status": "PASS",
+  "synthetic_edge_case_tests": "tests/test_cp1_6_preprocessing_equivalence.py"
+}

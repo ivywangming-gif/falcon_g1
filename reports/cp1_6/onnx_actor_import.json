@@ -1,0 +1,205 @@
+{
+  "architecture": {
+    "activation": "ELU(alpha=1)",
+    "branches": {
+      "lower_body": [
+        512,
+        256,
+        128,
+        15
+      ],
+      "upper_body": [
+        512,
+        256,
+        128,
+        14
+      ]
+    },
+    "concat_order": [
+      "lower_body",
+      "upper_body"
+    ],
+    "input": 575
+  },
+  "artifact": "/root/autodl-tmp/robotics/falcon-g1-access-push/artifacts/cp1_6/actor_only_warmstart.pt",
+  "comparisons": {
+    "onnxruntime_vs_pytorch": {
+      "max_abs_difference": 1.5348196029663086e-06,
+      "mean_abs_difference": 1.1452760872998624e-07
+    },
+    "reference_vs_onnxruntime": {
+      "max_abs_difference": 1.3709068298339844e-06,
+      "mean_abs_difference": 1.1727936310990117e-07
+    },
+    "reference_vs_pytorch": {
+      "max_abs_difference": 9.5367431640625e-07,
+      "mean_abs_difference": 8.549839947136206e-08
+    }
+  },
+  "intermediate_activations": [
+    {
+      "branch": "lower_body",
+      "max_abs_difference": 9.5367431640625e-07,
+      "mean_abs_difference": 2.9312360538824578e-08,
+      "onnx_output": "/actor_module/module/module.0/Gemm_output_0"
+    },
+    {
+      "branch": "lower_body",
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 1.5868380387473735e-08,
+      "onnx_output": "/actor_module/module/module.1/Elu_output_0"
+    },
+    {
+      "branch": "lower_body",
+      "max_abs_difference": 1.9073486328125e-06,
+      "mean_abs_difference": 2.3015968508843798e-07,
+      "onnx_output": "/actor_module/module/module.2/Gemm_output_0"
+    },
+    {
+      "branch": "lower_body",
+      "max_abs_difference": 1.9073486328125e-06,
+      "mean_abs_difference": 5.9288140619173646e-08,
+      "onnx_output": "/actor_module/module/module.1_1/Elu_output_0"
+    },
+    {
+      "branch": "lower_body",
+      "max_abs_difference": 3.814697265625e-06,
+      "mean_abs_difference": 3.23077074426692e-07,
+      "onnx_output": "/actor_module/module/module.4/Gemm_output_0"
+    },
+    {
+      "branch": "lower_body",
+      "max_abs_difference": 1.430511474609375e-06,
+      "mean_abs_difference": 9.059385774889961e-08,
+      "onnx_output": "/actor_module/module/module.1_2/Elu_output_0"
+    },
+    {
+      "branch": "lower_body",
+      "max_abs_difference": 1.1920928955078125e-06,
+      "mean_abs_difference": 1.6005554925868637e-07,
+      "onnx_output": "/actor_module/module/module.6/Gemm_output_0"
+    },
+    {
+      "branch": "upper_body",
+      "max_abs_difference": 4.76837158203125e-07,
+      "mean_abs_difference": 1.2907236168757663e-08,
+      "onnx_output": "/actor_module/module/module.0_1/Gemm_output_0"
+    },
+    {
+      "branch": "upper_body",
+      "max_abs_difference": 1.1920928955078125e-07,
+      "mean_abs_difference": 1.897313950394164e-08,
+      "onnx_output": "/actor_module/module/module.1_3/Elu_output_0"
+    },
+    {
+      "branch": "upper_body",
+      "max_abs_difference": 1.9073486328125e-06,
+      "mean_abs_difference": 1.3561361811298411e-07,
+      "onnx_output": "/actor_module/module/module.2_1/Gemm_output_0"
+    },
+    {
+      "branch": "upper_body",
+      "max_abs_difference": 7.152557373046875e-07,
+      "mean_abs_difference": 4.313039880798897e-08,
+      "onnx_output": "/actor_module/module/module.1_4/Elu_output_0"
+    },
+    {
+      "branch": "upper_body",
+      "max_abs_difference": 1.430511474609375e-06,
+      "mean_abs_difference": 1.542275640531443e-07,
+      "onnx_output": "/actor_module/module/module.4_1/Gemm_output_0"
+    },
+    {
+      "branch": "upper_body",
+      "max_abs_difference": 1.1920928955078125e-06,
+      "mean_abs_difference": 7.956623448990285e-08,
+      "onnx_output": "/actor_module/module/module.1_5/Elu_output_0"
+    },
+    {
+      "branch": "upper_body",
+      "max_abs_difference": 4.76837158203125e-07,
+      "mean_abs_difference": 7.4368600166963e-08,
+      "onnx_output": "/actor_module/module/module.6_1/Gemm_output_0"
+    }
+  ],
+  "metadata": {
+    "action_contract_sha256": "b06572f3ea5585cf39a0dd12aaa318e3a8e6664a67f6e747432eee34dc88df3f",
+    "actor_only": true,
+    "architecture_sha256": "2e62e80fc265636483984c5b209970fbd0e63be91586596350d824eecbdb2f7f",
+    "critic_present": false,
+    "observation_contract_sha256": "b050012e65cae6c66b9c13806cfd6d4faeca6b7b47103a70f2406ac4850114e4",
+    "optimizer_present": false,
+    "source_falcon_commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+    "source_onnx_sha256": "8ac8f51875b878a79d9b5782e702b66572697e204ed262e2002b55631f3105d0"
+  },
+  "observation_abs_max": 3.953153371810913,
+  "parameter_mapping": [
+    {
+      "bias_tensor": "actors.lower_body.actor_module.module.0.bias",
+      "branch": "lower_body",
+      "onnx_node": "/actor_module/module/module.0/Gemm",
+      "torch_parameter": "lower_body.layers.0",
+      "transB": 1,
+      "weight_tensor": "actors.lower_body.actor_module.module.0.weight"
+    },
+    {
+      "bias_tensor": "actors.lower_body.actor_module.module.2.bias",
+      "branch": "lower_body",
+      "onnx_node": "/actor_module/module/module.2/Gemm",
+      "torch_parameter": "lower_body.layers.2",
+      "transB": 1,
+      "weight_tensor": "actors.lower_body.actor_module.module.2.weight"
+    },
+    {
+      "bias_tensor": "actors.lower_body.actor_module.module.4.bias",
+      "branch": "lower_body",
+      "onnx_node": "/actor_module/module/module.4/Gemm",
+      "torch_parameter": "lower_body.layers.4",
+      "transB": 1,
+      "weight_tensor": "actors.lower_body.actor_module.module.4.weight"
+    },
+    {
+      "bias_tensor": "actors.lower_body.actor_module.module.6.bias",
+      "branch": "lower_body",
+      "onnx_node": "/actor_module/module/module.6/Gemm",
+      "torch_parameter": "lower_body.layers.6",
+      "transB": 1,
+      "weight_tensor": "actors.lower_body.actor_module.module.6.weight"
+    },
+    {
+      "bias_tensor": "actors.upper_body.actor_module.module.0.bias",
+      "branch": "upper_body",
+      "onnx_node": "/actor_module/module/module.0_1/Gemm",
+      "torch_parameter": "upper_body.layers.0",
+      "transB": 1,
+      "weight_tensor": "actors.upper_body.actor_module.module.0.weight"
+    },
+    {
+      "bias_tensor": "actors.upper_body.actor_module.module.2.bias",
+      "branch": "upper_body",
+      "onnx_node": "/actor_module/module/module.2_1/Gemm",
+      "torch_parameter": "upper_body.layers.2",
+      "transB": 1,
+      "weight_tensor": "actors.upper_body.actor_module.module.2.weight"
+    },
+    {
+      "bias_tensor": "actors.upper_body.actor_module.module.4.bias",
+      "branch": "upper_body",
+      "onnx_node": "/actor_module/module/module.4_1/Gemm",
+      "torch_parameter": "upper_body.layers.4",
+      "transB": 1,
+      "weight_tensor": "actors.upper_body.actor_module.module.4.weight"
+    },
+    {
+      "bias_tensor": "actors.upper_body.actor_module.module.6.bias",
+      "branch": "upper_body",
+      "onnx_node": "/actor_module/module/module.6_1/Gemm",
+      "torch_parameter": "upper_body.layers.6",
+      "transB": 1,
+      "weight_tensor": "actors.upper_body.actor_module.module.6.weight"
+    }
+  ],
+  "sample_count": 1000,
+  "sample_source": "1000 finite non-saturated Isaac Lab observations; official unstable frames remain preprocessing evidence",
+  "status": "PASS"
+}

@@ -1,0 +1,14 @@
+{
+  "frame_tests": "tests/test_cp1_6_sim2sim_metrics.py",
+  "free_joint_asserted": true,
+  "named_body": "pelvis",
+  "pelvis_contract": {
+    "pelvis_body_id": 1,
+    "pelvis_dof_address": 0,
+    "pelvis_free_joint_id": 0,
+    "pelvis_qpos_address": 0,
+    "velocity_source": "mj_objectVelocity"
+  },
+  "rollouts": 30,
+  "status": "PASS"
+}

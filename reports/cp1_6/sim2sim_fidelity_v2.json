@@ -1,0 +1,124 @@
+{
+  "classification": "OFFICIAL_POLICY_AND_GROUNDED_CONFIGURATION_DO_NOT_MEET_REQUIRED_PRECISION; REMOVING_BAND_CAUSES_COMPLETE_SURVIVAL_FAILURE",
+  "grounded_no_band_sim2sim": "FAIL",
+  "measurement_duration_observed_s": [
+    10.00499999999801,
+    10.004999999998132
+  ],
+  "measurement_duration_rule_s": [
+    9.95,
+    10.1
+  ],
+  "mujoco_state_contract": "PASS",
+  "official_default_sim2sim": "FAIL",
+  "original_cp1_5_evidence_mutated": false,
+  "pelvis_resolved_by_name": true,
+  "policy_does_not_own_measurement_lifetime": true,
+  "sim2sim_evaluator_fixed": "PASS",
+  "variants": {
+    "O0_OFFICIAL_DEFAULT": {
+      "cases": {
+        "forward010": {
+          "along_rmse_mean": 0.8749012011469506,
+          "cross_rmse_mean": 0.5651300693892175,
+          "precision_pass_count": 0,
+          "seeds": 3,
+          "survival_pass_count": 1,
+          "yaw_rmse_mean": 3.788276477569561
+        },
+        "forward025": {
+          "along_rmse_mean": 0.4427755136114949,
+          "cross_rmse_mean": 0.3067953068116471,
+          "precision_pass_count": 0,
+          "seeds": 3,
+          "survival_pass_count": 1,
+          "yaw_rmse_mean": 4.026876776335435
+        },
+        "left025": {
+          "along_rmse_mean": 0.40736186071927327,
+          "cross_rmse_mean": 0.3852975743012447,
+          "precision_pass_count": 0,
+          "seeds": 3,
+          "survival_pass_count": 1,
+          "yaw_rmse_mean": 3.5131171067846827
+        },
+        "stand": {
+          "along_rmse_mean": 0.2099845276662502,
+          "cross_rmse_mean": 0.349537735778901,
+          "precision_pass_count": 0,
+          "seeds": 3,
+          "survival_pass_count": 3,
+          "yaw_rmse_mean": 2.792756753056801
+        },
+        "turn025": {
+          "along_rmse_mean": 0.4180335282494527,
+          "cross_rmse_mean": 0.28673613812858967,
+          "precision_pass_count": 0,
+          "seeds": 3,
+          "survival_pass_count": 3,
+          "yaw_rmse_mean": 4.41885604454455
+        }
+      },
+      "duration_max_s": 10.004999999998073,
+      "duration_min_s": 10.00499999999801,
+      "elastic_band_enabled": true,
+      "official_config_modified_fields": [],
+      "precision_pass_count": 0,
+      "rollouts": 15,
+      "survival_pass_count": 9
+    },
+    "O1_GROUNDED_NO_BAND": {
+      "cases": {
+        "forward010": {
+          "along_rmse_mean": 0.5088133418206247,
+          "cross_rmse_mean": 0.5716880252444095,
+          "precision_pass_count": 0,
+          "seeds": 3,
+          "survival_pass_count": 0,
+          "yaw_rmse_mean": 4.287138570472918
+        },
+        "forward025": {
+          "along_rmse_mean": 0.49061743087217646,
+          "cross_rmse_mean": 0.43999548053953746,
+          "precision_pass_count": 0,
+          "seeds": 3,
+          "survival_pass_count": 0,
+          "yaw_rmse_mean": 4.481508253368775
+        },
+        "left025": {
+          "along_rmse_mean": 0.5454757571385648,
+          "cross_rmse_mean": 0.44278335407700564,
+          "precision_pass_count": 0,
+          "seeds": 3,
+          "survival_pass_count": 0,
+          "yaw_rmse_mean": 3.5523629361945397
+        },
+        "stand": {
+          "along_rmse_mean": 0.49305961144651295,
+          "cross_rmse_mean": 0.43654604792510093,
+          "precision_pass_count": 0,
+          "seeds": 3,
+          "survival_pass_count": 0,
+          "yaw_rmse_mean": 4.2057266494483105
+        },
+        "turn025": {
+          "along_rmse_mean": 0.5416061407753993,
+          "cross_rmse_mean": 0.6920932967937385,
+          "precision_pass_count": 0,
+          "seeds": 3,
+          "survival_pass_count": 0,
+          "yaw_rmse_mean": 3.8366097909921293
+        }
+      },
+      "duration_max_s": 10.004999999998132,
+      "duration_min_s": 10.00499999999801,
+      "elastic_band_enabled": false,
+      "official_config_modified_fields": [
+        "ENABLE_ELASTIC_BAND"
+      ],
+      "precision_pass_count": 0,
+      "rollouts": 15,
+      "survival_pass_count": 0
+    }
+  }
+}

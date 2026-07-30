@@ -1,0 +1,20 @@
+status: STATIC_CONTRACT_PPO_CONDITIONAL
+num_envs: 128
+max_iterations: 100
+wall_time_limit_minutes: 60
+checkpoint_interval: 10
+single_gpu: true
+video: false
+box: false
+command_modes: [STAND, LOW_SPEED_WALK, SUPPORTED_SPEED_WALK, TURN, TRANSITION]
+speed_bins_mps: [0.00, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30]
+yaw_bins_radps: [0.00, -0.05, 0.05, -0.10, 0.10, -0.15, 0.15, -0.25, 0.25]
+teacher:
+  source: frozen_official_onnx
+  regularization: action_distillation
+  preserve_supported_speed: true
+  decay_at_low_speed: gradual
+warmstart:
+  actor_only: true
+  critic_restore: false
+  optimizer_restore: false

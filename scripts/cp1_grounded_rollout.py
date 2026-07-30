@@ -64,6 +64,7 @@ def main() -> int:
     parser.add_argument("--left-force-x", type=float, default=0.0)
     parser.add_argument("--right-force-x", type=float, default=0.0)
     parser.add_argument("--video", type=Path, required=True)
+    parser.add_argument("--observation-capture", type=Path)
     args = parser.parse_args()
     np.random.seed(args.seed)
     root = args.run_root.resolve(); root.mkdir(parents=True, exist_ok=True)
@@ -154,7 +155,7 @@ def main() -> int:
     video_writer = cv2.VideoWriter(str(args.video), cv2.VideoWriter_fourcc(*"mp4v"), 2.0, (640, 480))
     if not video_writer.isOpened(): raise RuntimeError("could not open video writer")
 
-    policy = OnnxReferencePolicy(); history = ObservationHistory.zeros()
+    policy = OnnxReferencePolicy(); history = ObservationHistory.zeros(); observation_capture = []
     previous_action = np.zeros(29, dtype=np.float32)
     target_official = DEFAULT_JOINT_POS.copy()
     target_isaac = target_official[np.asarray(OFFICIAL_TO_ISAACLAB)]
@@ -187,7 +188,10 @@ def main() -> int:
                 "projected_gravity": robot.data.projected_gravity_b[0].detach().cpu().numpy().astype(np.float32),
                 "ref_upper_dof_pos": upper_reference,
             }
-            previous_action = policy(history.push(build_frame(fields)))[0]
+            actor_observation = history.push(build_frame(fields))
+            if args.observation_capture:
+                observation_capture.append(actor_observation.copy())
+            previous_action = policy(actor_observation)[0]
             target_official = np.clip(DEFAULT_JOINT_POS + ACTION_SCALE * previous_action,
                                       JOINT_POS_LOWER, JOINT_POS_UPPER)
             if precontact:
@@ -360,6 +364,9 @@ def main() -> int:
         "video": str(args.video.resolve()), "video_frames": frame_count,
         "fixed_root": False, "elastic_band": False, "upward_support_force": False}
     atomic_json(root / "qualification_summary.json", summary)
+    if args.observation_capture:
+        args.observation_capture.parent.mkdir(parents=True, exist_ok=True)
+        np.savez_compressed(args.observation_capture, actor_obs=np.concatenate(observation_capture, axis=0))
     checkpoint(progress_path, state, "ROLLOUT_COMPLETE", qualification_pass=qualification_pass,
                qualification_status=summary["status"], termination_reason=termination_reason,
                steps_completed=len(rows), video_frames=frame_count)

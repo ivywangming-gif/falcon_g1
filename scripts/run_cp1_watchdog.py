@@ -34,6 +34,7 @@ def main() -> int:
     parser.add_argument("--left-force-x", type=float, default=0.0)
     parser.add_argument("--right-force-x", type=float, default=0.0)
     parser.add_argument("--video", type=Path, required=True)
+    parser.add_argument("--observation-capture", type=Path)
     parser.add_argument("--timeout", type=float, default=420.0)
     args = parser.parse_args()
     root = args.run_root.resolve()
@@ -47,6 +48,8 @@ def main() -> int:
                "--right-force-x", str(args.right_force_x)]
     if args.upper_reference:
         command.extend(["--upper-reference", str(args.upper_reference.resolve())])
+    if args.observation_capture:
+        command.extend(["--observation-capture", str(args.observation_capture.resolve())])
     env = dict(os.environ, PYTHONPATH=str(REPO / "src"),
                XDG_CACHE_HOME=str(REPO / ".cache/xdg"),
                PIP_CACHE_DIR=str(REPO / ".cache/pip"), TMPDIR=str(REPO / ".cache/tmp"))

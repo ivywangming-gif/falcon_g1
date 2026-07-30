@@ -1,0 +1,16 @@
+{
+  "actor_only_warmstart_status": "PASS",
+  "command_sampler_tests": "PASS",
+  "current_phase": "CP1_6_AUDIT",
+  "falcon_training_started": false,
+  "full_ppo_training_authorized": "NO",
+  "grounded_no_band_sim2sim": "FAIL",
+  "mujoco_state_contract": "PASS",
+  "next_gate": "16-env reset/action/reward smoke for 1000 simulation steps",
+  "official_default_sim2sim": "FAIL",
+  "ppo_smoke_authorized": "NO",
+  "preprocessing_equivalence": "PASS",
+  "reward_tests": "PASS",
+  "sim2sim_evaluator_fixed": "PASS",
+  "training_env_smoke": "NOT_RUN"
+}
