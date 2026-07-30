@@ -1,9 +1,20 @@
 {
-  "fps": 40.0,
-  "frames": 200,
-  "normal_close": false,
-  "path": "/root/autodl-tmp/FALCON_CP0_G1_RUNTIME.mp4",
-  "provenance": "SEPARATE_32_BODY_CAPTURE_RUN_CP0_20260730_0645",
-  "sha256": "6dde43ae8935f7028e4521dff43926a6f9bb5affe6b3878c01abd20afea9c7b1",
-  "simulated_duration_s": 5.0
+  "ffprobe_status": "PASS",
+  "ffprobe_version": "4.4.2-0ubuntu0.22.04.1",
+  "generated_at_utc": "2026-07-30T08:50:54.698580+00:00",
+  "git_tracked": false,
+  "latest_path": "/root/autodl-tmp/FALCON_CP0_G1_RUNTIME_LATEST.mp4",
+  "opencv_full_decode_frames": 200,
+  "path": "/root/autodl-tmp/FALCON_CP0_G1_RUNTIME_PASS_20260730_1648.mp4",
+  "sha256": "9f283d69006a2cc6ac85713c7dc570fa7400df5f5d5456aafaffcb87ecb60444",
+  "source_run": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp_video_20260730_1648",
+  "stream": {
+    "codec_name": "mpeg4",
+    "duration_s": 5.0,
+    "height": 480,
+    "nb_frames": 200,
+    "r_frame_rate": "40/1",
+    "width": 640
+  },
+  "visual_review": "PASS_FULL_G1_FEET_AND_GROUND_VISIBLE"
 }

@@ -8,6 +8,20 @@
     "resumable_falcon_checkpoint": "NONE",
     "rule": "ONNX does not contain a recoverable PPO optimizer/training state."
   },
+  "cp0_valid_runs": [
+    {
+      "run": "runs/falcon_cp_shutdown_C_run1_20260730_1638",
+      "status": "PASS"
+    },
+    {
+      "run": "runs/falcon_cp_shutdown_C_run2_20260730_1641",
+      "status": "PASS"
+    },
+    {
+      "run": "runs/falcon_cp_video_20260730_1648",
+      "status": "PASS"
+    }
+  ],
   "disk": {
     "available_bytes": 83280691200,
     "total_bytes": 161061273600,
@@ -28,9 +42,9 @@
       "status": "PASS"
     },
     "CP0_RUNTIME": {
-      "detail": "Free-base G1 1000-step gate with video and normal close.",
+      "detail": "Two identical 1000-step camera-free runs plus one video run completed explicit stage close and clean framework exit with no orphan process.",
       "evidence": "reports/runtime/cp0_status.json",
-      "status": "FAIL"
+      "status": "PASS"
     },
     "CP1_GROUNDED_WBC_BASELINE": {
       "detail": "No resumable PPO checkpoint and no stand/walk qualification campaign exists.",
@@ -53,9 +67,9 @@
       "status": "PASS"
     },
     "S2_2_G1_ONE_ENV_RUNTIME": {
-      "detail": "1000 steps completed, but required normal close failed.",
+      "detail": "Free-base 1-env G1 completed 1000 finite steps and normal cleanup twice consecutively.",
       "evidence": "reports/runtime/cp0_status.json",
-      "status": "FAIL"
+      "status": "PASS"
     },
     "S2_3_CONTACT_FORCE_RUNTIME": {
       "detail": "Finite left/right ankle contact tensors in the 1000-step run.",
@@ -73,7 +87,7 @@
       "status": "NOT_RUN"
     }
   },
-  "generated_at_utc": "2026-07-30T07:44:20.162182+00:00",
+  "generated_at_utc": "2026-07-30T08:50:54.698580+00:00",
   "gpu": "NVIDIA GeForce RTX 5090, 580.76.05, 32607 MiB, 0 MiB, 0 %, 12.0",
   "host": {
     "hostname": "autodl-container-0a774196a2-8e059bec",
@@ -112,7 +126,7 @@
       "status": "FAIL"
     }
   ],
-  "next_gate": "Resolve the CP0 SimulationApp.close hang, then run the CP1 grounded FALCON stand/walk baseline; CP3 remains prohibited.",
+  "next_gate": "CP1 remains NOT_RUN. Audit official FALCON ONNX as read-only inference only, then separately qualify grounded stand/walk; CP3 and PPO remain prohibited.",
   "official_falcon": {
     "head": "a967a6d8494f57777cf8d266a644ac8e45833301",
     "modified": false,
@@ -122,10 +136,10 @@
   },
   "personal_repository": {
     "branch": "research/contact-primitive-library-35-38",
-    "head": "a570449aa8d9f4e12252344248b041d22d1fbbca",
+    "head": "d88b2e7f955f39cf778d17d1d59e4cd2c3b5bcec",
     "origin": "ssh://git@ssh.github.com:443/ivywangming-gif/falcon_g1.git",
     "path": "/root/autodl-tmp/robotics/falcon-g1-access-push",
-    "status": "## research/contact-primitive-library-35-38...origin/research/contact-primitive-library-35-38\n M artifacts/contact_search/contact_candidate_visualizations/manifest.json\n M artifacts/contact_search/contact_candidates_all.parquet\n M artifacts/contact_search/contact_candidates_rejected.parquet\n M artifacts/contact_search/contact_candidates_topk.json\n M artifacts/contact_search/cp2_static_status.json"
+    "status": "CP0_FIX_PENDING_LOCAL_COMMIT"
   },
   "processes": "",
   "safety": {

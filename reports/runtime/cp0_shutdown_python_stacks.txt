@@ -1,0 +1,12 @@
+CP0 shutdown watchdog Python stack (falcon_cp_shutdown_B_20260730_1618)
+
+Current thread:
+  torch.cuda.set_device
+  isaaclab.sim.simulation_context.SimulationContext.render (line 597)
+  SimulationContext._app_control_on_stop_handle_fn (line 979)
+  timeline STOP subscription lambda (line 241)
+  isaacsim.core.api SimulationContext.stop (line 989)
+  scripts/cp0_shutdown_probe.py: sim.stop
+
+Interpretation: the standalone STOP callback intentionally loops render() while the timeline is not playing.
+Full contemporaneous stack remains in runs/falcon_cp_shutdown_B_20260730_1618/campaign.console.log.
