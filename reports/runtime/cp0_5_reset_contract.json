@@ -1,0 +1,34 @@
+{
+  "buffers_required": [
+    "root_state",
+    "joint_pos",
+    "joint_vel",
+    "episode_length",
+    "reset",
+    "actions",
+    "last_actions",
+    "history",
+    "commands",
+    "filtered_hand_forces"
+  ],
+  "order": [
+    "curricula",
+    "root_joint_history_command_buffers",
+    "task_buffers",
+    "robot_state",
+    "force_filters"
+  ],
+  "source": {
+    "missing_source_tokens": [],
+    "path": "/root/autodl-tmp/robotics/falcon_sandbox/FALCON/humanoidverse/envs/decoupled_locomotion/decoupled_locomotion_stand_height_waist_wbc_ma_diff_force.py",
+    "required_source_tokens": [
+      "def reset_envs_idx",
+      "_reset_buffers_callback",
+      "_reset_robot_states_callback",
+      "filtered_left_force_max"
+    ],
+    "sha256": "3e5d62bf61a890f60938012db8566607d5932e520a0b98b1f1f0530d574dadd9",
+    "status": "PASS"
+  },
+  "status": "PASS"
+}

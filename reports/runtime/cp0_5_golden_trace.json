@@ -1,0 +1,264 @@
+{
+  "comparison_scope": "DETERMINISTIC_PORT_CONTRACT_TRACE_ONLY",
+  "fixed_initial_joint_state": "official_default_pose_29dof",
+  "fixed_initial_root_state_xyzw": [
+    0.0,
+    0.0,
+    0.8,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "official_runtime_comparison": "NOT_AVAILABLE",
+  "seed": 3538,
+  "steps": [
+    {
+      "external_force_sequence_world": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "falcon_command": {
+        "robot_base_linear_velocity_command": [
+          0.11500000000000002,
+          0.0
+        ],
+        "robot_base_yaw_rate_command": 0.0,
+        "root_height_command": 0.75,
+        "stance_or_walking_mode": "walking",
+        "upper_body_joint_target_or_residual": [
+          0.0,
+          -0.0,
+          0.0,
+          0.01,
+          0.01
+        ],
+        "waist_yaw_command": 0.0
+      },
+      "measured_box_twist_B": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "step": 0
+    },
+    {
+      "external_force_sequence_world": [
+        1.0,
+        -1.0,
+        0.5
+      ],
+      "falcon_command": {
+        "robot_base_linear_velocity_command": [
+          0.11386600000000002,
+          -3.5e-06
+        ],
+        "robot_base_yaw_rate_command": 0.0,
+        "root_height_command": 0.75,
+        "stance_or_walking_mode": "walking",
+        "upper_body_joint_target_or_residual": [
+          0.0005,
+          -0.0005,
+          0.0,
+          0.01,
+          0.01
+        ],
+        "waist_yaw_command": 0.0
+      },
+      "measured_box_twist_B": [
+        0.01,
+        0.0,
+        0.0
+      ],
+      "step": 1
+    },
+    {
+      "external_force_sequence_world": [
+        2.0,
+        -2.0,
+        1.0
+      ],
+      "falcon_command": {
+        "robot_base_linear_velocity_command": [
+          0.11199490000000002,
+          -9.275e-06
+        ],
+        "robot_base_yaw_rate_command": 0.0,
+        "root_height_command": 0.75,
+        "stance_or_walking_mode": "walking",
+        "upper_body_joint_target_or_residual": [
+          0.001,
+          -0.001,
+          0.0,
+          0.01,
+          0.01
+        ],
+        "waist_yaw_command": 0.0
+      },
+      "measured_box_twist_B": [
+        0.02,
+        0.0,
+        0.0
+      ],
+      "step": 2
+    },
+    {
+      "external_force_sequence_world": [
+        3.0,
+        -3.0,
+        1.5
+      ],
+      "falcon_command": {
+        "robot_base_linear_velocity_command": [
+          0.10964468500000002,
+          -1.652875e-05
+        ],
+        "robot_base_yaw_rate_command": 0.0,
+        "root_height_command": 0.75,
+        "stance_or_walking_mode": "walking",
+        "upper_body_joint_target_or_residual": [
+          0.0015,
+          -0.0015,
+          0.0,
+          0.01,
+          0.01
+        ],
+        "waist_yaw_command": 0.0
+      },
+      "measured_box_twist_B": [
+        0.03,
+        0.0,
+        0.0
+      ],
+      "step": 3
+    },
+    {
+      "external_force_sequence_world": [
+        4.0,
+        -4.0,
+        2.0
+      ],
+      "falcon_command": {
+        "robot_base_linear_velocity_command": [
+          0.10698304525000002,
+          -2.47436875e-05
+        ],
+        "robot_base_yaw_rate_command": 0.0,
+        "root_height_command": 0.75,
+        "stance_or_walking_mode": "walking",
+        "upper_body_joint_target_or_residual": [
+          0.002,
+          -0.002,
+          0.0,
+          0.01,
+          0.01
+        ],
+        "waist_yaw_command": 0.0
+      },
+      "measured_box_twist_B": [
+        0.04,
+        0.0,
+        0.0
+      ],
+      "step": 4
+    },
+    {
+      "external_force_sequence_world": [
+        5.0,
+        -5.0,
+        2.5
+      ],
+      "falcon_command": {
+        "robot_base_linear_velocity_command": [
+          0.10411897941250002,
+          -3.3583396875e-05
+        ],
+        "robot_base_yaw_rate_command": 0.0,
+        "root_height_command": 0.75,
+        "stance_or_walking_mode": "walking",
+        "upper_body_joint_target_or_residual": [
+          0.0025,
+          -0.0025,
+          0.0,
+          0.01,
+          0.01
+        ],
+        "waist_yaw_command": 0.0
+      },
+      "measured_box_twist_B": [
+        0.05,
+        0.0,
+        0.0
+      ],
+      "step": 5
+    },
+    {
+      "external_force_sequence_world": [
+        6.0,
+        -6.0,
+        3.0
+      ],
+      "falcon_command": {
+        "robot_base_linear_velocity_command": [
+          0.10112333661812502,
+          -4.282920796875e-05
+        ],
+        "robot_base_yaw_rate_command": 0.0,
+        "root_height_command": 0.75,
+        "stance_or_walking_mode": "walking",
+        "upper_body_joint_target_or_residual": [
+          0.003,
+          -0.003,
+          0.0,
+          0.01,
+          0.01
+        ],
+        "waist_yaw_command": 0.0
+      },
+      "measured_box_twist_B": [
+        0.06,
+        0.0,
+        0.0
+      ],
+      "step": 6
+    },
+    {
+      "external_force_sequence_world": [
+        7.0,
+        -7.0,
+        3.5
+      ],
+      "falcon_command": {
+        "robot_base_linear_velocity_command": [
+          0.09804216880178127,
+          -5.23389851796875e-05
+        ],
+        "robot_base_yaw_rate_command": 0.0,
+        "root_height_command": 0.75,
+        "stance_or_walking_mode": "walking",
+        "upper_body_joint_target_or_residual": [
+          0.0035,
+          -0.0035,
+          0.0,
+          0.01,
+          0.01
+        ],
+        "waist_yaw_command": 0.0
+      },
+      "measured_box_twist_B": [
+        0.07,
+        0.0,
+        0.0
+      ],
+      "step": 7
+    }
+  ],
+  "trace_sha256": "216edcfb59e427892eb030f94d261242f8b3077be4af02a920995dce45fbdc6a"
+}

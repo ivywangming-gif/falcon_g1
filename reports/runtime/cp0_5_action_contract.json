@@ -1,0 +1,30 @@
+{
+  "clip": 100.0,
+  "effort_limit_scale": 0.8,
+  "lower": 15,
+  "scale": 0.25,
+  "source": {
+    "missing_source_tokens": [],
+    "path": "/root/autodl-tmp/robotics/falcon_sandbox/FALCON/humanoidverse/config/robot/g1/g1_29dof_waist_fakehand.yaml",
+    "required_source_tokens": [
+      "lower_body_actions_dim: 15",
+      "upper_body_actions_dim: 14",
+      "action_scale: 0.25",
+      "action_clip_value: 100.0",
+      "default_joint_angles"
+    ],
+    "sha256": "3ce7f7d42daf6e7a7c3dd5eef6ac45985e10aa409817a528425d4e1a2a45f286",
+    "status": "PASS"
+  },
+  "status": "PASS",
+  "target": "default_joint_angle + 0.25 * clipped_action",
+  "total": 29,
+  "units": {
+    "damping": "N*m*s/rad",
+    "effort": "N*m",
+    "position": "rad",
+    "stiffness": "N*m/rad",
+    "velocity": "rad/s"
+  },
+  "upper": 14
+}

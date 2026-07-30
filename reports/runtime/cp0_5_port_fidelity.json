@@ -1,0 +1,54 @@
+{
+  "agile_imported": false,
+  "body_mapping_provenance": "CP0_RUNTIME",
+  "checks": {
+    "action_scale_clip_default": true,
+    "actuator_units_and_limits": true,
+    "angular_velocity_frame": true,
+    "body_order_and_permutation": true,
+    "contact_force_direction_frame": true,
+    "deterministic_golden_trace": true,
+    "dt_and_decimation": true,
+    "external_force_body_position_sign": true,
+    "force_curriculum": true,
+    "joint_order_and_permutation": true,
+    "local_world_base_frames": true,
+    "lower_upper_observation_slice": true,
+    "observation_history_order": true,
+    "projected_gravity": true,
+    "quaternion_xyzw_wxyz": true,
+    "reset_contract": true,
+    "reward_and_termination": true
+  },
+  "conventions": {
+    "base_velocity_observation": "base",
+    "box_twist_frame": "box_body",
+    "contact_force_runtime": "world",
+    "conversion": "explicit [x,y,z,w] <-> [w,x,y,z]",
+    "isaaclab_root_quaternion": "wxyz",
+    "official_root_quaternion": "xyzw",
+    "projected_gravity": "world gravity rotated inverse by base quaternion",
+    "root_velocity_source": "world"
+  },
+  "cp0_5_port_contract": "PASS",
+  "joint_mapping_provenance": "CP0_RUNTIME",
+  "official_falcon_commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+  "official_runtime_comparison": "NOT_AVAILABLE",
+  "port_fidelity": "SOURCE_AUDITED_NOT_NUMERICALLY_PROVEN",
+  "ppo_started": false,
+  "source_manifest": {
+    "humanoidverse/config/env/decoupled_locomotion_stand_height_waist_wbc_ma_diff_force.yaml": "91cac0f4b7b7dfb8aef4ba140e2299d00591bd8f739ebc29b191fb0b1963d7aa",
+    "humanoidverse/config/obs/dec_loco/g1_29dof_obs_diff_force_history_wolinvel_ma.yaml": "eed39ffd7a9d13f328458bca8a91261c9ce16912a1d0d2a03e184bc1968b077c",
+    "humanoidverse/config/rewards/dec_loco/reward_dec_loco_stand_height_ma_diff_force.yaml": "b5284087fa79fa476efca901c7b2a17290912437b017815f8fa1fa119b579627",
+    "humanoidverse/config/robot/g1/g1_29dof_waist_fakehand.yaml": "3ce7f7d42daf6e7a7c3dd5eef6ac45985e10aa409817a528425d4e1a2a45f286",
+    "humanoidverse/config/simulator/isaacgym.yaml": "fd5990ee37c485ae3da8652c76dbc0915daa1b7b4d754be9cc9d5346ea22fbff",
+    "humanoidverse/envs/decoupled_locomotion/decoupled_locomotion_stand_height_waist_wbc_ma_diff_force.py": "3e5d62bf61a890f60938012db8566607d5932e520a0b98b1f1f0530d574dadd9",
+    "humanoidverse/envs/legged_base_task/legged_robot_base_ma.py": "938670273280043717b4a178ffa7569d598e33c8645d06c4302cbc83df82c65b"
+  },
+  "timing": {
+    "control_decimation": 4,
+    "control_dt": 0.02,
+    "physics_dt": 0.005,
+    "physics_fps": 200
+  }
+}

@@ -1,0 +1,3 @@
+# CP2 evidence writer only; install into falcon_isaaclab, never agile_env.
+pyarrow==21.0.0
+

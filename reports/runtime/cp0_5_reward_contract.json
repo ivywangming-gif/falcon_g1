@@ -1,0 +1,26 @@
+{
+  "groups": [
+    "lower_body",
+    "upper_body"
+  ],
+  "scale_applied_per_control_dt": true,
+  "source": {
+    "missing_source_tokens": [],
+    "path": "/root/autodl-tmp/robotics/falcon_sandbox/FALCON/humanoidverse/config/rewards/dec_loco/reward_dec_loco_stand_height_ma_diff_force.yaml",
+    "required_source_tokens": [
+      "reward_scales",
+      "reward_groups",
+      "termination: -250.0",
+      "tracking_upper_body_dofs"
+    ],
+    "sha256": "b5284087fa79fa476efca901c7b2a17290912437b017815f8fa1fa119b579627",
+    "status": "PASS"
+  },
+  "status": "PASS",
+  "termination": {
+    "contact": false,
+    "gravity": true,
+    "low_height": true,
+    "reward_scale": -250.0
+  }
+}

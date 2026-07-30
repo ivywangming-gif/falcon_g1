@@ -1,0 +1,63 @@
+{
+  "application_frame": "world",
+  "application_position": "sampled on hand-to-extended-EE segment",
+  "config_source": {
+    "missing_source_tokens": [],
+    "path": "/root/autodl-tmp/robotics/falcon_sandbox/FALCON/humanoidverse/config/env/decoupled_locomotion_stand_height_waist_wbc_ma_diff_force.yaml",
+    "required_source_tokens": [
+      "apply_force_x_range",
+      "apply_force_y_range",
+      "apply_force_z_range",
+      "randomize_force_duration"
+    ],
+    "sha256": "91cac0f4b7b7dfb8aef4ba140e2299d00591bd8f739ebc29b191fb0b1963d7aa",
+    "status": "PASS"
+  },
+  "curriculum": {
+    "decrement": 0.02,
+    "down_threshold_steps": 200,
+    "enabled": true,
+    "increment": 0.02,
+    "initial": 0.1,
+    "max": 1.0,
+    "min": 0.0,
+    "up_threshold_steps": 210
+  },
+  "force_duration_control_steps": [
+    150,
+    250
+  ],
+  "force_range_world_n": {
+    "x": [
+      -40.0,
+      40.0
+    ],
+    "y": [
+      -40.0,
+      40.0
+    ],
+    "z": [
+      -50.0,
+      5.0
+    ]
+  },
+  "links": [
+    "left_rubber_hand",
+    "right_rubber_hand"
+  ],
+  "observation_frame": "base",
+  "sign_rule_when_walking": "xy resistance opposes walking direction",
+  "source": {
+    "missing_source_tokens": [],
+    "path": "/root/autodl-tmp/robotics/falcon_sandbox/FALCON/humanoidverse/envs/decoupled_locomotion/decoupled_locomotion_stand_height_waist_wbc_ma_diff_force.py",
+    "required_source_tokens": [
+      "apply_rigid_body_force_at_pos_tensor",
+      "left_hand_link_index",
+      "quat_rotate_inverse",
+      "_update_force_scale_curriculum"
+    ],
+    "sha256": "3e5d62bf61a890f60938012db8566607d5932e520a0b98b1f1f0530d574dadd9",
+    "status": "PASS"
+  },
+  "status": "PASS"
+}

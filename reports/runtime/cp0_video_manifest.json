@@ -1,0 +1,9 @@
+{
+  "fps": 40.0,
+  "frames": 200,
+  "normal_close": false,
+  "path": "/root/autodl-tmp/FALCON_CP0_G1_RUNTIME.mp4",
+  "provenance": "SEPARATE_32_BODY_CAPTURE_RUN_CP0_20260730_0645",
+  "sha256": "6dde43ae8935f7028e4521dff43926a6f9bb5affe6b3878c01abd20afea9c7b1",
+  "simulated_duration_s": 5.0
+}
