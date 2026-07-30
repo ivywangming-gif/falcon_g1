@@ -8,6 +8,7 @@
     "resumable_falcon_checkpoint": "NONE",
     "rule": "ONNX does not contain a recoverable PPO optimizer/training state."
   },
+  "cp0_fix_commit": "0ab812e40d551a82f42abedb977bd489b7eb4b2b",
   "cp0_valid_runs": [
     {
       "run": "runs/falcon_cp_shutdown_C_run1_20260730_1638",
@@ -136,10 +137,10 @@
   },
   "personal_repository": {
     "branch": "research/contact-primitive-library-35-38",
-    "head": "d88b2e7f955f39cf778d17d1d59e4cd2c3b5bcec",
+    "head": "0ab812e40d551a82f42abedb977bd489b7eb4b2b",
     "origin": "ssh://git@ssh.github.com:443/ivywangming-gif/falcon_g1.git",
     "path": "/root/autodl-tmp/robotics/falcon-g1-access-push",
-    "status": "CP0_FIX_PENDING_LOCAL_COMMIT"
+    "status": "CP0_FIX_COMMITTED_LOCALLY"
   },
   "processes": "",
   "safety": {
