@@ -1,0 +1,27 @@
+{
+  "critic_observation_dim": 700,
+  "future_command_present": false,
+  "future_state_present": false,
+  "groups": [
+    "actor_observation_575",
+    "root_linear_velocity_world",
+    "root_linear_velocity_body",
+    "root_angular_velocity_world",
+    "root_angular_velocity_body",
+    "root_height",
+    "projected_gravity",
+    "foot_contact_flags",
+    "foot_contact_forces_world",
+    "foot_slip",
+    "joint_torque_ratio",
+    "joint_limit_margin",
+    "command_mode_one_hot",
+    "precise_command",
+    "push_ready_flag",
+    "external_force_world_base_hand_slots",
+    "episode_progress",
+    "zero_padding_reserved_for_versioned_extensions"
+  ],
+  "policy_access": false,
+  "status": "STATIC_AND_16_ENV_LAUNCH_PROBE_PASS"
+}

@@ -1,0 +1,33 @@
+phase: CP1_7_OVERNIGHT_ACTOR_ONLY_WARMSTART_ADAPTATION
+max_iterations: 600
+wall_time_limit_hours: 8
+training_seed: 1701
+validation_seeds: [1801, 1802, 1803]
+held_out_seeds: [2001, 2002, 2003, 2004, 2005]
+capacity_candidates: [32, 64, 128, 256, 512]
+capacity_peak_vram_limit_mib: 26624
+physics_dt: 0.005
+decimation: 4
+num_steps_per_env: 24
+critic_warmup_iterations: 20
+actor_lr: 1.0e-5
+critic_lr: 3.0e-4
+gamma: 0.99
+lambda: 0.95
+clip_param: 0.10
+entropy_coef: 0.002
+max_grad_norm: 1.0
+num_learning_epochs: 3
+num_mini_batches: 4
+initial_noise_std: 0.15
+maximum_noise_std: 0.30
+free_base: true
+fixed_root: false
+elastic_band: false
+hidden_upward_force: false
+nominal_gravity: true
+ground_plane: true
+self_collision: true
+box_created: false
+camera_enabled_during_training: false
+agile_dependency: false

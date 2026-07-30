@@ -1,0 +1,35 @@
+{
+  "actor_observation_dim": 575,
+  "cp1_6_warmstart_observation_contract_sha256": "b050012e65cae6c66b9c13806cfd6d4faeca6b7b47103a70f2406ac4850114e4",
+  "field_dimensions": {
+    "actions": 29,
+    "base_ang_vel": 3,
+    "command_ang_vel": 1,
+    "command_base_height": 1,
+    "command_lin_vel": 2,
+    "command_stand": 1,
+    "command_waist_dofs": 3,
+    "dof_pos": 29,
+    "dof_vel": 29,
+    "projected_gravity": 3,
+    "ref_upper_dof_pos": 14
+  },
+  "field_order": [
+    "actions",
+    "base_ang_vel",
+    "command_ang_vel",
+    "command_base_height",
+    "command_lin_vel",
+    "command_stand",
+    "command_waist_dofs",
+    "dof_pos",
+    "dof_vel",
+    "projected_gravity",
+    "ref_upper_dof_pos"
+  ],
+  "history_length": 5,
+  "history_order": "oldest_to_newest",
+  "runtime_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+  "single_frame_dim": 115,
+  "status": "PASS_FROZEN_CP1_6_CONTRACT"
+}
