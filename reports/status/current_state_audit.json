@@ -1,0 +1,140 @@
+{
+  "checkpoint_audit": {
+    "onnx_inference_artifacts_not_resumable": [
+      "/root/autodl-tmp/robotics/falcon_sandbox/FALCON/sim2real/models/dec_loco/g1_29dof.onnx",
+      "/root/autodl-tmp/robotics/falcon_sandbox/FALCON/sim2real/models/falcon/g1_29dof.onnx",
+      "/root/autodl-tmp/robotics/falcon_sandbox/FALCON/sim2real/models/falcon/t1_29dof.onnx"
+    ],
+    "resumable_falcon_checkpoint": "NONE",
+    "rule": "ONNX does not contain a recoverable PPO optimizer/training state."
+  },
+  "disk": {
+    "available_bytes": 83366375424,
+    "total_bytes": 161061273600,
+    "used_bytes": 77694898176
+  },
+  "environment": {
+    "isaac_lab_checkout": "/root/autodl-tmp/robotics/falcon-g1-access-push/third_party/IsaacLab",
+    "isaac_lab_distribution_version": "0.48.0",
+    "isaac_lab_head": "5c2ec81cb17532d32f7922dd7fcaae40d123b71a",
+    "isaac_sim_version": "5.1.0.0",
+    "path": "/root/autodl-tmp/conda/envs/falcon_isaaclab",
+    "pyarrow_version": "21.0.0"
+  },
+  "gates": {
+    "CP0_5_PORT_CONTRACT": {
+      "detail": "SOURCE_AUDITED_NOT_NUMERICALLY_PROVEN",
+      "evidence": "reports/runtime/cp0_5_port_fidelity.json",
+      "status": "PASS"
+    },
+    "CP0_RUNTIME": {
+      "detail": "Free-base G1 1000-step gate with video and normal close.",
+      "evidence": "reports/runtime/cp0_status.json",
+      "status": "FAIL"
+    },
+    "CP1_GROUNDED_WBC_BASELINE": {
+      "detail": "No resumable PPO checkpoint and no stand/walk qualification campaign exists.",
+      "evidence": "NONE",
+      "status": "NOT_RUN"
+    },
+    "CP2_STATIC_CONTACT_CANDIDATE_SMOKE": {
+      "detail": "Static URDF IK/collision smoke only; NOT_PHYSICALLY_QUALIFIED.",
+      "evidence": "artifacts/contact_search/cp2_static_status.json",
+      "status": "PASS"
+    },
+    "CP3_PHYSICS_SCREEN": {
+      "detail": "Blocked until CP1 grounded baseline passes.",
+      "evidence": "NONE",
+      "status": "NOT_RUN"
+    },
+    "S2_1_EMPTY_ISAAC_APP_SMOKE": {
+      "detail": "Historical empty Isaac app evidence.",
+      "evidence": "reports/standalone/s2_1_empty_scene_result.json",
+      "status": "PASS"
+    },
+    "S2_2_G1_ONE_ENV_RUNTIME": {
+      "detail": "1000 steps completed, but required normal close failed.",
+      "evidence": "reports/runtime/cp0_status.json",
+      "status": "FAIL"
+    },
+    "S2_3_CONTACT_FORCE_RUNTIME": {
+      "detail": "Finite left/right ankle contact tensors in the 1000-step run.",
+      "evidence": "reports/runtime/cp0_status.json",
+      "status": "PASS"
+    },
+    "S2_4_32_ENV_CAPACITY": {
+      "detail": "No 32-env capacity run was authorized in this round.",
+      "evidence": "NONE",
+      "status": "NOT_RUN"
+    },
+    "STANDALONE_FALCON_PPO": {
+      "detail": "PPO is not authorized in this round.",
+      "evidence": "NONE",
+      "status": "NOT_RUN"
+    }
+  },
+  "generated_at_utc": "2026-07-30T06:31:45.247927+00:00",
+  "gpu": "NVIDIA GeForce RTX 5090, 580.76.05, 32607 MiB, 0 MiB, 0 %, 12.0",
+  "host": {
+    "hostname": "autodl-container-0a774196a2-8e059bec",
+    "os": "Linux-5.15.0-119-generic-x86_64-with-glibc2.35",
+    "python": "3.11.15 (main, Jun 11 2026, 15:20:16) [GCC 14.3.0]"
+  },
+  "invalid_or_stale_runs": [
+    {
+      "reason": "camera flag missing; wrapper return-code false positive",
+      "run": "runs/cp0_g1_runtime_20260730_0610",
+      "status": "FAIL"
+    },
+    {
+      "reason": "39-body non-collapsed asset and close hang",
+      "run": "runs/cp0_g1_runtime_20260730_0620",
+      "status": "STALE_EVIDENCE"
+    },
+    {
+      "reason": "32-body camera-enabled close hang",
+      "run": "runs/cp0_g1_runtime_20260730_0635",
+      "status": "FAIL"
+    },
+    {
+      "reason": "32-body capture completed; Camera cleanup did not return",
+      "run": "runs/cp0_g1_runtime_20260730_0645",
+      "status": "FAIL"
+    },
+    {
+      "reason": "camera-free close did not return",
+      "run": "runs/cp0_g1_runtime_20260730_0650",
+      "status": "FAIL"
+    },
+    {
+      "reason": "1000-step preclose passed; close did not return after explicit sim.stop",
+      "run": "runs/cp0_g1_runtime_20260730_0700",
+      "status": "FAIL"
+    }
+  ],
+  "next_gate": "Resolve the CP0 SimulationApp.close hang, then run the CP1 grounded FALCON stand/walk baseline; CP3 remains prohibited.",
+  "official_falcon": {
+    "head": "a967a6d8494f57777cf8d266a644ac8e45833301",
+    "modified": false,
+    "path": "/root/autodl-tmp/robotics/falcon_sandbox/FALCON",
+    "remote": "https://github.com/LeCAR-Lab/FALCON.git",
+    "status": "CLEAN"
+  },
+  "personal_repository": {
+    "branch": "research/contact-primitive-library-35-38",
+    "head": "07a22f659266353dc0fcb64401dfc7861fb5995e",
+    "origin": "ssh://git@ssh.github.com:443/ivywangming-gif/falcon_g1.git",
+    "path": "/root/autodl-tmp/robotics/falcon-g1-access-push",
+    "status": "## research/contact-primitive-library-35-38\n?? reports/status/current_state_audit.json\n?? reports/status/current_state_audit.md\n?? scripts/generate_current_state_audit.py\n?? scripts/standalone_s2_2_g1_runtime_smoke.py\n?? scripts/standalone_s2_2_g1_runtime_smoke_v2.py\n?? scripts/standalone_s2_2_g1_runtime_smoke_v3.py"
+  },
+  "processes": "",
+  "safety": {
+    "agile_checkpoint_loaded": false,
+    "agile_env_used": false,
+    "agile_imported": false,
+    "falcon_training_started": false,
+    "g1_access_push_modified": false,
+    "official_falcon_modified": false,
+    "wbc_agile_modified": false
+  }
+}
