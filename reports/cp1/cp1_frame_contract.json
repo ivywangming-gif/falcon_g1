@@ -1,0 +1,11 @@
+{
+  "command_frame": "heading/base-aligned locomotion frame",
+  "joint_state_policy_frame": "official policy joint order after name mapping",
+  "projected_gravity": "world gravity unit vector [0,0,-1] inverse-rotated into base frame",
+  "quaternion_convention": {
+    "isaaclab": "wxyz",
+    "official_deployment": "wxyz"
+  },
+  "root_angular_velocity_frame": "base/body frame",
+  "root_linear_velocity_frame": "world in Isaac Lab telemetry; not present in selected actor observation"
+}

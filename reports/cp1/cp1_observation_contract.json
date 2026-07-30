@@ -1,0 +1,54 @@
+{
+  "dims": {
+    "actions": 29,
+    "base_ang_vel": 3,
+    "command_ang_vel": 1,
+    "command_base_height": 1,
+    "command_lin_vel": 2,
+    "command_stand": 1,
+    "command_waist_dofs": 3,
+    "dof_pos": 29,
+    "dof_vel": 29,
+    "projected_gravity": 3,
+    "ref_upper_dof_pos": 14
+  },
+  "frame_order": [
+    "actions",
+    "base_ang_vel",
+    "command_ang_vel",
+    "command_base_height",
+    "command_lin_vel",
+    "command_stand",
+    "command_waist_dofs",
+    "dof_pos",
+    "dof_vel",
+    "projected_gravity",
+    "ref_upper_dof_pos"
+  ],
+  "history_flatten_order": "oldest frame to newest frame",
+  "history_length": 5,
+  "input_name": "actor_obs",
+  "input_shape": [
+    1,
+    575
+  ],
+  "joint_position_offset": "q - official default pose",
+  "joint_velocity_scale": 0.05,
+  "lower_observation_slice": "dof state includes all 29 joints in official policy order",
+  "previous_action": "previous raw clipped 29-D policy output",
+  "scales": {
+    "actions": 1.0,
+    "base_ang_vel": 0.25,
+    "command_ang_vel": 1.0,
+    "command_base_height": 2.0,
+    "command_lin_vel": 1.0,
+    "command_stand": 1.0,
+    "command_waist_dofs": 1.0,
+    "dof_pos": 1.0,
+    "dof_vel": 0.05,
+    "projected_gravity": 1.0,
+    "ref_upper_dof_pos": 1.0
+  },
+  "single_frame_dim": 115,
+  "upper_observation_slice": "ref_upper_dof_pos is explicitly 14-D by name"
+}

@@ -1,0 +1,464 @@
+{
+  "action": {
+    "clip": 100.0,
+    "dim": 29,
+    "scale": 0.25,
+    "source": [
+      {
+        "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+        "lines": "237-240",
+        "path": "humanoidverse/config/robot/g1/g1_29dof_waist_fakehand.yaml"
+      },
+      {
+        "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+        "lines": "82-97,123-142",
+        "path": "sim2real/rl_policy/loco_manip/loco_manip.py"
+      }
+    ],
+    "target": "default_joint_pos + scale * clipped_policy_action"
+  },
+  "agent_split": {
+    "lower": 15,
+    "source": {
+      "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+      "lines": "10-13,40-50",
+      "path": "humanoidverse/config/robot/g1/g1_29dof_waist_fakehand.yaml"
+    },
+    "upper": 14
+  },
+  "body_names_order": {
+    "source": {
+      "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+      "lines": "127-134",
+      "path": "humanoidverse/config/robot/g1/g1_29dof_waist_fakehand.yaml"
+    },
+    "value": [
+      "pelvis",
+      "left_hip_pitch_link",
+      "left_hip_roll_link",
+      "left_hip_yaw_link",
+      "left_knee_link",
+      "left_ankle_pitch_link",
+      "left_ankle_roll_link",
+      "right_hip_pitch_link",
+      "right_hip_roll_link",
+      "right_hip_yaw_link",
+      "right_knee_link",
+      "right_ankle_pitch_link",
+      "right_ankle_roll_link",
+      "waist_yaw_link",
+      "waist_roll_link",
+      "torso_link",
+      "left_shoulder_pitch_link",
+      "left_shoulder_roll_link",
+      "left_shoulder_yaw_link",
+      "left_elbow_link",
+      "left_wrist_roll_link",
+      "left_wrist_pitch_link",
+      "left_wrist_yaw_link",
+      "left_rubber_hand",
+      "right_shoulder_pitch_link",
+      "right_shoulder_roll_link",
+      "right_shoulder_yaw_link",
+      "right_elbow_link",
+      "right_wrist_roll_link",
+      "right_wrist_pitch_link",
+      "right_wrist_yaw_link",
+      "right_rubber_hand"
+    ]
+  },
+  "command": {
+    "fields": [
+      "command_lin_vel",
+      "command_ang_vel",
+      "command_stand",
+      "command_base_height",
+      "command_waist_dofs"
+    ],
+    "source": [
+      {
+        "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+        "lines": "123-139",
+        "path": "sim2real/rl_policy/base_policy.py"
+      },
+      {
+        "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+        "lines": "23-35,79-117",
+        "path": "sim2real/rl_policy/dec_loco/dec_loco.py"
+      }
+    ],
+    "stand_value": 0,
+    "walk_value": 1
+  },
+  "default_pose": {
+    "source": {
+      "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+      "lines": "139-173",
+      "path": "humanoidverse/config/robot/g1/g1_29dof_waist_fakehand.yaml"
+    },
+    "value": [
+      -0.10000000149011612,
+      0.0,
+      0.0,
+      0.30000001192092896,
+      -0.20000000298023224,
+      0.0,
+      -0.10000000149011612,
+      0.0,
+      0.0,
+      0.30000001192092896,
+      -0.20000000298023224,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "deployment_preprocessing": {
+    "projected_gravity": "inverse_rotate(world [0,0,-1])",
+    "quaternion": "wxyz",
+    "source": [
+      {
+        "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+        "lines": "42-56",
+        "path": "sim2real/utils/comm/state_processor/unitree/unitree_state_processor.py"
+      },
+      {
+        "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+        "lines": "8-20",
+        "path": "sim2real/utils/math.py"
+      },
+      {
+        "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+        "lines": "258-302",
+        "path": "sim2real/rl_policy/base_policy.py"
+      }
+    ]
+  },
+  "force_curriculum": {
+    "source": [
+      {
+        "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+        "lines": "52-67",
+        "path": "humanoidverse/config/env/decoupled_locomotion_stand_height_waist_wbc_ma_diff_force.yaml"
+      },
+      {
+        "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+        "lines": "209-217",
+        "path": "humanoidverse/config/rewards/dec_loco/reward_dec_loco_stand_height_ma_diff_force.yaml"
+      }
+    ]
+  },
+  "joint_names_order": {
+    "source": {
+      "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+      "lines": "33-50",
+      "path": "humanoidverse/config/robot/g1/g1_29dof_waist_fakehand.yaml"
+    },
+    "value": [
+      "left_hip_pitch_joint",
+      "left_hip_roll_joint",
+      "left_hip_yaw_joint",
+      "left_knee_joint",
+      "left_ankle_pitch_joint",
+      "left_ankle_roll_joint",
+      "right_hip_pitch_joint",
+      "right_hip_roll_joint",
+      "right_hip_yaw_joint",
+      "right_knee_joint",
+      "right_ankle_pitch_joint",
+      "right_ankle_roll_joint",
+      "waist_yaw_joint",
+      "waist_roll_joint",
+      "waist_pitch_joint",
+      "left_shoulder_pitch_joint",
+      "left_shoulder_roll_joint",
+      "left_shoulder_yaw_joint",
+      "left_elbow_joint",
+      "left_wrist_roll_joint",
+      "left_wrist_pitch_joint",
+      "left_wrist_yaw_joint",
+      "right_shoulder_pitch_joint",
+      "right_shoulder_roll_joint",
+      "right_shoulder_yaw_joint",
+      "right_elbow_joint",
+      "right_wrist_roll_joint",
+      "right_wrist_pitch_joint",
+      "right_wrist_yaw_joint"
+    ]
+  },
+  "normalization": {
+    "scales": {
+      "actions": 1.0,
+      "base_ang_vel": 0.25,
+      "command_ang_vel": 1.0,
+      "command_base_height": 2.0,
+      "command_lin_vel": 1.0,
+      "command_stand": 1.0,
+      "command_waist_dofs": 1.0,
+      "dof_pos": 1.0,
+      "dof_vel": 0.05,
+      "projected_gravity": 1.0,
+      "ref_upper_dof_pos": 1.0
+    },
+    "source": {
+      "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+      "lines": "278-292",
+      "path": "sim2real/config/g1/g1_29dof_falcon.yaml"
+    }
+  },
+  "observation": {
+    "dims": {
+      "actions": 29,
+      "base_ang_vel": 3,
+      "command_ang_vel": 1,
+      "command_base_height": 1,
+      "command_lin_vel": 2,
+      "command_stand": 1,
+      "command_waist_dofs": 3,
+      "dof_pos": 29,
+      "dof_vel": 29,
+      "projected_gravity": 3,
+      "ref_upper_dof_pos": 14
+    },
+    "order": [
+      "actions",
+      "base_ang_vel",
+      "command_ang_vel",
+      "command_base_height",
+      "command_lin_vel",
+      "command_stand",
+      "command_waist_dofs",
+      "dof_pos",
+      "dof_vel",
+      "projected_gravity",
+      "ref_upper_dof_pos"
+    ],
+    "single_frame_dim": 115,
+    "source": [
+      {
+        "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+        "lines": "245-292",
+        "path": "sim2real/config/g1/g1_29dof_falcon.yaml"
+      },
+      {
+        "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+        "lines": "234-302",
+        "path": "sim2real/rl_policy/base_policy.py"
+      }
+    ]
+  },
+  "observation_history": {
+    "flatten_order": "oldest_to_newest; feature order within frame is sorted key order",
+    "length": 5,
+    "source": [
+      {
+        "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+        "lines": "260-262",
+        "path": "sim2real/config/g1/g1_29dof_falcon.yaml"
+      },
+      {
+        "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+        "lines": "290-302",
+        "path": "sim2real/rl_policy/base_policy.py"
+      }
+    ]
+  },
+  "official_commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+  "pd": {
+    "kd": [
+      2.5,
+      2.5,
+      2.5,
+      5.0,
+      0.20000000298023224,
+      0.10000000149011612,
+      2.5,
+      2.5,
+      2.5,
+      5.0,
+      0.20000000298023224,
+      0.10000000149011612,
+      5.0,
+      5.0,
+      5.0,
+      2.0,
+      1.0,
+      0.4000000059604645,
+      1.0,
+      0.20000000298023224,
+      0.20000000298023224,
+      0.20000000298023224,
+      2.0,
+      1.0,
+      0.4000000059604645,
+      1.0,
+      0.20000000298023224,
+      0.20000000298023224,
+      0.20000000298023224
+    ],
+    "kp": [
+      100.0,
+      100.0,
+      100.0,
+      200.0,
+      20.0,
+      20.0,
+      100.0,
+      100.0,
+      100.0,
+      200.0,
+      20.0,
+      20.0,
+      300.0,
+      300.0,
+      300.0,
+      90.0,
+      60.0,
+      20.0,
+      60.0,
+      4.0,
+      4.0,
+      4.0,
+      90.0,
+      60.0,
+      20.0,
+      60.0,
+      4.0,
+      4.0,
+      4.0
+    ],
+    "source": [
+      {
+        "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+        "lines": "181-218",
+        "path": "humanoidverse/config/robot/g1/g1_29dof_waist_fakehand.yaml"
+      },
+      {
+        "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+        "lines": "60-90",
+        "path": "sim2real/config/g1/g1_29dof_falcon.yaml"
+      }
+    ]
+  },
+  "policy_architecture": {
+    "input_dim": 575,
+    "onnx_ops": [
+      "Concat",
+      "Elu",
+      "Gemm"
+    ],
+    "output_dim": 29,
+    "source": {
+      "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+      "lines": "binary graph",
+      "path": "sim2real/models/falcon/g1_29dof.onnx"
+    },
+    "source_code": {
+      "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+      "lines": "38-67",
+      "path": "humanoidverse/config/algo/ppo_decoupled_wbc_ma.yaml"
+    }
+  },
+  "reset": {
+    "root_pos": [
+      0.0,
+      0.0,
+      0.8
+    ],
+    "root_quat_xyzw": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "source": {
+      "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+      "lines": "139-173",
+      "path": "humanoidverse/config/robot/g1/g1_29dof_waist_fakehand.yaml"
+    }
+  },
+  "rewards": {
+    "source": {
+      "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+      "lines": "6-166",
+      "path": "humanoidverse/config/rewards/dec_loco/reward_dec_loco_stand_height_ma_diff_force.yaml"
+    }
+  },
+  "robot_config": {
+    "source": {
+      "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+      "lines": "6-13,242-273",
+      "path": "humanoidverse/config/robot/g1/g1_29dof_waist_fakehand.yaml"
+    },
+    "value": "g1_29dof_fakehand"
+  },
+  "termination": {
+    "contacts": [
+      "pelvis",
+      "shoulder",
+      "hip"
+    ],
+    "min_height": 0.3,
+    "projected_gravity_xy": 0.8,
+    "source": [
+      {
+        "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+        "lines": "137-138",
+        "path": "humanoidverse/config/robot/g1/g1_29dof_waist_fakehand.yaml"
+      },
+      {
+        "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+        "lines": "70-91",
+        "path": "humanoidverse/config/env/decoupled_locomotion_stand_height_waist_wbc_ma_diff_force.yaml"
+      }
+    ]
+  },
+  "timing": {
+    "control_dt": 0.02,
+    "decimation": 4,
+    "physics_dt": 0.005,
+    "source": [
+      {
+        "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+        "lines": "14-17",
+        "path": "humanoidverse/config/simulator/isaacgym.yaml"
+      },
+      {
+        "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+        "lines": "21-22",
+        "path": "sim2real/config/g1/g1_29dof_falcon.yaml"
+      }
+    ]
+  },
+  "upstream_ambiguity": {
+    "detail": "sim2real dof_names lines 92-115 place hip yaw before pitch, while training action order and default-angle vectors place pitch before yaw; CP1 adopts the training action/default-pose order and maps by name",
+    "source": [
+      {
+        "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+        "lines": "92-115,153-183",
+        "path": "sim2real/config/g1/g1_29dof_falcon.yaml"
+      },
+      {
+        "commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+        "lines": "33-50,139-173",
+        "path": "humanoidverse/config/robot/g1/g1_29dof_waist_fakehand.yaml"
+      }
+    ],
+    "status": "RECORDED_NOT_SILENT"
+  }
+}

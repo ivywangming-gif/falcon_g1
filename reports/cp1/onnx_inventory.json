@@ -1,0 +1,162 @@
+{
+  "models": [
+    {
+      "dynamic_axes": {
+        "inputs": [
+          []
+        ],
+        "outputs": [
+          []
+        ]
+      },
+      "file_size": 904290,
+      "initializer_count": 8,
+      "input_names": [
+        "actor_obs"
+      ],
+      "input_shapes": [
+        [
+          1,
+          102
+        ]
+      ],
+      "input_types": [
+        "FLOAT"
+      ],
+      "metadata": {},
+      "node_count": 7,
+      "opset": [
+        {
+          "domain": "",
+          "version": 13
+        }
+      ],
+      "output_names": [
+        "action"
+      ],
+      "output_shapes": [
+        [
+          1,
+          15
+        ]
+      ],
+      "output_types": [
+        "FLOAT"
+      ],
+      "path": "/root/autodl-tmp/robotics/falcon_sandbox/FALCON/sim2real/models/dec_loco/g1_29dof.onnx",
+      "producer": {
+        "name": "pytorch",
+        "version": "2.4.1"
+      },
+      "sha256": "ffea7587b53aecc6ea8a3fc48dcb575cc73f347be7e918cc4adf2b2501164a0e",
+      "training_info_count": 0,
+      "training_info_present": false
+    },
+    {
+      "dynamic_axes": {
+        "inputs": [
+          []
+        ],
+        "outputs": [
+          []
+        ]
+      },
+      "file_size": 3757314,
+      "initializer_count": 16,
+      "input_names": [
+        "actor_obs"
+      ],
+      "input_shapes": [
+        [
+          1,
+          575
+        ]
+      ],
+      "input_types": [
+        "FLOAT"
+      ],
+      "metadata": {},
+      "node_count": 15,
+      "opset": [
+        {
+          "domain": "",
+          "version": 13
+        }
+      ],
+      "output_names": [
+        "action"
+      ],
+      "output_shapes": [
+        [
+          1,
+          29
+        ]
+      ],
+      "output_types": [
+        "FLOAT"
+      ],
+      "path": "/root/autodl-tmp/robotics/falcon_sandbox/FALCON/sim2real/models/falcon/g1_29dof.onnx",
+      "producer": {
+        "name": "pytorch",
+        "version": "2.4.1"
+      },
+      "sha256": "8ac8f51875b878a79d9b5782e702b66572697e204ed262e2002b55631f3105d0",
+      "training_info_count": 0,
+      "training_info_present": false
+    },
+    {
+      "dynamic_axes": {
+        "inputs": [
+          []
+        ],
+        "outputs": [
+          []
+        ]
+      },
+      "file_size": 4343528,
+      "initializer_count": 20,
+      "input_names": [
+        "actor_obs"
+      ],
+      "input_shapes": [
+        [
+          1,
+          585
+        ]
+      ],
+      "input_types": [
+        "FLOAT"
+      ],
+      "metadata": {},
+      "node_count": 19,
+      "opset": [
+        {
+          "domain": "",
+          "version": 13
+        }
+      ],
+      "output_names": [
+        "action"
+      ],
+      "output_shapes": [
+        [
+          1,
+          29
+        ]
+      ],
+      "output_types": [
+        "FLOAT"
+      ],
+      "path": "/root/autodl-tmp/robotics/falcon_sandbox/FALCON/sim2real/models/falcon/t1_29dof.onnx",
+      "producer": {
+        "name": "pytorch",
+        "version": "2.4.1"
+      },
+      "sha256": "164c0c483cce4134afc1aaced28ada8d1c1818d1fead9d3800dbb0cdc238ee21",
+      "training_info_count": 0,
+      "training_info_present": false
+    }
+  ],
+  "official_commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+  "resumable_ppo_checkpoint": "NONE"
+}

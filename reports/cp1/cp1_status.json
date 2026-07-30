@@ -1,0 +1,14 @@
+{
+  "agile_checkpoint_loaded": false,
+  "agile_env_used": false,
+  "agile_imported": false,
+  "cp0_runtime_status": "PASS",
+  "cp0_shutdown_regression": "PASS",
+  "cp1_grounded_wbc_status": "PASS",
+  "cp2_contact_candidate_status": "PASS_STATIC_ONLY_NOT_PHYSICALLY_QUALIFIED",
+  "cp3_physics_screen_status": "NOT_RUN",
+  "current_phase": "CP1",
+  "falcon_training_started": false,
+  "official_falcon_modified": false,
+  "ppo_status": "NOT_AUTHORIZED"
+}

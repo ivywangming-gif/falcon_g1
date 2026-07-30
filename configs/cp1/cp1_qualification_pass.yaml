@@ -1,0 +1,26 @@
+schema_version: 2
+phase: CP1_STANDALONE_GROUNDED_FALCON_PORT
+status: PASS
+training_enabled: false
+simulator: isaaclab
+num_envs: 1
+free_base: true
+fixed_root: false
+elastic_band: false
+upward_support_force: false
+box_present: false
+official_onnx_read_only: true
+resumable_ppo_checkpoint: NONE
+qualification_rule: alternating_gait_support_v2
+passed_cases:
+  - stand_10s
+  - stand_30s
+  - stand_60s
+  - forward_010
+  - backward_010
+  - left_010
+  - right_010
+  - yaw_left_010
+  - yaw_right_010
+cp3_status: NOT_RUN
+ppo_status: NOT_AUTHORIZED
