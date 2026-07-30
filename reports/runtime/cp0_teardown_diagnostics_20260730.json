@@ -1,0 +1,36 @@
+{
+  "audit_date_utc": "2026-07-30",
+  "cp0_result": "FAIL",
+  "failure_class": "ISAAC_SIM_TEARDOWN_DID_NOT_RETURN",
+  "runtime_evidence_before_teardown": {
+    "steps_completed": 1000,
+    "state_tensors_finite": true,
+    "ppo_started": false
+  },
+  "bounded_attempts": [
+    {
+      "run_root": "runs/falcon_cp_cp0_20260730_073241",
+      "exit_code": 124,
+      "change_under_test": "clear callbacks and simulation context after SimulationContext.stop",
+      "last_observation": "1000 steps and finite tensors completed; SimulationApp.close was not reached"
+    },
+    {
+      "run_root": "runs/falcon_cp_cp0_20260730_073647",
+      "exit_code": 124,
+      "change_under_test": "bypass SimulationContext.stop and invoke SimulationApp.close directly",
+      "last_observation": "replicator shutdown and time-sample cleanup completed; stage close did not return"
+    },
+    {
+      "run_root": "runs/falcon_cp_cp0_20260730_074032",
+      "exit_code": 124,
+      "change_under_test": "invalidate live articulation and contact-sensor views before direct close",
+      "last_observation": "replicator shutdown and time-sample cleanup completed; stage close did not return"
+    }
+  ],
+  "conclusion": "CP0 remains FAIL. CP1 runtime qualification, CP3 physical screening, and PPO are not authorized.",
+  "agile_imported": false,
+  "agile_env_used": false,
+  "agile_checkpoint_loaded": false,
+  "official_falcon_modified": false,
+  "falcon_training_started": false
+}

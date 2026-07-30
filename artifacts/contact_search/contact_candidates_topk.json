@@ -5,6 +5,331 @@
     "front": [
       {
         "achieved_left_hand_point_in_box_frame": [
+          0.6806792467175466,
+          -0.17968160483451323,
+          0.5017592515968988
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          0.680678809981797,
+          0.1796812540068137,
+          0.5017617809804086
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "front_s0.18_h0.90_d0.42_a1",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.09999999999999998,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 6,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          0.6,
+          -0.18,
+          0.4
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          -0.19695448865140552,
+          0.04594133822172435,
+          0.9792618679527063,
+          -0.012021514723070358
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.6305908650254022,
+          0.6305892734663576
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.38475429042381043,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0019147465165104802,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          0.6,
+          0.18,
+          0.4
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.19695426390331472,
+          -0.04594366093026071,
+          0.9792616319331962,
+          0.01203553796729433
+        ],
+        "robot_base_offset_in_box_frame": [
+          1.02,
+          0.0,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 3.141592653589793,
+        "static_score": 0.12496388843174841,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "front",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          0.6801375096018022,
+          -0.17998664466199726,
+          0.42010789249820346
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          0.6801375883280475,
+          0.17998662996982348,
+          0.42010794347579405
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "front_s0.18_h0.82_d0.36_a1",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.12,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 7,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          0.6,
+          -0.18,
+          0.31999999999999995
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          -0.3409101249356601,
+          0.0029027021837421795,
+          0.9395437633740922,
+          -0.03208391717407884
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.5796409523782726,
+          0.5796267025728175
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.3723562387424868,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0001753884251835324,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          0.6,
+          0.18,
+          0.31999999999999995
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.3409147235112561,
+          -0.0029026176429561745,
+          0.9395415899525316,
+          0.03209870485754377
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.96,
+          0.0,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 3.141592653589793,
+        "static_score": 0.12570414067668617,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "front",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          0.680344580963198,
+          -0.17994918518999237,
+          0.36038066222529475
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          0.6803447229769122,
+          0.17994914345632565,
+          0.3603808027508498
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "front_s0.18_h0.76_d0.30_a1",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.12,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 8,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          0.6,
+          -0.18,
+          0.26
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          -0.4859621549480805,
+          -0.012740957684524457,
+          0.8731224990201916,
+          -0.0365452275986123
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.4136189762995812,
+          0.41360219579381186
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.35648953388803434,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.000516169598001026,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          0.6,
+          0.18,
+          0.26
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.48596591352979174,
+          0.012741246512378889,
+          0.8731197937643587,
+          0.03655977654950245
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.8999999999999999,
+          0.0,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 3.141592653589793,
+        "static_score": 0.12921826282039417,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "front",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          0.6801185837267477,
+          -0.17998854076797877,
+          0.420069646902654
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          0.6801186340313472,
+          0.17998853157095498,
+          0.4200696711009769
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "front_s0.18_h0.82_d0.30_a1",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.12,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 4,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          0.6,
+          -0.18,
+          0.31999999999999995
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          -0.2175078230629846,
+          0.01289698222617224,
+          0.975040744734503,
+          -0.04265631094509915
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          1.0122415092033847,
+          1.0122331734172096
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.42031064675681995,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.00013805658466661835,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          0.6,
+          0.18,
+          0.31999999999999995
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.21751113062774424,
+          -0.012903944156489145,
+          0.9750392988899232,
+          0.04267038666913449
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.8999999999999999,
+          0.0,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 3.141592653589793,
+        "static_score": 0.16144376281536207,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "front",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          0.6803408953563235,
+          -0.17977911432576452,
+          0.5007034141660495
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          0.6803409066580924,
+          0.17977907453728995,
+          0.5007034665995443
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "front_s0.18_h0.90_d0.36_a1",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.09999999999999998,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 3,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          0.6,
+          -0.18,
+          0.4
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          -0.036326738618998954,
+          0.03067171817804904,
+          0.9983116945434766,
+          -0.03336726394305657
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          1.1188544961847962,
+          1.1188462657786422
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.390832079587674,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0008123365474234974,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          0.6,
+          0.18,
+          0.4
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.03632974487209072,
+          -0.03067828128580486,
+          0.9983108893028925,
+          0.03338204598501764
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.96,
+          0.0,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 3.141592653589793,
+        "static_score": 0.1893363641462325,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "front",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
           0.6800197945644295,
           -0.1800065501064772,
           0.5000143660739405
@@ -72,6 +397,1111 @@
     "left": [
       {
         "achieved_left_hand_point_in_box_frame": [
+          0.27953621784331145,
+          0.3808952024538253,
+          0.4205051346694231
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          -0.27953589108896176,
+          0.38089574373313173,
+          0.4205053947291101
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "left_s0.28_h0.82_d0.30_a0",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.18000000000000005,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 5,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          0.28,
+          0.3,
+          0.31999999999999995
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          0.2644440665519228,
+          0.1612990634686477,
+          -0.527395847791481,
+          0.791141938922419
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.7867981860360729,
+          0.7867632073181494
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.4102320973045233,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0011283517842243214,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          -0.28,
+          0.3,
+          0.31999999999999995
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          0.1613061107582622,
+          0.26445501510439196,
+          -0.7911477069937732,
+          0.527379549600355
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          0.6,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": -1.5707963267948966,
+        "static_score": 0.1193584389787419,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "left",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          0.1796816048345133,
+          0.3806792467175466,
+          0.5017592515968987
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          -0.17968125400681376,
+          0.3806788099817972,
+          0.5017617809804081
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "left_s0.18_h0.90_d0.42_a0",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.09999999999999998,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 6,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          0.18,
+          0.3,
+          0.4
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          0.1717532863039038,
+          0.10678242271717187,
+          -0.6839422128059471,
+          0.7009432019675811
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.6305908650254017,
+          0.6305892734663558
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.38475429042381054,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0019147465165101213,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          -0.18,
+          0.3,
+          0.4
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          0.10678062139331604,
+          0.17175476978596155,
+          -0.7009529510076702,
+          0.6839321299838658
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          0.72,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": -1.5707963267948966,
+        "static_score": 0.12496388843174801,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "left",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          0.17998664466199726,
+          0.38013750960180215,
+          0.42010789249820346
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          -0.17998662996982348,
+          0.38013758832804734,
+          0.42010794347579383
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "left_s0.18_h0.82_d0.36_a0",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.18000000000000005,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 7,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          0.18,
+          0.3,
+          0.31999999999999995
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          0.24311238151504724,
+          0.2390073407192692,
+          -0.6416710109025309,
+          0.6870445217041683
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.5796409523782726,
+          0.5796267025728143
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.3723562387424871,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.00017538842518322157,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          -0.18,
+          0.3,
+          0.31999999999999995
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          0.2390106521826201,
+          0.2431155734196724,
+          -0.6870534413343002,
+          0.641659017590151
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          0.6599999999999999,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": -1.5707963267948966,
+        "static_score": 0.1257041406766858,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "left",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          0.23986411267860303,
+          0.3803780786578572,
+          0.5001412976151507
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          -0.23986394056118426,
+          0.38037852178839426,
+          0.5001414323941357
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "left_s0.24_h0.90_d0.42_a0",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.09999999999999998,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 8,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          0.24,
+          0.3,
+          0.4
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          0.21312140044381417,
+          0.16086713444574177,
+          -0.6074779615432989,
+          0.748111996941154
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.4281131620845735,
+          0.42807010700946924
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.36345033504716256,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0004263731198035183,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          -0.24,
+          0.3,
+          0.4
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          0.16088156535361997,
+          0.2131236939976003,
+          -0.7481194000086148,
+          0.6074642181371149
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          0.72,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": -1.5707963267948966,
+        "static_score": 0.127736306110371,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "left",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          0.1799491851899924,
+          0.3803445809631979,
+          0.36038066222529475
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          -0.17994914345632562,
+          0.38034472297691235,
+          0.3603808027508498
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "left_s0.18_h0.76_d0.30_a0",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.24,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 8,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          0.18,
+          0.3,
+          0.26
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          0.334617917586277,
+          0.3526363527413534,
+          -0.5915494616087377,
+          0.6432322181187069
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.41361897629957944,
+          0.41360219579381186
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.35648953388803434,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0005161695980011029,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          -0.18,
+          0.3,
+          0.26
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          0.35263921469210363,
+          0.33462037107275855,
+          -0.6432405928757958,
+          0.5915372610421598
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          0.6,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": -1.5707963267948966,
+        "static_score": 0.12921826282039425,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "left",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          0.2397416641353572,
+          0.3806432580642068,
+          0.42043474014303606
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          -0.2397414210807114,
+          0.3806437874889,
+          0.4204350613020943
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "left_s0.24_h0.82_d0.36_a0",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.18000000000000005,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 8,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          0.24,
+          0.3,
+          0.31999999999999995
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          0.2805854129604856,
+          0.27443128659634564,
+          -0.5622562830700198,
+          0.7278922771393812
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.3921454463387768,
+          0.3921026699937218
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.3554074416464913,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0008189039778537217,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          -0.24,
+          0.3,
+          0.31999999999999995
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          0.2744419697617028,
+          0.28058882348115965,
+          -0.7278982406830977,
+          0.5622416460750895
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          0.6599999999999999,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": -1.5707963267948966,
+        "static_score": 0.12973741564855548,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "left",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          0.27997453160256086,
+          0.3800426439815423,
+          0.5000251914625999
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          -0.27997446722829783,
+          0.3800427485285911,
+          0.5000252262962117
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "left_s0.28_h0.90_d0.36_a0",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.09999999999999998,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 5,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          0.28,
+          0.3,
+          0.4
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          0.14560865852776037,
+          0.018717903517088918,
+          -0.5496623463017527,
+          0.8223862010684051
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.89338041817481,
+          0.8933444634754397
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.43963557868960007,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 5.581868099535593e-05,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          -0.28,
+          0.3,
+          0.4
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          0.0187267083291493,
+          0.14562010552281904,
+          -0.8223943331203404,
+          0.5496468467245388
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          0.6599999999999999,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": -1.5707963267948966,
+        "static_score": 0.13372155842810032,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "left",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          0.23951002222452097,
+          0.38133622817526913,
+          0.4205668493574515
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          -0.23950979522506155,
+          0.3813366576883642,
+          0.42056701507517
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "left_s0.24_h0.82_d0.30_a0",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.18000000000000005,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 4,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          0.24,
+          0.3,
+          0.31999999999999995
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          0.2215094777738037,
+          0.13631480958380812,
+          -0.5898857188727442,
+          0.7644518706985369
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.9216810132722881,
+          0.9216596656719123
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.4356807138536517,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0015324687901245402,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          -0.24,
+          0.3,
+          0.31999999999999995
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          0.1363163691669751,
+          0.2215186790177973,
+          -0.7644596203050104,
+          0.5898718600395024
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          0.6,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": -1.5707963267948966,
+        "static_score": 0.14165076123381426,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "left",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          0.23966305916403963,
+          0.3806160844031232,
+          0.360713989069531
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          -0.23966268027307489,
+          0.38061670757027766,
+          0.3607146508189357
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "left_s0.24_h0.76_d0.30_a0",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.24,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 10,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          0.24,
+          0.3,
+          0.26
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          0.3528297669177711,
+          0.37834185332124803,
+          -0.5157533089292718,
+          0.6829107715731987
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.15426240576457362,
+          0.15421031924252615
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.3278433346957623,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.001002416389738372,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          -0.24,
+          0.3,
+          0.26
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          0.3783476121827026,
+          0.3528263590799621,
+          -0.6829189791623616,
+          0.515740547750381
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          0.6,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": -1.5707963267948966,
+        "static_score": 0.15694635450987593,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "left",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          0.17998854076797877,
+          0.38011858372674767,
+          0.420069646902654
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          -0.17998853157095504,
+          0.3801186340313473,
+          0.42006967110097704
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "left_s0.18_h0.82_d0.30_a0",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.18000000000000005,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 4,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          0.18,
+          0.3,
+          0.31999999999999995
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          0.16292080023792885,
+          0.14468171305999158,
+          -0.659295355805267,
+          0.7196204892646301
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          1.0122415092033852,
+          1.0122331734172105
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.42031064675682,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.00013805658466671747,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          -0.18,
+          0.3,
+          0.31999999999999995
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          0.14467912903332486,
+          0.16292806186753694,
+          -0.7196294199380388,
+          0.6592843803988446
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          0.6,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": -1.5707963267948966,
+        "static_score": 0.16144376281536227,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "left",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          0.23994220565143484,
+          0.38011649002772346,
+          0.5000343495209161
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          -0.239942140921194,
+          0.3801166209303453,
+          0.5000343746705487
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "left_s0.24_h0.90_d0.36_a0",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.09999999999999998,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 4,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          0.24,
+          0.3,
+          0.4
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          0.10539829662214371,
+          -0.001691916445566076,
+          -0.6096940575983295,
+          0.7855962656588794
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          1.015977149523668,
+          1.0159543588096058
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.4202433750736925,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.00013464669461302485,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          -0.24,
+          0.3,
+          0.4
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.0016890074051455085,
+          0.10540764421983344,
+          -0.78560559721718,
+          0.6096804256453116
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          0.6599999999999999,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": -1.5707963267948966,
+        "static_score": 0.16219948983320193,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "left",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          0.27982133904532536,
+          0.38032895087303226,
+          0.5001674435038941
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          -0.279820819289782,
+          0.38032977897077064,
+          0.5001677990660405
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "left_s0.28_h0.90_d0.42_a0",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.09999999999999998,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 11,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          0.28,
+          0.3,
+          0.4
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          0.21895331256983458,
+          0.21583468108591056,
+          -0.5561958415028636,
+          0.7720887405280309
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.0983623167852401,
+          0.09827514407142024
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.30623022622091756,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0004111160700347767,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          -0.28,
+          0.3,
+          0.4
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          0.21583826260947625,
+          0.21894123809387023,
+          -0.7720969134802672,
+          0.5561878593154391
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          0.72,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": -1.5707963267948966,
+        "static_score": 0.17186120230018526,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "left",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          0.27950302967100543,
+          0.38074034553409075,
+          0.4206080294224085
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          -0.2795021912942467,
+          0.38074149140441116,
+          0.4206088935912342
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "left_s0.28_h0.82_d0.36_a0",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.18000000000000005,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 11,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          0.28,
+          0.3,
+          0.31999999999999995
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          0.26619579119108855,
+          0.3162193755329697,
+          -0.5111726498603724,
+          0.7535566530290966
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.057116880500643674,
+          0.0570368897088791
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.2907769353559929,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0010809136948829988,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          -0.28,
+          0.3,
+          0.31999999999999995
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          0.3162246677491786,
+          0.2661821269935306,
+          -0.7535655609927786,
+          0.5111633594671668
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          0.6599999999999999,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": -1.5707963267948966,
+        "static_score": 0.18387002716273215,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "left",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          0.1797791143257646,
+          0.38034089535632365,
+          0.5007034141660495
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          -0.17977907453728995,
+          0.38034090665809256,
+          0.5007034665995443
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "left_s0.18_h0.90_d0.36_a0",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.09999999999999998,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 3,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          0.18,
+          0.3,
+          0.4
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          0.04737506313022637,
+          0.003998703301544097,
+          -0.6823187503457487,
+          0.7295071875533023
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          1.1188544961847975,
+          1.1188462657786435
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.3908320795876737,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0008123365474235207,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          -0.18,
+          0.3,
+          0.4
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          0.0039961882254912415,
+          0.047381829690173294,
+          -0.7295170706443351,
+          0.6823077284725609
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          0.6599999999999999,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": -1.5707963267948966,
+        "static_score": 0.1893363641462329,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "left",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          0.3005829375014091,
+          0.3822383991226054,
+          0.37729291707159096
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          -0.3005992830263499,
+          0.3822385311915098,
+          0.3773059417825644
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "left_s0.28_h0.76_d0.30_a0",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.24,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 160,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          0.28,
+          0.3,
+          0.26
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          -0.09773850164509987,
+          0.5192217811279963,
+          -0.2938399528897085,
+          0.7965638765247993
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.15408151437620354,
+          0.15407180524372466
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.20830150241914933,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.015650757130178494,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          -0.28,
+          0.3,
+          0.26
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.519183337998526,
+          0.09775983643019188,
+          0.7965902873700716,
+          -0.29382918506083927
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          0.6,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": -1.5707963267948966,
+        "static_score": 0.19553500224435583,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "left",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          0.28005607841698515,
+          0.3804744345344063,
+          0.5006790785078303
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          -0.2800560604278639,
+          0.38047476608540914,
+          0.5006797074679223
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "left_s0.28_h0.90_d0.30_a0",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.09999999999999998,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 4,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          0.28,
+          0.3,
+          0.4
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          0.12223371718285735,
+          -0.06566567361346574,
+          -0.5506292231020494,
+          0.8231369244290919
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          1.2460972046830012,
+          1.2460705138721067
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.3552524238605295,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0008309920874330877,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          -0.28,
+          0.3,
+          0.4
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.06566503171953028,
+          0.12224354407098968,
+          -0.8231463057889663,
+          0.5506130935677197
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          0.6,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": -1.5707963267948966,
+        "static_score": 0.221917646490838,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "left",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          0.23998907144830767,
+          0.38001487415068325,
+          0.5000087950741984
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          -0.23998906000410503,
+          0.38001488657484006,
+          0.5000088016545229
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "left_s0.24_h0.90_d0.30_a0",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.09999999999999998,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 4,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          0.24,
+          0.3,
+          0.4
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          0.07287212317466585,
+          -0.06181141454681608,
+          -0.6056811977577862,
+          0.7899489156764704
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          1.346206613791011,
+          1.3461855461349224
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.3265108828536819,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 2.0463693288129512e-05,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          -0.24,
+          0.3,
+          0.4
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.06181238597437767,
+          0.07288245431414772,
+          -0.7899585199865518,
+          0.6056673290627104
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          0.6,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": -1.5707963267948966,
+        "static_score": 0.24687787043514509,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "left",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
           0.18000655010647726,
           0.38001979456442964,
           0.5000143660739405
@@ -137,6 +1567,351 @@
       }
     ],
     "rear": [
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          -0.6806792467175466,
+          0.1796816048345132,
+          0.5017592515968988
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          -0.680678809981797,
+          -0.17968125400681376,
+          0.5017617809804085
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "rear_s0.18_h0.90_d0.42_a0",
+        "desired_box_twist": [
+          0.1,
+          0.0,
+          0.0
+        ],
+        "edge_margin_m": 0.09999999999999998,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 6,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          -0.6,
+          0.18,
+          0.4
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          0.045941338221724276,
+          0.19695448865140552,
+          0.012021514723070307,
+          0.9792618679527063
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.6305908650254022,
+          0.6305892734663567
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.3847542904238104,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0019147465165103687,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          -0.6,
+          -0.18,
+          0.4
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.04594366093026062,
+          0.19695426390331483,
+          -0.012035537967294306,
+          0.9792616319331962
+        ],
+        "robot_base_offset_in_box_frame": [
+          -1.02,
+          0.0,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 0.0,
+        "static_score": 0.1249638884317483,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "rear",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          -0.6801375096018022,
+          0.1799866446619973,
+          0.42010789249820346
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          -0.6801375883280475,
+          -0.17998662996982348,
+          0.42010794347579405
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "rear_s0.18_h0.82_d0.36_a0",
+        "desired_box_twist": [
+          0.1,
+          0.0,
+          0.0
+        ],
+        "edge_margin_m": 0.12,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 7,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          -0.6,
+          0.18,
+          0.31999999999999995
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          0.002902702183742127,
+          0.34091012493566014,
+          0.032083917174078894,
+          0.9395437633740921
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.5796409523782726,
+          0.5796267025728175
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.372356238742487,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0001753884251835324,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          -0.6,
+          -0.18,
+          0.31999999999999995
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.002902617642956239,
+          0.3409147235112561,
+          -0.032098704857543806,
+          0.9395415899525316
+        ],
+        "robot_base_offset_in_box_frame": [
+          -0.96,
+          0.0,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 0.0,
+        "static_score": 0.12570414067668612,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "rear",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          -0.6803445809631978,
+          0.1799491851899924,
+          0.3603806622252945
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          -0.6803447229769122,
+          -0.1799491434563256,
+          0.3603808027508498
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "rear_s0.18_h0.76_d0.30_a0",
+        "desired_box_twist": [
+          0.1,
+          0.0,
+          0.0
+        ],
+        "edge_margin_m": 0.12,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 8,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          -0.6,
+          0.18,
+          0.26
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          -0.01274095768452439,
+          0.48596215494808087,
+          0.03654522759861223,
+          0.8731224990201915
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.4136189762995781,
+          0.41360219579381186
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.35648953388803434,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0005161695980010314,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          -0.6,
+          -0.18,
+          0.26
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          0.012741246512378946,
+          0.48596591352979224,
+          -0.036559776549502467,
+          0.8731197937643584
+        ],
+        "robot_base_offset_in_box_frame": [
+          -0.8999999999999999,
+          0.0,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 0.0,
+        "static_score": 0.12921826282039417,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "rear",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          -0.6801185837267477,
+          0.17998854076797877,
+          0.420069646902654
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          -0.6801186340313474,
+          -0.17998853157095496,
+          0.42006967110097704
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "rear_s0.18_h0.82_d0.30_a0",
+        "desired_box_twist": [
+          0.1,
+          0.0,
+          0.0
+        ],
+        "edge_margin_m": 0.12,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 4,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          -0.6,
+          0.18,
+          0.31999999999999995
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          0.012896982226172192,
+          0.21750782306298444,
+          0.04265631094509912,
+          0.975040744734503
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          1.0122415092033847,
+          1.01223317341721
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.42031064675681995,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0001380565846668675,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          -0.6,
+          -0.18,
+          0.31999999999999995
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.012903944156489123,
+          0.21751113062774416,
+          -0.04267038666913445,
+          0.9750392988899234
+        ],
+        "robot_base_offset_in_box_frame": [
+          -0.8999999999999999,
+          0.0,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 0.0,
+        "static_score": 0.16144376281536238,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "rear",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          -0.6803408953563235,
+          0.17977911432576454,
+          0.5007034141660495
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          -0.6803409066580924,
+          -0.17977907453728995,
+          0.5007034665995443
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "rear_s0.18_h0.90_d0.36_a0",
+        "desired_box_twist": [
+          0.1,
+          0.0,
+          0.0
+        ],
+        "edge_margin_m": 0.09999999999999998,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 3,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          -0.6,
+          0.18,
+          0.4
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          0.03067171817804902,
+          0.036326738618998995,
+          0.03336726394305658,
+          0.9983116945434767
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          1.1188544961847962,
+          1.1188462657786422
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.390832079587674,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0008123365474234974,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          -0.6,
+          -0.18,
+          0.4
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.030678281285804875,
+          0.03632974487209061,
+          -0.033382045985017594,
+          0.9983108893028925
+        ],
+        "robot_base_offset_in_box_frame": [
+          -0.96,
+          0.0,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 0.0,
+        "static_score": 0.1893363641462325,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "rear",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
       {
         "achieved_left_hand_point_in_box_frame": [
           -0.6800197945644295,
@@ -208,6 +1983,1111 @@
       }
     ],
     "right": [
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          -0.27953621784331145,
+          -0.3808952024538253,
+          0.4205051346694231
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          0.27953589108896176,
+          -0.3808957437331315,
+          0.4205053947291101
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "right_s0.28_h0.82_d0.30_a1",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.18000000000000005,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 5,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          -0.28,
+          -0.3,
+          0.31999999999999995
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          -0.16129906346864756,
+          0.26444406655192293,
+          0.791141938922419,
+          0.5273958477914809
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.7867981860360724,
+          0.7867632073181494
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.41023209730452315,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0011283517842241451,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          0.28,
+          -0.3,
+          0.31999999999999995
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.26445501510439173,
+          0.16130611075826223,
+          0.5273795496003549,
+          0.7911477069937737
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          -0.6,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 1.5707963267948966,
+        "static_score": 0.11935843897874171,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "right",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          -0.17968160483451334,
+          -0.380679246717547,
+          0.501759251596898
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          0.17968125400681378,
+          -0.3806788099817972,
+          0.5017617809804081
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "right_s0.18_h0.90_d0.42_a1",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.09999999999999998,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 6,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          -0.18,
+          -0.3,
+          0.4
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          -0.10678242271717221,
+          0.17175328630390432,
+          0.7009432019675811,
+          0.6839422128059469
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.6305908650254026,
+          0.6305892734663563
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.3847542904238106,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0019147465165101167,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          0.18,
+          -0.3,
+          0.4
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.17175476978596144,
+          0.10678062139331612,
+          0.683932129983866,
+          0.70095295100767
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          -0.72,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 1.5707963267948966,
+        "static_score": 0.12496388843174801,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "right",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          -0.1799866446619973,
+          -0.38013750960180204,
+          0.42010789249820346
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          0.17998662996982348,
+          -0.3801375883280475,
+          0.42010794347579383
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "right_s0.18_h0.82_d0.36_a1",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.18000000000000005,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 7,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          -0.18,
+          -0.3,
+          0.31999999999999995
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          -0.239007340719269,
+          0.24311238151504735,
+          0.6870445217041683,
+          0.641671010902531
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.5796409523782731,
+          0.5796267025728152
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.37235623874248713,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0001753884251833522,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          0.18,
+          -0.3,
+          0.31999999999999995
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.24311557341967213,
+          0.23901065218262013,
+          0.6416590175901509,
+          0.6870534413343004
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          -0.6599999999999999,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 1.5707963267948966,
+        "static_score": 0.12570414067668595,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "right",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          -0.23986411267860303,
+          -0.3803780786578571,
+          0.5001412976151507
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          0.23986394056118424,
+          -0.38037852178839415,
+          0.5001414323941357
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "right_s0.24_h0.90_d0.42_a1",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.09999999999999998,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 8,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          -0.24,
+          -0.3,
+          0.4
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          -0.1608671344457415,
+          0.21312140044381406,
+          0.748111996941154,
+          0.6074779615432989
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.42811316208457484,
+          0.4280701070094688
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.3634503350471627,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.00042637311980342864,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          0.24,
+          -0.3,
+          0.4
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.21312369399760037,
+          0.16088156535362044,
+          0.6074642181371152,
+          0.7481194000086145
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          -0.72,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 1.5707963267948966,
+        "static_score": 0.12773630611037087,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "right",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          -0.1799491851899924,
+          -0.3803445809631981,
+          0.36038066222529463
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          0.17994914345632557,
+          -0.38034472297691213,
+          0.3603808027508498
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "right_s0.18_h0.76_d0.30_a1",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.24,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 8,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          -0.18,
+          -0.3,
+          0.26
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          -0.3526363527413535,
+          0.3346179175862772,
+          0.6432322181187068,
+          0.5915494616087377
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.4136189762995808,
+          0.41360219579381274
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.35648953388803445,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.00051616959800096,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          0.18,
+          -0.3,
+          0.26
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.3346203710727585,
+          0.35263921469210374,
+          0.5915372610421598,
+          0.643240592875796
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          -0.6,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 1.5707963267948966,
+        "static_score": 0.12921826282039406,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "right",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          -0.23974166413535722,
+          -0.3806432580642067,
+          0.42043474014303595
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          0.23974142108071136,
+          -0.3806437874888998,
+          0.4204350613020944
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "right_s0.24_h0.82_d0.36_a1",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.18000000000000005,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 8,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          -0.24,
+          -0.3,
+          0.31999999999999995
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          -0.274431286596345,
+          0.2805854129604855,
+          0.7278922771393815,
+          0.56225628307002
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.39214544633877946,
+          0.39210266999372045
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.3554074416464914,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0008189039778536585,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          0.24,
+          -0.3,
+          0.31999999999999995
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.2805888234811592,
+          0.27444196976170304,
+          0.5622416460750894,
+          0.7278982406830979
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          -0.6599999999999999,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 1.5707963267948966,
+        "static_score": 0.1297374156485554,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "right",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          -0.27997453160256086,
+          -0.3800426439815424,
+          0.5000251914626
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          0.27997446722829783,
+          -0.38004274852859105,
+          0.5000252262962117
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "right_s0.28_h0.90_d0.36_a1",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.09999999999999998,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 5,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          -0.28,
+          -0.3,
+          0.4
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          -0.01871790351708861,
+          0.14560865852776037,
+          0.8223862010684051,
+          0.5496623463017528
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.89338041817481,
+          0.8933444634754397
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.4396355786896,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 5.5818680995313424e-05,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          0.28,
+          -0.3,
+          0.4
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.14562010552281882,
+          0.018726708329149345,
+          0.5496468467245389,
+          0.8223943331203404
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          -0.6599999999999999,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 1.5707963267948966,
+        "static_score": 0.1337215584281003,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "right",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          -0.23951002222452106,
+          -0.38133622817526913,
+          0.4205668493574517
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          0.23950979522506155,
+          -0.381336657688364,
+          0.42056701507517
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "right_s0.24_h0.82_d0.30_a1",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.18000000000000005,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 4,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          -0.24,
+          -0.3,
+          0.31999999999999995
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          -0.13631480958380798,
+          0.2215094777738038,
+          0.7644518706985367,
+          0.5898857188727442
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.9216810132722886,
+          0.9216596656719114
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.4356807138536517,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0015324687901243465,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          0.24,
+          -0.3,
+          0.31999999999999995
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.2215186790177972,
+          0.13631636916697515,
+          0.5898718600395025,
+          0.7644596203050104
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          -0.6,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 1.5707963267948966,
+        "static_score": 0.141650761233814,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "right",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          -0.2396630591640396,
+          -0.3806160844031231,
+          0.3607139890695309
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          0.2396626802730749,
+          -0.38061670757027766,
+          0.3607146508189355
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "right_s0.24_h0.76_d0.30_a1",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.24,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 10,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          -0.24,
+          -0.3,
+          0.26
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          -0.37834185332124826,
+          0.35282976691777135,
+          0.6829107715731986,
+          0.515753308929272
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.1542624057645705,
+          0.15421031924251904
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.32784333469576027,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0010024163897382045,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          0.24,
+          -0.3,
+          0.26
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.35282635907996246,
+          0.3783476121827032,
+          0.5157405477503809,
+          0.6829189791623611
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          -0.6,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 1.5707963267948966,
+        "static_score": 0.1569463545098772,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "right",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          -0.17998854076797877,
+          -0.3801185837267478,
+          0.420069646902654
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          0.17998853157095498,
+          -0.3801186340313473,
+          0.42006967110097704
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "right_s0.18_h0.82_d0.30_a1",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.18000000000000005,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 4,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          -0.18,
+          -0.3,
+          0.31999999999999995
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          -0.14468171305999133,
+          0.16292080023792882,
+          0.7196204892646301,
+          0.659295355805267
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          1.0122415092033852,
+          1.0122331734172105
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.42031064675681973,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.00013805658466672208,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          0.18,
+          -0.3,
+          0.31999999999999995
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.162928061867537,
+          0.14467912903332503,
+          0.6592843803988445,
+          0.7196294199380388
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          -0.6,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 1.5707963267948966,
+        "static_score": 0.16144376281536235,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "right",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          -0.23994220565143481,
+          -0.38011649002772346,
+          0.5000343495209162
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          0.23994214092119398,
+          -0.3801166209303452,
+          0.5000343746705489
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "right_s0.24_h0.90_d0.36_a1",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.09999999999999998,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 4,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          -0.24,
+          -0.3,
+          0.4
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          0.0016919164455664612,
+          0.10539829662214353,
+          0.7855962656588793,
+          0.6096940575983297
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          1.015977149523669,
+          1.0159543588096063
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.4202433750736923,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0001346466946129973,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          0.24,
+          -0.3,
+          0.4
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.1054076442198333,
+          -0.0016890074051456529,
+          0.6096804256453116,
+          0.7856055972171802
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          -0.6599999999999999,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 1.5707963267948966,
+        "static_score": 0.16219948983320207,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "right",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          -0.27982133904532547,
+          -0.38032895087303203,
+          0.5001674435038942
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          0.2798208192897819,
+          -0.38032977897077064,
+          0.5001677990660406
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "right_s0.28_h0.90_d0.42_a1",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.09999999999999998,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 11,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          -0.28,
+          -0.3,
+          0.4
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          -0.2158346810859103,
+          0.2189533125698344,
+          0.7720887405280311,
+          0.5561958415028635
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.09836231678523655,
+          0.09827514407142335
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.3062302262209186,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.00041111607003484625,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          0.28,
+          -0.3,
+          0.4
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.21894123809387053,
+          0.21583826260947528,
+          0.5561878593154392,
+          0.7720969134802673
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          -0.72,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 1.5707963267948966,
+        "static_score": 0.17186120230018515,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "right",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          -0.27950302967100543,
+          -0.3807403455340908,
+          0.4206080294224084
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          0.2795021912942465,
+          -0.38074149140441094,
+          0.4206088935912339
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "right_s0.28_h0.82_d0.36_a1",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.18000000000000005,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 11,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          -0.28,
+          -0.3,
+          0.31999999999999995
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          -0.3162193755329693,
+          0.26619579119108894,
+          0.7535566530290965,
+          0.5111726498603724
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.05711688050063746,
+          0.0570368897088831
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.29077693535599314,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0010809136948827355,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          0.28,
+          -0.3,
+          0.31999999999999995
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.26618212699353033,
+          0.316224667749179,
+          0.511163359467167,
+          0.7535655609927787
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          -0.6599999999999999,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 1.5707963267948966,
+        "static_score": 0.18387002716273204,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "right",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          -0.17977911432576452,
+          -0.38034089535632365,
+          0.5007034141660495
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          0.17977907453728995,
+          -0.38034090665809245,
+          0.5007034665995443
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "right_s0.18_h0.90_d0.36_a1",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.09999999999999998,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 3,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          -0.18,
+          -0.3,
+          0.4
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          -0.003998703301544033,
+          0.04737506313022642,
+          0.7295071875533023,
+          0.6823187503457488
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          1.1188544961847975,
+          1.1188462657786435
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.3908320795876737,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.000812336547423474,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          0.18,
+          -0.3,
+          0.4
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.047381829690173294,
+          0.003996188225491436,
+          0.6823077284725608,
+          0.7295170706443352
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          -0.6599999999999999,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 1.5707963267948966,
+        "static_score": 0.18933636414623287,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "right",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          -0.3005829375014165,
+          -0.3822383991226023,
+          0.3772929170715954
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          0.30059928302634886,
+          -0.3822385311915111,
+          0.3773059417825634
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "right_s0.28_h0.76_d0.30_a1",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.24,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 160,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          -0.28,
+          -0.3,
+          0.26
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          -0.5192217811279531,
+          -0.09773850164511434,
+          0.796563876524827,
+          0.29383995288970516
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          0.1540815143761769,
+          0.1540718052437362
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.20830150241914933,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.015650757130177582,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          0.28,
+          -0.3,
+          0.26
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          0.0977598364301829,
+          0.51918333799854,
+          0.29382918506084504,
+          0.7965902873700617
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          -0.6,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 1.5707963267948966,
+        "static_score": 0.1955350022443564,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "right",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          -0.2800560784169851,
+          -0.3804744345344062,
+          0.5006790785078302
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          0.280056060427864,
+          -0.38047476608540926,
+          0.5006797074679225
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "right_s0.28_h0.90_d0.30_a1",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.09999999999999998,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 4,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          -0.28,
+          -0.3,
+          0.4
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          0.06566567361346572,
+          0.1222337171828574,
+          0.8231369244290917,
+          0.5506292231020495
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          1.2460972046830008,
+          1.2460705138721084
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.35525242386052946,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 0.0008309920874332495,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          0.28,
+          -0.3,
+          0.4
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.12224354407098965,
+          -0.0656650317195303,
+          0.5506130935677194,
+          0.8231463057889665
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          -0.6,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 1.5707963267948966,
+        "static_score": 0.22191764649083828,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "right",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
+      {
+        "achieved_left_hand_point_in_box_frame": [
+          -0.23998907144830772,
+          -0.38001487415068347,
+          0.5000087950741984
+        ],
+        "achieved_right_hand_point_in_box_frame": [
+          0.239989060004105,
+          -0.38001488657484006,
+          0.5000088016545228
+        ],
+        "attach_profile_id": "attach_nominal_dev_v1",
+        "contact_configuration_id": "right_s0.24_h0.90_d0.30_a1",
+        "desired_box_twist": null,
+        "edge_margin_m": 0.09999999999999998,
+        "executor_id": "executor_box_twist_v1",
+        "hand_surface_offset_from_rubber_hand_frame_m": 0.08,
+        "ik_iterations": 4,
+        "illegal_non_hand_box_collisions": [],
+        "left_contact_point_in_box_frame": [
+          -0.24,
+          -0.3,
+          0.4
+        ],
+        "left_hand_orientation_in_box_frame_xyzw": [
+          0.06181141454681625,
+          0.07287212317466592,
+          0.7899489156764703,
+          0.6056811977577863
+        ],
+        "new_self_collisions": [],
+        "nominal_elbow_flexion_rad": [
+          1.3462066137910123,
+          1.3461855461349224
+        ],
+        "nominal_foot_frame_height_m": [
+          0.050797818084668614,
+          0.050797818084668614
+        ],
+        "normalized_joint_margin": 0.3265108828536818,
+        "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+        "position_residual_m": 2.0463693288096596e-05,
+        "rejection_reasons": [],
+        "right_contact_point_in_box_frame": [
+          0.24,
+          -0.3,
+          0.4
+        ],
+        "right_hand_orientation_in_box_frame_xyzw": [
+          -0.07288245431414783,
+          -0.06181238597437738,
+          0.6056673290627104,
+          0.7899585199865518
+        ],
+        "robot_base_offset_in_box_frame": [
+          0.0,
+          -0.6,
+          0.8
+        ],
+        "robot_base_yaw_relative_to_box": 1.5707963267948966,
+        "static_score": 0.2468778704351452,
+        "status": "STATICALLY_FEASIBLE",
+        "template": "right",
+        "wbc_id": "WBC_UNQUALIFIED_CP1_NOT_PASSED"
+      },
       {
         "achieved_left_hand_point_in_box_frame": [
           -0.18000655010647726,

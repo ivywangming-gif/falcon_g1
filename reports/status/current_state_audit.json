@@ -9,9 +9,9 @@
     "rule": "ONNX does not contain a recoverable PPO optimizer/training state."
   },
   "disk": {
-    "available_bytes": 83366375424,
+    "available_bytes": 83280691200,
     "total_bytes": 161061273600,
-    "used_bytes": 77694898176
+    "used_bytes": 77780582400
   },
   "environment": {
     "isaac_lab_checkout": "/root/autodl-tmp/robotics/falcon-g1-access-push/third_party/IsaacLab",
@@ -73,7 +73,7 @@
       "status": "NOT_RUN"
     }
   },
-  "generated_at_utc": "2026-07-30T06:31:45.247927+00:00",
+  "generated_at_utc": "2026-07-30T07:44:20.162182+00:00",
   "gpu": "NVIDIA GeForce RTX 5090, 580.76.05, 32607 MiB, 0 MiB, 0 %, 12.0",
   "host": {
     "hostname": "autodl-container-0a774196a2-8e059bec",
@@ -122,10 +122,10 @@
   },
   "personal_repository": {
     "branch": "research/contact-primitive-library-35-38",
-    "head": "07a22f659266353dc0fcb64401dfc7861fb5995e",
+    "head": "a570449aa8d9f4e12252344248b041d22d1fbbca",
     "origin": "ssh://git@ssh.github.com:443/ivywangming-gif/falcon_g1.git",
     "path": "/root/autodl-tmp/robotics/falcon-g1-access-push",
-    "status": "## research/contact-primitive-library-35-38\n?? reports/status/current_state_audit.json\n?? reports/status/current_state_audit.md\n?? scripts/generate_current_state_audit.py\n?? scripts/standalone_s2_2_g1_runtime_smoke.py\n?? scripts/standalone_s2_2_g1_runtime_smoke_v2.py\n?? scripts/standalone_s2_2_g1_runtime_smoke_v3.py"
+    "status": "## research/contact-primitive-library-35-38...origin/research/contact-primitive-library-35-38\n M artifacts/contact_search/contact_candidate_visualizations/manifest.json\n M artifacts/contact_search/contact_candidates_all.parquet\n M artifacts/contact_search/contact_candidates_rejected.parquet\n M artifacts/contact_search/contact_candidates_topk.json\n M artifacts/contact_search/cp2_static_status.json"
   },
   "processes": "",
   "safety": {

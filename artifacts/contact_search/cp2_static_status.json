@@ -1,11 +1,11 @@
 {
   "accepted_by_template": {
-    "front": 1,
-    "left": 1,
-    "rear": 1,
-    "right": 1
+    "front": 6,
+    "left": 18,
+    "rear": 6,
+    "right": 18
   },
-  "accepted_count": 4,
+  "accepted_count": 48,
   "baseline_adjacent_collision_pairs": [
     [
       "left_ankle_pitch_link_0",
@@ -58,15 +58,15 @@
   ],
   "best_contact_configuration": null,
   "box_config_sha256": "862f8ae14eb9d05c696edd1d2f26ca29b23f728e82db5a4155f2af0f535a1ff8",
-  "candidate_count": 8,
+  "candidate_count": 216,
   "collision_geometry_count": 39,
   "config_sha256": "7afaf46c146304e38d59c40810590d009ff9288c6b16722d5a84ed3b79842aca",
   "cp2_static_contact_candidate_smoke": "PASS",
-  "mode": "SMOKE",
+  "mode": "FULL_STATIC_GRID",
   "physical_rollouts": 0,
   "ppo_started": false,
   "qualification": "STATICALLY_FEASIBLE_NOT_PHYSICALLY_QUALIFIED",
-  "rejected_count": 4,
+  "rejected_count": 168,
   "source_falcon_commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
   "urdf": "/root/autodl-tmp/robotics/falcon_sandbox/FALCON/humanoidverse/data/robots/g1/g1_29dof_fakehand.urdf",
   "urdf_sha256": "3a561056e659cdcaaadeee6e650c2cff7ad0a11f27a43c3909c98ccb31e06a1a"

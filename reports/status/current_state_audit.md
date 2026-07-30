@@ -1,6 +1,6 @@
 # Current standalone FALCON state audit
 
-Generated: 2026-07-30T06:31:45.247927+00:00
+Generated: 2026-07-30T07:44:20.162182+00:00
 
 | Gate | Status | Evidence | Detail |
 |---|---|---|---|
