@@ -1,0 +1,34 @@
+schema_version: 1
+plan_id: standalone_falcon_grounded_wbc_minimal_v1
+status: BLOCKED_BY_CP0_NORMAL_CLOSE
+training_enabled: false
+simulator: isaaclab
+robot: unitree_g1_29dof_fakehand
+free_base: true
+fixed_root: false
+elastic_band: false
+box_present: false
+agile_dependency: false
+control:
+  physics_dt: 0.005
+  decimation: 4
+  control_dt: 0.02
+  action_scale: 0.25
+  lower_actions: 15
+  upper_actions: 14
+qualification_commands:
+  - {duration_s: 10, vx: 0.0, vy: 0.0, yaw_rate: 0.0}
+  - {duration_s: 30, vx: 0.0, vy: 0.0, yaw_rate: 0.0}
+  - {duration_s: 60, vx: 0.0, vy: 0.0, yaw_rate: 0.0}
+  - {duration_s: 10, vx: 0.1, vy: 0.0, yaw_rate: 0.0}
+  - {duration_s: 10, vx: -0.1, vy: 0.0, yaw_rate: 0.0}
+  - {duration_s: 10, vx: 0.0, vy: 0.1, yaw_rate: 0.0}
+  - {duration_s: 10, vx: 0.0, vy: -0.1, yaw_rate: 0.0}
+  - {duration_s: 10, vx: 0.0, vy: 0.0, yaw_rate: 0.1}
+  - {duration_s: 10, vx: 0.0, vy: 0.0, yaw_rate: -0.1}
+checkpoint_contract:
+  resumable_required: true
+  required_state: [actor, critic, optimizer, scheduler, iteration, rng_state, resolved_config, source_sha256]
+  onnx_is_resumable: false
+ppo_start_authorized: false
+

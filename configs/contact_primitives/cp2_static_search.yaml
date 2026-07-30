@@ -1,0 +1,27 @@
+schema_version: 1
+search_id: cp2_pinocchio_static_v1
+random_seed: 3538
+source_urdf: /root/autodl-tmp/robotics/falcon_sandbox/FALCON/humanoidverse/data/robots/g1/g1_29dof_fakehand.urdf
+source_falcon_commit: a967a6d8494f57777cf8d266a644ac8e45833301
+box_profile: box_1200x600x1000_dev_v1
+templates: [rear, front, right, left]
+contact_separation_m: [0.18, 0.24, 0.28]
+contact_height_from_ground_m: [0.90, 0.82, 0.76]
+base_clearance_from_face_m: [0.30, 0.36, 0.42]
+hand_edge_margin_m: 0.08
+hand_surface_offset_from_rubber_hand_frame_m: 0.08
+max_position_residual_m: 0.025
+min_normalized_joint_margin: 0.05
+elbow_preference_rad: [0.2617993878, 0.7853981634]
+top_k_per_template: 20
+ik:
+  iterations: 160
+  damping: 0.0001
+  step_limit_rad: 0.12
+  optimized_joints: upper_body_14
+collision:
+  source: urdf_collision_mesh
+  baseline_adjacent_pairs_ignored: true
+  new_self_collision_rejected: true
+  non_hand_box_collision_rejected: true
+qualification_label: STATICALLY_FEASIBLE_NOT_PHYSICALLY_QUALIFIED

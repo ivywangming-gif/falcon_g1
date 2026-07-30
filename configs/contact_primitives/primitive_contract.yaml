@@ -1,0 +1,31 @@
+schema_version: 1
+contract_id: chapter4_equations_35_38_p0_v1
+box_twist_frame: box_body
+box_twist_order: [vx_box_B, vy_box_B, omega_box]
+quaternion_storage: xyzw
+templates:
+  rear:
+    face: negative_x_B
+    p0_twists: [[0.1, 0.0, 0.0], [0.2, 0.0, 0.0], [0.1, 0.0, 0.1], [0.1, 0.0, -0.1], [0.2, 0.0, 0.2], [0.2, 0.0, -0.2]]
+  front:
+    face: positive_x_B
+    p0_twists: [[-0.1, 0.0, 0.0], [-0.2, 0.0, 0.0]]
+  right:
+    face: negative_y_B
+    p0_twists: [[0.0, 0.1, 0.0], [0.0, 0.2, 0.0]]
+  left:
+    face: positive_y_B
+    p0_twists: [[0.0, -0.1, 0.0], [0.0, -0.2, 0.0]]
+zero_twist_usage: [stop, settle, transition]
+zero_twist_is_planner_self_loop: false
+executor_boundary:
+  desired_box_twist_is_robot_base_command: false
+  executor_id: executor_box_twist_v1
+  inputs: [template, desired_box_twist, measured_box_twist, box_pose_error, contact_error, contact_configuration, previous_command]
+  outputs: [robot_base_linear_velocity_command, robot_base_yaw_rate_command, stance_or_walking_mode, root_height_command, waist_yaw_command, upper_body_joint_target_or_residual]
+qualification_binding_required: [wbc_id, executor_id, attach_profile_id]
+qualification_statistics: [episode_count, success_count, raw_success_rate, wilson_lower_bound, confidence_level]
+qualification_rule: wilson_lower_bound_gte_threshold_and_full_preregistered_episode_count
+planner_key_required: [template, desired_box_twist, primitive_duration, contact_configuration_id, attach_profile_id, executor_id, wbc_checkpoint_sha256, robot_asset_sha256, box_asset_sha256, physics_bin, simulator_version, control_dt]
+key_change_policy: STALE_QUALIFICATION=true
+

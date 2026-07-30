@@ -1,0 +1,16 @@
+schema_version: 1
+profiles:
+  attach_nominal_dev_v1:
+    status: DEVELOPMENT_ONLY_NOT_PHYSICALLY_QUALIFIED
+    left_precontact_offset: [-0.06, 0.0, 0.0]
+    right_precontact_offset: [-0.06, 0.0, 0.0]
+    approach_direction_in_robot_facing_frame: [1.0, 0.0, 0.0]
+    approach_speed_mps: 0.04
+    approach_acceleration_limit_mps2: 0.10
+    preload_displacement_m: 0.01
+    preload_duration_s: 0.30
+    attach_contact_threshold_n: 8.0
+    attach_settle_duration_s: 0.40
+    cp2_usage: metadata_only
+    cp3_requires_physical_qualification: true
+

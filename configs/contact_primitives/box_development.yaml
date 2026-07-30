@@ -1,0 +1,17 @@
+schema_version: 1
+box_profile_id: box_1200x600x1000_dev_v1
+status: DEVELOPMENT_ONLY
+assumption_requires_review: true
+frame:
+  origin: geometric_center
+  axes: {x: length, y: width, z: up}
+dimensions_m: {length: 1.20, width: 0.60, height: 1.00}
+mass_kg: 20.0
+center_of_mass_m: [0.0, 0.0, 0.0]
+inertia_kg_m2:
+  type: uniform_cuboid_derived
+  diagonal: [2.2666666667, 4.0666666667, 3.0]
+friction: {ground_static: 0.60, ground_dynamic: 0.55, hand_static: 0.80, hand_dynamic: 0.70}
+contact: {compliance: simulator_default, restitution: 0.0}
+collision_mesh: analytic_box
+visual_mesh: analytic_box
