@@ -28,6 +28,11 @@ def main() -> int:
     parser.add_argument("--vx", type=float, default=0.0)
     parser.add_argument("--vy", type=float, default=0.0)
     parser.add_argument("--yaw-rate", type=float, default=0.0)
+    parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument("--case-name", default="cp1")
+    parser.add_argument("--upper-reference", type=Path)
+    parser.add_argument("--left-force-x", type=float, default=0.0)
+    parser.add_argument("--right-force-x", type=float, default=0.0)
     parser.add_argument("--video", type=Path, required=True)
     parser.add_argument("--timeout", type=float, default=420.0)
     args = parser.parse_args()
@@ -36,7 +41,12 @@ def main() -> int:
     command = [str(PYTHON), str(REPO / "scripts/cp1_grounded_rollout.py"),
                "--run-root", str(root), "--duration", str(args.duration),
                "--vx", str(args.vx), "--vy", str(args.vy),
-               "--yaw-rate", str(args.yaw_rate), "--video", str(args.video.resolve())]
+               "--yaw-rate", str(args.yaw_rate), "--seed", str(args.seed),
+               "--case-name", args.case_name, "--video", str(args.video.resolve()),
+               "--left-force-x", str(args.left_force_x),
+               "--right-force-x", str(args.right_force_x)]
+    if args.upper_reference:
+        command.extend(["--upper-reference", str(args.upper_reference.resolve())])
     env = dict(os.environ, PYTHONPATH=str(REPO / "src"),
                XDG_CACHE_HOME=str(REPO / ".cache/xdg"),
                PIP_CACHE_DIR=str(REPO / ".cache/pip"), TMPDIR=str(REPO / ".cache/tmp"))

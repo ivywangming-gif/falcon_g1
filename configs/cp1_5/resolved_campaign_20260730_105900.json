@@ -1,0 +1,54 @@
+{
+  "campaign_timestamp": "20260730_105900",
+  "environment": "/root/autodl-tmp/conda/envs/falcon_isaaclab",
+  "official_falcon_commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+  "official_onnx": "/root/autodl-tmp/robotics/falcon_sandbox/FALCON/sim2real/models/falcon/g1_29dof.onnx",
+  "personal_base_commit": "1b8369e8fcbfdd9f97be72cdb3b759e56a594eee",
+  "rollout": {
+    "duration_s": 10.0,
+    "environment_count": 1,
+    "gravity": "nominal",
+    "box_spawned": false,
+    "elastic_band": false,
+    "hidden_upward_force": false,
+    "seeds": [101, 202, 303]
+  },
+  "precision_rule": {
+    "version": 3,
+    "along_axis_rmse_max": "max(0.03, 0.20 * abs(command_along))",
+    "cross_axis_rmse_max": 0.03,
+    "yaw_rate_rmse_max": "max(0.05, 0.20 * abs(command_yaw_rate))",
+    "straight_heading_drift_max": 0.1,
+    "straight_cross_track_max": 0.15,
+    "action_clip_fraction_max_exclusive": 0.01
+  },
+  "constant_matrix": {
+    "case_count": 21,
+    "rollout_count": 63,
+    "campaign_root": "runs/cp1_5_constant_matrix_20260730_105900"
+  },
+  "push_ready": {
+    "qualification": "PRECONTACT_REFERENCE_ONLY",
+    "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+    "case_count": 7,
+    "rollout_count": 21,
+    "campaign_root": "runs/cp1_5_push_ready_20260730_105900"
+  },
+  "external_loads": {
+    "force_frame": "world",
+    "loads_N": [[-5.0, -5.0], [-10.0, -10.0], [-5.0, -10.0], [-10.0, -5.0]],
+    "ramp_up_s": 0.5,
+    "hold_s": 4.0,
+    "ramp_down_s": 0.5,
+    "rollout_count": 24,
+    "campaign_root": "runs/cp1_5_external_loads_20260730_105900"
+  },
+  "official_sim2sim": {
+    "case_count": 5,
+    "same_onnx": true,
+    "campaign_root": "runs/cp1_5_sim2sim_20260730_105900"
+  },
+  "waypoint_gate_authorized": false,
+  "ppo_authorized": false,
+  "training_started": false
+}

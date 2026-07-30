@@ -1,0 +1,18 @@
+status: DESIGN_ONLY_PPO_NOT_AUTHORIZED
+command_sampler:
+  translation_speed_mps: [0.0, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30]
+  modes: [stand, walking, low_speed_transition]
+  preserve_original_deadzone_as_only_rule: false
+reward_contract:
+  required_terms:
+    - longitudinal_velocity_tracking
+    - cross_axis_velocity_suppression
+    - zero_yaw_straight_line_tracking
+    - heading_drift
+    - cross_track_displacement
+    - low_speed_foot_slip
+    - action_smoothness
+    - push_ready_upper_body_tracking
+    - external_force_stability
+training_started: false
+ppo_authorized: false

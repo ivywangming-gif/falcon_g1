@@ -1,0 +1,16 @@
+{
+  "gate": {
+    "precision_translation_count": 0,
+    "precision_translation_required": 4,
+    "required_supported_survival": {
+      "B_backward_025": true,
+      "B_forward_025": true,
+      "B_left_025": true,
+      "B_right_025": true,
+      "B_turn_left": true,
+      "B_turn_right": true
+    }
+  },
+  "rollout_started": false,
+  "status": "NOT_RUN_GATE_FAILED"
+}

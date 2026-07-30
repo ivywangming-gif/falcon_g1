@@ -1,0 +1,12 @@
+{
+  "official_falcon_commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+  "source_file": "humanoidverse/envs/decoupled_locomotion/decoupled_locomotion_stand_height_waist_wbc_ma.py",
+  "source_lines": [159, 160, 171],
+  "training_config": "humanoidverse/config/env/decoupled_locomotion_stand_height_waist_wbc_ma_diff_force.yaml",
+  "sampled_ranges": {"lin_vel_x": [-1.0, 1.0], "lin_vel_y": [-1.0, 1.0], "ang_vel_yaw": [-1.0, 1.0]},
+  "post_sampling_operation": "commands[env_ids, :2] *= (torch.norm(commands[env_ids, :2], dim=1) > 0.2).unsqueeze(1)",
+  "execution_position": "after vx/vy/yaw sampling and command masks; before waist-command sampling",
+  "low_speed_ood_or_deadzone": "norm([vx, vy]) <= 0.2",
+  "training_supported_translation": "norm([vx, vy]) > 0.2",
+  "deadzone_confirmed": true
+}

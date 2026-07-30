@@ -1,0 +1,89 @@
+{
+  "box_spawned": false,
+  "full_reference_official_order": [
+    -0.1,
+    0.0,
+    0.0,
+    0.3,
+    -0.2,
+    0.0,
+    -0.1,
+    0.0,
+    0.0,
+    0.3,
+    -0.2,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.017717851963695557,
+    0.04516756388053132,
+    0.06678857831898063,
+    0.2732479278512261,
+    -0.005343269747736184,
+    0.15027013336662753,
+    0.00599974515693258,
+    0.017713391569814566,
+    -0.04518656100875013,
+    -0.06681115300653365,
+    0.2732548390296102,
+    0.005343705791073325,
+    0.1502758517312073,
+    -0.006003011337558101
+  ],
+  "hands": {
+    "left": {
+      "orientation_in_base_frame_xyzw": [
+        0.012896982226172153,
+        0.21750782306298483,
+        0.04265631094509912,
+        0.975040744734503
+      ],
+      "position_in_base_frame": [
+        0.2198814162732523,
+        0.17998854076797877,
+        0.020069646902654004
+      ]
+    },
+    "right": {
+      "orientation_in_base_frame_xyzw": [
+        -0.012903944156489114,
+        0.21751113062774427,
+        -0.04267038666913449,
+        0.9750392988899232
+      ],
+      "position_in_base_frame": [
+        0.21988136596865254,
+        -0.17998853157095498,
+        0.020069671100977016
+      ]
+    }
+  },
+  "ik_iterations": 4,
+  "ik_position_residual_m": 0.00013805658466684134,
+  "new_self_collisions_from_static_candidate": [],
+  "official_falcon_commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+  "physical_qualification": "NOT_PHYSICALLY_QUALIFIED",
+  "qualification": "PRECONTACT_REFERENCE_ONLY",
+  "selection_rule": "rear, centered, maximum normalized joint margin among recorded rear top-k",
+  "source_candidate_id": "rear_s0.18_h0.82_d0.30_a0",
+  "source_candidate_normalized_joint_margin": 0.42031064675681995,
+  "upper_reference_official_order": [
+    0.017717851963695557,
+    0.04516756388053132,
+    0.06678857831898063,
+    0.2732479278512261,
+    -0.005343269747736184,
+    0.15027013336662753,
+    0.00599974515693258,
+    0.017713391569814566,
+    -0.04518656100875013,
+    -0.06681115300653365,
+    0.2732548390296102,
+    0.005343705791073325,
+    0.1502758517312073,
+    -0.006003011337558101
+  ],
+  "virtual_box_illegal_overlap_from_static_candidate": [],
+  "virtual_contact_markers_only": true
+}

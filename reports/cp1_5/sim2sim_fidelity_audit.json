@@ -1,0 +1,278 @@
+{
+  "cases": [
+    {
+      "case": "forward010",
+      "command": {
+        "vx": 0.1,
+        "vy": 0.0,
+        "yaw_rate": 0.0
+      },
+      "duration_s": 9.5499999999981,
+      "error_statistics": {
+        "along_axis": {
+          "mae": 0.27369744335321894,
+          "p95_absolute_error": 1.099877988347508,
+          "rmse": 0.43643298312048123,
+          "signed_mean_error": -0.060837539165989926
+        },
+        "cross_axis": {
+          "mae": 0.2165350271510666,
+          "p95_absolute_error": 1.1180290664961139,
+          "rmse": 0.49430114238137957,
+          "signed_mean_error": 0.004665503239412591
+        },
+        "vx_body": {
+          "mae": 0.27369744335321894,
+          "p95_absolute_error": 1.099877988347508,
+          "rmse": 0.43643298312048123,
+          "signed_mean_error": -0.060837539165989926
+        },
+        "vy_body": {
+          "mae": 0.2165350271510666,
+          "p95_absolute_error": 1.1180290664961139,
+          "rmse": 0.49430114238137957,
+          "signed_mean_error": 0.004665503239412591
+        },
+        "yaw_rate_body": {
+          "mae": 1.9376080558921596,
+          "p95_absolute_error": 8.311754865500353,
+          "rmse": 3.7910542864321495,
+          "signed_mean_error": -0.38036698254631135
+        }
+      },
+      "finite": true,
+      "policy_return_code": 0,
+      "precision_pass": false,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_sim2sim_20260730_105900/forward010",
+      "simulator_return_code": 0,
+      "survival_pass": false,
+      "trajectory": {
+        "cross_displacement": -0.2540275833471198,
+        "delta_x": -1.4699744754378186,
+        "delta_y": -0.2540275833471198,
+        "heading_drift": -1.255745141944962
+      },
+      "video": "/root/autodl-tmp/FALCON_CP1_5_SIM2SIM_forward010_20260730_105900.mp4"
+    },
+    {
+      "case": "forward025",
+      "command": {
+        "vx": 0.25,
+        "vy": 0.0,
+        "yaw_rate": 0.0
+      },
+      "duration_s": 9.609999999998122,
+      "error_statistics": {
+        "along_axis": {
+          "mae": 0.3815797732285909,
+          "p95_absolute_error": 1.1998531522658553,
+          "rmse": 0.5484923325327657,
+          "signed_mean_error": -0.20509208803089626
+        },
+        "cross_axis": {
+          "mae": 0.2174636515927446,
+          "p95_absolute_error": 0.9297987828200112,
+          "rmse": 0.46900898236944844,
+          "signed_mean_error": -0.03625556477488799
+        },
+        "vx_body": {
+          "mae": 0.3815797732285909,
+          "p95_absolute_error": 1.1998531522658553,
+          "rmse": 0.5484923325327657,
+          "signed_mean_error": -0.20509208803089626
+        },
+        "vy_body": {
+          "mae": 0.2174636515927446,
+          "p95_absolute_error": 0.9297987828200112,
+          "rmse": 0.46900898236944844,
+          "signed_mean_error": -0.03625556477488799
+        },
+        "yaw_rate_body": {
+          "mae": 2.1610257885803335,
+          "p95_absolute_error": 9.30434738595641,
+          "rmse": 4.34116444480677,
+          "signed_mean_error": -0.3248845082675447
+        }
+      },
+      "finite": true,
+      "policy_return_code": 0,
+      "precision_pass": false,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_sim2sim_20260730_105900/forward025",
+      "simulator_return_code": 0,
+      "survival_pass": false,
+      "trajectory": {
+        "cross_displacement": -0.5201475710612379,
+        "delta_x": -1.9825955395219,
+        "delta_y": -0.5201475710612379,
+        "heading_drift": 6.378263410914968
+      },
+      "video": "/root/autodl-tmp/FALCON_CP1_5_SIM2SIM_forward025_20260730_105900.mp4"
+    },
+    {
+      "case": "left025",
+      "command": {
+        "vx": 0.0,
+        "vy": 0.25,
+        "yaw_rate": 0.0
+      },
+      "duration_s": 9.624999999998112,
+      "error_statistics": {
+        "along_axis": {
+          "mae": 0.25309273507862284,
+          "p95_absolute_error": 0.2631123434630636,
+          "rmse": 0.2796394210327055,
+          "signed_mean_error": -0.2177375075246588
+        },
+        "cross_axis": {
+          "mae": 0.03236648291484107,
+          "p95_absolute_error": 0.15132265897719677,
+          "rmse": 0.11173183595875429,
+          "signed_mean_error": 0.003418458369968568
+        },
+        "vx_body": {
+          "mae": 0.03236648291484107,
+          "p95_absolute_error": 0.15132265897719677,
+          "rmse": 0.11173183595875429,
+          "signed_mean_error": 0.003418458369968568
+        },
+        "vy_body": {
+          "mae": 0.25309273507862284,
+          "p95_absolute_error": 0.2631123434630636,
+          "rmse": 0.2796394210327055,
+          "signed_mean_error": -0.2177375075246588
+        },
+        "yaw_rate_body": {
+          "mae": 0.3937536391331689,
+          "p95_absolute_error": 1.1460949334315798,
+          "rmse": 1.8736010559234921,
+          "signed_mean_error": -0.2161002737138135
+        }
+      },
+      "finite": true,
+      "policy_return_code": 0,
+      "precision_pass": false,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_sim2sim_20260730_105900/left025",
+      "simulator_return_code": 0,
+      "survival_pass": false,
+      "trajectory": {
+        "cross_displacement": 0.159621657445006,
+        "delta_x": 0.159621657445006,
+        "delta_y": -0.00037760492053946423,
+        "heading_drift": -1.8727026397669804
+      },
+      "video": "/root/autodl-tmp/FALCON_CP1_5_SIM2SIM_left025_20260730_105900.mp4"
+    },
+    {
+      "case": "arc010",
+      "command": {
+        "vx": 0.1,
+        "vy": 0.0,
+        "yaw_rate": 0.1
+      },
+      "duration_s": 9.659999999998114,
+      "error_statistics": {
+        "along_axis": {
+          "mae": 0.3352060967584241,
+          "p95_absolute_error": 2.0907154070589478,
+          "rmse": 0.7605832049804568,
+          "signed_mean_error": -0.1878902711182014
+        },
+        "cross_axis": {
+          "mae": 0.27236144898110115,
+          "p95_absolute_error": 1.7716515504006083,
+          "rmse": 0.7180524179764916,
+          "signed_mean_error": -0.045216408437564595
+        },
+        "vx_body": {
+          "mae": 0.3352060967584241,
+          "p95_absolute_error": 2.0907154070589478,
+          "rmse": 0.7605832049804568,
+          "signed_mean_error": -0.1878902711182014
+        },
+        "vy_body": {
+          "mae": 0.27236144898110115,
+          "p95_absolute_error": 1.7716515504006083,
+          "rmse": 0.7180524179764916,
+          "signed_mean_error": -0.045216408437564595
+        },
+        "yaw_rate_body": {
+          "mae": 2.082854418726083,
+          "p95_absolute_error": 13.142459986436522,
+          "rmse": 5.530911143731299,
+          "signed_mean_error": -1.355198395589534
+        }
+      },
+      "finite": true,
+      "policy_return_code": 0,
+      "precision_pass": false,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_sim2sim_20260730_105900/arc010",
+      "simulator_return_code": 0,
+      "survival_pass": false,
+      "trajectory": {
+        "cross_displacement": -0.7059559760429166,
+        "delta_x": -2.709202073100128,
+        "delta_y": -0.7059559760429166,
+        "heading_drift": -13.940441696074608
+      },
+      "video": "/root/autodl-tmp/FALCON_CP1_5_SIM2SIM_arc010_20260730_105900.mp4"
+    },
+    {
+      "case": "turn025",
+      "command": {
+        "vx": 0.25,
+        "vy": 0.0,
+        "yaw_rate": 0.15
+      },
+      "duration_s": 9.554999999998117,
+      "error_statistics": {
+        "along_axis": {
+          "mae": 0.31628018803384095,
+          "p95_absolute_error": 0.8116740740916759,
+          "rmse": 0.39346436161177245,
+          "signed_mean_error": -0.1855116340848936
+        },
+        "cross_axis": {
+          "mae": 0.10408085839458901,
+          "p95_absolute_error": 0.6404933065748551,
+          "rmse": 0.2847842292090828,
+          "signed_mean_error": -0.03402676030564566
+        },
+        "vx_body": {
+          "mae": 0.31628018803384095,
+          "p95_absolute_error": 0.8116740740916759,
+          "rmse": 0.39346436161177245,
+          "signed_mean_error": -0.1855116340848936
+        },
+        "vy_body": {
+          "mae": 0.10408085839458901,
+          "p95_absolute_error": 0.6404933065748551,
+          "rmse": 0.2847842292090828,
+          "signed_mean_error": -0.03402676030564566
+        },
+        "yaw_rate_body": {
+          "mae": 1.1886940157501247,
+          "p95_absolute_error": 6.324511170489515,
+          "rmse": 3.171331232119526,
+          "signed_mean_error": -0.6635486030257194
+        }
+      },
+      "finite": true,
+      "policy_return_code": 0,
+      "precision_pass": false,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_sim2sim_20260730_105900/turn025",
+      "simulator_return_code": 0,
+      "survival_pass": false,
+      "trajectory": {
+        "cross_displacement": -0.1896959062140019,
+        "delta_x": -0.9410097996929458,
+        "delta_y": -0.1896959062140019,
+        "heading_drift": -1.0303081927808229
+      },
+      "video": "/root/autodl-tmp/FALCON_CP1_5_SIM2SIM_turn025_20260730_105900.mp4"
+    }
+  ],
+  "official_falcon_commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+  "same_onnx": true,
+  "status": "FAIL",
+  "upstream_modified": false
+}

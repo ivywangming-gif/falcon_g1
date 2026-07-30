@@ -1,0 +1,288 @@
+{
+  "force_frame": "world",
+  "force_schedule": {
+    "hold_s": 4.0,
+    "ramp_down_s": 0.5,
+    "ramp_up_s": 0.5,
+    "zero_until_s": 1.0
+  },
+  "frame_telemetry": [
+    "world",
+    "robot_base",
+    "hand_local"
+  ],
+  "interpretation": "robot stability under hand loads only; not box twist qualification",
+  "passing_stand_loads": [
+    "symmetric_5N",
+    "symmetric_10N",
+    "asymmetric_left5_right10",
+    "asymmetric_left10_right5"
+  ],
+  "rollouts": [
+    {
+      "left_force_world_x_N": -5.0,
+      "load": "symmetric_5N",
+      "mode": "stand",
+      "precision_pass": false,
+      "right_force_world_x_N": -5.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/stand_symmetric_5N_seed101",
+      "seed": 101,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_symmetric_5N_seed101_20260730_105900.mp4"
+    },
+    {
+      "left_force_world_x_N": -5.0,
+      "load": "symmetric_5N",
+      "mode": "stand",
+      "precision_pass": false,
+      "right_force_world_x_N": -5.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/stand_symmetric_5N_seed202",
+      "seed": 202,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_symmetric_5N_seed202_20260730_105900.mp4"
+    },
+    {
+      "left_force_world_x_N": -5.0,
+      "load": "symmetric_5N",
+      "mode": "stand",
+      "precision_pass": false,
+      "right_force_world_x_N": -5.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/stand_symmetric_5N_seed303",
+      "seed": 303,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_symmetric_5N_seed303_20260730_105900.mp4"
+    },
+    {
+      "left_force_world_x_N": -10.0,
+      "load": "symmetric_10N",
+      "mode": "stand",
+      "precision_pass": false,
+      "right_force_world_x_N": -10.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/stand_symmetric_10N_seed101",
+      "seed": 101,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_symmetric_10N_seed101_20260730_105900.mp4"
+    },
+    {
+      "left_force_world_x_N": -10.0,
+      "load": "symmetric_10N",
+      "mode": "stand",
+      "precision_pass": false,
+      "right_force_world_x_N": -10.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/stand_symmetric_10N_seed202",
+      "seed": 202,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_symmetric_10N_seed202_20260730_105900.mp4"
+    },
+    {
+      "left_force_world_x_N": -10.0,
+      "load": "symmetric_10N",
+      "mode": "stand",
+      "precision_pass": false,
+      "right_force_world_x_N": -10.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/stand_symmetric_10N_seed303",
+      "seed": 303,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_symmetric_10N_seed303_20260730_105900.mp4"
+    },
+    {
+      "left_force_world_x_N": -5.0,
+      "load": "asymmetric_left5_right10",
+      "mode": "stand",
+      "precision_pass": false,
+      "right_force_world_x_N": -10.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/stand_asymmetric_left5_right10_seed101",
+      "seed": 101,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_asymmetric_left5_right10_seed101_20260730_105900.mp4"
+    },
+    {
+      "left_force_world_x_N": -5.0,
+      "load": "asymmetric_left5_right10",
+      "mode": "stand",
+      "precision_pass": false,
+      "right_force_world_x_N": -10.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/stand_asymmetric_left5_right10_seed202",
+      "seed": 202,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_asymmetric_left5_right10_seed202_20260730_105900.mp4"
+    },
+    {
+      "left_force_world_x_N": -5.0,
+      "load": "asymmetric_left5_right10",
+      "mode": "stand",
+      "precision_pass": false,
+      "right_force_world_x_N": -10.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/stand_asymmetric_left5_right10_seed303",
+      "seed": 303,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_asymmetric_left5_right10_seed303_20260730_105900.mp4"
+    },
+    {
+      "left_force_world_x_N": -10.0,
+      "load": "asymmetric_left10_right5",
+      "mode": "stand",
+      "precision_pass": false,
+      "right_force_world_x_N": -5.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/stand_asymmetric_left10_right5_seed101",
+      "seed": 101,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_asymmetric_left10_right5_seed101_20260730_105900.mp4"
+    },
+    {
+      "left_force_world_x_N": -10.0,
+      "load": "asymmetric_left10_right5",
+      "mode": "stand",
+      "precision_pass": false,
+      "right_force_world_x_N": -5.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/stand_asymmetric_left10_right5_seed202",
+      "seed": 202,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_asymmetric_left10_right5_seed202_20260730_105900.mp4"
+    },
+    {
+      "left_force_world_x_N": -10.0,
+      "load": "asymmetric_left10_right5",
+      "mode": "stand",
+      "precision_pass": false,
+      "right_force_world_x_N": -5.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/stand_asymmetric_left10_right5_seed303",
+      "seed": 303,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_asymmetric_left10_right5_seed303_20260730_105900.mp4"
+    },
+    {
+      "left_force_world_x_N": -5.0,
+      "load": "symmetric_5N",
+      "mode": "forward_025",
+      "precision_pass": false,
+      "right_force_world_x_N": -5.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/forward025_symmetric_5N_seed101",
+      "seed": 101,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_symmetric_5N_seed101_20260730_105900.mp4"
+    },
+    {
+      "left_force_world_x_N": -5.0,
+      "load": "symmetric_5N",
+      "mode": "forward_025",
+      "precision_pass": false,
+      "right_force_world_x_N": -5.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/forward025_symmetric_5N_seed202",
+      "seed": 202,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_symmetric_5N_seed202_20260730_105900.mp4"
+    },
+    {
+      "left_force_world_x_N": -5.0,
+      "load": "symmetric_5N",
+      "mode": "forward_025",
+      "precision_pass": false,
+      "right_force_world_x_N": -5.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/forward025_symmetric_5N_seed303",
+      "seed": 303,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_symmetric_5N_seed303_20260730_105900.mp4"
+    },
+    {
+      "left_force_world_x_N": -10.0,
+      "load": "symmetric_10N",
+      "mode": "forward_025",
+      "precision_pass": false,
+      "right_force_world_x_N": -10.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/forward025_symmetric_10N_seed101",
+      "seed": 101,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_symmetric_10N_seed101_20260730_105900.mp4"
+    },
+    {
+      "left_force_world_x_N": -10.0,
+      "load": "symmetric_10N",
+      "mode": "forward_025",
+      "precision_pass": false,
+      "right_force_world_x_N": -10.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/forward025_symmetric_10N_seed202",
+      "seed": 202,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_symmetric_10N_seed202_20260730_105900.mp4"
+    },
+    {
+      "left_force_world_x_N": -10.0,
+      "load": "symmetric_10N",
+      "mode": "forward_025",
+      "precision_pass": false,
+      "right_force_world_x_N": -10.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/forward025_symmetric_10N_seed303",
+      "seed": 303,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_symmetric_10N_seed303_20260730_105900.mp4"
+    },
+    {
+      "left_force_world_x_N": -5.0,
+      "load": "asymmetric_left5_right10",
+      "mode": "forward_025",
+      "precision_pass": false,
+      "right_force_world_x_N": -10.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/forward025_asymmetric_left5_right10_seed101",
+      "seed": 101,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_asymmetric_left5_right10_seed101_20260730_105900.mp4"
+    },
+    {
+      "left_force_world_x_N": -5.0,
+      "load": "asymmetric_left5_right10",
+      "mode": "forward_025",
+      "precision_pass": false,
+      "right_force_world_x_N": -10.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/forward025_asymmetric_left5_right10_seed202",
+      "seed": 202,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_asymmetric_left5_right10_seed202_20260730_105900.mp4"
+    },
+    {
+      "left_force_world_x_N": -5.0,
+      "load": "asymmetric_left5_right10",
+      "mode": "forward_025",
+      "precision_pass": false,
+      "right_force_world_x_N": -10.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/forward025_asymmetric_left5_right10_seed303",
+      "seed": 303,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_asymmetric_left5_right10_seed303_20260730_105900.mp4"
+    },
+    {
+      "left_force_world_x_N": -10.0,
+      "load": "asymmetric_left10_right5",
+      "mode": "forward_025",
+      "precision_pass": false,
+      "right_force_world_x_N": -5.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/forward025_asymmetric_left10_right5_seed101",
+      "seed": 101,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_asymmetric_left10_right5_seed101_20260730_105900.mp4"
+    },
+    {
+      "left_force_world_x_N": -10.0,
+      "load": "asymmetric_left10_right5",
+      "mode": "forward_025",
+      "precision_pass": false,
+      "right_force_world_x_N": -5.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/forward025_asymmetric_left10_right5_seed202",
+      "seed": 202,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_asymmetric_left10_right5_seed202_20260730_105900.mp4"
+    },
+    {
+      "left_force_world_x_N": -10.0,
+      "load": "asymmetric_left10_right5",
+      "mode": "forward_025",
+      "precision_pass": false,
+      "right_force_world_x_N": -5.0,
+      "run_root": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/cp1_5_external_loads_20260730_105900/forward025_asymmetric_left10_right5_seed303",
+      "seed": 303,
+      "survival_pass": true,
+      "video": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_asymmetric_left10_right5_seed303_20260730_105900.mp4"
+    }
+  ],
+  "status": "PASS"
+}

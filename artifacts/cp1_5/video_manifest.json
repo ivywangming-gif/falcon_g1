@@ -1,0 +1,2120 @@
+{
+  "montages": [
+    "/root/autodl-tmp/FALCON_CP1_5_LOW_SPEED_MATRIX_20260730_105900.mp4",
+    "/root/autodl-tmp/FALCON_CP1_5_PUSH_READY_20260730_105900.mp4",
+    "/root/autodl-tmp/FALCON_CP1_5_FORCE_LOADS_20260730_105900.mp4"
+  ],
+  "phase": "CP1_5",
+  "timestamp": "20260730_105900",
+  "videos": [
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "590495"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "5/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_arc_left_010_seed101_20260730_105900.mp4",
+      "sha256": "fede6bf4b68e797b6ae1d0f249975db411e50344b3889d9c329c9c5f949145a5"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "592866"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "5/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_arc_left_010_seed202_20260730_105900.mp4",
+      "sha256": "aa81145f0021dc93b0771f013de2d3b8fe3c77d1a5f7f61af0fd51c8bec85067"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "591552"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "5/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_arc_left_010_seed303_20260730_105900.mp4",
+      "sha256": "cd8f7d74856d8dd91f5e25fb6a46d5fadbd4e768ba256a72d21c99e076349176"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "594742"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "5/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_arc_right_010_seed101_20260730_105900.mp4",
+      "sha256": "8316e2440061dd2b59607249c5d79dbabad166b33253a31f64ee9119f55940c5"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "240105"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_arc_right_010_seed202_20260730_105900.mp4",
+      "sha256": "26cabecdbcbbc1b685236b83666b4bee7451105aa9ef4531c22271144c6afda2"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "240148"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_arc_right_010_seed303_20260730_105900.mp4",
+      "sha256": "74c9bcf7f4533e6a3c2832d1890aa6b6fbce9d37b01d4a885a0697b89543d7bd"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "1040676"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "10/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_backward_010_seed101_20260730_105900.mp4",
+      "sha256": "b7ead324b347dab438c2b3657e8329845d71dfeaa2f672ea81845287bf16de2f"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "1034919"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "10/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_backward_010_seed202_20260730_105900.mp4",
+      "sha256": "5ee2d0721c799d4c5c6b91e945494470613d05bb2461f599d0fc3ea3cde4a02f"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "1035903"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "10/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_backward_010_seed303_20260730_105900.mp4",
+      "sha256": "5a3868cda695a473f2d543396d806e3c70fc0469c41b07032e8f1383ec2b75b6"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "1056557"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "10/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_forward_010_seed101_20260730_105900.mp4",
+      "sha256": "27b9ff96fff3702dcddefb56cb8265d463ead643e40b8114f0624c6430cb165f"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "1055123"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "10/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_forward_010_seed202_20260730_105900.mp4",
+      "sha256": "2cb9cbf75c4fc33f2d5eca65e8578e8c3aaeac61c42be31228d5681b0ec03c64"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "1055544"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "10/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_forward_010_seed303_20260730_105900.mp4",
+      "sha256": "3721f455998c89e74b6ba74458406bb04bd73067e935a64668e62ac75b265aa5"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "1040014"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "10/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_left_010_seed101_20260730_105900.mp4",
+      "sha256": "b6a6c8e76d579687de8d572710a2e72780a7625710833b27b25b8d1d1cf8aa32"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "1040014"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "10/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_left_010_seed202_20260730_105900.mp4",
+      "sha256": "b6a6c8e76d579687de8d572710a2e72780a7625710833b27b25b8d1d1cf8aa32"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "1040884"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "10/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_left_010_seed303_20260730_105900.mp4",
+      "sha256": "f39984d0fd397d9779a5b1c5415f13103242c9509816ef43d764296c5fc079ad"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "1037571"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "10/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_right_010_seed101_20260730_105900.mp4",
+      "sha256": "e47cc36f76daa66676c081dc9a863cd483a97df4ab20f1057a2a9c60e8c6cacd"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "1037121"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "10/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_right_010_seed202_20260730_105900.mp4",
+      "sha256": "a6e11db8538bdcbbc841adb2ef4cc2a6faacef11027cda373d4df8c35b30ee72"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "1037172"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "10/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_right_010_seed303_20260730_105900.mp4",
+      "sha256": "539bdb8ce2e888fd70682f84fe59c735e8e2e8f0795e8b7f618d83a3342d5b6e"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "1161382"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "20/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_stand_seed101_20260730_105900.mp4",
+      "sha256": "b7215afb263e6b923bc20ae8b29c8c51eb3b3d4b99d72636fac22258ae62ede9"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "1163011"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "20/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_stand_seed202_20260730_105900.mp4",
+      "sha256": "3b1e65e84ee92c197f03ff364c13fae3656a7d616a1a8e2cb06c597a7a19859b"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "1158338"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "20/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_stand_seed303_20260730_105900.mp4",
+      "sha256": "265787ba4217ce206154e1c2329ca16b8a8ff2aac62267ded9ea9439c32b96c3"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "1035481"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "10/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_yaw_left_010_seed101_20260730_105900.mp4",
+      "sha256": "5a171c97d529dae66b2cb882143b807c9a55f8fd920d15edcf7fc9f77c91cea5"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "1035481"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "10/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_yaw_left_010_seed202_20260730_105900.mp4",
+      "sha256": "5a171c97d529dae66b2cb882143b807c9a55f8fd920d15edcf7fc9f77c91cea5"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "572022"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "5/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_yaw_left_010_seed303_20260730_105900.mp4",
+      "sha256": "4ba98dc1064fdd36df1fece37dc2bb7af2c451840b57247f9092f71f5fe14ff3"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "585247"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "5/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_yaw_right_010_seed101_20260730_105900.mp4",
+      "sha256": "7d51e282b8a906d96fb589952a64b5ea5db9ef3620af2c321f7808ddcb4c4827"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "585247"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "5/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_yaw_right_010_seed202_20260730_105900.mp4",
+      "sha256": "7d51e282b8a906d96fb589952a64b5ea5db9ef3620af2c321f7808ddcb4c4827"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "584129"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "5/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_A_yaw_right_010_seed303_20260730_105900.mp4",
+      "sha256": "083b9a084c1b57496ae54d3bd3b131879f853005bb15ee082b4f7b749211ec63"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "235832"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_backward_025_seed101_20260730_105900.mp4",
+      "sha256": "764c1aa53ec0b3ac24a9aad1c62ea4a2dc07aca3695ad30ea506830036e9955e"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "238015"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_backward_025_seed202_20260730_105900.mp4",
+      "sha256": "c31b97651d55639b863ce5d76e2456e8f1514b5826af3a0a5aa58c22545f04ad"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "236126"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_backward_025_seed303_20260730_105900.mp4",
+      "sha256": "46bcb2983128df1a12404c2735643457e7c497ffdb29194806d40fce86bbc5e8"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "256875"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_diag_backward_left_seed101_20260730_105900.mp4",
+      "sha256": "785300e378b90e68f3d7d9f098de1933eb04c2b8a4a709df634067d3877e7728"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "256026"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_diag_backward_left_seed202_20260730_105900.mp4",
+      "sha256": "9543ed013684c60d7dff292d43fc23e029c9ecdd7119e85fc1815e791ca7d0fc"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "257545"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_diag_backward_left_seed303_20260730_105900.mp4",
+      "sha256": "f5a3b2b1f9f465799d325966a6bf16616dec7c6ee8e309dff495e12302e947cd"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "225876"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_diag_backward_right_seed101_20260730_105900.mp4",
+      "sha256": "62daae50ecb68425fe937eee43dcb762243972b4ef0f93dbbcafaadeba3c7fd3"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "225491"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_diag_backward_right_seed202_20260730_105900.mp4",
+      "sha256": "34dd62cf44e6239468c1c53823f5556791672bbe2aa6d705bd11d2b29dab6104"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "230070"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_diag_backward_right_seed303_20260730_105900.mp4",
+      "sha256": "1d3a74088fcf9b0a52a05f58b469d7fa459a80faa58f9e14ca5a5cb30f75d2ff"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "264284"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_diag_forward_left_seed101_20260730_105900.mp4",
+      "sha256": "da352d23d504dc0e049289f645119485a12966b95b077fd428784e87eca9a018"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "264581"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_diag_forward_left_seed202_20260730_105900.mp4",
+      "sha256": "68dd75d7c72335e4da2a4ec128b3e95cc1afe1da83d4cfc4f107443fc80e6f74"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "265891"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_diag_forward_left_seed303_20260730_105900.mp4",
+      "sha256": "bccb6249c0013eedd9fb8d8df023d41ef5cf2a0f8e9dfd8d4c2ccda50909ab6a"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "242418"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_diag_forward_right_seed101_20260730_105900.mp4",
+      "sha256": "dcf43122c701fa3689d361c4f4821ed82a53ff6f26ea4c991af8e3d1eec49a41"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "242496"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_diag_forward_right_seed202_20260730_105900.mp4",
+      "sha256": "17dbda0e91d3afdd22f2f1fad452fa931836dd008600b7e915c710fda07ec43b"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "242418"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_diag_forward_right_seed303_20260730_105900.mp4",
+      "sha256": "dcf43122c701fa3689d361c4f4821ed82a53ff6f26ea4c991af8e3d1eec49a41"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "270697"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_forward_025_seed101_20260730_105900.mp4",
+      "sha256": "c4b07c6e29e8e450c18ce95b41a5c46a31d26d51019eed7465e1d62d9c7b8d86"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "270326"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_forward_025_seed202_20260730_105900.mp4",
+      "sha256": "7ea1a4d62bb304b32339fce80dbc717f531e3385d8a85c849d02c15be44c5670"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "271159"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_forward_025_seed303_20260730_105900.mp4",
+      "sha256": "030c6ab5c39ec692df84690bdc20147fd3b1c4b3d65df5178d47f23f505ecc42"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "266448"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_left_025_seed101_20260730_105900.mp4",
+      "sha256": "a7f566f9ca7982c72e89547c59aa88ea0bea61130df19558dc8cb86609506514"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "265729"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_left_025_seed202_20260730_105900.mp4",
+      "sha256": "e88aa3c5318ec15616cc084b72c0a625cfe8c6ffd35fce175635ad79fdb551e3"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "265699"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_left_025_seed303_20260730_105900.mp4",
+      "sha256": "73ec43ab9471af66695a5944b45897c71da62dca0b160a4ee80e8511c86270fe"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "224962"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_right_025_seed101_20260730_105900.mp4",
+      "sha256": "257a06589dc709d4775018d9fd3aee309a7d2846e113b285946f7ecafd331132"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "224524"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_right_025_seed202_20260730_105900.mp4",
+      "sha256": "ecf0d0a0d68188d8467062f1d518aa142531c7d84622c2688345fc50cb5b822d"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "224956"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_right_025_seed303_20260730_105900.mp4",
+      "sha256": "93b48c89a1bd33d1ebf581c4f41905793b026c75edd1810697a52d29c82dad54"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "276504"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_turn_left_seed101_20260730_105900.mp4",
+      "sha256": "65a4f6d0c3f0d9afecd725bdd37dd6faace485563eac4d004ff09e3e39e2d1a8"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "276235"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_turn_left_seed202_20260730_105900.mp4",
+      "sha256": "74ac0b4aab4d0b1ed3a3bbabcd99bbb7d1eee4d192c4008dae29d1a98e461500"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "276504"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_turn_left_seed303_20260730_105900.mp4",
+      "sha256": "65a4f6d0c3f0d9afecd725bdd37dd6faace485563eac4d004ff09e3e39e2d1a8"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "252822"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_turn_right_seed101_20260730_105900.mp4",
+      "sha256": "df5fb9aadfdd860c69ef06cd21f08a93a5b0242c39c57e2f77b86643a38c511d"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "252333"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_turn_right_seed202_20260730_105900.mp4",
+      "sha256": "e0269b8de8bfef4b89a427db5a44fdcc0268079741ce2f757694d535da9d9906"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "252671"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_turn_right_seed303_20260730_105900.mp4",
+      "sha256": "05fecea40fe1855db3cbec44ce3e8e26cc25a29d93eef1b633f9b99f939a777a"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "246617"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_yaw_left_025_seed101_20260730_105900.mp4",
+      "sha256": "efdac4a0b49f12cf3ad1ee018801b0661324aa669c858538d9a74e1ad4586145"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "246234"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_yaw_left_025_seed202_20260730_105900.mp4",
+      "sha256": "7727391cc3ca745195476073ef56cc61c435ae08aca0567989398af709e97bdb"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "245684"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_yaw_left_025_seed303_20260730_105900.mp4",
+      "sha256": "6df632b84d1e774a8350cb5e25d24f50d6250210fb60c62e941013a58ce4237b"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "238098"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_yaw_right_025_seed101_20260730_105900.mp4",
+      "sha256": "5450c25b47c4dcc547a506c3eaec9eb905038a893018bb3cf304422a715170bd"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "238098"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_yaw_right_025_seed202_20260730_105900.mp4",
+      "sha256": "5450c25b47c4dcc547a506c3eaec9eb905038a893018bb3cf304422a715170bd"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "238098"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_B_yaw_right_025_seed303_20260730_105900.mp4",
+      "sha256": "5450c25b47c4dcc547a506c3eaec9eb905038a893018bb3cf304422a715170bd"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "147.200000",
+          "size": "1146009"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "height": 480,
+            "r_frame_rate": "10/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_LOADS_20260730_105900.mp4",
+      "sha256": "944e052f2b500467aab4012b54a0468493d1028ab861ae1b63999a7a9e0485f9"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "274201"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_asymmetric_left10_right5_seed101_20260730_105900.mp4",
+      "sha256": "5545eabbd3e4c0ebded3878bfdb2331ceae7761f962d39007a648e33a8d5e831"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "274462"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_asymmetric_left10_right5_seed202_20260730_105900.mp4",
+      "sha256": "a91836d3cde324cdfc603b8ad8a7d89a45ac2fce268506ba0b445aa3971d3aa7"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "274201"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_asymmetric_left10_right5_seed303_20260730_105900.mp4",
+      "sha256": "5545eabbd3e4c0ebded3878bfdb2331ceae7761f962d39007a648e33a8d5e831"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "274935"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_asymmetric_left5_right10_seed101_20260730_105900.mp4",
+      "sha256": "f08c0ecbfaf9d1c250a9e082a105804a4a12bd96663d40760cba37346018fb1e"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "275939"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_asymmetric_left5_right10_seed202_20260730_105900.mp4",
+      "sha256": "0d82bb77271c5a619123fe61c9fb56318e051384e364c4fb13d7b0aa72ec5432"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "278251"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_asymmetric_left5_right10_seed303_20260730_105900.mp4",
+      "sha256": "a38a2aae4d961cdbbd1e80ff14c48653cbd4d497a2b67aefe8440ef70a83edba"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "263467"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_symmetric_10N_seed101_20260730_105900.mp4",
+      "sha256": "884e8e4ab2e7c2fca8085ff62ddcc0d4e4786d10439f38393ae7b71a62fe37e5"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "267869"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_symmetric_10N_seed202_20260730_105900.mp4",
+      "sha256": "e72f63d7d8c0a4f022aceebb4641c0721f8191c4f8fa58a773356ccb39ee753c"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "263937"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_symmetric_10N_seed303_20260730_105900.mp4",
+      "sha256": "1a56286b538b7fd513bdafe400cf0b224c8f999cf828cdeb9d9597c1c465e3da"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "270728"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_symmetric_5N_seed101_20260730_105900.mp4",
+      "sha256": "277d6e7c4afca0f110f856edff2168333534a6a6d58b720d949ef603003067ac"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "274524"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_symmetric_5N_seed202_20260730_105900.mp4",
+      "sha256": "4e0e40c64f455de002c157ebc998dc2468606242661ec0ba7ef8183b6167716e"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "269927"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_forward025_symmetric_5N_seed303_20260730_105900.mp4",
+      "sha256": "187873db272da5a72a2630e83117dcac80d3315e2b04c99fddb31b5bb056cbc5"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "180952"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_asymmetric_left10_right5_seed101_20260730_105900.mp4",
+      "sha256": "dcb6f0645f14c9fa98d64499e8886c3315b3d99f9715fd9f0b20ba61ef82264a"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "180952"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_asymmetric_left10_right5_seed202_20260730_105900.mp4",
+      "sha256": "dcb6f0645f14c9fa98d64499e8886c3315b3d99f9715fd9f0b20ba61ef82264a"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "181283"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_asymmetric_left10_right5_seed303_20260730_105900.mp4",
+      "sha256": "c7209848f4b04e11c5598196da8714ad3420b2a2b5aa4bd45460e1dcd25abf54"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "199990"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_asymmetric_left5_right10_seed101_20260730_105900.mp4",
+      "sha256": "bee0b4abf140ac28b4790ff32960c34159f7adb38095ad8b7118ace608bcdec1"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "198825"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_asymmetric_left5_right10_seed202_20260730_105900.mp4",
+      "sha256": "d32f4f7ffda0e56fba424c2caecb6c66d599f469128cee117431a4fb2ffe04a7"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "198231"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_asymmetric_left5_right10_seed303_20260730_105900.mp4",
+      "sha256": "749d7744bc1f83662efc69b7871169536a8abc85e8a85bd2fba975819cbb7a77"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "208618"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_symmetric_10N_seed101_20260730_105900.mp4",
+      "sha256": "6b242edc1b443195c87bb8c65a0180876b6e70834ee1a3f454c53e3ac214b0ca"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "209378"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_symmetric_10N_seed202_20260730_105900.mp4",
+      "sha256": "1171b7445df50d71bc4f8ca0f9fb0d995789545076263620ae489bec66d35ef0"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "209047"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_symmetric_10N_seed303_20260730_105900.mp4",
+      "sha256": "1bb3e77938bbdec8b2a03299584fc874a04c1302e7d04e9f1f59fafb1219efff"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "167950"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_symmetric_5N_seed101_20260730_105900.mp4",
+      "sha256": "ff526162ef7aa9a0ef6190d0cfb9386142bf4f7caa2fd52b8fae22f112caa856"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "167950"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_symmetric_5N_seed202_20260730_105900.mp4",
+      "sha256": "ff526162ef7aa9a0ef6190d0cfb9386142bf4f7caa2fd52b8fae22f112caa856"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "166642"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_FORCE_stand_symmetric_5N_seed303_20260730_105900.mp4",
+      "sha256": "7bc3c2e4c2f92cec88700daeec2273ec7e6013d7735e3e282206a54d03c47351"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "386.400000",
+          "size": "3034314"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "height": 480,
+            "r_frame_rate": "10/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_LOW_SPEED_MATRIX_20260730_105900.mp4",
+      "sha256": "52457e4710487c8328fc68c87a282c5c1adea5db2d29745c2964713c097957ec"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "128.800000",
+          "size": "1053996"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "height": 480,
+            "r_frame_rate": "10/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_PUSH_READY_20260730_105900.mp4",
+      "sha256": "11cdbc6fed3d4786a1b3aaa0790f629eb149c1dddab5fc13b135f29235c18a43"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "248562"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_PUSH_READY_low_straight_seed101_20260730_105900.mp4",
+      "sha256": "0d7ffcd0d6ac24a8ffbc087f39ba1a1bb25a342ac296b32a547e7ec7022b3351"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "249100"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_PUSH_READY_low_straight_seed202_20260730_105900.mp4",
+      "sha256": "c2367f27a278cfa9f75833648cfe5e789e26436c7abeab00bb6fbdf26671dd2c"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "248562"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_PUSH_READY_low_straight_seed303_20260730_105900.mp4",
+      "sha256": "0d7ffcd0d6ac24a8ffbc087f39ba1a1bb25a342ac296b32a547e7ec7022b3351"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "256393"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_PUSH_READY_low_turn_left_seed101_20260730_105900.mp4",
+      "sha256": "3c2189cf715ec2c638f0713691fded5b94e522367f42db5d128f9a7c585d2030"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "254449"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_PUSH_READY_low_turn_left_seed202_20260730_105900.mp4",
+      "sha256": "b5d990c5744bd2c028b8c7f38d39561fd67eb56bf1e94a27a5eacc682fad0020"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "253884"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_PUSH_READY_low_turn_left_seed303_20260730_105900.mp4",
+      "sha256": "b96017e2cf5e5c9a36f6ff0f3647432bbf5181e65688d78466ffc07357983a7b"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "250185"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_PUSH_READY_low_turn_right_seed101_20260730_105900.mp4",
+      "sha256": "55013a70da6954a51ad7bbf6e4950e6ff468d5684437f3bfb55b3a9b2c48b450"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "246643"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_PUSH_READY_low_turn_right_seed202_20260730_105900.mp4",
+      "sha256": "6399ec484f5ef82739e6608c1339c06e34b06dd89143eb0cdadc2bb882d89e59"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "246643"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_PUSH_READY_low_turn_right_seed303_20260730_105900.mp4",
+      "sha256": "6399ec484f5ef82739e6608c1339c06e34b06dd89143eb0cdadc2bb882d89e59"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "156797"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_PUSH_READY_stand_seed101_20260730_105900.mp4",
+      "sha256": "c91671d8a25d63897fcdb430abbfa9d124156c66a2b9d0b71285fd4ac38ef9f1"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "157540"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_PUSH_READY_stand_seed202_20260730_105900.mp4",
+      "sha256": "54ba50e4161e844e395e71f3afa26069406bd8e1db3cbb13f165e7e269e11626"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "156897"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_PUSH_READY_stand_seed303_20260730_105900.mp4",
+      "sha256": "cc922ca449b143965a3bc972c5623b3b4d883e85e49c60821192a3cf9ca00c35"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "275972"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_PUSH_READY_supported_straight_seed101_20260730_105900.mp4",
+      "sha256": "98bef005fe4d30d1b27d259663895e8857907c638fc51c4a0bfc5056f3a98135"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "275972"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_PUSH_READY_supported_straight_seed202_20260730_105900.mp4",
+      "sha256": "98bef005fe4d30d1b27d259663895e8857907c638fc51c4a0bfc5056f3a98135"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "275972"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_PUSH_READY_supported_straight_seed303_20260730_105900.mp4",
+      "sha256": "98bef005fe4d30d1b27d259663895e8857907c638fc51c4a0bfc5056f3a98135"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "289802"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_PUSH_READY_supported_turn_left_seed101_20260730_105900.mp4",
+      "sha256": "0bbbabe6401d80e2a24aa456e3f1455c9e2fa75277e49a42776f182cc25f0f56"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "288329"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_PUSH_READY_supported_turn_left_seed202_20260730_105900.mp4",
+      "sha256": "f0823606c694b2113cddddf0a62e618362d6483eb7e934923c375a63e1d603a5"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "287394"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_PUSH_READY_supported_turn_left_seed303_20260730_105900.mp4",
+      "sha256": "1fb34d0b3076e21877274c9e70d6d447896b91dcc31c8b55040e935831541176"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "262731"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_PUSH_READY_supported_turn_right_seed101_20260730_105900.mp4",
+      "sha256": "5e8f31be626a73692b1104273f8e69120eb96e86f6d42705e39f4f1ff02099e2"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "262027"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_PUSH_READY_supported_turn_right_seed202_20260730_105900.mp4",
+      "sha256": "5e1ecc556ce1130d9a63bbfe6d5f1e700768696e299478f825d5be22d81adcf0"
+    },
+    {
+      "ffprobe": {
+        "format": {
+          "duration": "10.000000",
+          "size": "262952"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "height": 480,
+            "r_frame_rate": "2/1",
+            "width": 640
+          }
+        ]
+      },
+      "path": "/root/autodl-tmp/FALCON_CP1_5_PUSH_READY_supported_turn_right_seed303_20260730_105900.mp4",
+      "sha256": "ae293c5a08630de15f5e26b59041b49450e5570fb8586eeea5c1225cca3e7e60"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "cp1_policy_port_and_survival": "PASS",
+  "cp1_low_speed_precision_tracking": "FAIL",
+  "cp1_training_supported_speed_tracking": "FAIL",
+  "constant_command_rollouts": 63,
+  "survival_pass_rollouts": 63,
+  "precision_pass_rollouts": 0,
+  "final_classification": "OFFICIAL_POLICY_NOT_PRECISE_ENOUGH_FOR_REQUIRED_LOW_SPEED",
+  "official_sim2sim_status": "FAIL",
+  "evidence_interpretation": "The historical V2 PASS establishes survival, alternating support, and loose command tracking; it does not establish precise 0.1 m/s tracking.",
+  "historical_evidence_mutated": false,
+  "new_evaluator": "src/falcon_g1/cp1_precision_qualification.py",
+  "rule_version": 3,
+  "waypoint_smoke_status": "NOT_RUN_GATE_FAILED"
+}
