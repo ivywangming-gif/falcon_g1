@@ -1,357 +1,5222 @@
 {
-  "checkpoint_count": 31,
-  "checkpoints": [
+  "checkpoints_screened": 29,
+  "checkpoints_total": 31,
+  "failed_checkpoints": [
     {
-      "action_clip_fraction": null,
-      "approx_kl": null,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0000.pt",
-      "falls": null,
-      "iteration": 0,
-      "mean_reward": null,
-      "teacher_lower_mse": null,
-      "teacher_upper_mse": null,
-      "torque_saturation_fraction": null
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 1.5398995975653331,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0010.pt",
-      "falls": 7,
-      "iteration": 10,
-      "mean_reward": 0.04186899587512016,
-      "teacher_lower_mse": 0.0,
-      "teacher_upper_mse": 0.0,
-      "torque_saturation_fraction": 0.0004910874640804598
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 0.6004684517780939,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0020.pt",
-      "falls": 4,
-      "iteration": 20,
-      "mean_reward": 0.04235341399908066,
-      "teacher_lower_mse": 0.0,
-      "teacher_upper_mse": 0.0,
-      "torque_saturation_fraction": 0.00018801634339080458
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 1.0902428752742708,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0030.pt",
-      "falls": 4,
-      "iteration": 30,
-      "mean_reward": 0.033719636499881744,
-      "teacher_lower_mse": 0.0001407190417618646,
-      "teacher_upper_mse": 0.00014522687464098757,
-      "torque_saturation_fraction": 0.000244140625
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 1.7991745074590046,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0040.pt",
-      "falls": 8,
-      "iteration": 40,
-      "mean_reward": 0.0340375117957592,
-      "teacher_lower_mse": 0.0003585444016304488,
-      "teacher_upper_mse": 0.0003375354547946093,
-      "torque_saturation_fraction": 0.0003058773347701149
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 1.3620974645018578,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0050.pt",
-      "falls": 6,
-      "iteration": 50,
-      "mean_reward": 0.03387369215488434,
-      "teacher_lower_mse": 0.0005912797496421263,
-      "teacher_upper_mse": 0.000451706492943534,
-      "torque_saturation_fraction": 0.0003002649066091954
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 1.4519894396653399,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0060.pt",
-      "falls": 3,
-      "iteration": 60,
-      "mean_reward": 0.03383895382285118,
-      "teacher_lower_mse": 0.000927920036095505,
-      "teacher_upper_mse": 0.0010707788654447843,
-      "torque_saturation_fraction": 0.00021327227011494254
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 0.5439290789266428,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0070.pt",
-      "falls": 1,
-      "iteration": 70,
-      "mean_reward": 0.03450740873813629,
-      "teacher_lower_mse": 0.0011245297112812598,
-      "teacher_upper_mse": 0.0012587083037942648,
-      "torque_saturation_fraction": 4.7705639367816095e-05
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 1.110779294744134,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0080.pt",
-      "falls": 5,
-      "iteration": 80,
-      "mean_reward": 0.03364957869052887,
-      "teacher_lower_mse": 0.0013433787292645623,
-      "teacher_upper_mse": 0.0013777197746094316,
-      "torque_saturation_fraction": 0.00033393947557471264
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 3.2599941740433374,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0090.pt",
-      "falls": 11,
-      "iteration": 90,
-      "mean_reward": 0.03361489623785019,
-      "teacher_lower_mse": 0.0015001612676618,
-      "teacher_upper_mse": 0.0017950621161920328,
-      "torque_saturation_fraction": 0.0003255208333333333
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 1.3046011465291183,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0100.pt",
-      "falls": 5,
-      "iteration": 100,
-      "mean_reward": 0.03394288942217827,
-      "teacher_lower_mse": 0.0018196882059176762,
-      "teacher_upper_mse": 0.0017091729775226365,
-      "torque_saturation_fraction": 0.0002609779094827586
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 2.708495080471039,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0125.pt",
-      "falls": 4,
-      "iteration": 125,
-      "mean_reward": 0.03422876447439194,
-      "teacher_lower_mse": 0.0022556986465739706,
-      "teacher_upper_mse": 0.0020913203479722142,
-      "torque_saturation_fraction": 0.00021888469827586207
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 2.5497248470783234,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0150.pt",
-      "falls": 9,
-      "iteration": 150,
-      "mean_reward": 0.03408605232834816,
-      "teacher_lower_mse": 0.0028877731529064476,
-      "teacher_upper_mse": 0.0017846837872639298,
-      "torque_saturation_fraction": 0.0005668552442528736
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 0.9405971070130666,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0175.pt",
-      "falls": 3,
-      "iteration": 175,
-      "mean_reward": 0.035893745720386505,
-      "teacher_lower_mse": 0.0031256401950183013,
-      "teacher_upper_mse": 0.001557325847291698,
-      "torque_saturation_fraction": 0.00014311691810344826
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 1.9917392507195473,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0200.pt",
-      "falls": 4,
-      "iteration": 200,
-      "mean_reward": 0.03552194684743881,
-      "teacher_lower_mse": 0.004064938092293839,
-      "teacher_upper_mse": 0.0016959197528194636,
-      "torque_saturation_fraction": 0.00017398527298850575
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 0.8083753076692423,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0225.pt",
-      "falls": 2,
-      "iteration": 225,
-      "mean_reward": 0.03601174056529999,
-      "teacher_lower_mse": 0.00506853098825862,
-      "teacher_upper_mse": 0.0018428536228990804,
-      "torque_saturation_fraction": 3.928699712643678e-05
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 1.2989721844593685,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0250.pt",
-      "falls": 0,
-      "iteration": 250,
-      "mean_reward": 0.03533164784312248,
-      "teacher_lower_mse": 0.0064885133955006795,
-      "teacher_upper_mse": 0.002440664878425499,
-      "torque_saturation_fraction": 0.0001122485632183908
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 2.5727020502090454,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0275.pt",
-      "falls": 6,
       "iteration": 275,
-      "mean_reward": 0.036329105496406555,
-      "teacher_lower_mse": 0.007594190343903999,
-      "teacher_upper_mse": 0.002539371547754854,
-      "torque_saturation_fraction": 0.0003199084051724138
+      "return_code": -9,
+      "reason": "SCREENING_WORKER_STALLED_AND_WAS_TERMINATED"
     },
     {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 0.8733891199032465,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0300.pt",
-      "falls": 3,
       "iteration": 300,
-      "mean_reward": 0.036578357219696045,
-      "teacher_lower_mse": 0.009414706456785401,
-      "teacher_upper_mse": 0.002568175628160437,
-      "torque_saturation_fraction": 9.821749281609196e-05
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 0.7111467414846023,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0325.pt",
-      "falls": 1,
-      "iteration": 325,
-      "mean_reward": 0.03601929917931557,
-      "teacher_lower_mse": 0.011320168773333231,
-      "teacher_upper_mse": 0.002675412610794107,
-      "torque_saturation_fraction": 6.454292385057472e-05
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 0.35273433725039166,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0350.pt",
-      "falls": 0,
-      "iteration": 350,
-      "mean_reward": 0.03669550642371178,
-      "teacher_lower_mse": 0.012854713403309384,
-      "teacher_upper_mse": 0.002902280422858894,
-      "torque_saturation_fraction": 3.6480783045977014e-05
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 0.5657160406311353,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0375.pt",
-      "falls": 0,
-      "iteration": 375,
-      "mean_reward": 0.03664605692028999,
-      "teacher_lower_mse": 0.015677834938590724,
-      "teacher_upper_mse": 0.0033487569889985025,
-      "torque_saturation_fraction": 6.734913793103448e-05
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 1.1261060734589894,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0400.pt",
-      "falls": 1,
-      "iteration": 400,
-      "mean_reward": 0.03643156588077545,
-      "teacher_lower_mse": 0.019198617121825617,
-      "teacher_upper_mse": 0.003101561451330781,
-      "torque_saturation_fraction": 8.138020833333333e-05
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 0.39442986622452736,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0425.pt",
-      "falls": 0,
-      "iteration": 425,
-      "mean_reward": 0.03823717683553696,
-      "teacher_lower_mse": 0.020903264948477347,
-      "teacher_upper_mse": 0.003078964112016062,
-      "torque_saturation_fraction": 1.964349856321839e-05
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 0.4079367493589719,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0450.pt",
-      "falls": 0,
-      "iteration": 450,
-      "mean_reward": 0.03825199231505394,
-      "teacher_lower_mse": 0.02474099661534031,
-      "teacher_upper_mse": 0.0032434159268935523,
-      "torque_saturation_fraction": 1.964349856321839e-05
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 0.3854252410431703,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0475.pt",
-      "falls": 0,
-      "iteration": 475,
-      "mean_reward": 0.038815125823020935,
-      "teacher_lower_mse": 0.026767758497347433,
-      "teacher_upper_mse": 0.0027177895535714924,
-      "torque_saturation_fraction": 2.244971264367816e-05
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 0.688774066666762,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0500.pt",
-      "falls": 1,
-      "iteration": 500,
-      "mean_reward": 0.03851776570081711,
-      "teacher_lower_mse": 0.029650829111536343,
-      "teacher_upper_mse": 0.002520775500064095,
-      "torque_saturation_fraction": 9.260506465517241e-05
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 1.0861885795990627,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0525.pt",
-      "falls": 2,
-      "iteration": 525,
-      "mean_reward": 0.03762512654066086,
-      "teacher_lower_mse": 0.03131734114140272,
-      "teacher_upper_mse": 0.00255797568631048,
-      "torque_saturation_fraction": 0.00011505477729885057
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 0.5268272832036018,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0550.pt",
-      "falls": 1,
-      "iteration": 550,
-      "mean_reward": 0.03842758759856224,
-      "teacher_lower_mse": 0.034375488137205444,
-      "teacher_upper_mse": 0.0025309071061201394,
-      "torque_saturation_fraction": 1.683728448275862e-05
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 0.29160697748496506,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0575.pt",
-      "falls": 0,
-      "iteration": 575,
-      "mean_reward": 0.037877872586250305,
-      "teacher_lower_mse": 0.0374423178533713,
-      "teacher_upper_mse": 0.002315654690998296,
-      "torque_saturation_fraction": 3.6480783045977014e-05
-    },
-    {
-      "action_clip_fraction": 0.0,
-      "approx_kl": 0.3107621806363265,
-      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0600.pt",
-      "falls": 0,
-      "iteration": 600,
-      "mean_reward": 0.03931097686290741,
-      "teacher_lower_mse": 0.03878306628515323,
-      "teacher_upper_mse": 0.0023980687644022205,
-      "torque_saturation_fraction": 2.80621408045977e-05
+      "return_code": -6,
+      "reason": "SCREENING_WORKER_ABORTED"
     }
   ],
-  "cp1_7_iteration_600_is_not_assumed_optimal": true,
-  "selection_order": [
-    "fall_count",
-    "yaw_rmse",
-    "cross_axis_rmse",
-    "along_axis_rmse",
-    "torque_saturation",
-    "action_clip",
-    "push_ready_proxy"
+  "force_validation": [
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0600.pt",
+      "checkpoint_sha256": "f75583173b6d42b16c7042e10817e6afcf5cdb46125d0ba62675e0adcf690ecb",
+      "elapsed_s": 36.06276085972786,
+      "eval_steps": 500,
+      "fall_count": 4,
+      "force_n": 10.0,
+      "iteration": 600,
+      "normal_close": true,
+      "push_ready": true,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.020064398646354675,
+          "rmse_vy": 0.005018543917685747,
+          "rmse_yaw": 0.0612238347530365,
+          "seed_count": 5,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.10666497051715851,
+          "rmse_vy": 0.028698276728391647,
+          "rmse_yaw": 0.27142900228500366,
+          "seed_count": 5,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.14941038191318512,
+          "rmse_vy": 0.03748515248298645,
+          "rmse_yaw": 0.30756399035453796,
+          "seed_count": 5,
+          "survival": 1.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.10643782466650009,
+          "rmse_vy": 0.025182906538248062,
+          "rmse_yaw": 0.2445821762084961,
+          "seed_count": 5,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 2,
+          "rmse_vx": 0.12684381008148193,
+          "rmse_vy": 0.050108395516872406,
+          "rmse_yaw": 0.4625624716281891,
+          "seed_count": 5,
+          "survival": 0.6
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.21835288405418396,
+          "rmse_vy": 0.1333572268486023,
+          "rmse_yaw": 0.7245718836784363,
+          "seed_count": 5,
+          "survival": 0.8
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.1653682440519333,
+          "rmse_vy": 0.04406523331999779,
+          "rmse_yaw": 0.4316764771938324,
+          "seed_count": 5,
+          "survival": 0.8
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.11973496526479721,
+          "rmse_vy": 0.04249294847249985,
+          "rmse_yaw": 0.33419546484947205,
+          "seed_count": 5,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.1304306983947754,
+          "rmse_vy": 0.03892349451780319,
+          "rmse_yaw": 0.3414056897163391,
+          "seed_count": 5,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.9111111111111111
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0575.pt",
+      "checkpoint_sha256": "6b45935f338745ac0a928c3887acfad9d46992b9401d052fce78c9e17e67b4b2",
+      "elapsed_s": 37.13506719097495,
+      "eval_steps": 500,
+      "fall_count": 3,
+      "force_n": 10.0,
+      "iteration": 575,
+      "normal_close": true,
+      "push_ready": true,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.018054576590657234,
+          "rmse_vy": 0.00514048058539629,
+          "rmse_yaw": 0.0638640820980072,
+          "seed_count": 5,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.15656760334968567,
+          "rmse_vy": 0.048394300043582916,
+          "rmse_yaw": 0.40213751792907715,
+          "seed_count": 5,
+          "survival": 0.8
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.1647515594959259,
+          "rmse_vy": 0.048734188079833984,
+          "rmse_yaw": 0.3900250196456909,
+          "seed_count": 5,
+          "survival": 0.8
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.11784356832504272,
+          "rmse_vy": 0.030653929337859154,
+          "rmse_yaw": 0.23532351851463318,
+          "seed_count": 5,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.1249614730477333,
+          "rmse_vy": 0.03327372297644615,
+          "rmse_yaw": 0.249735027551651,
+          "seed_count": 5,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.22116708755493164,
+          "rmse_vy": 0.05615275353193283,
+          "rmse_yaw": 0.46299976110458374,
+          "seed_count": 5,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.13439734280109406,
+          "rmse_vy": 0.03881468623876572,
+          "rmse_yaw": 0.311553955078125,
+          "seed_count": 5,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.154835507273674,
+          "rmse_vy": 0.04497779160737991,
+          "rmse_yaw": 0.3937760889530182,
+          "seed_count": 5,
+          "survival": 0.8
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.11705978959798813,
+          "rmse_vy": 0.034814849495887756,
+          "rmse_yaw": 0.2721024751663208,
+          "seed_count": 5,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.9333333333333333
+    }
   ],
-  "status": "SCREENING_PENDING"
+  "pareto_best_checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0600.pt",
+  "pareto_best_checkpoint_sha256": "f75583173b6d42b16c7042e10817e6afcf5cdb46125d0ba62675e0adcf690ecb",
+  "pareto_best_iteration": 600,
+  "screening": [
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0000.pt",
+      "checkpoint_sha256": "3717375b2aa198c8536873630167458f0865b3a597aa1957cd33b7a3c0d22083",
+      "elapsed_s": 17.21773472428322,
+      "eval_steps": 250,
+      "fall_count": 4,
+      "force_n": 0.0,
+      "iteration": 0,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.032434433698654175,
+          "rmse_vy": 0.007597968447953463,
+          "rmse_yaw": 0.07053070515394211,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.13039177656173706,
+          "rmse_vy": 0.1442749798297882,
+          "rmse_yaw": 0.45022764801979065,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.5994738936424255,
+          "rmse_vy": 0.1861964762210846,
+          "rmse_yaw": 1.7342133522033691,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.06236407905817032,
+          "rmse_vy": 0.14340490102767944,
+          "rmse_yaw": 0.2014048993587494,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.059296268969774246,
+          "rmse_vy": 0.1252501904964447,
+          "rmse_yaw": 0.19345234334468842,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.5060490965843201,
+          "rmse_vy": 0.17828863859176636,
+          "rmse_yaw": 1.6608632802963257,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.0671427920460701,
+          "rmse_vy": 0.1364906132221222,
+          "rmse_yaw": 0.18873533606529236,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.5372203588485718,
+          "rmse_vy": 0.2253488153219223,
+          "rmse_yaw": 1.5873491764068604,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.23736707866191864,
+          "rmse_vy": 0.13234777748584747,
+          "rmse_yaw": 0.6852457523345947,
+          "seed_count": 1,
+          "survival": 0.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.5555555555555556
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0010.pt",
+      "checkpoint_sha256": "deba35456b6e9f664ce35684dab2b9ce5d67f326aa588e4ad131793273fa7e9c",
+      "elapsed_s": 17.226304683834314,
+      "eval_steps": 250,
+      "fall_count": 4,
+      "force_n": 0.0,
+      "iteration": 10,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03244007006287575,
+          "rmse_vy": 0.009035647846758366,
+          "rmse_yaw": 0.07948094606399536,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.1169547289609909,
+          "rmse_vy": 0.158274844288826,
+          "rmse_yaw": 0.8000706434249878,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.3309970796108246,
+          "rmse_vy": 0.1364685595035553,
+          "rmse_yaw": 0.7577686309814453,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.08895155787467957,
+          "rmse_vy": 0.1419353038072586,
+          "rmse_yaw": 0.41547855734825134,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.056136954575777054,
+          "rmse_vy": 0.12429410964250565,
+          "rmse_yaw": 0.17119215428829193,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.08196275681257248,
+          "rmse_vy": 0.135039821267128,
+          "rmse_yaw": 0.255719929933548,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.07361496984958649,
+          "rmse_vy": 0.13162772357463837,
+          "rmse_yaw": 0.22816376388072968,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.24284031987190247,
+          "rmse_vy": 0.1649608612060547,
+          "rmse_yaw": 1.039692997932434,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.5956360697746277,
+          "rmse_vy": 0.1881292462348938,
+          "rmse_yaw": 1.5627808570861816,
+          "seed_count": 1,
+          "survival": 0.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.5555555555555556
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0020.pt",
+      "checkpoint_sha256": "5ff299a5f894019423534d427eeb8495f1212e1fae8eb06d0e132c73faccf23a",
+      "elapsed_s": 17.247055400162935,
+      "eval_steps": 250,
+      "fall_count": 7,
+      "force_n": 0.0,
+      "iteration": 20,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.030182739719748497,
+          "rmse_vy": 0.006328148301690817,
+          "rmse_yaw": 0.07085657864809036,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.3558192551136017,
+          "rmse_vy": 0.16369788348674774,
+          "rmse_yaw": 1.2813100814819336,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.40061935782432556,
+          "rmse_vy": 0.1507442444562912,
+          "rmse_yaw": 1.137192964553833,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.06525175273418427,
+          "rmse_vy": 0.14215485751628876,
+          "rmse_yaw": 0.20401142537593842,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.4320357143878937,
+          "rmse_vy": 0.13496004045009613,
+          "rmse_yaw": 0.9960724711418152,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.44557639956474304,
+          "rmse_vy": 0.17153771221637726,
+          "rmse_yaw": 1.296228051185608,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.49617090821266174,
+          "rmse_vy": 0.2344234138727188,
+          "rmse_yaw": 1.6926467418670654,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.2776295244693756,
+          "rmse_vy": 0.1604263186454773,
+          "rmse_yaw": 1.323909878730774,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.2994033396244049,
+          "rmse_vy": 0.13845717906951904,
+          "rmse_yaw": 0.9444982409477234,
+          "seed_count": 1,
+          "survival": 0.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.2222222222222222
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0030.pt",
+      "checkpoint_sha256": "c9ca309b212cda66a25c4b7848ac0d392b15605c2bb5214989d80b289934f540",
+      "elapsed_s": 17.643086064606905,
+      "eval_steps": 250,
+      "fall_count": 3,
+      "force_n": 0.0,
+      "iteration": 30,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.030726337805390358,
+          "rmse_vy": 0.00670979730784893,
+          "rmse_yaw": 0.08227112889289856,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.0531584769487381,
+          "rmse_vy": 0.13810338079929352,
+          "rmse_yaw": 0.17906621098518372,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.08184158056974411,
+          "rmse_vy": 0.13519611954689026,
+          "rmse_yaw": 0.19954650104045868,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.06237432733178139,
+          "rmse_vy": 0.14245325326919556,
+          "rmse_yaw": 0.2057531625032425,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.2940746545791626,
+          "rmse_vy": 0.1489054262638092,
+          "rmse_yaw": 0.7798551917076111,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.06462253630161285,
+          "rmse_vy": 0.13491520285606384,
+          "rmse_yaw": 0.19837306439876556,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.2656420171260834,
+          "rmse_vy": 0.20860685408115387,
+          "rmse_yaw": 0.9780890941619873,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.051312047988176346,
+          "rmse_vy": 0.134881854057312,
+          "rmse_yaw": 0.18435333669185638,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.27953872084617615,
+          "rmse_vy": 0.15860050916671753,
+          "rmse_yaw": 0.6351920366287231,
+          "seed_count": 1,
+          "survival": 0.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.6666666666666667
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0040.pt",
+      "checkpoint_sha256": "1e288f8c596082a44bf1711fce76b1c6687e18fdbb24173a135283a7e3e68373",
+      "elapsed_s": 17.26477814093232,
+      "eval_steps": 250,
+      "fall_count": 3,
+      "force_n": 0.0,
+      "iteration": 40,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03147724270820618,
+          "rmse_vy": 0.009899627417325974,
+          "rmse_yaw": 0.10444413870573044,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.06049023196101189,
+          "rmse_vy": 0.13271601498126984,
+          "rmse_yaw": 0.22647610306739807,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.43413394689559937,
+          "rmse_vy": 0.2034507542848587,
+          "rmse_yaw": 1.2358602285385132,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.06157961115241051,
+          "rmse_vy": 0.1394961029291153,
+          "rmse_yaw": 0.19859246909618378,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.06678860634565353,
+          "rmse_vy": 0.12412524968385696,
+          "rmse_yaw": 0.18098242580890656,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.08087088912725449,
+          "rmse_vy": 0.13164196908473969,
+          "rmse_yaw": 0.21998295187950134,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.46509984135627747,
+          "rmse_vy": 0.12083496153354645,
+          "rmse_yaw": 1.1657863855361938,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.3402763307094574,
+          "rmse_vy": 0.15888938307762146,
+          "rmse_yaw": 1.3102233409881592,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.0569126196205616,
+          "rmse_vy": 0.1264108568429947,
+          "rmse_yaw": 0.20660625398159027,
+          "seed_count": 1,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.6666666666666667
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0050.pt",
+      "checkpoint_sha256": "ddd5a21fd71eaf3e04171ca3fc93090789dcca5b7cc7fecf8389391bd249f7af",
+      "elapsed_s": 17.590225968509912,
+      "eval_steps": 250,
+      "fall_count": 5,
+      "force_n": 0.0,
+      "iteration": 50,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03364584967494011,
+          "rmse_vy": 0.00844977144151926,
+          "rmse_yaw": 0.0887887105345726,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.3512241244316101,
+          "rmse_vy": 0.24695049226284027,
+          "rmse_yaw": 1.6784580945968628,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.34475329518318176,
+          "rmse_vy": 0.14297357201576233,
+          "rmse_yaw": 0.8159729242324829,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.056856583803892136,
+          "rmse_vy": 0.13748569786548615,
+          "rmse_yaw": 0.19570496678352356,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.05833487585186958,
+          "rmse_vy": 0.12343781441450119,
+          "rmse_yaw": 0.18379078805446625,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.38263681530952454,
+          "rmse_vy": 0.16336366534233093,
+          "rmse_yaw": 0.9523739218711853,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.3380216360092163,
+          "rmse_vy": 0.12367668002843857,
+          "rmse_yaw": 0.8952357172966003,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.5863110423088074,
+          "rmse_vy": 0.27701449394226074,
+          "rmse_yaw": 2.3672614097595215,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.07924957573413849,
+          "rmse_vy": 0.12924523651599884,
+          "rmse_yaw": 0.4321317970752716,
+          "seed_count": 1,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.4444444444444444
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0060.pt",
+      "checkpoint_sha256": "8d53a4d52677bd0de00cb82b12356c4efdfb4e172d52247dc5f3950896be68d6",
+      "elapsed_s": 17.38340799883008,
+      "eval_steps": 250,
+      "fall_count": 4,
+      "force_n": 0.0,
+      "iteration": 60,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03532881662249565,
+          "rmse_vy": 0.012711049988865852,
+          "rmse_yaw": 0.11724308878183365,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.1004396304488182,
+          "rmse_vy": 0.12382671982049942,
+          "rmse_yaw": 0.45507943630218506,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.29953494668006897,
+          "rmse_vy": 0.13518089056015015,
+          "rmse_yaw": 0.7677951455116272,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.06780622899532318,
+          "rmse_vy": 0.13356247544288635,
+          "rmse_yaw": 0.20866720378398895,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.06036372482776642,
+          "rmse_vy": 0.1252056509256363,
+          "rmse_yaw": 0.19229651987552643,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.1847115457057953,
+          "rmse_vy": 0.13026967644691467,
+          "rmse_yaw": 0.8963696956634521,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.6226184964179993,
+          "rmse_vy": 0.160116046667099,
+          "rmse_yaw": 1.4985264539718628,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.25264906883239746,
+          "rmse_vy": 0.16671790182590485,
+          "rmse_yaw": 1.5083680152893066,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.05511007085442543,
+          "rmse_vy": 0.1296885460615158,
+          "rmse_yaw": 0.21850836277008057,
+          "seed_count": 1,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.5555555555555556
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0070.pt",
+      "checkpoint_sha256": "f27da398ba136ce8d374d83eaf3cf81aaed2017f6cb0b80771fff5d174005ac5",
+      "elapsed_s": 17.23957371711731,
+      "eval_steps": 250,
+      "fall_count": 5,
+      "force_n": 0.0,
+      "iteration": 70,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.033575888723134995,
+          "rmse_vy": 0.006654222030192614,
+          "rmse_yaw": 0.07473297417163849,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.3331797122955322,
+          "rmse_vy": 0.1350431889295578,
+          "rmse_yaw": 0.9791370034217834,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.5174773931503296,
+          "rmse_vy": 0.2620191276073456,
+          "rmse_yaw": 1.7130743265151978,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.06306876242160797,
+          "rmse_vy": 0.1356477290391922,
+          "rmse_yaw": 0.2664717435836792,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.0651855617761612,
+          "rmse_vy": 0.11915888637304306,
+          "rmse_yaw": 0.1936504989862442,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.14686977863311768,
+          "rmse_vy": 0.15676815807819366,
+          "rmse_yaw": 0.7899078726768494,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.33955657482147217,
+          "rmse_vy": 0.13173484802246094,
+          "rmse_yaw": 0.7652137875556946,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.24534554779529572,
+          "rmse_vy": 0.12308958172798157,
+          "rmse_yaw": 0.7064909934997559,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.3336683213710785,
+          "rmse_vy": 0.1552819311618805,
+          "rmse_yaw": 1.285443663597107,
+          "seed_count": 1,
+          "survival": 0.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.4444444444444444
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0080.pt",
+      "checkpoint_sha256": "aa4addc09778e438c403e4d34442990d9eec2f6b498a9a56c6dd2248ab9a8e86",
+      "elapsed_s": 17.153598479926586,
+      "eval_steps": 250,
+      "fall_count": 3,
+      "force_n": 0.0,
+      "iteration": 80,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03277842327952385,
+          "rmse_vy": 0.004624778870493174,
+          "rmse_yaw": 0.06775560230016708,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.060846660286188126,
+          "rmse_vy": 0.12979067862033844,
+          "rmse_yaw": 0.20571015775203705,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.08682195097208023,
+          "rmse_vy": 0.12828868627548218,
+          "rmse_yaw": 0.21685180068016052,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.06839163601398468,
+          "rmse_vy": 0.13600528240203857,
+          "rmse_yaw": 0.23105497658252716,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.05848567932844162,
+          "rmse_vy": 0.11944930255413055,
+          "rmse_yaw": 0.20381571352481842,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.5702164173126221,
+          "rmse_vy": 0.18072481453418732,
+          "rmse_yaw": 1.641891360282898,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.5603222846984863,
+          "rmse_vy": 0.1560756117105484,
+          "rmse_yaw": 2.075910806655884,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.2210228592157364,
+          "rmse_vy": 0.12199952453374863,
+          "rmse_yaw": 0.7431511878967285,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.32670438289642334,
+          "rmse_vy": 0.14103274047374725,
+          "rmse_yaw": 0.8769868612289429,
+          "seed_count": 1,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.6666666666666667
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0090.pt",
+      "checkpoint_sha256": "e6392351c9ff394e14ac92fc6ac584fb148ce579dabc9fca30072b7849d69dfc",
+      "elapsed_s": 17.369001612067223,
+      "eval_steps": 250,
+      "fall_count": 1,
+      "force_n": 0.0,
+      "iteration": 90,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03210057318210602,
+          "rmse_vy": 0.009899931959807873,
+          "rmse_yaw": 0.0694572851061821,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.057983994483947754,
+          "rmse_vy": 0.12220975011587143,
+          "rmse_yaw": 0.22149860858917236,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.090848907828331,
+          "rmse_vy": 0.12190230190753937,
+          "rmse_yaw": 0.24872876703739166,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.2948942482471466,
+          "rmse_vy": 0.20526592433452606,
+          "rmse_yaw": 0.9062590599060059,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.06993770599365234,
+          "rmse_vy": 0.12226858735084534,
+          "rmse_yaw": 0.21644484996795654,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.0848231241106987,
+          "rmse_vy": 0.1303248405456543,
+          "rmse_yaw": 0.26045507192611694,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.06359091401100159,
+          "rmse_vy": 0.12502241134643555,
+          "rmse_yaw": 0.211669921875,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.061069488525390625,
+          "rmse_vy": 0.1289726048707962,
+          "rmse_yaw": 0.23243984580039978,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.11057128012180328,
+          "rmse_vy": 0.13843989372253418,
+          "rmse_yaw": 0.4983333349227905,
+          "seed_count": 1,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.8888888888888888
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0100.pt",
+      "checkpoint_sha256": "57c59d31d1011dbad021c3b9b0c68564860155dfba85fd2217bcc42c26d476eb",
+      "elapsed_s": 17.18869924172759,
+      "eval_steps": 250,
+      "fall_count": 3,
+      "force_n": 0.0,
+      "iteration": 100,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.032083604484796524,
+          "rmse_vy": 0.006383481435477734,
+          "rmse_yaw": 0.07591646909713745,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.05588185414671898,
+          "rmse_vy": 0.12847934663295746,
+          "rmse_yaw": 0.21712297201156616,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.073820561170578,
+          "rmse_vy": 0.12950950860977173,
+          "rmse_yaw": 0.22978809475898743,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.06136111542582512,
+          "rmse_vy": 0.13792766630649567,
+          "rmse_yaw": 0.23025865852832794,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.3694535493850708,
+          "rmse_vy": 0.2977321743965149,
+          "rmse_yaw": 1.6220319271087646,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.4773462414741516,
+          "rmse_vy": 0.1401655375957489,
+          "rmse_yaw": 1.4389793872833252,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.058445192873477936,
+          "rmse_vy": 0.12794460356235504,
+          "rmse_yaw": 0.23918433487415314,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.31226933002471924,
+          "rmse_vy": 0.2133985161781311,
+          "rmse_yaw": 1.695271372795105,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.17079497873783112,
+          "rmse_vy": 0.12575282156467438,
+          "rmse_yaw": 0.6247974038124084,
+          "seed_count": 1,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.6666666666666667
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0125.pt",
+      "checkpoint_sha256": "3a6f0b41baf8d1110b8c206d95ddece540c311412c30c1ba0b3b988aebf1f435",
+      "elapsed_s": 17.621935818344355,
+      "eval_steps": 250,
+      "fall_count": 2,
+      "force_n": 0.0,
+      "iteration": 125,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.0342266820371151,
+          "rmse_vy": 0.006920716725289822,
+          "rmse_yaw": 0.08568849414587021,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.3635212779045105,
+          "rmse_vy": 0.12821470201015472,
+          "rmse_yaw": 1.2061152458190918,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.09021319448947906,
+          "rmse_vy": 0.12575308978557587,
+          "rmse_yaw": 0.23345154523849487,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.04958561435341835,
+          "rmse_vy": 0.13893266022205353,
+          "rmse_yaw": 0.23928484320640564,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.4474894106388092,
+          "rmse_vy": 0.11660591512918472,
+          "rmse_yaw": 1.207545280456543,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.06151041015982628,
+          "rmse_vy": 0.12943872809410095,
+          "rmse_yaw": 0.19458061456680298,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.2672956883907318,
+          "rmse_vy": 0.11921647191047668,
+          "rmse_yaw": 0.7311151027679443,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.10038328915834427,
+          "rmse_vy": 0.1224609836935997,
+          "rmse_yaw": 0.45066261291503906,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.052939966320991516,
+          "rmse_vy": 0.12810470163822174,
+          "rmse_yaw": 0.2296551913022995,
+          "seed_count": 1,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.7777777777777778
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0150.pt",
+      "checkpoint_sha256": "61ecc1c0a90987a0b46d18dcd5d8f192ea7e49d9820bbff465d158418a96e3f8",
+      "elapsed_s": 17.47496149688959,
+      "eval_steps": 250,
+      "fall_count": 3,
+      "force_n": 0.0,
+      "iteration": 150,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03261418268084526,
+          "rmse_vy": 0.007565234787762165,
+          "rmse_yaw": 0.10813253372907639,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.2661510109901428,
+          "rmse_vy": 0.12814968824386597,
+          "rmse_yaw": 1.0167646408081055,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.28157636523246765,
+          "rmse_vy": 0.12818729877471924,
+          "rmse_yaw": 0.8666918277740479,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.050455957651138306,
+          "rmse_vy": 0.1327071487903595,
+          "rmse_yaw": 0.20694638788700104,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.05204492062330246,
+          "rmse_vy": 0.11830546706914902,
+          "rmse_yaw": 0.1946830451488495,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.3114699423313141,
+          "rmse_vy": 0.12015882134437561,
+          "rmse_yaw": 0.7837293744087219,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.07846379280090332,
+          "rmse_vy": 0.12054087966680527,
+          "rmse_yaw": 0.4455232322216034,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03632425144314766,
+          "rmse_vy": 0.12543267011642456,
+          "rmse_yaw": 0.19610922038555145,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.17917682230472565,
+          "rmse_vy": 0.12079887092113495,
+          "rmse_yaw": 0.6695703268051147,
+          "seed_count": 1,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.6666666666666667
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0175.pt",
+      "checkpoint_sha256": "6c8eeeac51f0ee27a8cdcb2f86b2ac9d120420d7a94ee791ff5b75780657231d",
+      "elapsed_s": 17.47608120366931,
+      "eval_steps": 250,
+      "fall_count": 2,
+      "force_n": 0.0,
+      "iteration": 175,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03049529530107975,
+          "rmse_vy": 0.0075678774155676365,
+          "rmse_yaw": 0.07034134119749069,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.25559893250465393,
+          "rmse_vy": 0.13315001130104065,
+          "rmse_yaw": 0.9412638545036316,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.3899010121822357,
+          "rmse_vy": 0.13278625905513763,
+          "rmse_yaw": 0.8898967504501343,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.04267166182398796,
+          "rmse_vy": 0.1308746635913849,
+          "rmse_yaw": 0.22779756784439087,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.041647154837846756,
+          "rmse_vy": 0.11603343486785889,
+          "rmse_yaw": 0.202020063996315,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03947804123163223,
+          "rmse_vy": 0.12290983647108078,
+          "rmse_yaw": 0.20853912830352783,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.06765170395374298,
+          "rmse_vy": 0.11567819863557816,
+          "rmse_yaw": 0.27018415927886963,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03433813527226448,
+          "rmse_vy": 0.121131531894207,
+          "rmse_yaw": 0.21499548852443695,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03318564221262932,
+          "rmse_vy": 0.11494064331054688,
+          "rmse_yaw": 0.21854719519615173,
+          "seed_count": 1,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.7777777777777778
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0200.pt",
+      "checkpoint_sha256": "8ee51dff9088a4a5a204e0c972bb5aeda22eda170f1c469768581595845bc43e",
+      "elapsed_s": 17.714045714586973,
+      "eval_steps": 250,
+      "fall_count": 5,
+      "force_n": 0.0,
+      "iteration": 200,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.02668282948434353,
+          "rmse_vy": 0.007322946097701788,
+          "rmse_yaw": 0.06730728596448898,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.342865914106369,
+          "rmse_vy": 0.1273551881313324,
+          "rmse_yaw": 1.1629053354263306,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.3661690056324005,
+          "rmse_vy": 0.13723811507225037,
+          "rmse_yaw": 0.9942148327827454,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.510132908821106,
+          "rmse_vy": 0.15725651383399963,
+          "rmse_yaw": 1.6930569410324097,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.040456753224134445,
+          "rmse_vy": 0.11201460659503937,
+          "rmse_yaw": 0.1900799572467804,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.38381853699684143,
+          "rmse_vy": 0.21487079560756683,
+          "rmse_yaw": 1.392134428024292,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.05141836777329445,
+          "rmse_vy": 0.11569079011678696,
+          "rmse_yaw": 0.2078930288553238,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.12671032547950745,
+          "rmse_vy": 0.18717430531978607,
+          "rmse_yaw": 0.9130425453186035,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.26646047830581665,
+          "rmse_vy": 0.11616528779268265,
+          "rmse_yaw": 0.836798906326294,
+          "seed_count": 1,
+          "survival": 0.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.4444444444444444
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0225.pt",
+      "checkpoint_sha256": "b450cb661788eb0e5ebdb749318fe5e2b6d16f65dda5630d89c701d2d0a28141",
+      "elapsed_s": 17.531229253858328,
+      "eval_steps": 250,
+      "fall_count": 3,
+      "force_n": 0.0,
+      "iteration": 225,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.032130345702171326,
+          "rmse_vy": 0.006077946629375219,
+          "rmse_yaw": 0.08249327540397644,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.05348242074251175,
+          "rmse_vy": 0.10311557352542877,
+          "rmse_yaw": 0.29024210572242737,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.33116376399993896,
+          "rmse_vy": 0.11101441085338593,
+          "rmse_yaw": 0.8510837554931641,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.059127405285835266,
+          "rmse_vy": 0.11454389989376068,
+          "rmse_yaw": 0.20773544907569885,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.04230537638068199,
+          "rmse_vy": 0.10466685891151428,
+          "rmse_yaw": 0.1767970770597458,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.0866919755935669,
+          "rmse_vy": 0.11034536361694336,
+          "rmse_yaw": 0.4502597451210022,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.05303511396050453,
+          "rmse_vy": 0.11169781535863876,
+          "rmse_yaw": 0.17931780219078064,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.33623647689819336,
+          "rmse_vy": 0.1449887752532959,
+          "rmse_yaw": 0.9757439494132996,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.25270095467567444,
+          "rmse_vy": 0.10960321873426437,
+          "rmse_yaw": 1.0037450790405273,
+          "seed_count": 1,
+          "survival": 0.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.6666666666666667
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0250.pt",
+      "checkpoint_sha256": "5c24177b3d5cc6ffaf35332a5afda641750bcf06ff0818b7616bca46ff7268e2",
+      "elapsed_s": 17.19399333745241,
+      "eval_steps": 250,
+      "fall_count": 2,
+      "force_n": 0.0,
+      "iteration": 250,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.024601595476269722,
+          "rmse_vy": 0.009221472777426243,
+          "rmse_yaw": 0.09428459405899048,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.1473761349916458,
+          "rmse_vy": 0.11712455749511719,
+          "rmse_yaw": 0.5189293026924133,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.0801246240735054,
+          "rmse_vy": 0.10206398367881775,
+          "rmse_yaw": 0.27154120802879333,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.04035404324531555,
+          "rmse_vy": 0.1112467348575592,
+          "rmse_yaw": 0.20104648172855377,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.38118427991867065,
+          "rmse_vy": 0.17751391232013702,
+          "rmse_yaw": 1.3368861675262451,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.22580952942371368,
+          "rmse_vy": 0.11677910387516022,
+          "rmse_yaw": 0.633705735206604,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.2867751717567444,
+          "rmse_vy": 0.10946954041719437,
+          "rmse_yaw": 0.7416601777076721,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.28535929322242737,
+          "rmse_vy": 0.11466804146766663,
+          "rmse_yaw": 0.7480939030647278,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.22465738654136658,
+          "rmse_vy": 0.11398352682590485,
+          "rmse_yaw": 0.809319257736206,
+          "seed_count": 1,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.7777777777777778
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0325.pt",
+      "checkpoint_sha256": "310a2594e8aee3083551944fe3315da29db2f9baa3501a192662165a86eb80de",
+      "elapsed_s": 17.240024015307426,
+      "eval_steps": 250,
+      "fall_count": 3,
+      "force_n": 0.0,
+      "iteration": 325,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.02597763203084469,
+          "rmse_vy": 0.010041680186986923,
+          "rmse_yaw": 0.10516414046287537,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.032313115894794464,
+          "rmse_vy": 0.08356759697198868,
+          "rmse_yaw": 0.22562497854232788,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.05625118315219879,
+          "rmse_vy": 0.08574675768613815,
+          "rmse_yaw": 0.24543794989585876,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03570390120148659,
+          "rmse_vy": 0.08544054627418518,
+          "rmse_yaw": 0.22262077033519745,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.2631698548793793,
+          "rmse_vy": 0.16101787984371185,
+          "rmse_yaw": 1.2929773330688477,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.29977238178253174,
+          "rmse_vy": 0.10800083726644516,
+          "rmse_yaw": 0.9593523144721985,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.077371746301651,
+          "rmse_vy": 0.08673039823770523,
+          "rmse_yaw": 0.35349974036216736,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.08848107606172562,
+          "rmse_vy": 0.1609349101781845,
+          "rmse_yaw": 1.0326017141342163,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.04066697508096695,
+          "rmse_vy": 0.08261796087026596,
+          "rmse_yaw": 0.23602725565433502,
+          "seed_count": 1,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.6666666666666667
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0350.pt",
+      "checkpoint_sha256": "0d8054a6c0dded180f6c0a3b73bc00b218de123ac123ff94f44fdf0e5fce53a5",
+      "elapsed_s": 17.575256925076246,
+      "eval_steps": 250,
+      "fall_count": 3,
+      "force_n": 0.0,
+      "iteration": 350,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.024740446358919144,
+          "rmse_vy": 0.00803923886269331,
+          "rmse_yaw": 0.0505857840180397,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.2825196385383606,
+          "rmse_vy": 0.1707281917333603,
+          "rmse_yaw": 0.9615817666053772,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.3995007276535034,
+          "rmse_vy": 0.17353618144989014,
+          "rmse_yaw": 1.57296621799469,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03758985176682472,
+          "rmse_vy": 0.07282549142837524,
+          "rmse_yaw": 0.227668896317482,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.2739906311035156,
+          "rmse_vy": 0.11677908897399902,
+          "rmse_yaw": 1.1313776969909668,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.06563984602689743,
+          "rmse_vy": 0.0794019103050232,
+          "rmse_yaw": 0.3465624153614044,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.27016741037368774,
+          "rmse_vy": 0.08149184286594391,
+          "rmse_yaw": 0.6923660039901733,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.1250382661819458,
+          "rmse_vy": 0.07752058655023575,
+          "rmse_yaw": 0.5059552192687988,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03776637837290764,
+          "rmse_vy": 0.06943424046039581,
+          "rmse_yaw": 0.21334296464920044,
+          "seed_count": 1,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.6666666666666667
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0375.pt",
+      "checkpoint_sha256": "da9f2340fb274bfea85255cf608d9e7944b056c7a9bd829e0eb4418dc69bc472",
+      "elapsed_s": 17.53326180204749,
+      "eval_steps": 250,
+      "fall_count": 0,
+      "force_n": 0.0,
+      "iteration": 375,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.02255946397781372,
+          "rmse_vy": 0.010214917361736298,
+          "rmse_yaw": 0.1139548197388649,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.034633006900548935,
+          "rmse_vy": 0.06569980829954147,
+          "rmse_yaw": 0.22928880155086517,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.050016433000564575,
+          "rmse_vy": 0.06508500874042511,
+          "rmse_yaw": 0.24617061018943787,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.04221973940730095,
+          "rmse_vy": 0.06263985484838486,
+          "rmse_yaw": 0.23811516165733337,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.04815253987908363,
+          "rmse_vy": 0.06620308756828308,
+          "rmse_yaw": 0.2501630187034607,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.055442001670598984,
+          "rmse_vy": 0.06425486505031586,
+          "rmse_yaw": 0.3480452597141266,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.042689770460128784,
+          "rmse_vy": 0.06688814610242844,
+          "rmse_yaw": 0.24255329370498657,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.1000627726316452,
+          "rmse_vy": 0.074803426861763,
+          "rmse_yaw": 0.4789588451385498,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.1913367658853531,
+          "rmse_vy": 0.08439608663320541,
+          "rmse_yaw": 0.5936951637268066,
+          "seed_count": 1,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 1.0
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0400.pt",
+      "checkpoint_sha256": "23b7ebda6adcf3ce2900edb09dc936a26f430fa11c0028163dacfe2ada09d390",
+      "elapsed_s": 17.48184134438634,
+      "eval_steps": 250,
+      "fall_count": 1,
+      "force_n": 0.0,
+      "iteration": 400,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.023270258679986,
+          "rmse_vy": 0.004807401914149523,
+          "rmse_yaw": 0.06107966974377632,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.04608330875635147,
+          "rmse_vy": 0.06542260944843292,
+          "rmse_yaw": 0.3827514350414276,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.2860485315322876,
+          "rmse_vy": 0.08473048359155655,
+          "rmse_yaw": 0.855083167552948,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.045664891600608826,
+          "rmse_vy": 0.05613258108496666,
+          "rmse_yaw": 0.2590246796607971,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.0440947525203228,
+          "rmse_vy": 0.059912651777267456,
+          "rmse_yaw": 0.2411491870880127,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.24582187831401825,
+          "rmse_vy": 0.08216043561697006,
+          "rmse_yaw": 0.7775853872299194,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.16911661624908447,
+          "rmse_vy": 0.06509945541620255,
+          "rmse_yaw": 0.49688154458999634,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.3081682324409485,
+          "rmse_vy": 0.23904038965702057,
+          "rmse_yaw": 1.2720539569854736,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.2407604306936264,
+          "rmse_vy": 0.08067245781421661,
+          "rmse_yaw": 1.0198153257369995,
+          "seed_count": 1,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.8888888888888888
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0425.pt",
+      "checkpoint_sha256": "3de91719c07749badeb8b42111519e88d789179ca825de043c84797f765a20c1",
+      "elapsed_s": 17.523738391697407,
+      "eval_steps": 250,
+      "fall_count": 0,
+      "force_n": 0.0,
+      "iteration": 425,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.021554533392190933,
+          "rmse_vy": 0.0069453832693398,
+          "rmse_yaw": 0.07284070551395416,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.06143815442919731,
+          "rmse_vy": 0.05068747326731682,
+          "rmse_yaw": 0.38840046525001526,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.2699919044971466,
+          "rmse_vy": 0.10618388652801514,
+          "rmse_yaw": 0.8450459241867065,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.0407416969537735,
+          "rmse_vy": 0.05127329006791115,
+          "rmse_yaw": 0.27469444274902344,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.042100317776203156,
+          "rmse_vy": 0.05315631255507469,
+          "rmse_yaw": 0.2633886933326721,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.05263279005885124,
+          "rmse_vy": 0.049711018800735474,
+          "rmse_yaw": 0.31382685899734497,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.16056232154369354,
+          "rmse_vy": 0.05941753089427948,
+          "rmse_yaw": 0.5279402136802673,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03630353510379791,
+          "rmse_vy": 0.050141870975494385,
+          "rmse_yaw": 0.26572224497795105,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03778742626309395,
+          "rmse_vy": 0.05936117470264435,
+          "rmse_yaw": 0.2670612037181854,
+          "seed_count": 1,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 1.0
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0450.pt",
+      "checkpoint_sha256": "a3eaba6e613af3872dc154cdda20ab32bd45cd730e094f1da0a7af95404d1bce",
+      "elapsed_s": 17.490649834275246,
+      "eval_steps": 250,
+      "fall_count": 0,
+      "force_n": 0.0,
+      "iteration": 450,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.0239698588848114,
+          "rmse_vy": 0.00642779003828764,
+          "rmse_yaw": 0.06424415111541748,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.2810984253883362,
+          "rmse_vy": 0.16957348585128784,
+          "rmse_yaw": 1.126962661743164,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.261898010969162,
+          "rmse_vy": 0.06236066296696663,
+          "rmse_yaw": 0.5554088950157166,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.04558925703167915,
+          "rmse_vy": 0.048046186566352844,
+          "rmse_yaw": 0.2776257395744324,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.042353738099336624,
+          "rmse_vy": 0.048038557171821594,
+          "rmse_yaw": 0.2660013735294342,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.18261058628559113,
+          "rmse_vy": 0.06407249718904495,
+          "rmse_yaw": 0.47584909200668335,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.059369735419750214,
+          "rmse_vy": 0.05348799005150795,
+          "rmse_yaw": 0.3687266707420349,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.05054942145943642,
+          "rmse_vy": 0.05900515988469124,
+          "rmse_yaw": 0.41170498728752136,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.05261548236012459,
+          "rmse_vy": 0.05533503368496895,
+          "rmse_yaw": 0.3472428321838379,
+          "seed_count": 1,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 1.0
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0475.pt",
+      "checkpoint_sha256": "199bdd78099db49efbe8320046f7216edcd9bfbe7c09ffa8f2a972d02215c97e",
+      "elapsed_s": 16.0398821644485,
+      "eval_steps": 250,
+      "fall_count": 1,
+      "force_n": 0.0,
+      "iteration": 475,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.022469285875558853,
+          "rmse_vy": 0.005942097399383783,
+          "rmse_yaw": 0.0804186686873436,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.053080298006534576,
+          "rmse_vy": 0.055699508637189865,
+          "rmse_yaw": 0.36734357476234436,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.48883530497550964,
+          "rmse_vy": 0.17620991170406342,
+          "rmse_yaw": 1.112040400505066,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03765363246202469,
+          "rmse_vy": 0.03953127562999725,
+          "rmse_yaw": 0.2783691883087158,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.22983521223068237,
+          "rmse_vy": 0.07230149954557419,
+          "rmse_yaw": 0.5763072967529297,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.4631820321083069,
+          "rmse_vy": 0.15213316679000854,
+          "rmse_yaw": 1.33668053150177,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.0749858096241951,
+          "rmse_vy": 0.05242832750082016,
+          "rmse_yaw": 0.4502539336681366,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.04168577492237091,
+          "rmse_vy": 0.05833768472075462,
+          "rmse_yaw": 0.26789045333862305,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.1070123240351677,
+          "rmse_vy": 0.06310522556304932,
+          "rmse_yaw": 0.4038354456424713,
+          "seed_count": 1,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.8888888888888888
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0500.pt",
+      "checkpoint_sha256": "fc32c40e4138decb4b0ed6db03c304b1936ad84df4cd6564eccd1647ac83734c",
+      "elapsed_s": 16.92629224061966,
+      "eval_steps": 250,
+      "fall_count": 0,
+      "force_n": 0.0,
+      "iteration": 500,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.024306073784828186,
+          "rmse_vy": 0.007598318625241518,
+          "rmse_yaw": 0.04474432021379471,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.07139796763658524,
+          "rmse_vy": 0.06493064761161804,
+          "rmse_yaw": 0.4135845899581909,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.06453597545623779,
+          "rmse_vy": 0.05055956169962883,
+          "rmse_yaw": 0.2827858030796051,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.0416351817548275,
+          "rmse_vy": 0.03556738793849945,
+          "rmse_yaw": 0.2766852080821991,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.051116980612277985,
+          "rmse_vy": 0.03454360365867615,
+          "rmse_yaw": 0.2814309597015381,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.19819670915603638,
+          "rmse_vy": 0.06139682978391647,
+          "rmse_yaw": 0.6690372228622437,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.05693249776959419,
+          "rmse_vy": 0.049797173589468,
+          "rmse_yaw": 0.3844810724258423,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.26994094252586365,
+          "rmse_vy": 0.07415289431810379,
+          "rmse_yaw": 0.9300989508628845,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03727805241942406,
+          "rmse_vy": 0.05495687946677208,
+          "rmse_yaw": 0.2624497711658478,
+          "seed_count": 1,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 1.0
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0525.pt",
+      "checkpoint_sha256": "67f4713b17b0d6a8287d1e78888f5f1c666747ba98cdbdd4e349562857efeb3c",
+      "elapsed_s": 17.634382274001837,
+      "eval_steps": 250,
+      "fall_count": 0,
+      "force_n": 0.0,
+      "iteration": 525,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.021294603124260902,
+          "rmse_vy": 0.005655826069414616,
+          "rmse_yaw": 0.0703384205698967,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.07486455142498016,
+          "rmse_vy": 0.04834044724702835,
+          "rmse_yaw": 0.47247108817100525,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.05434999614953995,
+          "rmse_vy": 0.0466994047164917,
+          "rmse_yaw": 0.2791706621646881,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.04491829872131348,
+          "rmse_vy": 0.033120714128017426,
+          "rmse_yaw": 0.27463504672050476,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.04546752944588661,
+          "rmse_vy": 0.0369856096804142,
+          "rmse_yaw": 0.2668175995349884,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.06769993901252747,
+          "rmse_vy": 0.055434755980968475,
+          "rmse_yaw": 0.4740646481513977,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.2921289801597595,
+          "rmse_vy": 0.05325835570693016,
+          "rmse_yaw": 0.8509418368339539,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.057531241327524185,
+          "rmse_vy": 0.05235735699534416,
+          "rmse_yaw": 0.4028581380844116,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03669990226626396,
+          "rmse_vy": 0.05060655623674393,
+          "rmse_yaw": 0.44532865285873413,
+          "seed_count": 1,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 1.0
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0550.pt",
+      "checkpoint_sha256": "c91bc22b2e2e0fcf1592de1251e081390fd5982d1bb953e13594647af6fc70e2",
+      "elapsed_s": 17.584748931229115,
+      "eval_steps": 250,
+      "fall_count": 1,
+      "force_n": 0.0,
+      "iteration": 550,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.02411668561398983,
+          "rmse_vy": 0.010977393016219139,
+          "rmse_yaw": 0.07130078226327896,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.04866207018494606,
+          "rmse_vy": 0.024777622893452644,
+          "rmse_yaw": 0.2961653769016266,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.37604930996894836,
+          "rmse_vy": 0.17085620760917664,
+          "rmse_yaw": 1.761207938194275,
+          "seed_count": 1,
+          "survival": 0.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.043726932257413864,
+          "rmse_vy": 0.029493438079953194,
+          "rmse_yaw": 0.2863404452800751,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.05624151602387428,
+          "rmse_vy": 0.034934308379888535,
+          "rmse_yaw": 0.29701462388038635,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.22475045919418335,
+          "rmse_vy": 0.052084241062402725,
+          "rmse_yaw": 0.6881133317947388,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.045995790511369705,
+          "rmse_vy": 0.0439569428563118,
+          "rmse_yaw": 0.30153268575668335,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.05472956970334053,
+          "rmse_vy": 0.048674218356609344,
+          "rmse_yaw": 0.4548038840293884,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.5223278403282166,
+          "rmse_vy": 0.36713868379592896,
+          "rmse_yaw": 1.7518796920776367,
+          "seed_count": 1,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.8888888888888888
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0575.pt",
+      "checkpoint_sha256": "6b45935f338745ac0a928c3887acfad9d46992b9401d052fce78c9e17e67b4b2",
+      "elapsed_s": 17.57910168915987,
+      "eval_steps": 250,
+      "fall_count": 0,
+      "force_n": 0.0,
+      "iteration": 575,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.0235262680798769,
+          "rmse_vy": 0.00518217496573925,
+          "rmse_yaw": 0.06489303708076477,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.035831425338983536,
+          "rmse_vy": 0.04048663005232811,
+          "rmse_yaw": 0.2876443564891815,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.06628945469856262,
+          "rmse_vy": 0.044812001287937164,
+          "rmse_yaw": 0.2888263165950775,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.04146186634898186,
+          "rmse_vy": 0.02692473493516445,
+          "rmse_yaw": 0.2939086854457855,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.047462861984968185,
+          "rmse_vy": 0.03271542862057686,
+          "rmse_yaw": 0.2918407618999481,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.061152730137109756,
+          "rmse_vy": 0.0483480729162693,
+          "rmse_yaw": 0.3970527648925781,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.06872927397489548,
+          "rmse_vy": 0.04032466188073158,
+          "rmse_yaw": 0.36012688279151917,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.041156500577926636,
+          "rmse_vy": 0.0258766058832407,
+          "rmse_yaw": 0.285086452960968,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.05347496643662453,
+          "rmse_vy": 0.04367372766137123,
+          "rmse_yaw": 0.3735498785972595,
+          "seed_count": 1,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 1.0
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0600.pt",
+      "checkpoint_sha256": "f75583173b6d42b16c7042e10817e6afcf5cdb46125d0ba62675e0adcf690ecb",
+      "elapsed_s": 17.47753991559148,
+      "eval_steps": 250,
+      "fall_count": 0,
+      "force_n": 0.0,
+      "iteration": 600,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.028906244784593582,
+          "rmse_vy": 0.008186005987226963,
+          "rmse_yaw": 0.06186733767390251,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.07894405722618103,
+          "rmse_vy": 0.03482529893517494,
+          "rmse_yaw": 0.42356136441230774,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.0646568015217781,
+          "rmse_vy": 0.04132911562919617,
+          "rmse_yaw": 0.29825645685195923,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.0648227408528328,
+          "rmse_vy": 0.05723373219370842,
+          "rmse_yaw": 0.4164234399795532,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.047937192022800446,
+          "rmse_vy": 0.03302239626646042,
+          "rmse_yaw": 0.28323838114738464,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.047540921717882156,
+          "rmse_vy": 0.03293057903647423,
+          "rmse_yaw": 0.3612326979637146,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.07233179360628128,
+          "rmse_vy": 0.03387802466750145,
+          "rmse_yaw": 0.36774128675460815,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.05898057669401169,
+          "rmse_vy": 0.04523096978664398,
+          "rmse_yaw": 0.43380263447761536,
+          "seed_count": 1,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.06490664929151535,
+          "rmse_vy": 0.033076100051403046,
+          "rmse_yaw": 0.3566312789916992,
+          "seed_count": 1,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 1.0
+    }
+  ],
+  "screening_status": "PARTIAL_29_OF_31",
+  "status": "PARTIAL_SCREENING_WITH_TWO_RUNTIME_FAILURES",
+  "top2_iterations": [
+    600,
+    575
+  ],
+  "top5_iterations": [
+    575,
+    375,
+    600,
+    425,
+    525
+  ],
+  "validation": [
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0575.pt",
+      "checkpoint_sha256": "6b45935f338745ac0a928c3887acfad9d46992b9401d052fce78c9e17e67b4b2",
+      "elapsed_s": 35.821274254471064,
+      "eval_steps": 500,
+      "fall_count": 0,
+      "force_n": 0.0,
+      "iteration": 575,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.01905536837875843,
+          "rmse_vy": 0.005608715116977692,
+          "rmse_yaw": 0.056858718395233154,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.04948241636157036,
+          "rmse_vy": 0.03285955265164375,
+          "rmse_yaw": 0.3392440378665924,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.07347800582647324,
+          "rmse_vy": 0.030713297426700592,
+          "rmse_yaw": 0.3454361855983734,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03452589735388756,
+          "rmse_vy": 0.025418339297175407,
+          "rmse_yaw": 0.28854262828826904,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.0813988521695137,
+          "rmse_vy": 0.03794535622000694,
+          "rmse_yaw": 0.40370699763298035,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.044269490987062454,
+          "rmse_vy": 0.030229590833187103,
+          "rmse_yaw": 0.32703736424446106,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.13477516174316406,
+          "rmse_vy": 0.04797220230102539,
+          "rmse_yaw": 0.5177742838859558,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.038951802998781204,
+          "rmse_vy": 0.029952287673950195,
+          "rmse_yaw": 0.32323166728019714,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.037085216492414474,
+          "rmse_vy": 0.027827268466353416,
+          "rmse_yaw": 0.2868404686450958,
+          "seed_count": 3,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 1.0
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0375.pt",
+      "checkpoint_sha256": "da9f2340fb274bfea85255cf608d9e7944b056c7a9bd829e0eb4418dc69bc472",
+      "elapsed_s": 35.621572609990835,
+      "eval_steps": 500,
+      "fall_count": 4,
+      "force_n": 0.0,
+      "iteration": 375,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.020182035863399506,
+          "rmse_vy": 0.006012613419443369,
+          "rmse_yaw": 0.0643581822514534,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.10410294681787491,
+          "rmse_vy": 0.08112780004739761,
+          "rmse_yaw": 0.4786043167114258,
+          "seed_count": 3,
+          "survival": 0.6666666666666667
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.16940508782863617,
+          "rmse_vy": 0.07560307532548904,
+          "rmse_yaw": 0.5191914439201355,
+          "seed_count": 3,
+          "survival": 0.6666666666666667
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03684184327721596,
+          "rmse_vy": 0.06354547291994095,
+          "rmse_yaw": 0.22975313663482666,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.07861566543579102,
+          "rmse_vy": 0.09516096115112305,
+          "rmse_yaw": 0.41992437839508057,
+          "seed_count": 3,
+          "survival": 0.6666666666666667
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.15250863134860992,
+          "rmse_vy": 0.07632419466972351,
+          "rmse_yaw": 0.5596699714660645,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.11271459609270096,
+          "rmse_vy": 0.08562896400690079,
+          "rmse_yaw": 0.47349512577056885,
+          "seed_count": 3,
+          "survival": 0.6666666666666667
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.10646506398916245,
+          "rmse_vy": 0.0708279237151146,
+          "rmse_yaw": 0.4396272897720337,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.09566634148359299,
+          "rmse_vy": 0.06691288203001022,
+          "rmse_yaw": 0.34456324577331543,
+          "seed_count": 3,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.8518518518518519
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0600.pt",
+      "checkpoint_sha256": "f75583173b6d42b16c7042e10817e6afcf5cdb46125d0ba62675e0adcf690ecb",
+      "elapsed_s": 35.195364098995924,
+      "eval_steps": 500,
+      "fall_count": 0,
+      "force_n": 0.0,
+      "iteration": 600,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.022028116509318352,
+          "rmse_vy": 0.006447235122323036,
+          "rmse_yaw": 0.05559511110186577,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03816165402531624,
+          "rmse_vy": 0.031855855137109756,
+          "rmse_yaw": 0.3048342168331146,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.1935359239578247,
+          "rmse_vy": 0.05111206695437431,
+          "rmse_yaw": 0.5535459518432617,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03593163192272186,
+          "rmse_vy": 0.024121643975377083,
+          "rmse_yaw": 0.28101226687431335,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.04223215579986572,
+          "rmse_vy": 0.028022445738315582,
+          "rmse_yaw": 0.2703390121459961,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.04802481457591057,
+          "rmse_vy": 0.0311131551861763,
+          "rmse_yaw": 0.3202713429927826,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.045648884028196335,
+          "rmse_vy": 0.02608564682304859,
+          "rmse_yaw": 0.3210994303226471,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03736010566353798,
+          "rmse_vy": 0.037348777055740356,
+          "rmse_yaw": 0.3483881652355194,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.05728147551417351,
+          "rmse_vy": 0.03407447412610054,
+          "rmse_yaw": 0.4044205844402313,
+          "seed_count": 3,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 1.0
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0425.pt",
+      "checkpoint_sha256": "3de91719c07749badeb8b42111519e88d789179ca825de043c84797f765a20c1",
+      "elapsed_s": 36.230311416089535,
+      "eval_steps": 500,
+      "fall_count": 3,
+      "force_n": 0.0,
+      "iteration": 425,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.019526751711964607,
+          "rmse_vy": 0.005689642857760191,
+          "rmse_yaw": 0.07906171679496765,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.19318443536758423,
+          "rmse_vy": 0.07043112069368362,
+          "rmse_yaw": 0.6325632929801941,
+          "seed_count": 3,
+          "survival": 0.6666666666666667
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.11482390016317368,
+          "rmse_vy": 0.052909474819898605,
+          "rmse_yaw": 0.44195231795310974,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.03592779114842415,
+          "rmse_vy": 0.048952311277389526,
+          "rmse_yaw": 0.261470764875412,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.038060616701841354,
+          "rmse_vy": 0.054045598953962326,
+          "rmse_yaw": 0.2552894055843353,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.16513791680335999,
+          "rmse_vy": 0.0598466731607914,
+          "rmse_yaw": 0.5731382369995117,
+          "seed_count": 3,
+          "survival": 0.6666666666666667
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.13265548646450043,
+          "rmse_vy": 0.0648578628897667,
+          "rmse_yaw": 0.6200011372566223,
+          "seed_count": 3,
+          "survival": 0.6666666666666667
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.057381246238946915,
+          "rmse_vy": 0.05580438673496246,
+          "rmse_yaw": 0.365001916885376,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.0730069950222969,
+          "rmse_vy": 0.05474214628338814,
+          "rmse_yaw": 0.3560464084148407,
+          "seed_count": 3,
+          "survival": 1.0
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.8888888888888888
+    },
+    {
+      "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+      "adapter": false,
+      "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0525.pt",
+      "checkpoint_sha256": "67f4713b17b0d6a8287d1e78888f5f1c666747ba98cdbdd4e349562857efeb3c",
+      "elapsed_s": 36.22982029244304,
+      "eval_steps": 500,
+      "fall_count": 3,
+      "force_n": 0.0,
+      "iteration": 525,
+      "normal_close": true,
+      "push_ready": false,
+      "return_code": 0,
+      "rows": [
+        {
+          "case": "stand",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.019533520564436913,
+          "rmse_vy": 0.005498820450156927,
+          "rmse_yaw": 0.07491374760866165,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "forward_010",
+          "command": [
+            0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.036228928714990616,
+          "rmse_vy": 0.03204377368092537,
+          "rmse_yaw": 0.29927781224250793,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "backward_010",
+          "command": [
+            -0.1,
+            0.0,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.09893617033958435,
+          "rmse_vy": 0.03677684813737869,
+          "rmse_yaw": 0.3843916654586792,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "left_010",
+          "command": [
+            0.0,
+            0.1,
+            0.0
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.04085648059844971,
+          "rmse_vy": 0.03478579223155975,
+          "rmse_yaw": 0.2963743507862091,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "right_010",
+          "command": [
+            0.0,
+            -0.1,
+            0.0
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.09092533588409424,
+          "rmse_vy": 0.041208114475011826,
+          "rmse_yaw": 0.45843634009361267,
+          "seed_count": 3,
+          "survival": 0.6666666666666667
+        },
+        {
+          "case": "yaw_left_010",
+          "command": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.117343969643116,
+          "rmse_vy": 0.08128710836172104,
+          "rmse_yaw": 0.530376672744751,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "yaw_right_010",
+          "command": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.18695931136608124,
+          "rmse_vy": 0.1041373610496521,
+          "rmse_yaw": 0.8458417057991028,
+          "seed_count": 3,
+          "survival": 0.6666666666666667
+        },
+        {
+          "case": "arc_left",
+          "command": [
+            0.1,
+            0.0,
+            0.1
+          ],
+          "fall_count": 0,
+          "rmse_vx": 0.07259595394134521,
+          "rmse_vy": 0.03614478185772896,
+          "rmse_yaw": 0.3701191246509552,
+          "seed_count": 3,
+          "survival": 1.0
+        },
+        {
+          "case": "arc_right",
+          "command": [
+            0.1,
+            0.0,
+            -0.1
+          ],
+          "fall_count": 1,
+          "rmse_vx": 0.1677776724100113,
+          "rmse_vy": 0.05744823440909386,
+          "rmse_yaw": 0.6777413487434387,
+          "seed_count": 3,
+          "survival": 0.6666666666666667
+        }
+      ],
+      "status": "PASS_STATIC_EVAL_COMPLETED",
+      "survival": 0.8888888888888888
+    }
+  ]
 }

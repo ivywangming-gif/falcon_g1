@@ -1,0 +1,174 @@
+{
+  "config": {
+    "command_bounds": [
+      0.35,
+      0.35,
+      0.4
+    ],
+    "cutoff_hz": 2.0,
+    "delta_limits": [
+      0.15,
+      0.15,
+      0.25
+    ],
+    "ki": [
+      0.015,
+      0.015,
+      0.01
+    ],
+    "kp": [
+      0.2,
+      0.2,
+      0.12
+    ],
+    "rate_limits": [
+      0.3,
+      0.3,
+      0.5
+    ]
+  },
+  "heldout": {
+    "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+    "adapter": true,
+    "checkpoint": "/root/autodl-tmp/robotics/falcon-g1-access-push/runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0600.pt",
+    "checkpoint_sha256": "f75583173b6d42b16c7042e10817e6afcf5cdb46125d0ba62675e0adcf690ecb",
+    "elapsed_s": 37.23352048546076,
+    "eval_steps": 500,
+    "fall_count": 0,
+    "force_n": 0.0,
+    "normal_close": true,
+    "push_ready": false,
+    "return_code": 0,
+    "rows": [
+      {
+        "case": "stand",
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "fall_count": 0,
+        "rmse_vx": 0.017997784540057182,
+        "rmse_vy": 0.004786992445588112,
+        "rmse_yaw": 0.04076710343360901,
+        "seed_count": 5,
+        "survival": 1.0
+      },
+      {
+        "case": "forward_010",
+        "command": [
+          0.1,
+          0.0,
+          0.0
+        ],
+        "fall_count": 0,
+        "rmse_vx": 0.03503257781267166,
+        "rmse_vy": 0.04748891666531563,
+        "rmse_yaw": 0.31632962822914124,
+        "seed_count": 5,
+        "survival": 1.0
+      },
+      {
+        "case": "backward_010",
+        "command": [
+          -0.1,
+          0.0,
+          0.0
+        ],
+        "fall_count": 0,
+        "rmse_vx": 0.0496857687830925,
+        "rmse_vy": 0.052375875413417816,
+        "rmse_yaw": 0.3229382634162903,
+        "seed_count": 5,
+        "survival": 1.0
+      },
+      {
+        "case": "left_010",
+        "command": [
+          0.0,
+          0.1,
+          0.0
+        ],
+        "fall_count": 0,
+        "rmse_vx": 0.040135350078344345,
+        "rmse_vy": 0.05076199769973755,
+        "rmse_yaw": 0.32457923889160156,
+        "seed_count": 5,
+        "survival": 1.0
+      },
+      {
+        "case": "right_010",
+        "command": [
+          0.0,
+          -0.1,
+          0.0
+        ],
+        "fall_count": 0,
+        "rmse_vx": 0.04153016209602356,
+        "rmse_vy": 0.048657942563295364,
+        "rmse_yaw": 0.30996060371398926,
+        "seed_count": 5,
+        "survival": 1.0
+      },
+      {
+        "case": "yaw_left_010",
+        "command": [
+          0.0,
+          0.0,
+          0.1
+        ],
+        "fall_count": 0,
+        "rmse_vx": 0.04059390723705292,
+        "rmse_vy": 0.05019664764404297,
+        "rmse_yaw": 0.31024953722953796,
+        "seed_count": 5,
+        "survival": 1.0
+      },
+      {
+        "case": "yaw_right_010",
+        "command": [
+          0.0,
+          0.0,
+          -0.1
+        ],
+        "fall_count": 0,
+        "rmse_vx": 0.03959696739912033,
+        "rmse_vy": 0.05002211406826973,
+        "rmse_yaw": 0.31330937147140503,
+        "seed_count": 5,
+        "survival": 1.0
+      },
+      {
+        "case": "arc_left",
+        "command": [
+          0.1,
+          0.0,
+          0.1
+        ],
+        "fall_count": 0,
+        "rmse_vx": 0.03617626056075096,
+        "rmse_vy": 0.04660415276885033,
+        "rmse_yaw": 0.3157253861427307,
+        "seed_count": 5,
+        "survival": 1.0
+      },
+      {
+        "case": "arc_right",
+        "command": [
+          0.1,
+          0.0,
+          -0.1
+        ],
+        "fall_count": 0,
+        "rmse_vx": 0.03514479845762253,
+        "rmse_vy": 0.04730517789721489,
+        "rmse_yaw": 0.32338443398475647,
+        "seed_count": 5,
+        "survival": 1.0
+      }
+    ],
+    "status": "PASS_STATIC_EVAL_COMPLETED",
+    "survival": 1.0
+  },
+  "status": "HELDOUT_EVALUATED"
+}
