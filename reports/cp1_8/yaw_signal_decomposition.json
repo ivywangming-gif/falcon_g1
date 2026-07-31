@@ -1,0 +1,9 @@
+{
+  "causal_2hz": "NOT_AVAILABLE",
+  "causal_4hz": "NOT_AVAILABLE",
+  "classification": "UNDECIDED",
+  "psd": "NOT_AVAILABLE",
+  "raw_yaw_rate": "NOT_AVAILABLE",
+  "status": "BLOCKED_TELEMETRY_NOT_RECORDED_IN_CP1_7",
+  "strict_raw_gate_preserved": true
+}

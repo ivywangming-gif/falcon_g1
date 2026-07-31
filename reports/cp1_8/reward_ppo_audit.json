@@ -1,0 +1,8 @@
+{
+  "bug_effect": "CP1.7 logs only aggregate reward and omits per-term statistics, explained variance, episode length, and value diagnostics; approx_kl also greatly exceeds desired_kl without a stop gate.",
+  "bug_path": "scripts/cp1_7_worker.py",
+  "reward_formula_static_contract": "PARTIAL",
+  "status": "BUG_FOUND",
+  "targeted_ppo_authorized": false,
+  "unit_test": "tests/test_cp1_7_training_contract.py plus CP1.8 audit checks"
+}

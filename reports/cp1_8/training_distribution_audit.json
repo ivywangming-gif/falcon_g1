@@ -1,0 +1,15 @@
+{
+  "arc_left_right_balance": "NOT_OBSERVABLE",
+  "observed_counts": null,
+  "reason": "CP1.7 metrics did not persist per-episode mode, bin, command-hold, push-ready, or force counters.",
+  "resolved_config_expected_probabilities": {
+    "LOW_SPEED_WALK": 0.35,
+    "STAND": 0.2,
+    "SUPPORTED_SPEED_WALK": 0.25,
+    "TRANSITION": 0.05,
+    "TURN": 0.15
+  },
+  "status": "FAIL_MISSING_MODE_AND_FORCE_COUNTERS",
+  "ten_newton_training_exposure": "NOT_OBSERVABLE",
+  "yaw_left_right_balance": "NOT_OBSERVABLE"
+}

@@ -51,8 +51,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--run-root", type=Path, required=True)
     parser.add_argument("--checkpoint", type=Path)
     parser.add_argument("--eval-steps", type=int, default=500)
+    parser.add_argument("--eval-seed-count", type=int, default=5)
     parser.add_argument("--push-ready", action="store_true")
     parser.add_argument("--force-n", type=float, default=0.0)
+    parser.add_argument("--adapter", action="store_true")
     parser.add_argument("--seed", type=int, default=1701)
     return parser.parse_args()
 
@@ -91,6 +93,7 @@ from falcon_g1.cp1_7_training import (
     teacher_coefficients,
     tensor_state_sha256,
 )
+from falcon_g1.closed_loop_command_adapter import CommandAdapter
 from falcon_g1.cp1_policy import (
     ACTION_SCALE,
     DEFAULT_JOINT_POS,
@@ -675,18 +678,30 @@ def run_eval(env: FalconGroundedEnv) -> dict:
         ("arc_left", (0.1, 0.0, 0.1), 1),
         ("arc_right", (0.1, 0.0, -0.1), 1),
     ]
-    if env.num_envs != len(cases) * 5:
-        raise ValueError(f"eval requires {len(cases) * 5} envs, got {env.num_envs}")
-    command = torch.tensor([case[1] for case in cases for _ in range(5)], device=env.device)
-    modes = torch.tensor([case[2] for case in cases for _ in range(5)], device=env.device)
+    seed_count = ARGS.eval_seed_count
+    if env.num_envs != len(cases) * seed_count:
+        raise ValueError(f"eval requires {len(cases) * seed_count} envs, got {env.num_envs}")
+    command = torch.tensor([case[1] for case in cases for _ in range(seed_count)], device=env.device)
+    modes = torch.tensor([case[2] for case in cases for _ in range(seed_count)], device=env.device)
     push = torch.full((env.num_envs,), ARGS.push_ready, dtype=torch.bool, device=env.device)
     env.set_fixed_commands(command, modes, push_ready=push, force_n=ARGS.force_n)
     obs = env._get_observations()
+    adapters = [CommandAdapter() for _ in range(env.num_envs)] if ARGS.adapter else None
     fallen = torch.zeros(env.num_envs, dtype=torch.bool, device=env.device)
     error_sum = torch.zeros(env.num_envs, 3, device=env.device)
     start = time.monotonic()
     with torch.inference_mode():
         for _ in range(ARGS.eval_steps):
+            if adapters is not None:
+                measured = env.robot.data.root_lin_vel_b[:, :2].detach().cpu().numpy()
+                measured_yaw = env.robot.data.root_ang_vel_b[:, 2].detach().cpu().numpy()
+                corrected = []
+                for index, adapter in enumerate(adapters):
+                    desired = command[index].detach().cpu().numpy()
+                    output = adapter(*desired, float(measured[index, 0]), float(measured[index, 1]), float(measured_yaw[index]), env.step_dt)
+                    corrected.append([output["policy_vx_command"], output["policy_vy_command"], output["policy_yaw_command"]])
+                env.command[:] = torch.tensor(corrected, device=env.device)
+                obs = env._get_observations()
             action = model.actor(obs["policy"])
             obs, _, terminated, _, _ = env.step(action)
             fallen |= terminated
@@ -699,17 +714,17 @@ def run_eval(env: FalconGroundedEnv) -> dict:
     fell = fallen.cpu().numpy()
     rows = []
     for index, (name, desired, _) in enumerate(cases):
-        sl = slice(index * 5, index * 5 + 5)
+        sl = slice(index * seed_count, index * seed_count + seed_count)
         rows.append({
             "case": name, "command": desired, "fall_count": int(fell[sl].sum()),
             "survival": float(1.0 - fell[sl].mean()), "rmse_vx": float(rms[sl, 0].mean()),
             "rmse_vy": float(rms[sl, 1].mean()), "rmse_yaw": float(rms[sl, 2].mean()),
-            "seed_count": 5,
+            "seed_count": seed_count,
         })
     return {
         "status": "PASS_STATIC_EVAL_COMPLETED", "checkpoint": str(ARGS.checkpoint),
         "checkpoint_sha256": sha256(ARGS.checkpoint), "eval_steps": ARGS.eval_steps,
-        "push_ready": ARGS.push_ready, "force_n": ARGS.force_n,
+        "push_ready": ARGS.push_ready, "force_n": ARGS.force_n, "adapter": ARGS.adapter,
         "rows": rows, "fall_count": int(fell.sum()), "survival": float(1.0 - fell.mean()),
         "elapsed_s": time.monotonic() - start, "actor_observation_schema_sha256": ACTOR_OBSERVATION_SCHEMA_SHA256,
     }

@@ -1,0 +1,7 @@
+{
+  "classification": "UNDECIDED",
+  "name_mapping_contract": "PASS_STATIC",
+  "reason": "CP1.7 used independent random resets and did not save paired mirrored initial states or 200 Hz actions/contact timing.",
+  "sampler_symmetry": "NOT_OBSERVABLE",
+  "status": "NOT_DETERMINED"
+}
