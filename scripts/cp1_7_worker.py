@@ -44,11 +44,15 @@ def gpu_memory_mib() -> float:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--mode", choices=("smoke", "capacity", "train"), required=True)
+    parser.add_argument("--mode", choices=("smoke", "capacity", "train", "eval"), required=True)
     parser.add_argument("--num-envs", type=int, required=True)
     parser.add_argument("--steps", type=int, default=1000, help="Physics steps for smoke/capacity")
     parser.add_argument("--iterations", type=int, default=600)
     parser.add_argument("--run-root", type=Path, required=True)
+    parser.add_argument("--checkpoint", type=Path)
+    parser.add_argument("--eval-steps", type=int, default=500)
+    parser.add_argument("--push-ready", action="store_true")
+    parser.add_argument("--force-n", type=float, default=0.0)
     parser.add_argument("--seed", type=int, default=1701)
     return parser.parse_args()
 
@@ -199,6 +203,9 @@ class FalconGroundedEnv(DirectRLEnv):
         self.force_phase = torch.zeros(self.num_envs, device=self.device)
         self.current_iteration = 0
         self.freeze_commands = False
+        self.fixed_commands: torch.Tensor | None = None
+        self.fixed_modes: torch.Tensor | None = None
+        self.fixed_push: torch.Tensor | None = None
         self.latest_reward_terms: dict[str, torch.Tensor] = {}
         self.left_foot_id = self.robot.body_names.index("left_ankle_roll_link")
         self.right_foot_id = self.robot.body_names.index("right_ankle_roll_link")
@@ -225,8 +232,26 @@ class FalconGroundedEnv(DirectRLEnv):
     def set_iteration(self, iteration: int) -> None:
         self.current_iteration = iteration
 
+    def set_fixed_commands(self, commands: torch.Tensor, modes: torch.Tensor, push_ready: torch.Tensor | None = None, force_n: float = 0.0) -> None:
+        self.freeze_commands = True
+        self.fixed_commands = commands.to(self.device).clone()
+        self.fixed_modes = modes.to(self.device).long().clone()
+        self.fixed_push = torch.zeros(self.num_envs, dtype=torch.bool, device=self.device) if push_ready is None else push_ready.to(self.device).bool().clone()
+        self.command[:] = self.fixed_commands
+        self.command_mode[:] = self.fixed_modes
+        self.push_ready[:] = self.fixed_push
+        self.command_hold[:] = self.max_episode_length + 1
+        self.force_target.zero_()
+        if force_n:
+            self.force_target[:, :, 0] = float(force_n)
+
     def _sample_commands(self, env_ids: torch.Tensor) -> None:
         if not len(env_ids):
+            return
+        if self.fixed_commands is not None and self.fixed_modes is not None:
+            self.command[env_ids] = self.fixed_commands[env_ids]
+            self.command_mode[env_ids] = self.fixed_modes[env_ids]
+            self.command_hold[env_ids] = self.max_episode_length + 1
             return
         probabilities = torch.tensor([0.20, 0.35, 0.25, 0.15, 0.05], device=self.device)
         mode = torch.multinomial(probabilities, len(env_ids), replacement=True)
@@ -253,6 +278,11 @@ class FalconGroundedEnv(DirectRLEnv):
         self.command_hold[env_ids] = torch.randint(100, 251, (len(env_ids),), device=self.device)
 
     def _sample_curriculum(self, env_ids: torch.Tensor) -> None:
+        if self.fixed_push is not None:
+            self.push_ready[env_ids] = self.fixed_push[env_ids]
+            self.force_target[env_ids] = 0.0
+            self.force_phase[env_ids] = 0.0
+            return
         if self.current_iteration <= 100:
             push_probability, force_probability, force_max = .10, 0.0, 0.0
         elif self.current_iteration <= 300:
@@ -417,6 +447,12 @@ def load_actor(model: WarmstartedActorCritic) -> dict:
     payload = torch.load(WARMSTART, map_location="cpu", weights_only=False)
     model.actor.load_state_dict(payload["actor_state_dict"], strict=True)
     return payload["metadata"]
+
+
+def load_checkpoint_actor(model: WarmstartedActorCritic, path: Path) -> None:
+    payload = torch.load(path, map_location="cpu", weights_only=False)
+    model.actor.load_state_dict(payload["actor"], strict=True)
+    model.log_std.data.copy_(payload["log_std"])
 
 
 def create_env() -> FalconGroundedEnv:
@@ -618,6 +654,67 @@ def run_train(env: FalconGroundedEnv) -> dict:
     return result
 
 
+def run_eval(env: FalconGroundedEnv) -> dict:
+    if ARGS.checkpoint is None:
+        raise ValueError("--checkpoint is required for eval")
+    obs, _ = env.reset(seed=ARGS.seed)
+    model = WarmstartedActorCritic(obs["critic"].shape[-1]).to(env.device)
+    if ARGS.checkpoint.name == "actor_only_warmstart.pt":
+        load_actor(model)
+    else:
+        load_checkpoint_actor(model, ARGS.checkpoint)
+    model.eval()
+    cases = [
+        ("stand", (0.0, 0.0, 0.0), 0),
+        ("forward_010", (0.1, 0.0, 0.0), 1),
+        ("backward_010", (-0.1, 0.0, 0.0), 1),
+        ("left_010", (0.0, 0.1, 0.0), 1),
+        ("right_010", (0.0, -0.1, 0.0), 1),
+        ("yaw_left_010", (0.0, 0.0, 0.1), 3),
+        ("yaw_right_010", (0.0, 0.0, -0.1), 3),
+        ("arc_left", (0.1, 0.0, 0.1), 1),
+        ("arc_right", (0.1, 0.0, -0.1), 1),
+    ]
+    if env.num_envs != len(cases) * 5:
+        raise ValueError(f"eval requires {len(cases) * 5} envs, got {env.num_envs}")
+    command = torch.tensor([case[1] for case in cases for _ in range(5)], device=env.device)
+    modes = torch.tensor([case[2] for case in cases for _ in range(5)], device=env.device)
+    push = torch.full((env.num_envs,), ARGS.push_ready, dtype=torch.bool, device=env.device)
+    env.set_fixed_commands(command, modes, push_ready=push, force_n=ARGS.force_n)
+    obs = env._get_observations()
+    fallen = torch.zeros(env.num_envs, dtype=torch.bool, device=env.device)
+    error_sum = torch.zeros(env.num_envs, 3, device=env.device)
+    start = time.monotonic()
+    with torch.inference_mode():
+        for _ in range(ARGS.eval_steps):
+            action = model.actor(obs["policy"])
+            obs, _, terminated, _, _ = env.step(action)
+            fallen |= terminated
+            measured = torch.stack([
+                env.robot.data.root_lin_vel_b[:, 0], env.robot.data.root_lin_vel_b[:, 1],
+                env.robot.data.root_ang_vel_b[:, 2],
+            ], dim=-1)
+            error_sum += torch.square(measured - command)
+    rms = torch.sqrt(error_sum / max(ARGS.eval_steps, 1)).cpu().numpy()
+    fell = fallen.cpu().numpy()
+    rows = []
+    for index, (name, desired, _) in enumerate(cases):
+        sl = slice(index * 5, index * 5 + 5)
+        rows.append({
+            "case": name, "command": desired, "fall_count": int(fell[sl].sum()),
+            "survival": float(1.0 - fell[sl].mean()), "rmse_vx": float(rms[sl, 0].mean()),
+            "rmse_vy": float(rms[sl, 1].mean()), "rmse_yaw": float(rms[sl, 2].mean()),
+            "seed_count": 5,
+        })
+    return {
+        "status": "PASS_STATIC_EVAL_COMPLETED", "checkpoint": str(ARGS.checkpoint),
+        "checkpoint_sha256": sha256(ARGS.checkpoint), "eval_steps": ARGS.eval_steps,
+        "push_ready": ARGS.push_ready, "force_n": ARGS.force_n,
+        "rows": rows, "fall_count": int(fell.sum()), "survival": float(1.0 - fell.mean()),
+        "elapsed_s": time.monotonic() - start, "actor_observation_schema_sha256": ACTOR_OBSERVATION_SCHEMA_SHA256,
+    }
+
+
 def main() -> int:
     env = None
     report_path = ARGS.run_root / f"{ARGS.mode}_{ARGS.num_envs}.json"
@@ -625,7 +722,12 @@ def main() -> int:
     try:
         torch.manual_seed(ARGS.seed)
         env = create_env()
-        result = run_train(env) if ARGS.mode == "train" else run_rollout(env)
+        if ARGS.mode == "train":
+            result = run_train(env)
+        elif ARGS.mode == "eval":
+            result = run_eval(env)
+        else:
+            result = run_rollout(env)
         result["return_code"] = 0
     except Exception as error:
         result.update(status="FAIL", return_code=1, error_type=type(error).__name__, error=str(error))

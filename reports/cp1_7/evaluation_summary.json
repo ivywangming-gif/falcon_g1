@@ -1,0 +1,40 @@
+{
+  "status": "ADAPTATION_PIPELINE_ONLY",
+  "qualification_note": "No CORE_LOCOMOTION_QUALIFIED claim is permitted.",
+  "warmstart": {
+    "fall_count": 20,
+    "survival": 0.5555555556,
+    "checkpoint": "artifacts/cp1_6/actor_only_warmstart.pt"
+  },
+  "iteration_600": {
+    "fall_count": 1,
+    "survival": 0.9777777778,
+    "checkpoint": "runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0600.pt",
+    "checkpoint_sha256": "f75583173b6d42b16c7042e10817e6afcf5cdb46125d0ba62675e0adcf690ecb",
+    "rows": {
+      "stand": {"fall_count": 0, "survival": 1.0, "rmse_vx": 0.0215511, "rmse_vy": 0.0061035, "rmse_yaw": 0.0582563},
+      "forward_010": {"fall_count": 0, "survival": 1.0, "rmse_vx": 0.0373334, "rmse_vy": 0.0262950, "rmse_yaw": 0.2988987},
+      "backward_010": {"fall_count": 0, "survival": 1.0, "rmse_vx": 0.0735389, "rmse_vy": 0.0360833, "rmse_yaw": 0.3426293},
+      "left_010": {"fall_count": 0, "survival": 1.0, "rmse_vx": 0.0435492, "rmse_vy": 0.0285949, "rmse_yaw": 0.3169957},
+      "right_010": {"fall_count": 0, "survival": 1.0, "rmse_vx": 0.0485856, "rmse_vy": 0.0309226, "rmse_yaw": 0.3014140},
+      "yaw_left_010": {"fall_count": 0, "survival": 1.0, "rmse_vx": 0.0413853, "rmse_vy": 0.0257306, "rmse_yaw": 0.3028034},
+      "yaw_right_010": {"fall_count": 0, "survival": 1.0, "rmse_vx": 0.0673773, "rmse_vy": 0.0316727, "rmse_yaw": 0.3464645},
+      "arc_left": {"fall_count": 1, "survival": 0.8, "rmse_vx": 0.0875385, "rmse_vy": 0.0413883, "rmse_yaw": 0.4164793},
+      "arc_right": {"fall_count": 0, "survival": 1.0, "rmse_vx": 0.0371405, "rmse_vy": 0.0276513, "rmse_yaw": 0.3013130}
+    }
+  },
+  "iteration_600_push_ready_force_10n": {
+    "fall_count": 4,
+    "survival": 0.9111111111,
+    "push_ready": true,
+    "force_n_per_hand": 10.0,
+    "stand_survival": 1.0,
+    "forward_010_survival": 0.6,
+    "yaw_right_010_survival": 0.6
+  },
+  "registered_precision_gate": {
+    "along_axis_rmse_max": "max(0.03, 0.20 * abs(command_along))",
+    "cross_axis_rmse_max": 0.03,
+    "yaw_rate_rmse_max": "max(0.05, 0.20 * abs(command_yaw))"
+  }
+}

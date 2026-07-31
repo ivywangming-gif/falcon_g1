@@ -1,0 +1,28 @@
+{
+  "actor_observation_schema_sha256": "ec33edc3b57c8015aa6fc3e2efda5200769e5908460a73d2362f2019a463c893",
+  "actor_warmstart": {
+    "action_contract_sha256": "b06572f3ea5585cf39a0dd12aaa318e3a8e6664a67f6e747432eee34dc88df3f",
+    "actor_only": true,
+    "architecture_sha256": "2e62e80fc265636483984c5b209970fbd0e63be91586596350d824eecbdb2f7f",
+    "critic_present": false,
+    "observation_contract_sha256": "b050012e65cae6c66b9c13806cfd6d4faeca6b7b47103a70f2406ac4850114e4",
+    "optimizer_present": false,
+    "source_falcon_commit": "a967a6d8494f57777cf8d266a644ac8e45833301",
+    "source_onnx_sha256": "8ac8f51875b878a79d9b5782e702b66572697e204ed262e2002b55631f3105d0"
+  },
+  "all_actions_finite": true,
+  "all_observations_finite": true,
+  "all_rewards_finite": true,
+  "control_steps": 250,
+  "elapsed_s": 18.7651413269341,
+  "mode": "smoke",
+  "normal_close": true,
+  "num_envs": 16,
+  "orphan_process_count": 0,
+  "peak_gpu_memory_mib": 7284.0,
+  "physics_steps": 1000,
+  "physics_steps_per_second": 852.6447907447828,
+  "resets": 8,
+  "return_code": 0,
+  "status": "PASS"
+}
