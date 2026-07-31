@@ -306,6 +306,13 @@ def explained_variance(prediction: torch.Tensor, target: torch.Tensor) -> float:
     return float(1.0 - residual_variance / target_variance)
 
 
+def bounded_policy_mean(raw_mean: torch.Tensor, limit: float) -> torch.Tensor:
+    """Smoothly bound a Gaussian policy mean while retaining actor gradients."""
+    if limit <= 0.0:
+        raise ValueError("limit must be positive")
+    return float(limit) * torch.tanh(raw_mean / float(limit))
+
+
 def ppo_clip_fraction(ratio: torch.Tensor, clip_param: float) -> float:
     return float(((ratio < 1.0 - clip_param) | (ratio > 1.0 + clip_param)).float().mean())
 

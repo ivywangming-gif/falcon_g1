@@ -2,10 +2,22 @@ import pytest
 import torch
 
 from falcon_g1.cp1_9_training import (
+    bounded_policy_mean,
     explained_variance,
     kl_early_stop,
     ppo_clip_fraction,
 )
+
+
+def test_bounded_policy_mean_is_smooth_and_respects_limit():
+    raw = torch.tensor([-3.0, 0.0, 3.0], requires_grad=True)
+    bounded = bounded_policy_mean(raw, limit=3.0)
+    assert torch.all(bounded.abs() < 3.0)
+    bounded.sum().backward()
+    assert torch.all(raw.grad > 0.0)
+    assert bounded_policy_mean(torch.tensor([-100.0, 100.0]), 3.0).abs().max() <= 3.0
+    with pytest.raises(ValueError, match="positive"):
+        bounded_policy_mean(raw, limit=0.0)
 
 
 def test_kl_stop_uses_registered_one_point_five_multiplier():

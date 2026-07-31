@@ -18,6 +18,8 @@ WARMSTART = REPO / "artifacts/cp1_6/actor_only_warmstart.pt"
 BASE_CHECKPOINT = REPO / "runs/falcon_cp1_7_overnight_20260730_174025/checkpoints/iteration_0600.pt"
 PUSH_READY = REPO / "artifacts/cp1_5/precontact_reference.json"
 HAND_RESISTING_NORMAL_BODY = (-1.0, 0.0, 0.0)
+ACTION_LIMIT = 5.0
+OBSERVATION_LIMIT = 100.0
 
 
 def atomic_json(path: Path, payload: dict) -> None:
@@ -105,6 +107,7 @@ from falcon_g1.cp1_7_training import (
 )
 from falcon_g1.cp1_9_training import (
     BalancedCommandSampler,
+    bounded_policy_mean,
     CommandCounters,
     RewardTermAccumulator,
     balanced_force_batch,
@@ -363,7 +366,7 @@ class FalconGroundedEnv(DirectRLEnv):
         )
 
     def _pre_physics_step(self, actions: torch.Tensor):
-        self.actions = actions.clamp(-100.0, 100.0)
+        self.actions = actions.clamp(-ACTION_LIMIT, ACTION_LIMIT)
         target_official = self.default_official + ACTION_SCALE * self.actions
         push_delta = self.push_upper - self.default_official[15:]
         target_official[:, 15:] += self.push_ready.float().unsqueeze(-1) * push_delta
@@ -451,7 +454,7 @@ class FalconGroundedEnv(DirectRLEnv):
             "support_phase": support,
             "illegal_contact": illegal,
             "joint_actions": self.actions,
-            "action_clip": self.actions.abs() >= 100.0,
+            "action_clip": self.actions.abs() >= ACTION_LIMIT,
             "torque_saturation": torque_ratio >= 1.0,
             "waist_yaw": self.robot.data.joint_pos[:, self.to_official[12]],
             "pelvis_orientation": quaternion,
@@ -518,7 +521,9 @@ class FalconGroundedEnv(DirectRLEnv):
         frame = self._actor_frame()
         self.history = torch.roll(self.history, shifts=-1, dims=1)
         self.history[:, -1] = frame
-        actor_obs = self.history.reshape(self.num_envs, 575)
+        actor_obs = self.history.reshape(self.num_envs, 575).clamp(
+            -OBSERVATION_LIMIT, OBSERVATION_LIMIT
+        )
         self.previous_action = self.actions.clone()
         return {"policy": actor_obs, "critic": self._critic_observation(actor_obs)}
 
@@ -734,7 +739,7 @@ def run_rollout(env: FalconGroundedEnv) -> dict:
     peak_mib = gpu_memory_mib()
     with torch.inference_mode():
         for step in range(control_steps):
-            action = model.actor(obs["policy"])
+            action = bounded_policy_mean(model.actor(obs["policy"]), ACTION_LIMIT)
             action_finite &= torch.isfinite(action).all().item()
             obs, reward, terminated, truncated, _ = env.step(action)
             finite &= finite_observations(obs)
@@ -768,6 +773,15 @@ def save_checkpoint(path: Path, model, optimizer, iteration: int, metadata: dict
         "isaac_sim_version": "5.1.0", "actor_observation_schema_sha256": ACTOR_OBSERVATION_SCHEMA_SHA256,
     }, path)
 
+
+
+def cp1_9_distribution(
+    model: WarmstartedActorCritic, actor_observation: torch.Tensor
+) -> tuple[torch.distributions.Normal, torch.Tensor]:
+    raw_mean = model.actor(actor_observation)
+    mean = bounded_policy_mean(raw_mean, ACTION_LIMIT)
+    std = model.log_std.exp().clamp(max=0.30).expand_as(mean)
+    return torch.distributions.Normal(mean, std), raw_mean
 
 
 def make_cp1_9_optimizer(model: WarmstartedActorCritic) -> torch.optim.Adam:
@@ -827,6 +841,9 @@ def run_train(env: FalconGroundedEnv) -> dict:
         "policy_current_weights": "CP1_7_ITERATION_600",
         "cp1_8_policy_training": False,
         "current_policy_is_official_unmodified": False,
+        "observation_clip": OBSERVATION_LIMIT,
+        "policy_mean_limit": ACTION_LIMIT,
+        "policy_mean_transform": "limit*tanh(raw_mean/limit)",
     }
 
     teacher = WarmstartedActorCritic(obs["critic"].shape[-1]).to(env.device)
@@ -875,18 +892,37 @@ def run_train(env: FalconGroundedEnv) -> dict:
         action_clip_count = 0
         torque_saturation_count = 0
         sample_count = 0
+        actor_observation_max_abs = 0.0
+        policy_mean_max_abs = 0.0
+        raw_policy_mean_max_abs = 0.0
+        raw_action_max_abs = 0.0
 
         for _ in range(hp.num_steps_per_env):
             with torch.no_grad():
-                distribution = model.distribution(obs["policy"])
-                action = distribution.sample()
-                log_prob = distribution.log_prob(action).sum(-1)
+                distribution, raw_policy_mean = cp1_9_distribution(model, obs["policy"])
+                raw_action = distribution.sample()
+                actor_observation_max_abs = max(
+                    actor_observation_max_abs, float(obs["policy"].abs().max())
+                )
+                policy_mean_max_abs = max(
+                    policy_mean_max_abs, float(distribution.mean.abs().max())
+                )
+                raw_policy_mean_max_abs = max(
+                    raw_policy_mean_max_abs, float(raw_policy_mean.abs().max())
+                )
+                raw_action_max_abs = max(
+                    raw_action_max_abs, float(raw_action.abs().max())
+                )
+                action = raw_action.clamp(-ACTION_LIMIT, ACTION_LIMIT)
+                # Keep PPO probability ratios tied to the sampled action; the environment
+                # alone receives the bounded command.
+                log_prob = distribution.log_prob(raw_action).sum(-1)
                 value = model.critic(obs["critic"])
             next_obs, reward, terminated, truncated, _ = env.step(action)
             done = terminated | truncated
             storage["actor"].append(obs["policy"])
             storage["critic"].append(obs["critic"])
-            storage["action"].append(action)
+            storage["action"].append(raw_action)
             storage["log_prob"].append(log_prob)
             storage["value"].append(value)
             storage["reward"].append(reward)
@@ -894,7 +930,7 @@ def run_train(env: FalconGroundedEnv) -> dict:
             storage["mode"].append(env.command_mode.clone())
             reward_stats.update(env.latest_reward_terms)
             iteration_resets += int(terminated.sum().item())
-            action_clip_count += int((action.abs() >= 100.0).sum().item())
+            action_clip_count += int((raw_action.abs() >= ACTION_LIMIT).sum().item())
             torque = (
                 env.robot.data.applied_torque[:, env.to_official].abs()
                 / env.effort_official
@@ -937,7 +973,7 @@ def run_train(env: FalconGroundedEnv) -> dict:
 
         for epoch in range(hp.num_learning_epochs):
             for indices in torch.randperm(total, device=env.device).split(mini_batch):
-                distribution = model.distribution(flat["actor"][indices])
+                distribution, _ = cp1_9_distribution(model, flat["actor"][indices])
                 new_log_prob = distribution.log_prob(flat["action"][indices]).sum(-1)
                 ratio = torch.exp(new_log_prob - flat["log_prob"][indices])
                 surrogate = torch.minimum(
@@ -1030,6 +1066,10 @@ def run_train(env: FalconGroundedEnv) -> dict:
             "critic_explained_variance": critic_explained_variance,
             "falls": iteration_resets,
             "action_clip_fraction": action_clip_count / max(sample_count, 1),
+            "actor_observation_max_abs": actor_observation_max_abs,
+            "policy_mean_max_abs": policy_mean_max_abs,
+            "raw_policy_mean_max_abs": raw_policy_mean_max_abs,
+            "raw_action_max_abs": raw_action_max_abs,
             "torque_saturation_fraction": torque_saturation_count / max(sample_count, 1),
             "lower_noise_std": float(model.log_std[:15].exp().mean().clamp(max=0.30)),
             "upper_noise_std": float(model.log_std[15:].exp().mean().clamp(max=0.30)),
@@ -1191,7 +1231,7 @@ def run_eval(env: FalconGroundedEnv) -> dict:
                     )
                 env.command[:] = torch.tensor(corrected, device=env.device)
                 obs = env._get_observations()
-            action = model.actor(obs["policy"])
+            action = bounded_policy_mean(model.actor(obs["policy"]), ACTION_LIMIT)
             obs, _, terminated, _, _ = env.step(action)
             fallen |= terminated
 
@@ -1317,6 +1357,9 @@ def run_eval(env: FalconGroundedEnv) -> dict:
         "telemetry_summary": aggregate_telemetry,
         "elapsed_s": time.monotonic() - start,
         "actor_observation_schema_sha256": ACTOR_OBSERVATION_SCHEMA_SHA256,
+        "observation_clip": OBSERVATION_LIMIT,
+        "policy_mean_limit": ACTION_LIMIT,
+        "policy_mean_transform": "limit*tanh(raw_mean/limit)",
     }
 
 
