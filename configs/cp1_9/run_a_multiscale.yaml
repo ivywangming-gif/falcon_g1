@@ -1,0 +1,16 @@
+{
+  "phase": "CP1_9_PRECISION_RUN_A",
+  "reward_scheme": "multiscale",
+  "training_phase": "precision",
+  "num_envs": 512,
+  "iterations": 400,
+  "actor_lr": 0.000005,
+  "upper_actor_lr": 0.0,
+  "critic_lr": 0.0003,
+  "desired_kl": 0.01,
+  "validation_interval": 50,
+  "checkpoint_interval": 25,
+  "push_ready_probability": 0.20,
+  "force_probability": 0.0,
+  "base_checkpoint_sha256": "f75583173b6d42b16c7042e10817e6afcf5cdb46125d0ba62675e0adcf690ecb"
+}

@@ -1,0 +1,15 @@
+{
+  "phase": "CP1_9_FORCE_CONTINUATION",
+  "training_phase": "force",
+  "num_envs": 512,
+  "iterations": 300,
+  "lower_actor_lr": 0.000002,
+  "upper_actor_lr": 0.000002,
+  "critic_lr": 0.0003,
+  "desired_kl": 0.01,
+  "checkpoint_interval": 25,
+  "push_ready_probability": 0.50,
+  "force_probability": 0.50,
+  "force_bins_n_per_hand": [0.0, 5.0, 7.5, 10.0],
+  "force_patterns": ["symmetric", "left_heavy", "right_heavy"]
+}
