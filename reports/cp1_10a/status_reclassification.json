@@ -1,0 +1,8 @@
+{
+  "phase": "CP1_10A_OFFICIAL_G1_SANITY_HARNESS_VALIDATION",
+  "historical_cp1_10_report": "reports/cp1_10/isaaclab_g1_sanity.json",
+  "OFFICIAL_G1_SANITY_VALIDITY": "FAIL",
+  "PHYSICS_OR_ASSET_STACK_STATUS": "UNRESOLVED",
+  "LIKELY_REASON": "COMMAND_MANAGER_OR_PLAY_CONFIG_OVERRIDE",
+  "reason": "The historical report's yaw-only cases still moved forward at approximately 0.8 m/s and recorded cumulative termination events as fall_count. CP1.10A replays the same local task with fixed term-buffer injection and separates harness validity from checkpoint maturity."
+}

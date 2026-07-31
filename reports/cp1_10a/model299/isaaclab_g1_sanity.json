@@ -1,0 +1,437 @@
+{
+  "CHECKPOINT_MATURITY_STATUS": "INSUFFICIENT",
+  "CHECKPOINT_PROVENANCE_STATUS": "PASS_LOCALLY_TRAINED_300_ITERATIONS",
+  "COMMAND_INJECTION_STATUS": "PASS",
+  "LIKELY_REASON": "CHECKPOINT_MATURITY_INSUFFICIENT",
+  "OFFICIAL_G1_SANITY": "UNRESOLVED",
+  "OFFICIAL_G1_SANITY_VALIDITY": "PASS",
+  "PHYSICS_OR_ASSET_STACK_STATUS": "UNRESOLVED",
+  "SANITY_HARNESS_STATUS": "PASS",
+  "actor_observation_command_slice": [
+    9,
+    12
+  ],
+  "checkpoint": "logs/rsl_rl/g1_flat/2026-07-31_21-35-34_cp1_10_sanity_20260731_133527/model_299.pt",
+  "command_tolerance": 1e-06,
+  "contact_sensor_body_names": [
+    "pelvis",
+    "left_hip_pitch_link",
+    "left_hip_roll_link",
+    "left_hip_yaw_link",
+    "left_knee_link",
+    "left_ankle_pitch_link",
+    "left_ankle_roll_link",
+    "pelvis_contour_link",
+    "right_hip_pitch_link",
+    "right_hip_roll_link",
+    "right_hip_yaw_link",
+    "right_knee_link",
+    "right_ankle_pitch_link",
+    "right_ankle_roll_link",
+    "torso_link",
+    "head_link",
+    "imu_link",
+    "left_shoulder_pitch_link",
+    "left_shoulder_roll_link",
+    "left_shoulder_yaw_link",
+    "left_elbow_pitch_link",
+    "left_elbow_roll_link",
+    "left_palm_link",
+    "left_five_link",
+    "left_six_link",
+    "left_three_link",
+    "left_four_link",
+    "left_zero_link",
+    "left_one_link",
+    "left_two_link",
+    "logo_link",
+    "right_shoulder_pitch_link",
+    "right_shoulder_roll_link",
+    "right_shoulder_yaw_link",
+    "right_elbow_pitch_link",
+    "right_elbow_roll_link",
+    "right_palm_link",
+    "right_five_link",
+    "right_six_link",
+    "right_three_link",
+    "right_four_link",
+    "right_zero_link",
+    "right_one_link",
+    "right_two_link"
+  ],
+  "control_dt_s": 0.02,
+  "control_steps": 500,
+  "duration_s": 10.0,
+  "foot_contact_sensor_indices": {
+    "left_ankle_roll_link": 6,
+    "right_ankle_roll_link": 13
+  },
+  "normal_close": true,
+  "num_envs": 16,
+  "physics_dt_s": 0.005,
+  "reward_command_consumers": [
+    "track_lin_vel_xy_exp",
+    "track_ang_vel_z_exp",
+    "feet_air_time"
+  ],
+  "rows": [
+    {
+      "COMMAND_INJECTION_STATUS": "PASS",
+      "FULL_10S_SURVIVAL_RATIO": 0.0,
+      "MEDIAN_TIME_TO_FALL": 1.2200000000000006,
+      "TERMINATION_RATE_PER_ENV_SECOND": 0.8,
+      "actor_observation_command_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actor_observation_finite": true,
+      "case": "stand",
+      "command_manager_actual_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "command_triplet_max_abs_error": 0.0,
+      "command_utilization": null,
+      "contact_force_nonzero": true,
+      "correct_direction": false,
+      "episodes_completed": 128,
+      "left_contact_ratio": 0.7895,
+      "low_height_count": 0,
+      "mean_episode_survival_time_s": 1.2200000000000006,
+      "mean_integrated_world_displacement_norm_m": 2.420182466506958,
+      "mean_integrated_world_displacement_xy_m": [
+        -0.3077215552330017,
+        -0.4209372401237488
+      ],
+      "mean_integrated_yaw_change_rad": -0.31628042459487915,
+      "median_time_to_fall_terminated_only_s": 1.2200000000000006,
+      "orientation_failure_count": 0,
+      "policy_action_finite": true,
+      "requested_command": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward_command_consumers": [
+        "track_lin_vel_xy_exp",
+        "track_ang_vel_z_exp",
+        "feet_air_time"
+      ],
+      "reward_command_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "right_contact_ratio": 0.7895,
+      "signed_mean_body_vx": 0.8089149594306946,
+      "signed_mean_body_vy": -0.019887221977114677,
+      "signed_mean_body_yaw_rate": -0.027679195627570152,
+      "signed_mean_world_vx": -0.03077203780412674,
+      "signed_mean_world_vy": -0.04209376126527786,
+      "signed_mean_world_yaw_rate": -0.03162801265716553,
+      "successful_full_episodes": 0,
+      "telemetry_path": "/root/autodl-tmp/robotics/falcon-g1-access-push/reports/cp1_10a/model299/telemetry/stand_200hz.npz",
+      "telemetry_sample_rate_hz": 200.0,
+      "telemetry_samples_per_env": 2000,
+      "termination_event_count": 128,
+      "termination_reason_counts": {
+        "base_contact": 128,
+        "time_out": 0
+      },
+      "time_to_first_termination_per_env_s": [
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006
+      ],
+      "timeout_count": 0,
+      "torso_contact_count": 128,
+      "unique_envs_terminated": 16
+    },
+    {
+      "COMMAND_INJECTION_STATUS": "PASS",
+      "FULL_10S_SURVIVAL_RATIO": 0.0,
+      "MEDIAN_TIME_TO_FALL": 1.2400000000000007,
+      "TERMINATION_RATE_PER_ENV_SECOND": 0.8,
+      "actor_observation_command_mean": [
+        0.5,
+        0.0,
+        0.0
+      ],
+      "actor_observation_finite": true,
+      "case": "forward_050",
+      "command_manager_actual_mean": [
+        0.5,
+        0.0,
+        0.0
+      ],
+      "command_triplet_max_abs_error": 0.0,
+      "command_utilization": 1.584092378616333,
+      "contact_force_nonzero": true,
+      "correct_direction": true,
+      "episodes_completed": 128,
+      "left_contact_ratio": 0.8005,
+      "low_height_count": 0,
+      "mean_episode_survival_time_s": 1.2400000000000007,
+      "mean_integrated_world_displacement_norm_m": 2.445472002029419,
+      "mean_integrated_world_displacement_xy_m": [
+        -0.27032434940338135,
+        -0.15419287979602814
+      ],
+      "mean_integrated_yaw_change_rad": 0.27458852529525757,
+      "median_time_to_fall_terminated_only_s": 1.2400000000000007,
+      "orientation_failure_count": 0,
+      "policy_action_finite": true,
+      "requested_command": [
+        0.5,
+        0.0,
+        0.0
+      ],
+      "reward_command_consumers": [
+        "track_lin_vel_xy_exp",
+        "track_ang_vel_z_exp",
+        "feet_air_time"
+      ],
+      "reward_command_mean": [
+        0.5,
+        0.0,
+        0.0
+      ],
+      "right_contact_ratio": 0.799,
+      "signed_mean_body_vx": 0.7920461893081665,
+      "signed_mean_body_vy": -0.0506167970597744,
+      "signed_mean_body_yaw_rate": 0.015747247263789177,
+      "signed_mean_world_vx": -0.027032479643821716,
+      "signed_mean_world_vy": -0.01541941612958908,
+      "signed_mean_world_yaw_rate": 0.027458878234028816,
+      "successful_full_episodes": 0,
+      "telemetry_path": "/root/autodl-tmp/robotics/falcon-g1-access-push/reports/cp1_10a/model299/telemetry/forward_050_200hz.npz",
+      "telemetry_sample_rate_hz": 200.0,
+      "telemetry_samples_per_env": 2000,
+      "termination_event_count": 128,
+      "termination_reason_counts": {
+        "base_contact": 128,
+        "time_out": 0
+      },
+      "time_to_first_termination_per_env_s": [
+        1.2400000000000007,
+        1.2400000000000007,
+        1.2400000000000007,
+        1.2400000000000007,
+        1.2400000000000007,
+        1.2400000000000007,
+        1.2400000000000007,
+        1.2400000000000007,
+        1.2400000000000007,
+        1.2400000000000007,
+        1.2400000000000007,
+        1.2400000000000007,
+        1.2400000000000007,
+        1.2400000000000007,
+        1.2400000000000007,
+        1.2400000000000007
+      ],
+      "timeout_count": 0,
+      "torso_contact_count": 128,
+      "unique_envs_terminated": 16
+    },
+    {
+      "COMMAND_INJECTION_STATUS": "PASS",
+      "FULL_10S_SURVIVAL_RATIO": 0.0,
+      "MEDIAN_TIME_TO_FALL": 1.2200000000000006,
+      "TERMINATION_RATE_PER_ENV_SECOND": 0.8,
+      "actor_observation_command_mean": [
+        0.0,
+        0.0,
+        0.25
+      ],
+      "actor_observation_finite": true,
+      "case": "yaw_left_025",
+      "command_manager_actual_mean": [
+        0.0,
+        0.0,
+        0.25
+      ],
+      "command_triplet_max_abs_error": 0.0,
+      "command_utilization": -0.10839469730854034,
+      "contact_force_nonzero": true,
+      "correct_direction": false,
+      "episodes_completed": 128,
+      "left_contact_ratio": 0.79,
+      "low_height_count": 0,
+      "mean_episode_survival_time_s": 1.2200000000000006,
+      "mean_integrated_world_displacement_norm_m": 2.211142063140869,
+      "mean_integrated_world_displacement_xy_m": [
+        0.3488845229148865,
+        -0.07977783679962158
+      ],
+      "mean_integrated_yaw_change_rad": -0.27257147431373596,
+      "median_time_to_fall_terminated_only_s": 1.2200000000000006,
+      "orientation_failure_count": 0,
+      "policy_action_finite": true,
+      "requested_command": [
+        0.0,
+        0.0,
+        0.25
+      ],
+      "reward_command_consumers": [
+        "track_lin_vel_xy_exp",
+        "track_ang_vel_z_exp",
+        "feet_air_time"
+      ],
+      "reward_command_mean": [
+        0.0,
+        0.0,
+        0.25
+      ],
+      "right_contact_ratio": 0.791,
+      "signed_mean_body_vx": 0.8001514673233032,
+      "signed_mean_body_vy": -0.02058570645749569,
+      "signed_mean_body_yaw_rate": -0.027098674327135086,
+      "signed_mean_world_vx": 0.034888219088315964,
+      "signed_mean_world_vy": -0.007977847009897232,
+      "signed_mean_world_yaw_rate": -0.027257123962044716,
+      "successful_full_episodes": 0,
+      "telemetry_path": "/root/autodl-tmp/robotics/falcon-g1-access-push/reports/cp1_10a/model299/telemetry/yaw_left_025_200hz.npz",
+      "telemetry_sample_rate_hz": 200.0,
+      "telemetry_samples_per_env": 2000,
+      "termination_event_count": 128,
+      "termination_reason_counts": {
+        "base_contact": 128,
+        "time_out": 0
+      },
+      "time_to_first_termination_per_env_s": [
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006
+      ],
+      "timeout_count": 0,
+      "torso_contact_count": 128,
+      "unique_envs_terminated": 16
+    },
+    {
+      "COMMAND_INJECTION_STATUS": "PASS",
+      "FULL_10S_SURVIVAL_RATIO": 0.0,
+      "MEDIAN_TIME_TO_FALL": 1.2200000000000006,
+      "TERMINATION_RATE_PER_ENV_SECOND": 0.8,
+      "actor_observation_command_mean": [
+        0.0,
+        0.0,
+        -0.25
+      ],
+      "actor_observation_finite": true,
+      "case": "yaw_right_025",
+      "command_manager_actual_mean": [
+        0.0,
+        0.0,
+        -0.25
+      ],
+      "command_triplet_max_abs_error": 0.0,
+      "command_utilization": -0.11393009126186371,
+      "contact_force_nonzero": true,
+      "correct_direction": false,
+      "episodes_completed": 128,
+      "left_contact_ratio": 0.808,
+      "low_height_count": 0,
+      "mean_episode_survival_time_s": 1.2256250000000006,
+      "mean_integrated_world_displacement_norm_m": 2.597264289855957,
+      "mean_integrated_world_displacement_xy_m": [
+        0.14925909042358398,
+        0.09284549951553345
+      ],
+      "mean_integrated_yaw_change_rad": 0.2555323541164398,
+      "median_time_to_fall_terminated_only_s": 1.2200000000000006,
+      "orientation_failure_count": 0,
+      "policy_action_finite": true,
+      "requested_command": [
+        0.0,
+        0.0,
+        -0.25
+      ],
+      "reward_command_consumers": [
+        "track_lin_vel_xy_exp",
+        "track_ang_vel_z_exp",
+        "feet_air_time"
+      ],
+      "reward_command_mean": [
+        0.0,
+        0.0,
+        -0.25
+      ],
+      "right_contact_ratio": 0.805,
+      "signed_mean_body_vx": 0.8248415589332581,
+      "signed_mean_body_vy": -0.025309711694717407,
+      "signed_mean_body_yaw_rate": 0.028482522815465927,
+      "signed_mean_world_vx": 0.014925866387784481,
+      "signed_mean_world_vy": 0.009284475818276405,
+      "signed_mean_world_yaw_rate": 0.02555319108068943,
+      "successful_full_episodes": 0,
+      "telemetry_path": "/root/autodl-tmp/robotics/falcon-g1-access-push/reports/cp1_10a/model299/telemetry/yaw_right_025_200hz.npz",
+      "telemetry_sample_rate_hz": 200.0,
+      "telemetry_samples_per_env": 2000,
+      "termination_event_count": 128,
+      "termination_reason_counts": {
+        "base_contact": 128,
+        "time_out": 0
+      },
+      "time_to_first_termination_per_env_s": [
+        1.2200000000000006,
+        1.2400000000000007,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2400000000000007,
+        1.2400000000000007,
+        1.2400000000000007,
+        1.2200000000000006,
+        1.2400000000000007,
+        1.2400000000000007,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2400000000000007,
+        1.2200000000000006,
+        1.2200000000000006,
+        1.2200000000000006
+      ],
+      "timeout_count": 0,
+      "torso_contact_count": 128,
+      "unique_envs_terminated": 16
+    }
+  ],
+  "status": "PASS_VALID_HARNESS",
+  "task": "Isaac-Velocity-Flat-G1-v0",
+  "termination_terms": [
+    "time_out",
+    "base_contact"
+  ],
+  "termination_terms_not_configured": [
+    "low_height",
+    "bad_orientation"
+  ]
+}

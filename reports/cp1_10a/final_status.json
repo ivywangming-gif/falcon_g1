@@ -1,0 +1,44 @@
+{
+  "phase": "CP1_10A_OFFICIAL_G1_SANITY_HARNESS_VALIDATION",
+  "OFFICIAL_G1_SANITY_VALIDITY": "PASS",
+  "COMMAND_INJECTION_STATUS": "PASS",
+  "SANITY_HARNESS_STATUS": "PASS",
+  "CHECKPOINT_PROVENANCE_STATUS": "PASS_VERIFIED_RESOLVER_ARTIFACT",
+  "CHECKPOINT_MATURITY_STATUS": "PASS_OFFICIAL_PRETRAINED",
+  "PHYSICS_OR_ASSET_STACK_STATUS": "PASS",
+  "NEXT_GATE": "LOWER_ACTOR_V2_CANDIDATE_A_B",
+  "NEXT_GATE_STARTED": false,
+  "prohibited_this_round_respected": ["Candidate A/B Lower Actor V2", "CP3", "box", "AGILE", "official FALCON modification", "Isaac Lab worktree modification"],
+  "local_short_checkpoint": {
+    "path": "reports/cp1_10a/model299/isaaclab_g1_sanity.json",
+    "validity": "PASS",
+    "maturity": "INSUFFICIENT",
+    "physics_status": "UNRESOLVED"
+  },
+  "official_pretrained_checkpoint": {
+    "path": ".pretrained_checkpoints/rsl_rl/Isaac-Velocity-Flat-G1-v0/checkpoint.pt",
+    "sha256": "fdf0f242bb8f3bcfc1aa9b7ff2761af4c014cf1cdc7e49242c9b92f3581720e7",
+    "evaluation": "reports/cp1_10a/official_pretrained/isaaclab_g1_sanity.json",
+    "num_envs": 16,
+    "duration_s": 10.0,
+    "cases": ["stand", "forward_050", "yaw_left_025", "yaw_right_025"],
+    "full_10s_survival_ratio": {"stand": 1.0, "forward_050": 1.0, "yaw_left_025": 1.0, "yaw_right_025": 1.0},
+    "termination_event_count": {"stand": 0, "forward_050": 0, "yaw_left_025": 0, "yaw_right_025": 0},
+    "command_triplet_max_abs_error": {"stand": 0.0, "forward_050": 0.0, "yaw_left_025": 0.0, "yaw_right_025": 0.0},
+    "body_response": {
+      "forward_vx": 0.3816523849964142,
+      "forward_utilization": 0.7633047699928284,
+      "yaw_left_rate": 0.2613619267940521,
+      "yaw_left_utilization": 1.0454477071762085,
+      "yaw_right_rate": -0.26219719648361206,
+      "yaw_right_utilization": 1.0487887859344482
+    },
+    "contact_force_nonzero": true,
+    "normal_close": true
+  },
+  "correction_of_prior_status": {
+    "prior": "PHYSICS_OR_ASSET_STACK_STATUS=FAIL",
+    "corrected": "OFFICIAL_G1_SANITY_VALIDITY=FAIL; PHYSICS_OR_ASSET_STACK_STATUS=UNRESOLVED; LIKELY_REASON=COMMAND_MANAGER_OR_PLAY_CONFIG_OVERRIDE",
+    "evidence": "prior model_299 rollout used an invalid command harness; CP1.10A command injection now passes and mature resolver artifact passes physics sanity"
+  }
+}

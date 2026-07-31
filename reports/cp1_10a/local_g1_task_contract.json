@@ -1,0 +1,87 @@
+{
+  "checkout": {
+    "path": "/root/autodl-tmp/robotics/falcon-g1-access-push/third_party/IsaacLab",
+    "head": "5c2ec81cb17532d32f7922dd7fcaae40d123b71a",
+    "dirty": false
+  },
+  "task": {
+    "source_file": "source/isaaclab_tasks/isaaclab_tasks/manager_based/locomotion/velocity/config/g1/__init__.py",
+    "line_range": "38-47",
+    "resolved_value": "Isaac-Velocity-Flat-G1-v0 -> isaaclab.envs:ManagerBasedRLEnv; env_cfg=flat_env_cfg:G1FlatEnvCfg; rsl_rl_cfg=agents/rsl_rl_ppo_cfg:G1FlatPPORunnerCfg"
+  },
+  "training_env_cfg_class": {
+    "source_file": "source/isaaclab_tasks/isaaclab_tasks/manager_based/locomotion/velocity/config/g1/flat_env_cfg.py",
+    "line_range": "12-42",
+    "resolved_value": "G1FlatEnvCfg; flat plane, no height scan, flat-task command ranges"
+  },
+  "play_env_cfg_class": {
+    "source_file": "source/isaaclab_tasks/isaaclab_tasks/manager_based/locomotion/velocity/config/g1/flat_env_cfg.py",
+    "line_range": "44-56",
+    "resolved_value": "G1FlatEnvCfg_PLAY; scene.num_envs=50, env_spacing=2.5, corruption/events disabled; it does not override lin_vel_x"
+  },
+  "agent_cfg": {
+    "source_file": "source/isaaclab_tasks/isaaclab_tasks/manager_based/locomotion/velocity/config/g1/agents/rsl_rl_ppo_cfg.py",
+    "line_range": "41-49",
+    "resolved_value": "G1FlatPPORunnerCfg; actor/critic=[256,128,128], experiment_name=g1_flat"
+  },
+  "max_iterations": {
+    "source_file": "source/isaaclab_tasks/isaaclab_tasks/manager_based/locomotion/velocity/config/g1/agents/rsl_rl_ppo_cfg.py",
+    "line_range": "12-15,41-47",
+    "resolved_value": 1500
+  },
+  "default_num_envs": {
+    "source_file": "source/isaaclab_tasks/isaaclab_tasks/manager_based/locomotion/velocity/velocity_env_cfg.py",
+    "line_range": "289-295",
+    "resolved_value": 4096
+  },
+  "control_and_physics": {
+    "source_file": "source/isaaclab_tasks/isaaclab_tasks/manager_based/locomotion/velocity/velocity_env_cfg.py",
+    "line_range": "305-320",
+    "resolved_value": {"decimation": 4, "sim_dt_s": 0.005, "control_dt_s": 0.02, "episode_length_s": 20.0, "contact_sensor_update_period_s": 0.005}
+  },
+  "command_ranges": {
+    "source_file": "source/isaaclab_tasks/isaaclab_tasks/manager_based/locomotion/velocity/config/g1/flat_env_cfg.py",
+    "line_range": "38-42",
+    "resolved_value": {"lin_vel_x": [0.0, 1.0], "lin_vel_y": [-0.5, 0.5], "ang_vel_z": [-1.0, 1.0], "heading": [-3.141592653589793, 3.141592653589793]}
+  },
+  "heading_command": {
+    "source_file": "source/isaaclab_tasks/isaaclab_tasks/manager_based/locomotion/velocity/velocity_env_cfg.py",
+    "line_range": "90-104",
+    "resolved_value": true
+  },
+  "resampling_time_range": {
+    "source_file": "source/isaaclab_tasks/isaaclab_tasks/manager_based/locomotion/velocity/velocity_env_cfg.py",
+    "line_range": "94-104",
+    "resolved_value": [10.0, 10.0]
+  },
+  "rel_standing_envs": {
+    "source_file": "source/isaaclab_tasks/isaaclab_tasks/manager_based/locomotion/velocity/velocity_env_cfg.py",
+    "line_range": "94-104",
+    "resolved_value": 0.02
+  },
+  "rel_heading_envs": {
+    "source_file": "source/isaaclab_tasks/isaaclab_tasks/manager_based/locomotion/velocity/velocity_env_cfg.py",
+    "line_range": "94-104",
+    "resolved_value": 1.0
+  },
+  "actor_observation_command_term": {
+    "source_file": "source/isaaclab_tasks/isaaclab_tasks/manager_based/locomotion/velocity/velocity_env_cfg.py",
+    "line_range": "119-143",
+    "resolved_value": {"group": "policy", "term": "velocity_commands", "function": "generated_commands", "command_name": "base_velocity", "runtime_slice": [9, 12], "runtime_observation_dim": 123}
+  },
+  "reward_command_terms": {
+    "source_file": "source/isaaclab_tasks/isaaclab_tasks/manager_based/locomotion/velocity/config/g1/rough_env_cfg.py",
+    "line_range": "20-48",
+    "resolved_value": ["track_lin_vel_xy_exp", "track_ang_vel_z_exp", "feet_air_time"]
+  },
+  "termination_terms": {
+    "source_file": "source/isaaclab_tasks/isaaclab_tasks/manager_based/locomotion/velocity/velocity_env_cfg.py; source/isaaclab_tasks/isaaclab_tasks/manager_based/locomotion/velocity/config/g1/rough_env_cfg.py",
+    "line_range": "266-275;151-153",
+    "resolved_value": {"time_out": {"time_out": true}, "base_contact": {"function": "illegal_contact", "sensor_body": "torso_link", "threshold": 1.0}}
+  },
+  "PLAY_CONFIG_INCOMPATIBLE_WITH_YAW_ONLY_SANITY": {
+    "source_file": "source/isaaclab_tasks/isaaclab_tasks/manager_based/locomotion/velocity/config/g1/flat_env_cfg.py",
+    "line_range": "44-56",
+    "resolved_value": "NO; G1FlatEnvCfg_PLAY inherits flat lin_vel_x=(0.0,1.0) and does not set lin_vel_x=(1.0,1.0)"
+  }
+}

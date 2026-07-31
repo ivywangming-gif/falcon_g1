@@ -1,0 +1,32 @@
+{
+  "task": "Isaac-Velocity-Flat-G1-v0",
+  "model_299": {
+    "classification": "LOCALLY_TRAINED_300_ITERATIONS",
+    "checkpoint": "logs/rsl_rl/g1_flat/2026-07-31_21-35-34_cp1_10_sanity_20260731_133527/model_299.pt",
+    "sha256": "2a4b14bd70ee7d1b6d5c666fef2e052242fa1b9a36549e51391b850cd5be0231",
+    "training_command": "/root/autodl-tmp/conda/envs/falcon_isaaclab/bin/python third_party/IsaacLab/scripts/reinforcement_learning/rsl_rl/train.py --task Isaac-Velocity-Flat-G1-v0 --num_envs 256 --max_iterations 300 --run_name cp1_10_sanity_20260731_133527 --seed 1910 --headless env.events.base_external_force_torque=null env.events.push_robot=null",
+    "training_env_cfg": "isaaclab_tasks.manager_based.locomotion.velocity.config.g1.flat_env_cfg:G1FlatEnvCfg",
+    "agent_cfg": "isaaclab_tasks.manager_based.locomotion.velocity.config.g1.agents.rsl_rl_ppo_cfg:G1FlatPPORunnerCfg",
+    "num_envs": 256,
+    "iterations": 300,
+    "registered_max_iterations": 1500,
+    "seed": 1910,
+    "learner_wall_time_s": 354,
+    "reward_curve": {"iteration_0": -0.14, "iteration_1": -5.99, "iteration_299": -5.15},
+    "termination_curve": {"iteration_0_base_contact": 0.0, "iteration_1_base_contact": 0.4339, "iteration_299_base_contact": 1.0, "iteration_299_time_out": 0.0},
+    "episode_length_curve": {"iteration_0": 5.0, "iteration_1": 41.34, "iteration_299": 50.95},
+    "latest_checkpoint": "model_299.pt",
+    "best_checkpoint": null,
+    "normal_close": true,
+    "normal_close_evidence": "campaign advanced from training stage to evaluation stage with return code 0"
+  },
+  "official_resolver_checkpoint": {
+    "classification": "OFFICIAL_PRETRAINED",
+    "resolver": "isaaclab.utils.pretrained_checkpoint.get_published_pretrained_checkpoint('rsl_rl','Isaac-Velocity-Flat-G1-v0')",
+    "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/IsaacLab/PretrainedCheckpoints/rsl_rl/Isaac-Velocity-Flat-G1-v0/checkpoint.pt",
+    "checkpoint": ".pretrained_checkpoints/rsl_rl/Isaac-Velocity-Flat-G1-v0/checkpoint.pt",
+    "sha256": "fdf0f242bb8f3bcfc1aa9b7ff2761af4c014cf1cdc7e49242c9b92f3581720e7",
+    "training_command": "official resolver artifact; training command is not locally available",
+    "provenance_status": "PASS_VERIFIED_RESOLVER_ARTIFACT"
+  }
+}
