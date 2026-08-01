@@ -131,6 +131,11 @@ from falcon_g1.cp1_10_training import (
     mirror_lower_v2_observation, orthogonal_initialize, reward_v3_terms, signed_progress_ratio,
     warmstart_extended_lower,
 )
+from falcon_g1.cp1_10f_reset import (
+    advance_history_once,
+    initialize_history,
+    reset_action_state,
+)
 from falcon_g1.closed_loop_command_adapter import CommandAdapter
 from falcon_g1.cp1_policy import (
     ACTION_SCALE,
@@ -258,6 +263,13 @@ class FalconGroundedEnv(DirectRLEnv):
         self.push_upper = torch.tensor(reference["upper_reference_official_order"], device=self.device)
         self.history = torch.zeros(self.num_envs, 5, 115, device=self.device)
         self.previous_action = torch.zeros(self.num_envs, 29, device=self.device)
+        self.residual_action = torch.zeros(self.num_envs, 15, device=self.device)
+        self.policy_history_advance_count = torch.zeros(
+            self.num_envs, dtype=torch.long, device=self.device
+        )
+        self._policy_control_step_token = 0
+        self._policy_history_advanced_token = -1
+        self._policy_step_in_progress = False
         self.previous_joint_vel = torch.zeros(self.num_envs, 29, device=self.device)
         self.command = torch.zeros(self.num_envs, 3, device=self.device)
         self.command_mode = torch.zeros(self.num_envs, dtype=torch.long, device=self.device)
@@ -318,6 +330,20 @@ class FalconGroundedEnv(DirectRLEnv):
 
     def set_iteration(self, iteration: int) -> None:
         self.current_iteration = iteration
+
+    def step(self, action: torch.Tensor):
+        if self._policy_step_in_progress:
+            raise RuntimeError("nested control step is forbidden")
+        self._policy_control_step_token += 1
+        token = self._policy_control_step_token
+        self._policy_step_in_progress = True
+        try:
+            result = super().step(action)
+            if self._policy_history_advanced_token != token:
+                raise RuntimeError("policy history was not advanced exactly once")
+            return result
+        finally:
+            self._policy_step_in_progress = False
 
     def set_fixed_commands(self, commands: torch.Tensor, modes: torch.Tensor, push_ready: torch.Tensor | None = None, force_n: float = 0.0) -> None:
         self.freeze_commands = True
@@ -579,14 +605,22 @@ class FalconGroundedEnv(DirectRLEnv):
         return torch.nn.functional.pad(values, (0, 700 - values.shape[-1]))
 
     def _get_observations(self) -> dict:
-        frame = self._actor_frame()
-        self.history = torch.roll(self.history, shifts=-1, dims=1)
-        self.history[:, -1] = frame
         actor_obs = self.history.reshape(self.num_envs, 575).clamp(
             -OBSERVATION_LIMIT, OBSERVATION_LIMIT
         )
-        self.previous_action = self.actions.clone()
         return {"policy": actor_obs, "policy_v2": torch.cat((actor_obs, self.robot.data.root_lin_vel_b), dim=-1), "critic": self._critic_observation(actor_obs)}
+
+    def _advance_policy_history_once(self) -> bool:
+        token = self._policy_control_step_token
+        if not self._policy_step_in_progress:
+            return False
+        if self._policy_history_advanced_token == token:
+            return False
+        self.previous_action.copy_(self.actions)
+        advance_history_once(self.history, self._actor_frame())
+        self.policy_history_advance_count += 1
+        self._policy_history_advanced_token = token
+        return True
 
     def _get_rewards(self) -> torch.Tensor:
         velocity = self.robot.data.root_lin_vel_b
@@ -664,6 +698,7 @@ class FalconGroundedEnv(DirectRLEnv):
         self.latest_reward_terms = terms
         self.latest_reward_active = active
         self.previous_joint_vel = self.robot.data.joint_vel.clone()
+        self._advance_policy_history_once()
         return reward * self.step_dt
 
     def _get_dones(self) -> tuple[torch.Tensor, torch.Tensor]:
@@ -696,14 +731,20 @@ class FalconGroundedEnv(DirectRLEnv):
         self.robot.write_root_pose_to_sim(root[:, :7], env_ids)
         self.robot.write_root_velocity_to_sim(root[:, 7:], env_ids)
         self.robot.write_joint_state_to_sim(joint_pos, joint_vel, None, env_ids)
-        self.history[env_ids] = 0.0
-        self.previous_action[env_ids] = 0.0
+        reset_action_state(
+            self.actions,
+            self.previous_action,
+            self.residual_action,
+            env_ids,
+        )
         self.previous_joint_vel[env_ids] = joint_vel
         self.foot_air_time[env_ids] = 0.0
         self.force_elapsed[env_ids] = 0.0
         self.applied_force_world[env_ids] = 0.0
         self._sample_commands(env_ids)
         self._sample_curriculum(env_ids)
+        initialize_history(self.history, self._actor_frame(), env_ids)
+        self.policy_history_advance_count[env_ids] = 0
 
 
 def load_actor(model: WarmstartedActorCritic) -> dict:
