@@ -1,0 +1,57 @@
+{
+  "campaign": "FALCON_PUSH_PATH_FEEDBACK_EE_ABLATION",
+  "falcon_contract": {
+    "dof": 29,
+    "policy_input": [
+      1,
+      575
+    ],
+    "policy_output": [
+      1,
+      29
+    ]
+  },
+  "variants": {
+    "RUBBER_BACK_CURRENT": {
+      "asset": "/root/autodl-tmp/robotics/worktrees/falcon_push_feedback/artifacts/ee_ablation/g1_usd/g1_29dof_rubberhand_back_current.usda",
+      "asset_sha256": "1c50f20895e328d2da0d8fa1e70e7cdf9a47637a8114c2b27ef4e42ef07cb9d9",
+      "contact_bodies": [
+        "left_rubber_hand",
+        "right_rubber_hand"
+      ],
+      "has_rubber_hand": true,
+      "mount_change": "none",
+      "source": "/root/autodl-tmp/robotics/falcon-g1-access-push/.cache/cp1_13r/g1_usd/g1_29dof_fakehand.usd",
+      "source_sha256": "86135447c01f5cf6ace8afec763c3543677fb9b1932e3d8e241ae3d2f59c8750"
+    },
+    "RUBBER_PALM_FORWARD": {
+      "asset": "/root/autodl-tmp/robotics/worktrees/falcon_push_feedback/artifacts/s2x_v22b0_palm_forward/g1_usd/g1_29dof_rubberhand_palm_forward.usda",
+      "asset_sha256": "8d06902ed918b1738eb0d0eefc09ad30851f12461af8c2a6c03e56f4a175872a",
+      "contact_bodies": [
+        "left_rubber_hand",
+        "right_rubber_hand"
+      ],
+      "hand_mass_kg_per_side": 0.17,
+      "has_rubber_hand": true,
+      "mount_change": "fixed wrist-to-hand rotation only",
+      "palm_normal_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source_sha256": "86135447c01f5cf6ace8afec763c3543677fb9b1932e3d8e241ae3d2f59c8750"
+    },
+    "WRIST_ONLY": {
+      "asset": "/root/autodl-tmp/tmp/falcon_push_ee_ablation_assets/wrist_only/g1_29dof_wrist_only.usd",
+      "asset_sha256": "f1f689012b0cd3af02959e13602d5ae6a422cdd273e75f98bd42f9ebcb19b3df",
+      "contact_bodies": [
+        "left_wrist_yaw_link",
+        "right_wrist_yaw_link"
+      ],
+      "has_added_sphere_capsule_pad": false,
+      "has_rubber_hand": false,
+      "source": "/root/autodl-tmp/robotics/falcon_sandbox/FALCON/humanoidverse/data/robots/g1/g1_29dof.urdf",
+      "source_sha256": "56d0c7b4e44351ee8e89e7b1f1fcc8b02d5ec5cd191e43239d2b06f039e75860"
+    }
+  }
+}
