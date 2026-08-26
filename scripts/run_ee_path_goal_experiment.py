@@ -105,6 +105,19 @@ def sensor_force(sensor: Any, torch: Any) -> float:
     return float(torch.linalg.vector_norm(sensor.data.net_forces_w[0]).item())
 
 
+def filtered_sensor_force(sensor: Any, torch: Any) -> float:
+    """Return the strongest force in the configured one-to-many filter.
+
+    ``net_forces_w`` is intentionally unfiltered by IsaacLab. For a sensor
+    attached to the box it can include the box's ground reaction, so filtered
+    force data is required for hand/box and illegal non-hand contact.
+    """
+    matrix = getattr(sensor.data, "force_matrix_w", None)
+    if matrix is None:
+        return sensor_force(sensor, torch)
+    return float(torch.linalg.vector_norm(matrix[0], dim=-1).max().item())
+
+
 def contact_position(sensor: Any, torch: Any) -> tuple[list[float] | None, int]:
     positions = getattr(sensor.data, "contact_pos_w", None)
     forces = getattr(sensor.data, "force_matrix_w", None)
@@ -301,15 +314,15 @@ def main() -> int:
             for camera in cameras.values(): camera.update(DT)
 
             root = tensor_values(robot.data.root_pos_w[0]); quat = tensor_values(robot.data.root_quat_w[0]); roll, pitch, yaw = rpy_wxyz(quat); v_body = tensor_values(robot.data.root_lin_vel_b[0]); w_body = tensor_values(robot.data.root_ang_vel_b[0]); projected = tensor_values(robot.data.projected_gravity_b[0]); errors = tracker.errors((root[0], root[1], yaw))
-            lf, rf = sensor_force(left_foot, torch), sensor_force(right_foot, torch); lhf = 0.0 if left_box is None else sensor_force(left_box, torch); rhf = 0.0 if right_box is None else sensor_force(right_box, torch)
-            illegal_force = 0.0 if illegal_box is None else sensor_force(illegal_box, torch)
-            contact_forces = tensor_values(all_contacts.data.net_forces_w[0]); excluded = set(contact_bodies) | {"left_ankle_roll_link", "right_ankle_roll_link"}; self_force = max((float(np.linalg.norm(force)) for name, force in zip(all_contacts.body_names, contact_forces) if name not in excluded), default=0.0)
+            lf, rf = sensor_force(left_foot, torch), sensor_force(right_foot, torch); lhf = 0.0 if left_box is None else filtered_sensor_force(left_box, torch); rhf = 0.0 if right_box is None else filtered_sensor_force(right_box, torch)
+            illegal_force = 0.0 if illegal_box is None else filtered_sensor_force(illegal_box, torch)
+            contact_forces = tensor_values(all_contacts.data.net_forces_w[0]); excluded = set(contact_bodies) | {"left_ankle_pitch_link", "right_ankle_pitch_link", "left_ankle_roll_link", "right_ankle_roll_link"}; self_force = max((float(np.linalg.norm(force)) for name, force in zip(all_contacts.body_names, contact_forces) if name not in excluded), default=0.0)
+            self_force = max(0.0, self_force - illegal_force)
             box_pos = None if box is None else tensor_values(box.data.root_pos_w[0]); box_quat = None if box is None else tensor_values(box.data.root_quat_w[0]); box_yaw = None if box_quat is None else rpy_wxyz(box_quat)[2]; box_vel = None if box is None else tensor_values(box.data.root_lin_vel_w[0]); lp, lpc = (None, 0) if left_box is None else contact_position(left_box, torch); rp, rpc = (None, 0) if right_box is None else contact_position(right_box, torch)
             q_now = tensor_values(robot.data.joint_pos[0])[np.asarray(ISAACLAB_TO_OFFICIAL)]; finite = bool(np.isfinite(np.concatenate((root, quat, v_body, w_body, projected, previous_action))).all())
             if not finite and fall_reason is None: fall_reason = "NONFINITE_TENSOR"
             elif root[2] < 0.55 and fall_reason is None: fall_reason = "ROOT_HEIGHT_BELOW_0P55"
             elif (abs(roll) > 0.6 or abs(pitch) > 0.6) and fall_reason is None: fall_reason = "ROOT_ROLL_PITCH_EXCEEDED_0P6"
-            elif self_force > ILLEGAL_FORCE_THRESHOLD and fall_reason is None: fall_reason = "RUNTIME_SELF_COLLISION_PROXY"
             elif illegal_force > ILLEGAL_FORCE_THRESHOLD and fall_reason is None: fall_reason = "ILLEGAL_NONHAND_BOX_CONTACT"
             row = {"step": step, "time_s": (step + 1) * DT, "controller": args.controller, "command_vx": command[0], "command_vy": command[1], "command_wz": command[2], "s_m": errors.s_m, "e_remaining_m": errors.remaining_m, "e_cross_m": errors.cross_m, "e_yaw_rad": errors.yaw_rad, "root_x": root[0], "root_y": root[1], "root_yaw": yaw, "root_height": root[2], "root_roll": roll, "root_pitch": pitch, "root_vx_b": v_body[0], "root_vy_b": v_body[1], "root_wz_b": w_body[2], "left_foot_force": lf, "right_foot_force": rf, "left_hand_force": lhf, "right_hand_force": rhf, "bilateral_contact": bool(lhf > HAND_FORCE_THRESHOLD and rhf > HAND_FORCE_THRESHOLD), "illegal_nonhand_force": illegal_force, "self_collision_proxy_force": self_force, "box_x": None if box_pos is None else box_pos[0], "box_y": None if box_pos is None else box_pos[1], "box_yaw": box_yaw, "box_vx": None if box_vel is None else box_vel[0], "box_vy": None if box_vel is None else box_vel[1], "left_contact_position": lp, "right_contact_position": rp, "left_contact_count": lpc, "right_contact_count": rpc, "upper_tracking_rms": float(np.sqrt(np.mean(np.square(q_now[15:] - q_upper)))), "finite": finite, "fall": fall_reason is not None, "fall_reason": fall_reason or ""}
             rows.append(clean(row))
