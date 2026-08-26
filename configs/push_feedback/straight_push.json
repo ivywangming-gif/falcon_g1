@@ -1,0 +1,56 @@
+{
+  "campaign": "FALCON_PUSH_PATH_FEEDBACK_20260826",
+  "scientific_question": "Does causal SE(2) P feedback reduce global robot and box straight-push drift versus identical open-loop commands?",
+  "planner_executor_interface": {
+    "planner_dispatch": "one edge at a time",
+    "edge_type": "REAR_BIMANUAL_STRAIGHT_PUSH",
+    "reference": "p_ref_W(t), yaw_ref(t), v_ref_W(t), omega_ref(t)",
+    "robot_reference": "box reference composed with fixed template T_OB_template",
+    "controller": "world-frame P + feedforward, body-frame conversion, clipping, mild rate limit",
+    "learned_box_goal_feedback": false,
+    "contact_force_control": false
+  },
+  "low_level": {
+    "falcon": "official recovered G1 FALCON ONNX",
+    "onnx": "/root/autodl-tmp/robotics/falcon_sandbox/FALCON/sim2real/models/falcon/g1_29dof.onnx",
+    "onnx_sha256": "8ac8f51875b878a79d9b5782e702b66572697e204ed262e2002b55631f3105d0",
+    "input_shape": [1, 575],
+    "output_shape": [1, 29],
+    "history_frames": 5,
+    "action_scale": 0.25,
+    "physics_dt_s": 0.005,
+    "control_dt_s": 0.02,
+    "pd": "official CP1 recovered JOINT_KP/JOINT_KD and name mapping",
+    "upper_residual": "disabled; q_upper_push is fixed"
+  },
+  "box": {
+    "dimensions_m": [1.4, 0.7, 0.8],
+    "mass_kg": 5.0,
+    "static_friction": 0.15,
+    "dynamic_friction": 0.15,
+    "restitution": 0.0,
+    "dynamic": true
+  },
+  "controller": {
+    "nominal_command_mps_radps": [0.3, 0.0, 0.0],
+    "position_gain_xy": [0.55, 0.85],
+    "heading_gain": 0.8,
+    "limits": {"vx": [0.0, 0.3], "vy_abs": 0.1, "wz_abs": 0.3},
+    "max_command_step_per_20ms": [0.06, 0.04, 0.06]
+  },
+  "assets": {
+    "palm_forward_variant": "artifacts/s2x_v22b0_palm_forward/g1_usd/g1_29dof_rubberhand_palm_forward.usda",
+    "palm_forward_sha256": "8d06902ed918b1738eb0d0eefc09ad30851f12461af8c2a6c03e56f4a175872a",
+    "source_fakehand_sha256": "86135447c01f5cf6ace8afec763c3543677fb9b1932e3d8e241ae3d2f59c8750",
+    "hand_mass_kg_per_side": 0.17,
+    "visual_collision": "same original rubber-hand mesh",
+    "palm_normal_world": [1.0, 0.0, 0.0]
+  },
+  "evaluation": {
+    "regression_duration_s": 5.0,
+    "push_duration_s": 5.0,
+    "paired_trials": 5,
+    "views": ["front", "side", "top"],
+    "seed_policy": "deterministic identical initial state per paired trial"
+  }
+}
