@@ -46,6 +46,42 @@ def range_gap(a, b):
     return float(np.linalg.norm(delta))
 
 
+def compare_b_c_transforms(reports):
+    """Compare B/C immutable hand data and the intended rotation-only delta."""
+
+    sides = {}
+    for side in ("left", "right"):
+        b = reports["RUBBER_BACK_CURRENT"]["sides"][side]
+        c = reports["RUBBER_PALM_FORWARD"]["sides"][side]
+        b_joint = b["fixed_joint"] or {}
+        c_joint = c["fixed_joint"] or {}
+        b_hand = b["hand"] or {}
+        c_hand = c["hand"] or {}
+        b_translation = np.asarray(b_joint.get("localPos0_m"), dtype=np.float64)
+        c_translation = np.asarray(c_joint.get("localPos0_m"), dtype=np.float64)
+        b_rotation = np.asarray(b_joint.get("localRot0"), dtype=np.float64)
+        c_rotation = np.asarray(c_joint.get("localRot0"), dtype=np.float64)
+        immutable_fields = ("geometry_prim_paths", "mass", "center_of_mass", "diagonal_inertia", "principal_axes")
+        immutable_equal = all(b_hand.get(key) == c_hand.get(key) for key in immutable_fields)
+        sides[side] = {
+            "translation_B_m": b_translation,
+            "translation_C_m": c_translation,
+            "translation_delta_C_minus_B_m": c_translation - b_translation,
+            "translation_identical": bool(np.allclose(b_translation, c_translation, rtol=0.0, atol=1.0e-8)),
+            "fixed_joint_rotation_B": b_rotation,
+            "fixed_joint_rotation_C": c_rotation,
+            "fixed_joint_rotation_changed": bool(not np.allclose(b_rotation, c_rotation, rtol=0.0, atol=1.0e-8)),
+            "same_hand_mesh_mass_inertia_collider": bool(immutable_equal),
+            "immutable_fields_compared": list(immutable_fields),
+        }
+    return clean({
+        "contract": "B/C same hand mesh, mass/inertia, collider, and wrist-to-hand translation; C only fixed mounting rotation",
+        "sides": sides,
+        "B_C_TRANSLATION_IDENTICAL": bool(all(item["translation_identical"] for item in sides.values())),
+        "B_C_ROTATION_ONLY_DIFF": bool(all(item["translation_identical"] and item["fixed_joint_rotation_changed"] and item["same_hand_mesh_mass_inertia_collider"] for item in sides.values())),
+    })
+
+
 def quat_wxyz(rotation):
     trace = float(np.trace(rotation))
     if trace > 0:
@@ -203,7 +239,7 @@ def main():
             reports[variant] = clean(report)
     finally:
         pass
-    output = {"WRIST_HAND_GAP_CAUSE": "expected_fixed_joint_mesh_geometry", "variants": reports, "figures": {variant: {kind: str(args.output_root / variant / f"{kind}_closeup.png") for kind in ("visual", "collider", "overlay")} for variant in reports}}
+    output = {"WRIST_HAND_GAP_CAUSE": "expected_fixed_joint_mesh_geometry", "variants": reports, "B_VS_C_TRANSFORM_DIFF": compare_b_c_transforms(reports), "figures": {variant: {kind: str(args.output_root / variant / f"{kind}_closeup.png") for kind in ("visual", "collider", "overlay")} for variant in reports}}
     (args.output_root / "EE_GAP_AUDIT.json").write_text(json.dumps(output, indent=2, sort_keys=True) + "\n")
     print(json.dumps(output, indent=2, sort_keys=True))
     app.close(wait_for_replicator=False, skip_cleanup=False)

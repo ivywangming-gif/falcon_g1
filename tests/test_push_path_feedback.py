@@ -1,4 +1,6 @@
 import math
+import json
+from pathlib import Path
 
 import numpy as np
 import pytest
@@ -11,6 +13,13 @@ from falcon_g1.push_path_feedback import (
     SE2Reference,
     straight_reference,
     wrap_angle,
+)
+from falcon_g1.validity_contract import (
+    ConfigFail,
+    classify_box_contact,
+    longest_contiguous_run_seconds,
+    resolve_runtime_contact_bodies,
+    validate_runtime_contract,
 )
 
 
@@ -72,3 +81,32 @@ def test_path_goal_success_requires_all_frozen_tolerances():
     assert not tracker.goal_reached((4.96, 0.09, 0.04), 0.05)
     assert not tracker.goal_reached((4.96, 0.04, 0.10), 0.05)
     assert not tracker.goal_reached((4.96, 0.04, 0.04), 0.09)
+
+
+def test_longest_bilateral_is_contiguous_not_total_sample_count():
+    assert longest_contiguous_run_seconds([0, 1, 1, 0, 1, 1, 1, 0], 0.005) == pytest.approx(3 * 0.005)
+
+
+def test_runtime_contract_rejects_legacy_five_second_timeout():
+    with pytest.raises(ConfigFail):
+        validate_runtime_contract({"path_length_m": 5.0, "nominal_speed_mps": 0.30, "max_duration_s": 5.0, "fixed_time_test": True})
+
+
+def test_contact_legality_uses_observed_composed_reporter_identity():
+    resolved = resolve_runtime_contact_bodies(
+        "RUBBER_PALM_FORWARD",
+        ("left_rubber_hand", "right_rubber_hand"),
+        ("left_wrist_yaw_link", "right_wrist_yaw_link", "left_elbow_link"),
+    )
+    assert [item["runtime_body"] for item in resolved] == ["left_wrist_yaw_link", "right_wrist_yaw_link"]
+    assert resolved[0]["resolution"] == "COMPOSED_FIXED_JOINT_RUNTIME_REPORTER"
+    assert classify_box_contact("left_wrist_yaw_link", ["left_wrist_yaw_link", "right_wrist_yaw_link"]) == "EXPECTED_EE_BOX_CONTACT"
+    assert classify_box_contact("left_elbow_link", ["left_wrist_yaw_link", "right_wrist_yaw_link"]) == "TRUE_ILLEGAL_ELBOW_BOX_CONTACT"
+
+
+def test_old_straight_push_config_is_explicitly_legacy():
+    config = json.loads((Path(__file__).parents[1] / "configs/push_feedback/straight_push.json").read_text())
+    assert config["do_not_use_for_validity_repair"] is True
+    assert config["evaluation"]["status"] == "LEGACY_NOT_FOR_VALIDITY_REPAIR"
+    assert config["evaluation"]["fixed_time_test"] is True
+    assert "regression_duration_s" not in config["evaluation"]

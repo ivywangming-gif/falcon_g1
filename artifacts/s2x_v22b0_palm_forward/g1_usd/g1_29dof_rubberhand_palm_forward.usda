@@ -13,20 +13,19 @@ over "g1_29dof"
     over "left_rubber_hand"
     {
         quatd xformOp:orient = (0.6749345885251178, 0.25671532885338877, 0.2531905610551949, -0.643781858191641)
-        double3 xformOp:translate = (0.2907467909704883, 0.21652367510306705, -0.03394968794306778)
     }
 
     over "joints"
     {
         over "left_hand_palm_joint"
         {
-            point3f physics:localPos0 = (0.07012402, 0.033107627, 0.03281652)
+            point3f physics:localPos0 = (0.0414999984, 0.003, 0)
             quatf physics:localRot0 = (0.56065935, 0.6333478, -0.021188952, -0.5329941)
         }
 
         over "right_hand_palm_joint"
         {
-            point3f physics:localPos0 = (0.069757015, -0.033361576, 0.032579485)
+            point3f physics:localPos0 = (0.0414999984, -0.003, 0)
             quatf physics:localRot0 = (0.56557506, -0.6325389, -0.021330783, 0.52873844)
         }
     }
@@ -34,7 +33,5 @@ over "g1_29dof"
     over "right_rubber_hand"
     {
         quatd xformOp:orient = (0.6728818526710324, -0.26215633277901473, 0.2582821153574557, 0.641712099322068)
-        double3 xformOp:translate = (0.2905436012140511, -0.2165941548528725, -0.03349947378715167)
     }
 }
-

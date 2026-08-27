@@ -69,20 +69,9 @@ def fmt(value, digits=4):
     return str(value)
 
 
-def selection_score(variant, no_box, push):
-    # Priority follows the handoff: no locomotion harm, then stable contact,
-    # then box yaw/cross drift.  Video appearance is deliberately absent.
-    no_harm = min(no_box.get("fall_free_rate") or 0.0, no_box.get("self_collision_free_rate") or 0.0)
-    contact = push.get("bilateral_contact_fraction_mean") or 0.0
-    yaw = push.get("box_yaw_drift_abs_rad_mean")
-    cross = push.get("box_cross_track_rmse_m_mean")
-    return (-no_harm, -contact, float("inf") if yaw is None else yaw, float("inf") if cross is None else cross, variant)
-
-
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--run-root", type=Path, required=True)
-    parser.add_argument("--selected", choices=VARIANTS)
     args = parser.parse_args()
     args.run_root = args.run_root.resolve()
     detail = {}
@@ -90,12 +79,7 @@ def main():
         no_box = aggregate(read_rows(args.run_root, variant, "no_box", "baseline"))
         push = aggregate(read_rows(args.run_root, variant, "push", "baseline"))
         detail[variant] = {"no_box_baseline": no_box, "push_baseline": push}
-    selected = args.selected
-    if selected is None:
-        selected = min(VARIANTS, key=lambda variant: selection_score(variant, detail[variant]["no_box_baseline"], detail[variant]["push_baseline"]))
-    selected_baseline = aggregate(read_rows(args.run_root, selected, "selected_comparison", "baseline"))
-    selected_p = aggregate(read_rows(args.run_root, selected, "selected_comparison", "p_feedback"))
-    report = {"run_root": str(args.run_root), "selected_ee": selected, "variants": detail, "selected_comparison": {"baseline": selected_baseline, "p_feedback": selected_p}, "WRIST_HAND_GAP_CAUSE": "expected_fixed_joint_mesh_geometry; WRIST_ONLY has no hand gap (hand absent)", "TRAINING_STARTED": "NO", "PPO_UPDATES": 0, "READY_FOR_SMALL_REAR_ARC": "NO"}
+    report = {"run_root": str(args.run_root), "selected_ee": "UNRESOLVED", "selection_evidence": "WITHHELD: old all-fail campaign and three minimal diagnostics are not formal EE selection evidence", "variants": detail, "selected_comparison": None, "WRIST_HAND_GAP_CAUSE": "expected_fixed_joint_mesh_geometry; WRIST_ONLY has no hand gap (hand absent)", "TRAINING_STARTED": "NO", "PPO_UPDATES": 0, "READY_FOR_SMALL_REAR_ARC": "NO"}
     (args.run_root / "EE_ABLATION_REPORT.json").write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
     lines = [
         "# FALCON path-goal EE ablation",
@@ -110,18 +94,9 @@ def main():
         report_name = {"RUBBER_BACK_CURRENT": "RUBBER_BACK", "RUBBER_PALM_FORWARD": "RUBBER_PALM"}.get(variant, variant)
         lines.extend([f"{report_name}_NOBOX={no_box.get('path_success_rate')} success_rate; trials={no_box.get('trials')}; fall_free={no_box.get('fall_free_rate')}", f"{report_name}_PUSH={push.get('path_success_rate')} success_rate; trials={push.get('trials')}; bilateral={fmt(push.get('bilateral_contact_fraction_mean'))}; box_cross_rmse={fmt(push.get('box_cross_track_rmse_m_mean'))}; box_yaw_abs={fmt(push.get('box_yaw_drift_abs_rad_mean'))}"])
     lines.extend([
-        f"SELECTED_EE={selected}",
-        "SELECTION_REASON=WRIST_ONLY selected: lowest no-box robot drift (cross RMSE 0.388m vs 0.447m/0.513m; all 5/5 fall-free); rubber-hand variants degrade FALCON locomotion, so keep wrist-only and do not retrain. Push baseline still shows non-hand contact; no small rear arc.",
-        f"BASELINE_PATH_SUCCESS_RATE={selected_baseline['path_success_rate']}",
-        f"P_FEEDBACK_PATH_SUCCESS_RATE={selected_p['path_success_rate']}",
-        f"BASELINE_ROBOT_CROSS_TRACK_RMSE={fmt(selected_baseline['robot_cross_track_rmse_m_mean'])}",
-        f"P_FEEDBACK_ROBOT_CROSS_TRACK_RMSE={fmt(selected_p['robot_cross_track_rmse_m_mean'])}",
-        f"BASELINE_BOX_CROSS_TRACK_RMSE={fmt(selected_baseline['box_cross_track_rmse_m_mean'])}",
-        f"P_FEEDBACK_BOX_CROSS_TRACK_RMSE={fmt(selected_p['box_cross_track_rmse_m_mean'])}",
-        f"BASELINE_BOX_YAW_DRIFT={fmt(selected_baseline['box_yaw_drift_abs_rad_mean'])}",
-        f"P_FEEDBACK_BOX_YAW_DRIFT={fmt(selected_p['box_yaw_drift_abs_rad_mean'])}",
-        f"BASELINE_COMPLETION_TIME={fmt(selected_baseline['completion_time_s_mean'])}",
-        f"P_FEEDBACK_COMPLETION_TIME={fmt(selected_p['completion_time_s_mean'])}",
+        "SELECTED_EE=UNRESOLVED",
+        "SELECTION_EVIDENCE=WITHHELD; old all-fail campaign and minimal diagnostics are not formal EE selection evidence",
+        "SELECTION_METRICS=WITHHELD",
         "READY_FOR_SMALL_REAR_ARC=NO",
         "TRAINING_STARTED=NO",
         "PPO_UPDATES=0",

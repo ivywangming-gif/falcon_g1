@@ -26,7 +26,7 @@
     },
     "RUBBER_PALM_FORWARD": {
       "asset": "/root/autodl-tmp/robotics/worktrees/falcon_push_feedback/artifacts/s2x_v22b0_palm_forward/g1_usd/g1_29dof_rubberhand_palm_forward.usda",
-      "asset_sha256": "8d06902ed918b1738eb0d0eefc09ad30851f12461af8c2a6c03e56f4a175872a",
+      "asset_sha256": "737fadc63ce75a2711a6ee30b1848b5b1425cad641e01f10b1d9b38ae9159ce5",
       "contact_bodies": [
         "left_rubber_hand",
         "right_rubber_hand"

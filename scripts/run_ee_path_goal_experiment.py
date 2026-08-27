@@ -10,6 +10,7 @@ the 5 m goal tolerances are met, or at the 30 s timeout.
 from __future__ import annotations
 
 import argparse
+import builtins
 import csv
 import gc
 import hashlib
@@ -21,9 +22,22 @@ from typing import Any
 
 import numpy as np
 
-
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
+
+from falcon_g1.validity_contract import (
+    ConfigFail,
+    MAX_DURATION_S,
+    PATH_LENGTH_M,
+    NOMINAL_SPEED_MPS,
+    classify_box_contact,
+    canonical_runtime_contract,
+    longest_contiguous_run_seconds,
+    resolve_runtime_contact_bodies,
+    validate_runtime_contract,
+)
+
+
 FALCON = Path("/root/autodl-tmp/robotics/falcon_sandbox/FALCON")
 ONNX = FALCON / "sim2real/models/falcon/g1_29dof.onnx"
 REGISTRY = REPO / "artifacts/ee_ablation/EE_VARIANTS.json"
@@ -118,6 +132,44 @@ def filtered_sensor_force(sensor: Any, torch: Any) -> float:
     return float(torch.linalg.vector_norm(matrix[0], dim=-1).max().item())
 
 
+def filtered_sensor_force_and_body(sensor: Any, torch: Any) -> tuple[float, str | None]:
+    """Read one independent body -> Box filter and retain its body identity."""
+
+    matrix = getattr(sensor.data, "force_matrix_w", None)
+    if matrix is None:
+        return 0.0, None
+    forces = torch.linalg.vector_norm(matrix[0], dim=-1)
+    value = float(forces.reshape(-1).max().item()) if forces.numel() else 0.0
+    body_names = list(getattr(sensor, "body_names", ()))
+    body_name = body_names[0] if body_names else None
+    return value, body_name
+
+
+def initialize_runtime_sensor(sensor: Any) -> None:
+    """Initialize a ContactSensor created after the simulator PLAY event."""
+
+    if not sensor.is_initialized:
+        sensor._initialize_callback(None)
+    callback_error = getattr(builtins, "ISAACLAB_CALLBACK_EXCEPTION", None)
+    if callback_error is not None:
+        raise RuntimeError(f"CONTACT_SENSOR_INITIALIZATION_FAILED:{callback_error}")
+    if not sensor.is_initialized or sensor.num_bodies < 1:
+        raise RuntimeError(f"CONTACT_SENSOR_BODY_RESOLUTION_FAILED:{sensor.cfg.prim_path}")
+
+
+def runtime_sensor_prim_paths(sensor: Any) -> list[str]:
+    view = getattr(sensor, "body_physx_view", None)
+    if view is None:
+        return []
+    return [str(path) for path in view.prim_paths[: sensor.num_bodies]]
+
+
+def runtime_contract_for_failure(max_time: float) -> dict[str, Any]:
+    contract = canonical_runtime_contract()
+    contract["requested_max_duration_s"] = max_time
+    return contract
+
+
 def contact_position(sensor: Any, torch: Any) -> tuple[list[float] | None, int]:
     positions = getattr(sensor.data, "contact_pos_w", None)
     forces = getattr(sensor.data, "force_matrix_w", None)
@@ -171,7 +223,13 @@ def load_contract(variant: str, mode: str, controller: str, run_root: Path) -> t
         "falcon": {"official_commit": OFFICIAL_COMMIT, "onnx": str(ONNX), "onnx_sha256": sha256(ONNX), "input_shape": [1, 575], "output_shape": [1, 29], "history_length": 5, "physics_dt_s": DT, "control_dt_s": DT * DECIMATION, "action_scale": 0.25},
         "asset": registry["variants"][variant],
         "q_upper_push": {"candidate_id": q_payload.get("candidate_id", "OLD_SPHERE_REFERENCE"), "source": str(QPOSTURE), "values": q_upper.tolist()},
-        "path_goal": {"origin": "actual robot initial base XY", "tangent_world": [1.0, 0.0], "length_m": 5.0, "goal_definition": "p0 + 5 m * global +X", "planned_yaw": "initial planned yaw", "nominal_speed_mps": 0.30, "max_time_s": 30.0, "terminal_law": "min(0.30, 1.0*max(e_remaining,0))", "tolerance": {"remaining_m": 0.08, "cross_m": 0.08, "yaw_deg": 5.0, "planar_speed_mps": 0.08}},
+        "runtime_contract": canonical_runtime_contract(),
+        "path_length_m": PATH_LENGTH_M,
+        "nominal_speed_mps": NOMINAL_SPEED_MPS,
+        "max_duration_s": MAX_DURATION_S,
+        "fixed_time_test": False,
+        "path_correction_enabled": controller == "p_feedback",
+        "path_goal": {"origin": "actual robot initial base XY", "tangent_world": [1.0, 0.0], "length_m": PATH_LENGTH_M, "goal_definition": "p0 + 5 m * global +X", "planned_yaw": "initial planned yaw", "nominal_speed_mps": NOMINAL_SPEED_MPS, "max_time_s": MAX_DURATION_S, "terminal_law": "min(0.30, 1.0*max(e_remaining,0))", "success_trigger": "endpoint/path tolerance and planar speed", "tolerance": {"remaining_m": 0.08, "cross_m": 0.08, "yaw_deg": 5.0, "planar_speed_mps": 0.08}},
         "box": None if mode == "no_box" else {"dimensions_m": list(BOX_DIMS), "mass_kg": BOX_MASS, "static_friction": BOX_FRICTION, "dynamic_friction": BOX_FRICTION, "restitution": 0.0},
         "initial": {"root_pos_seed_world": [PUSH_ROOT_X, 0.0, 0.8], "box_center_world": list(PUSH_BOX_CENTER) if mode == "push" else None},
     }
@@ -189,13 +247,30 @@ def main() -> int:
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--record-video", action="store_true")
     args = parser.parse_args()
-    if args.max_time <= 0.0 or not math.isfinite(args.max_time):
-        raise ValueError("max-time must be finite and positive")
     args.run_root = args.run_root.resolve()
     args.run_root.mkdir(parents=True, exist_ok=True)
+    try:
+        runtime_contract = validate_runtime_contract({**canonical_runtime_contract(), "max_duration_s": args.max_time})
+    except ConfigFail as exc:
+        config_fail = {
+            "status": "CONFIG_FAIL",
+            "error": str(exc),
+            "variant": args.variant,
+            "mode": args.mode,
+            "controller": args.controller,
+            "trial_id": str(args.trial_id),
+            "training_started": False,
+            "ppo_updates": 0,
+            **runtime_contract_for_failure(args.max_time),
+        }
+        write_json(args.run_root / "resolved_config.json", config_fail)
+        write_json(args.run_root / "summary.json", config_fail)
+        (args.run_root / "status.txt").write_text("CONFIG_FAIL\n")
+        return 2
     asset, q_upper, contract = load_contract(args.variant, args.mode, args.controller, args.run_root)
     contract.update({"trial_id": str(args.trial_id), "seed": int(args.seed), "record_video": bool(args.record_video)})
-    contract["path_goal"]["max_time_s"] = float(args.max_time)
+    contract["runtime_contract"] = runtime_contract
+    contract["path_goal"]["max_time_s"] = MAX_DURATION_S
     write_json(args.run_root / "resolved_config.json", contract)
     (args.run_root / "status.txt").write_text("APP_STARTING\n")
 
@@ -221,6 +296,12 @@ def main() -> int:
     fall_reason: str | None = None
     termination_reason = "TIMEOUT_MAX_TIME"
     success = False
+    contact_legality: dict[str, Any] = {}
+    endpoint_sensors: dict[str, Any] = {}
+    illegal_box_sensors: dict[str, Any] = {}
+    legal_runtime_bodies: list[str] = []
+    first_illegal_contact: dict[str, Any] | None = None
+    illegal_contact_events: list[dict[str, Any]] = []
     try:
         sim = SimulationContext(SimulationCfg(dt=DT, render_interval=1, device="cuda:0"))
         ground = sim_utils.GroundPlaneCfg(); ground.func("/World/defaultGroundPlane", ground)
@@ -239,17 +320,11 @@ def main() -> int:
                 init_state=RigidObjectCfg.InitialStateCfg(pos=PUSH_BOX_CENTER, rot=(1.0, 0.0, 0.0, 0.0))))
             objects.append(box)
 
-        contact_bodies = registry_body_names = json.loads(REGISTRY.read_text())["variants"][args.variant]["contact_bodies"]
-        left_body, right_body = contact_bodies
-        left_box = ContactSensor(ContactSensorCfg(prim_path=f"/World/envs/env_0/Robot/{left_body}", filter_prim_paths_expr=["/World/envs/env_0/Box"], max_contact_data_count_per_prim=64, history_length=0)) if box is not None else None
-        right_box = ContactSensor(ContactSensorCfg(prim_path=f"/World/envs/env_0/Robot/{right_body}", filter_prim_paths_expr=["/World/envs/env_0/Box"], max_contact_data_count_per_prim=64, history_length=0)) if box is not None else None
+        contact_bodies = json.loads(REGISTRY.read_text())["variants"][args.variant]["contact_bodies"]
+        left_box = right_box = None
         all_contacts = ContactSensor(ContactSensorCfg(prim_path="/World/envs/env_0/Robot/.*", max_contact_data_count_per_prim=64, history_length=0))
         left_foot = ContactSensor(ContactSensorCfg(prim_path="/World/envs/env_0/Robot/left_ankle_roll_link")); right_foot = ContactSensor(ContactSensorCfg(prim_path="/World/envs/env_0/Robot/right_ankle_roll_link"))
-        illegal_box = None
-        if box is not None:
-            non_hand_links = [name for name in ("pelvis", "left_hip_pitch_link", "right_hip_pitch_link", "waist_yaw_link", "left_hip_roll_link", "right_hip_roll_link", "waist_roll_link", "left_hip_yaw_link", "right_hip_yaw_link", "torso_link", "left_knee_link", "right_knee_link", "left_shoulder_pitch_link", "right_shoulder_pitch_link", "left_ankle_pitch_link", "right_ankle_pitch_link", "left_shoulder_roll_link", "right_shoulder_roll_link", "left_ankle_roll_link", "right_ankle_roll_link", "left_shoulder_yaw_link", "right_shoulder_yaw_link", "left_elbow_link", "right_elbow_link", "left_wrist_roll_link", "right_wrist_roll_link", "left_wrist_pitch_link", "right_wrist_pitch_link", "left_wrist_yaw_link", "right_wrist_yaw_link") if name not in contact_bodies]
-            illegal_box = ContactSensor(ContactSensorCfg(prim_path="/World/envs/env_0/Box", filter_prim_paths_expr=[f"/World/envs/env_0/Robot/{name}" for name in non_hand_links], max_contact_data_count_per_prim=128, history_length=0))
-        objects.extend([x for x in (left_box, right_box, illegal_box, all_contacts, left_foot, right_foot) if x is not None])
+        objects.extend([all_contacts, left_foot, right_foot])
 
         cameras: dict[str, Any] = {}
         if args.record_video:
@@ -266,8 +341,47 @@ def main() -> int:
 
         sim.reset()
         for obj in objects: obj.reset()
+        callback_error = getattr(builtins, "ISAACLAB_CALLBACK_EXCEPTION", None)
+        if callback_error is not None:
+            raise RuntimeError(f"CONTACT_SENSOR_INITIALIZATION_FAILED:{callback_error}")
         if tuple(robot.joint_names) != tuple(ISAACLAB_JOINT_ORDER) or robot.is_fixed_base:
             raise RuntimeError(f"FALCON_ARTICULATION_CONTRACT_FAILED:{len(robot.joint_names)}:{robot.joint_names}")
+        if box is not None:
+            # all_contacts is the runtime census.  Its PhysX view, not the
+            # registry spelling, is the source of truth for fixed-joint merges.
+            runtime_paths = runtime_sensor_prim_paths(all_contacts)
+            runtime_bodies = [path.rsplit("/", 1)[-1] for path in runtime_paths]
+            resolved = resolve_runtime_contact_bodies(args.variant, contact_bodies, runtime_bodies)
+            legal_runtime_bodies = [str(item["runtime_body"]) for item in resolved]
+            for item in resolved:
+                body_path = next(path for path in runtime_paths if path.rsplit("/", 1)[-1] == item["runtime_body"])
+                sensor = ContactSensor(ContactSensorCfg(prim_path=body_path, filter_prim_paths_expr=["/World/envs/env_0/Box"], max_contact_data_count_per_prim=64, history_length=0, track_contact_points=True))
+                initialize_runtime_sensor(sensor)
+                sensor.reset()
+                endpoint_sensors[str(item["side"])] = sensor
+                item.update({"sensor_prim_path": body_path, "other_prim_path": "/World/envs/env_0/Box", "filter_type": "independent_one_body_to_one_box"})
+            for body_path in runtime_paths:
+                body_name = body_path.rsplit("/", 1)[-1]
+                if body_name in legal_runtime_bodies:
+                    continue
+                sensor = ContactSensor(ContactSensorCfg(prim_path=body_path, filter_prim_paths_expr=["/World/envs/env_0/Box"], max_contact_data_count_per_prim=64, history_length=0, track_contact_points=True))
+                initialize_runtime_sensor(sensor)
+                sensor.reset()
+                illegal_box_sensors[body_name] = sensor
+            objects.extend([*endpoint_sensors.values(), *illegal_box_sensors.values()])
+            contact_legality = {
+                "identity_source": "actual ContactSensor.body_physx_view.prim_paths from unfiltered runtime census",
+                "expected_legal_contact": "A wrist collider body; B/C rubber-hand collider body, or observed composed fixed-joint reporter",
+                "box_filter_prim_path": "/World/envs/env_0/Box",
+                "runtime_contact_reporter_paths": runtime_paths,
+                "runtime_contact_reporter_bodies": runtime_bodies,
+                "legal_runtime_bodies": legal_runtime_bodies,
+                "endpoint_sensors": resolved,
+                "independent_illegal_sensors": [{"sensor_body": name, "sensor_prim_path": str(sensor.cfg.prim_path), "other_prim_path": "/World/envs/env_0/Box", "classification": classify_box_contact(name, legal_runtime_bodies)} for name, sensor in illegal_box_sensors.items()],
+            }
+            left_box = endpoint_sensors["left"]
+            right_box = endpoint_sensors["right"]
+            write_json(args.run_root / "contact_legality.json", contact_legality)
         if box is not None:
             box.write_root_pose_to_sim(torch.tensor([[*PUSH_BOX_CENTER, 1.0, 0.0, 0.0, 0.0]], device=sim.device)); box.write_root_velocity_to_sim(torch.zeros((1, 6), device=sim.device)); box.write_data_to_sim()
         seed_official = DEFAULT_JOINT_POS.copy(); seed_official[15:] = q_upper
@@ -294,7 +408,7 @@ def main() -> int:
         for field in OBSERVATION_ORDER: obs_slices[field] = (cursor, cursor + OBSERVATION_DIMS[field]); cursor += OBSERVATION_DIMS[field]
         if cursor != SINGLE_FRAME_DIM or SINGLE_FRAME_DIM * HISTORY_LENGTH != POLICY_OBSERVATION_DIM: raise RuntimeError("OFFICIAL_OBSERVATION_CONTRACT_FAILED")
         initial_box = None if box is None else tensor_values(box.data.root_pos_w[0]).copy()
-        total_steps = int(round(args.max_time / DT))
+        total_steps = int(round(MAX_DURATION_S / DT))
         for step in range(total_steps):
             time_s = step * DT
             pose_now = tensor_values(robot.data.root_pose_w[0]); _, _, yaw_now = rpy_wxyz(pose_now[3:7])
@@ -308,23 +422,52 @@ def main() -> int:
                 target_official = np.clip(DEFAULT_JOINT_POS + ACTION_SCALE * previous_action, JOINT_POS_LOWER, JOINT_POS_UPPER); target_official[15:] = np.clip(q_upper, JOINT_POS_LOWER[15:], JOINT_POS_UPPER[15:])
 
             robot.set_joint_position_target(torch.as_tensor(target_official[np.asarray(OFFICIAL_TO_ISAACLAB)], device=sim.device, dtype=robot.data.joint_pos.dtype).unsqueeze(0)); robot.write_data_to_sim(); sim.step(render=bool(args.record_video)); robot.update(DT)
-            for sensor in (all_contacts, left_foot, right_foot, left_box, right_box, illegal_box):
+            for sensor in (all_contacts, left_foot, right_foot, *endpoint_sensors.values(), *illegal_box_sensors.values()):
                 if sensor is not None: sensor.update(DT)
             if box is not None: box.update(DT)
             for camera in cameras.values(): camera.update(DT)
 
             root = tensor_values(robot.data.root_pos_w[0]); quat = tensor_values(robot.data.root_quat_w[0]); roll, pitch, yaw = rpy_wxyz(quat); v_body = tensor_values(robot.data.root_lin_vel_b[0]); w_body = tensor_values(robot.data.root_ang_vel_b[0]); projected = tensor_values(robot.data.projected_gravity_b[0]); errors = tracker.errors((root[0], root[1], yaw))
-            lf, rf = sensor_force(left_foot, torch), sensor_force(right_foot, torch); lhf = 0.0 if left_box is None else filtered_sensor_force(left_box, torch); rhf = 0.0 if right_box is None else filtered_sensor_force(right_box, torch)
-            illegal_force = 0.0 if illegal_box is None else filtered_sensor_force(illegal_box, torch)
-            contact_forces = tensor_values(all_contacts.data.net_forces_w[0]); excluded = set(contact_bodies) | {"left_ankle_pitch_link", "right_ankle_pitch_link", "left_ankle_roll_link", "right_ankle_roll_link"}; self_force = max((float(np.linalg.norm(force)) for name, force in zip(all_contacts.body_names, contact_forces) if name not in excluded), default=0.0)
+            lf, rf = sensor_force(left_foot, torch), sensor_force(right_foot, torch)
+            lhf, left_contact_body = (0.0, None) if left_box is None else filtered_sensor_force_and_body(left_box, torch)
+            rhf, right_contact_body = (0.0, None) if right_box is None else filtered_sensor_force_and_body(right_box, torch)
+            expected_box_contacts = []
+            for side, force, body in (("left", lhf, left_contact_body), ("right", rhf, right_contact_body)):
+                if force > HAND_FORCE_THRESHOLD:
+                    expected_box_contacts.append({"time_s": (step + 1) * DT, "variant": args.variant, "classification": "EXPECTED_EE_BOX_CONTACT", "side": side, "sensor_body": body, "other_body": "Box", "force_N": force, "prim_paths": {"sensor": f"/World/envs/env_0/Robot/{body}", "other": "/World/envs/env_0/Box"}})
+            step_illegal_events: list[dict[str, Any]] = []
+            for configured_body, sensor in illegal_box_sensors.items():
+                force, sensor_body = filtered_sensor_force_and_body(sensor, torch)
+                if force <= ILLEGAL_FORCE_THRESHOLD:
+                    continue
+                actual_body = sensor_body or configured_body
+                event = {
+                    "time_s": (step + 1) * DT,
+                    "variant": args.variant,
+                    "classification": classify_box_contact(actual_body, legal_runtime_bodies),
+                    "sensor_body": actual_body,
+                    "other_body": "Box",
+                    "force_N": force,
+                    "prim_paths": {"sensor": f"/World/envs/env_0/Robot/{actual_body}", "other": "/World/envs/env_0/Box"},
+                    "sensor_prim_path": f"/World/envs/env_0/Robot/{actual_body}",
+                    "other_prim_path": "/World/envs/env_0/Box",
+                }
+                step_illegal_events.append(event)
+            illegal_contact_events.extend(step_illegal_events)
+            if first_illegal_contact is None and step_illegal_events:
+                first_illegal_contact = step_illegal_events[0]
+                write_json(args.run_root / "first_illegal_contact.json", first_illegal_contact)
+                write_json(args.run_root / "illegal_contact_events.json", illegal_contact_events)
+            illegal_force = max((float(event["force_N"]) for event in step_illegal_events), default=0.0)
+            contact_forces = tensor_values(all_contacts.data.net_forces_w[0]); excluded = set(legal_runtime_bodies) | {"left_ankle_pitch_link", "right_ankle_pitch_link", "left_ankle_roll_link", "right_ankle_roll_link"}; self_force = max((float(np.linalg.norm(force)) for name, force in zip(all_contacts.body_names, contact_forces) if name not in excluded), default=0.0)
             self_force = max(0.0, self_force - illegal_force)
             box_pos = None if box is None else tensor_values(box.data.root_pos_w[0]); box_quat = None if box is None else tensor_values(box.data.root_quat_w[0]); box_yaw = None if box_quat is None else rpy_wxyz(box_quat)[2]; box_vel = None if box is None else tensor_values(box.data.root_lin_vel_w[0]); lp, lpc = (None, 0) if left_box is None else contact_position(left_box, torch); rp, rpc = (None, 0) if right_box is None else contact_position(right_box, torch)
             q_now = tensor_values(robot.data.joint_pos[0])[np.asarray(ISAACLAB_TO_OFFICIAL)]; finite = bool(np.isfinite(np.concatenate((root, quat, v_body, w_body, projected, previous_action))).all())
             if not finite and fall_reason is None: fall_reason = "NONFINITE_TENSOR"
+            elif step_illegal_events and fall_reason is None: fall_reason = str(step_illegal_events[0]["classification"])
             elif root[2] < 0.55 and fall_reason is None: fall_reason = "ROOT_HEIGHT_BELOW_0P55"
             elif (abs(roll) > 0.6 or abs(pitch) > 0.6) and fall_reason is None: fall_reason = "ROOT_ROLL_PITCH_EXCEEDED_0P6"
-            elif illegal_force > ILLEGAL_FORCE_THRESHOLD and fall_reason is None: fall_reason = "ILLEGAL_NONHAND_BOX_CONTACT"
-            row = {"step": step, "time_s": (step + 1) * DT, "controller": args.controller, "command_vx": command[0], "command_vy": command[1], "command_wz": command[2], "s_m": errors.s_m, "e_remaining_m": errors.remaining_m, "e_cross_m": errors.cross_m, "e_yaw_rad": errors.yaw_rad, "root_x": root[0], "root_y": root[1], "root_yaw": yaw, "root_height": root[2], "root_roll": roll, "root_pitch": pitch, "root_vx_b": v_body[0], "root_vy_b": v_body[1], "root_wz_b": w_body[2], "left_foot_force": lf, "right_foot_force": rf, "left_hand_force": lhf, "right_hand_force": rhf, "bilateral_contact": bool(lhf > HAND_FORCE_THRESHOLD and rhf > HAND_FORCE_THRESHOLD), "illegal_nonhand_force": illegal_force, "self_collision_proxy_force": self_force, "box_x": None if box_pos is None else box_pos[0], "box_y": None if box_pos is None else box_pos[1], "box_yaw": box_yaw, "box_vx": None if box_vel is None else box_vel[0], "box_vy": None if box_vel is None else box_vel[1], "left_contact_position": lp, "right_contact_position": rp, "left_contact_count": lpc, "right_contact_count": rpc, "upper_tracking_rms": float(np.sqrt(np.mean(np.square(q_now[15:] - q_upper)))), "finite": finite, "fall": fall_reason is not None, "fall_reason": fall_reason or ""}
+            row = {"step": step, "time_s": (step + 1) * DT, "controller": args.controller, "command_vx": command[0], "command_vy": command[1], "command_wz": command[2], "s_m": errors.s_m, "e_remaining_m": errors.remaining_m, "e_cross_m": errors.cross_m, "e_yaw_rad": errors.yaw_rad, "root_x": root[0], "root_y": root[1], "root_yaw": yaw, "root_height": root[2], "root_roll": roll, "root_pitch": pitch, "root_vx_b": v_body[0], "root_vy_b": v_body[1], "root_wz_b": w_body[2], "left_foot_force": lf, "right_foot_force": rf, "left_hand_force": lhf, "right_hand_force": rhf, "bilateral_contact": bool(lhf > HAND_FORCE_THRESHOLD and rhf > HAND_FORCE_THRESHOLD), "legal_contact_classification": "EXPECTED_EE_BOX_CONTACT" if lhf > HAND_FORCE_THRESHOLD or rhf > HAND_FORCE_THRESHOLD else "NO_EXPECTED_EE_BOX_CONTACT", "expected_ee_box_contacts": expected_box_contacts, "illegal_nonhand_force": illegal_force, "illegal_contact_events": step_illegal_events, "self_collision_proxy_force": self_force, "box_x": None if box_pos is None else box_pos[0], "box_y": None if box_pos is None else box_pos[1], "box_yaw": box_yaw, "box_vx": None if box_vel is None else box_vel[0], "box_vy": None if box_vel is None else box_vel[1], "left_contact_position": lp, "right_contact_position": rp, "left_contact_count": lpc, "right_contact_count": rpc, "upper_tracking_rms": float(np.sqrt(np.mean(np.square(q_now[15:] - q_upper)))), "finite": finite, "fall": fall_reason is not None, "fall_reason": fall_reason or ""}
             rows.append(clean(row))
             speed = float(np.linalg.norm(v_body[:2]))
             if fall_reason is not None: termination_reason = fall_reason; break
@@ -339,7 +482,9 @@ def main() -> int:
             writer = csv.DictWriter(stream, fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
         cross = np.asarray([r["e_cross_m"] for r in rows], dtype=np.float64); yaw_errors = np.asarray([r["e_yaw_rad"] for r in rows], dtype=np.float64); box_cross = None if box is None else np.asarray([r["box_y"] - initial_box[1] for r in rows], dtype=np.float64); box_yaws = None if box is None else np.asarray([wrap_angle(r["box_yaw"] - initial_yaw) for r in rows], dtype=np.float64)
         completion = rows[-1]["time_s"] if success else None
-        summary = {**contract, "status": "PASS" if success else "FAIL", "success": success, "termination_reason": termination_reason, "steps_completed": len(rows), "completion_time_s": completion, "robot_cross_track_rmse_m": float(np.sqrt(np.mean(cross * cross))), "robot_cross_track_max_m": float(np.max(np.abs(cross))), "robot_cross_track_final_m": float(cross[-1]), "robot_yaw_rmse_rad": float(np.sqrt(np.mean(yaw_errors * yaw_errors))), "robot_yaw_final_rad": float(yaw_errors[-1]), "root_vx_mean_mps": float(np.mean([r["root_vx_b"] for r in rows])), "root_vy_mean_mps": float(np.mean([r["root_vy_b"] for r in rows])), "root_wz_mean_radps": float(np.mean([r["root_wz_b"] for r in rows])), "root_roll_max_deg": float(np.degrees(np.max(np.abs([r["root_roll"] for r in rows])))), "root_pitch_max_deg": float(np.degrees(np.max(np.abs([r["root_pitch"] for r in rows])))), "root_height_min_m": float(min(r["root_height"] for r in rows)), "root_height_final_m": float(rows[-1]["root_height"]), "upper_tracking_max_rms_rad": float(max(r["upper_tracking_rms"] for r in rows)), "fall": fall_reason is not None, "self_collision": bool(any(r["self_collision_proxy_force"] > ILLEGAL_FORCE_THRESHOLD for r in rows)), "illegal_collision": bool(any(r["illegal_nonhand_force"] > ILLEGAL_FORCE_THRESHOLD for r in rows)), "bilateral_contact_fraction": None if box is None else float(np.mean([r["bilateral_contact"] for r in rows])), "contact_loss_fraction": None if box is None else float(np.mean([not r["bilateral_contact"] for r in rows])), "contact_longest_bilateral_s": None if box is None else float(max((sum(1 for r in rows[i:] if r["bilateral_contact"]) for i in range(len(rows)) if rows[i]["bilateral_contact"]), default=0) * DT), "left_force_mean_N": None if box is None else float(np.mean([r["left_hand_force"] for r in rows])), "right_force_mean_N": None if box is None else float(np.mean([r["right_hand_force"] for r in rows])), "force_asymmetry_mean_abs_N": None if box is None else float(np.mean([abs(r["left_hand_force"] - r["right_hand_force"]) for r in rows])), "gait_force_asymmetry_mean_N": float(np.mean([abs(r["left_foot_force"] - r["right_foot_force"]) for r in rows])), "box_cross_track_rmse_m": None if box_cross is None else float(np.sqrt(np.mean(box_cross * box_cross))), "box_cross_track_final_m": None if box_cross is None else float(box_cross[-1]), "box_yaw_drift_abs_rad": None if box_yaws is None else float(abs(box_yaws[-1])), "box_forward_progress_m": None if box is None else float(rows[-1]["box_x"] - initial_box[0]), "metrics_csv": str(args.run_root / "metrics.csv"), "videos": {name: str(args.run_root / "videos" / f"{name}.mp4") for name in writers}, "routes": routes}
+        longest_bilateral_s = longest_contiguous_run_seconds((row["bilateral_contact"] for row in rows), DT) if box is not None else None
+        write_json(args.run_root / "illegal_contact_events.json", illegal_contact_events)
+        summary = {**contract, "status": "PASS" if success else "FAIL", "success": success, "termination_reason": termination_reason, "steps_completed": len(rows), "completion_time_s": completion, "robot_cross_track_rmse_m": float(np.sqrt(np.mean(cross * cross))), "robot_cross_track_max_m": float(np.max(np.abs(cross))), "robot_cross_track_final_m": float(cross[-1]), "robot_yaw_rmse_rad": float(np.sqrt(np.mean(yaw_errors * yaw_errors))), "robot_yaw_final_rad": float(yaw_errors[-1]), "root_vx_mean_mps": float(np.mean([r["root_vx_b"] for r in rows])), "root_vy_mean_mps": float(np.mean([r["root_vy_b"] for r in rows])), "root_wz_mean_radps": float(np.mean([r["root_wz_b"] for r in rows])), "root_roll_max_deg": float(np.degrees(np.max(np.abs([r["root_roll"] for r in rows])))), "root_pitch_max_deg": float(np.degrees(np.max(np.abs([r["root_pitch"] for r in rows])))), "root_height_min_m": float(min(r["root_height"] for r in rows)), "root_height_final_m": float(rows[-1]["root_height"]), "upper_tracking_max_rms_rad": float(max(r["upper_tracking_rms"] for r in rows)), "fall": fall_reason is not None, "self_collision": bool(any(r["self_collision_proxy_force"] > ILLEGAL_FORCE_THRESHOLD for r in rows)), "illegal_collision": bool(any(r["illegal_nonhand_force"] > ILLEGAL_FORCE_THRESHOLD for r in rows)), "bilateral_contact_fraction": None if box is None else float(np.mean([r["bilateral_contact"] for r in rows])), "contact_loss_fraction": None if box is None else float(np.mean([not r["bilateral_contact"] for r in rows])), "contact_longest_bilateral_s": None if box is None else longest_bilateral_s, "left_force_mean_N": None if box is None else float(np.mean([r["left_hand_force"] for r in rows])), "right_force_mean_N": None if box is None else float(np.mean([r["right_hand_force"] for r in rows])), "force_asymmetry_mean_abs_N": None if box is None else float(np.mean([abs(r["left_hand_force"] - r["right_hand_force"]) for r in rows])), "gait_force_asymmetry_mean_N": float(np.mean([abs(r["left_foot_force"] - r["right_foot_force"]) for r in rows])), "box_cross_track_rmse_m": None if box_cross is None else float(np.sqrt(np.mean(box_cross * box_cross))), "box_cross_track_final_m": None if box_cross is None else float(box_cross[-1]), "box_yaw_drift_abs_rad": None if box_yaws is None else float(abs(box_yaws[-1])), "box_forward_progress_m": None if box is None else float(rows[-1]["box_x"] - initial_box[0]), "metrics_csv": str(args.run_root / "metrics.csv"), "videos": {name: str(args.run_root / "videos" / f"{name}.mp4") for name in writers}, "routes": routes, "contact_legality": contact_legality, "first_illegal_contact": first_illegal_contact, "illegal_contact_events": illegal_contact_events}
         write_json(args.run_root / "summary.json", summary); (args.run_root / "status.txt").write_text(f"{summary['status']}\n")
         return 0
     except Exception as exc:

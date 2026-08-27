@@ -47,10 +47,14 @@
     "palm_normal_world": [1.0, 0.0, 0.0]
   },
   "evaluation": {
-    "regression_duration_s": 5.0,
-    "push_duration_s": 5.0,
-    "paired_trials": 5,
+    "status": "LEGACY_NOT_FOR_VALIDITY_REPAIR",
+    "legacy": true,
+    "fixed_time_test": true,
+    "legacy_regression_duration_s": 5.0,
+    "legacy_push_duration_s": 5.0,
+    "legacy_paired_trials": 5,
     "views": ["front", "side", "top"],
     "seed_policy": "deterministic identical initial state per paired trial"
-  }
+  },
+  "do_not_use_for_validity_repair": true
 }

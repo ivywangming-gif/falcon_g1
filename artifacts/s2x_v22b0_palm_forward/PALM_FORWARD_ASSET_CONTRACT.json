@@ -3,16 +3,18 @@
   "asset": "artifacts/s2x_v22b0_palm_forward/g1_usd/g1_29dof_rubberhand_palm_forward.usda",
   "source_asset": "/root/autodl-tmp/robotics/runs/falcon_proven_cp1_vx_pos_0p3_canary_20260805_110734/artifacts/g1_usd/g1_29dof_fakehand.usd",
   "source_sha256": "86135447c01f5cf6ace8afec763c3543677fb9b1932e3d8e241ae3d2f59c8750",
-  "asset_sha256": "8d06902ed918b1738eb0d0eefc09ad30851f12461af8c2a6c03e56f4a175872a",
+  "asset_sha256": "737fadc63ce75a2711a6ee30b1848b5b1425cad641e01f10b1d9b38ae9159ce5",
   "robot_dof": 29,
   "visual_collision": "same original rubber-hand mesh; no sphere/capsule/pad added",
   "target_palm_normal_world": [1.0, 0.0, 0.0],
-  "rotation_method": "shortest geometry-derived normal alignment at OLD upper reference; compensating translation preserves palm center",
+  "rotation_method": "shortest geometry-derived fixed mounting rotation at OLD upper reference",
+  "contract_status": "B_C_SAME_HAND_MESH_MASS_INERTIA_COLLIDER_AND_TRANSLATION;_C_ONLY_FIXED_MOUNTING_ROTATION",
+  "translation_contract": "identical to RUBBER_BACK_CURRENT fixed-joint localPos0; no C xformOp:translate override",
   "hand_mass_kg_per_side": 0.17,
   "mass_inertia": "preserved from source USD/URDF in hand body frame",
   "fixed_joint_local_pos0_m": {
-    "left": [0.07012402336525694, 0.033107627168066284, 0.03281652296500513],
-    "right": [0.06975701685235096, -0.03336157675710373, 0.03257948535356302]
+    "left": [0.0414999984, 0.003, 0.0],
+    "right": [0.0414999984, -0.003, 0.0]
   },
   "qualification": {
     "palm_forward": true,
