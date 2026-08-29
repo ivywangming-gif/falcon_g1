@@ -1,0 +1,78 @@
+{
+  "schema": "FALCON_THREE_EE_FORMAL_VARIANTS.v1",
+  "task": "FALCON_THREE_EE_PARALLEL_E1_E2_5M_VALIDATION",
+  "formal_variant_names": [
+    "WRIST_ONLY",
+    "RUBBER_HAND_NATURAL",
+    "RUBBER_HAND_PALM_FORWARD_DOWN"
+  ],
+  "retired_from_current_paper": [
+    "PALM_FORWARD_FINGERS_UP"
+  ],
+  "retirement_reason": {
+    "visual_orientation": "does not match palm-toward-box intent",
+    "attach_failure": "7/7",
+    "repeated_contact": "right_wrist_yaw_link <-> Box",
+    "first_event_time_s": 1.345,
+    "first_event_force_N": 47.850662
+  },
+  "rubber_hand_mass_per_side_kg": 0.17,
+  "shared_rubber_hand_contract": {
+    "same_mesh": true,
+    "same_local_com": true,
+    "same_inertia": true,
+    "same_collider": true,
+    "same_material": true,
+    "same_mount_translation": true,
+    "allowed_difference": "mounting rotation only",
+    "left_right_rotation_policy": "mirror-aware, independently specified"
+  },
+  "frozen": {
+    "official_falcon_onnx_sha256": "8ac8f51875b878a79d9b5782e702b66572697e204ed262e2002b55631f3105d0",
+    "q_upper_push_sha256": "35a1078c9b72aed52dbe33764dd63f5834d62cfed369e1155271fee7fdae1453",
+    "physics_dt_s": 0.005,
+    "control_decimation": 4,
+    "control_dt_s": 0.02,
+    "box_dimensions_m": [1.4, 0.7, 0.8],
+    "box_mass_kg": 5.0,
+    "box_friction": 0.15,
+    "seed": 42,
+    "path_length_m": 5.0,
+    "checkpoint_spacing_m": 0.5,
+    "timeout_s": 60.0
+  },
+  "variants": {
+    "WRIST_ONLY": {
+      "source_variant": "WRIST_ONLY",
+      "historical_aliases": ["A", "WRIST_ONLY"],
+      "asset": "artifacts/ee_ablation_sixway/g1_usd/g1_29dof_wrist_only.usd",
+      "asset_sha256": "f1f689012b0cd3af02959e13602d5ae6a422cdd273e75f98bd42f9ebcb19b3df",
+      "contact_bodies": ["left_wrist_yaw_link", "right_wrist_yaw_link"],
+      "has_rubber_hand": false,
+      "mass_per_side_kg": null,
+      "mount_change": "none; no compensating hand mass"
+    },
+    "RUBBER_HAND_NATURAL": {
+      "source_variant": "RUBBER_BACK_CONTACT",
+      "historical_aliases": ["B", "RUBBER_BACK_CONTACT", "RUBBER_BACK_CURRENT"],
+      "asset": "artifacts/ee_ablation_sixway/g1_usd/g1_29dof_rubberhand_back_current_filtered.usda",
+      "asset_sha256": "e93ce57d5ba976306a072598c68783dfdb2ef5fb2d6b44e4f804dbd2d519a1d4",
+      "contact_bodies": ["left_rubber_hand", "right_rubber_hand"],
+      "has_rubber_hand": true,
+      "mass_per_side_kg": 0.17,
+      "mount_change": "reference rubber-hand mount"
+    },
+    "RUBBER_HAND_PALM_FORWARD_DOWN": {
+      "source_variant": "PALM_FORWARD_FINGERS_DOWN",
+      "historical_aliases": ["F", "C6", "PALM_FORWARD_FINGERS_DOWN"],
+      "asset": "artifacts/ee_ablation_sixway/g1_usd/g1_29dof_rubberhand_palm_forward_fingers_down_c6.usda",
+      "asset_sha256": "b2a4518bb9da94ab5732c3217e56d1a3ca8744f8b49b27e67ce778c496d7b05f",
+      "contact_bodies": ["left_rubber_hand", "right_rubber_hand"],
+      "has_rubber_hand": true,
+      "mass_per_side_kg": 0.17,
+      "mount_change": "mounting rotation only relative to RUBBER_HAND_NATURAL"
+    }
+  },
+  "source_response_run": "/root/autodl-tmp/robotics/runs/falcon_four_ee_response_identification_20260828_114005",
+  "history_policy": "historical assets/trials/videos are preserved; retired names cannot be campaign identifiers"
+}

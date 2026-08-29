@@ -1,0 +1,77 @@
+{
+  "schema": "FALCON_FOUR_EE_FORMAL_VARIANTS.v1",
+  "formal_variant_names": [
+    "WRIST_ONLY",
+    "RUBBER_BACK_CONTACT",
+    "PALM_FORWARD_FINGERS_UP",
+    "PALM_FORWARD_FINGERS_DOWN"
+  ],
+  "planner_template": "REAR",
+  "probe_executor": "OPEN_LOOP_RESPONSE_PROBE",
+  "historical_alias_policy": "metadata_only; never an experiment identifier",
+  "frozen": {
+    "official_falcon_onnx": "/root/autodl-tmp/robotics/falcon_sandbox/FALCON/sim2real/models/falcon/g1_29dof.onnx",
+    "official_falcon_onnx_sha256": "8ac8f51875b878a79d9b5782e702b66572697e204ed262e2002b55631f3105d0",
+    "q_upper_push": "configs/push_feedback/old_sphere_reference.json",
+    "q_upper_push_sha256": "35a1078c9b72aed52dbe33764dd63f5834d62cfed369e1155271fee7fdae1453",
+    "physics_dt_s": 0.005,
+    "control_decimation": 4,
+    "control_dt_s": 0.02,
+    "pd_history_joint_mapping_action_scale_box_physics_initial_state_attach_state_machine": "FROZEN_FROM_EXISTING_E1_CONTRACT"
+  },
+  "probe_contract": {
+    "open_space": true,
+    "wall": false,
+    "doorway": false,
+    "path_feedback": false,
+    "box_feedback": false,
+    "reset_each_probe": true,
+    "same_seed": 42,
+    "approach_command": [0.3, 0.0, 0.0],
+    "settle_s": 1.0,
+    "command_s": 4.0,
+    "zero_settle_s": 1.0,
+    "metric_interval_s": [1.0, 3.5],
+    "commands": {
+      "P0": [0.2, 0.0, 0.0],
+      "P1": [0.25, 0.0, 0.0],
+      "P2": [0.3, 0.0, 0.0],
+      "P3": [0.25, 0.0, 0.05],
+      "P4": [0.25, 0.0, -0.05],
+      "P5": [0.25, 0.0, 0.1],
+      "P6": [0.25, 0.0, -0.1]
+    },
+    "representative_video_probes": ["P5", "P6"],
+    "video_files": ["side_close.mp4", "top_local.mp4"]
+  },
+  "variants": {
+    "WRIST_ONLY": {
+      "historical_alias": ["A"],
+      "asset": "artifacts/ee_ablation_sixway/g1_usd/g1_29dof_wrist_only.usd",
+      "asset_sha256": "f1f689012b0cd3af02959e13602d5ae6a422cdd273e75f98bd42f9ebcb19b3df",
+      "contact_bodies": ["left_wrist_yaw_link", "right_wrist_yaw_link"],
+      "has_rubber_hand": false
+    },
+    "RUBBER_BACK_CONTACT": {
+      "historical_alias": ["B", "RUBBER_BACK_CURRENT"],
+      "asset": "artifacts/ee_ablation_sixway/g1_usd/g1_29dof_rubberhand_back_current_filtered.usda",
+      "asset_sha256": "e93ce57d5ba976306a072598c68783dfdb2ef5fb2d6b44e4f804dbd2d519a1d4",
+      "contact_bodies": ["left_rubber_hand", "right_rubber_hand"],
+      "has_rubber_hand": true
+    },
+    "PALM_FORWARD_FINGERS_UP": {
+      "historical_alias": ["E", "C5"],
+      "asset": "artifacts/ee_ablation_sixway/g1_usd/g1_29dof_rubberhand_palm_forward_fingers_up_c5.usda",
+      "asset_sha256": "6b9e1f5dac6264beee34c2cf7fb6f2e8f1355830a1ad394da7a3964741e395a3",
+      "contact_bodies": ["left_rubber_hand", "right_rubber_hand"],
+      "has_rubber_hand": true
+    },
+    "PALM_FORWARD_FINGERS_DOWN": {
+      "historical_alias": ["F", "C6"],
+      "asset": "artifacts/ee_ablation_sixway/g1_usd/g1_29dof_rubberhand_palm_forward_fingers_down_c6.usda",
+      "asset_sha256": "b2a4518bb9da94ab5732c3217e56d1a3ca8744f8b49b27e67ce778c496d7b05f",
+      "contact_bodies": ["left_rubber_hand", "right_rubber_hand"],
+      "has_rubber_hand": true
+    }
+  }
+}

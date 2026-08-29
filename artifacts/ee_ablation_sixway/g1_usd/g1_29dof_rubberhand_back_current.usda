@@ -1,0 +1,14 @@
+#usda 1.0
+(
+    defaultPrim = "g1_29dof"
+    metersPerUnit = 1
+    upAxis = "Z"
+    subLayers = [
+        @g1_29dof_rubberhand_back_current_source.usd@
+    ]
+)
+
+// B is deliberately a no-op layer: it freezes the current side-video
+// rubber-hand mesh, fixed mount, mass, inertia, and collider without
+// silently inheriting any of the palm-forward overrides used by C.
+over "g1_29dof" {}

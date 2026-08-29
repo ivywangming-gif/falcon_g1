@@ -230,6 +230,39 @@ def preflight(args: argparse.Namespace) -> tuple[Path, np.ndarray, dict[str, Any
     asset = asset.resolve()
     if not asset.is_file() or sha256(asset) != str(record["asset_sha256"]):
         raise RuntimeError(f"EE_ASSET_SHA256_FAIL:{args.formal_ee}")
+    canonical_root = args.canonical_state_root.resolve()
+    canonical_json = canonical_root / f"CONTACT_READY_STATE_{args.formal_ee}.json"
+    canonical_npz = canonical_root / f"CONTACT_READY_STATE_{args.formal_ee}.npz"
+    canonical_sha = canonical_root / f"CONTACT_READY_STATE_{args.formal_ee}.sha256"
+    if not (canonical_json.is_file() and canonical_npz.is_file() and canonical_sha.is_file()):
+        raise RuntimeError(f"CANONICAL_STATE_FILES_MISSING:{args.formal_ee}")
+    canonical_meta = json.loads(canonical_json.read_text(encoding="utf-8"))
+    recorded_state_sha = canonical_sha.read_text(encoding="utf-8").strip().split()[0]
+    actual_state_sha = sha256(canonical_npz)
+    if recorded_state_sha != actual_state_sha or actual_state_sha != str(canonical_meta.get("canonical_state_sha256")):
+        raise RuntimeError(f"CANONICAL_STATE_SHA256_FAIL:{args.formal_ee}")
+    if str(canonical_meta.get("asset_sha256")) != str(record["asset_sha256"]):
+        raise RuntimeError(f"CANONICAL_STATE_ASSET_MISMATCH:{args.formal_ee}")
+    if str(canonical_meta.get("official_falcon_sha256")) != OFFICIAL_ONNX_SHA256:
+        raise RuntimeError(f"CANONICAL_STATE_FALCON_MISMATCH:{args.formal_ee}")
+    if str(canonical_meta.get("q_upper_push_sha256")) != Q_UPPER_PUSH_SHA256:
+        raise RuntimeError(f"CANONICAL_STATE_Q_UPPER_MISMATCH:{args.formal_ee}")
+    expected_state_arrays = {
+        "robot_root_pose_w": (7,), "robot_root_velocity_w": (6,),
+        "robot_joint_pos_isaac": (29,), "robot_joint_vel_isaac": (29,),
+        "box_root_pose_w": (7,), "box_root_velocity_w": (6,),
+        "q_upper_target": (14,), "falcon_history_frames": (5, 115),
+        "last_policy_action": (29,), "target_official": (29,),
+    }
+    with np.load(canonical_npz, allow_pickle=False) as state_npz:
+        if set(state_npz.files) != set(expected_state_arrays):
+            raise RuntimeError(f"CANONICAL_STATE_ARRAY_SET_FAIL:{args.formal_ee}:{state_npz.files}")
+        for name, shape in expected_state_arrays.items():
+            value = np.asarray(state_npz[name])
+            if value.shape != shape or not np.isfinite(value).all():
+                raise RuntimeError(f"CANONICAL_STATE_ARRAY_FAIL:{args.formal_ee}:{name}:{value.shape}")
+    if str(canonical_meta.get("attach_phase")) != "ATTACHED" or not bool(canonical_meta.get("bilateral_contact")):
+        raise RuntimeError(f"CANONICAL_STATE_NOT_ATTACHED:{args.formal_ee}")
     q_payload = json.loads(Q_UPPER_PATH.read_text(encoding="utf-8"))
     q_upper = np.asarray(q_payload.get("upper_q_14d"), dtype=np.float32)
     if q_upper.shape != (14,) or not np.isfinite(q_upper).all():
@@ -285,6 +318,15 @@ def preflight(args: argparse.Namespace) -> tuple[Path, np.ndarray, dict[str, Any
         "official_falcon": {"path": str(FALCON_ONNX), "sha256": sha256(FALCON_ONNX)},
         "q_upper_push": {"path": str(Q_UPPER_PATH), "sha256": sha256(Q_UPPER_PATH)},
         "ee_asset": {"path": str(asset), "sha256": sha256(asset)},
+        "canonical_state": {
+            "root": str(canonical_root),
+            "json": str(canonical_json),
+            "npz": str(canonical_npz),
+            "sha256": actual_state_sha,
+            "reset_mode": "CANONICAL_EVAL_RESET",
+            "attached_snapshot": True,
+            "attach_discovery_in_worker": False,
+        },
         "rubber_hand_mass_per_side_kg": RUBBER_HAND_MASS_PER_SIDE_KG,
         "hand_differential": hand,
         "steering_sign_ee": steering_sign,
@@ -438,6 +480,13 @@ def make_environment(
         JOINT_VELOCITY_LIMIT,
     )
 
+    canonical_npz = Path(str(contract["canonical_state"]["npz"])).resolve()
+    with np.load(canonical_npz, allow_pickle=False) as state_npz:
+        canonical_state_np = {name: np.asarray(state_npz[name], dtype=np.float32).copy() for name in state_npz.files}
+    canonical_state = {
+        name: torch.as_tensor(value, device="cuda:0", dtype=torch.float32)
+        for name, value in canonical_state_np.items()
+    }
     actor_dim = 30 if int(contract["action_dim"]) == 3 else 31
     critic_dim = actor_dim + PRIVILEGED_DIM
     q_upper = torch.as_tensor(q_upper_np, device="cuda:0", dtype=torch.float32)
@@ -1392,6 +1441,47 @@ def make_environment(
             self._episode_yaw_max[env_ids] = 0.0
             self._episode_bilateral[env_ids] = 0.0
             self._episode_steps[env_ids] = 0.0
+            if canonical_state is not None:
+                origin_xy = origins[:, :2]
+                box_pose = canonical_state["box_root_pose_w"].expand(count, -1).clone()
+                robot_pose = canonical_state["robot_root_pose_w"].expand(count, -1).clone()
+                box_pose[:, :2] += origin_xy
+                robot_pose[:, :2] += origin_xy
+                self.robot.write_root_pose_to_sim(robot_pose, env_ids)
+                self.robot.write_root_velocity_to_sim(
+                    canonical_state["robot_root_velocity_w"].expand(count, -1), env_ids
+                )
+                self.robot.write_joint_state_to_sim(
+                    canonical_state["robot_joint_pos_isaac"].expand(count, -1),
+                    canonical_state["robot_joint_vel_isaac"].expand(count, -1), None, env_ids,
+                )
+                self.robot.set_joint_position_target(
+                    canonical_state["target_official"].expand(count, -1)[:, self.to_isaac], env_ids=env_ids
+                )
+                self.box.write_root_pose_to_sim(box_pose, env_ids)
+                self.box.write_root_velocity_to_sim(
+                    canonical_state["box_root_velocity_w"].expand(count, -1), env_ids
+                )
+                self.history[env_ids] = canonical_state["falcon_history_frames"]
+                self.falcon_action[env_ids] = canonical_state["last_policy_action"]
+                self.target_official[env_ids] = canonical_state["target_official"]
+                self.q_upper_ref[env_ids] = canonical_state["q_upper_target"]
+                self.previous_target_upper[env_ids] = canonical_state["q_upper_target"]
+                box_yaw = yaw_from_quat(box_pose[:, 3:7], torch)
+                root_yaw = yaw_from_quat(robot_pose[:, 3:7], torch)
+                relative_world = robot_pose[:, :2] - box_pose[:, :2]
+                c, s = torch.cos(box_yaw), torch.sin(box_yaw)
+                relative_xy = torch.stack((c * relative_world[:, 0] + s * relative_world[:, 1],
+                                           -s * relative_world[:, 0] + c * relative_world[:, 1]), dim=-1)
+                self.attach_reference[env_ids] = torch.cat(
+                    (relative_xy, wrap_tensor(root_yaw - box_yaw, torch)[:, None]), dim=-1
+                )
+                self.sigma_previous[env_ids] = torch.clamp(
+                    box_pose[:, 0] - origin_xy[:, 0] - BOX_START_X, 0.0, float(args.path_length)
+                )
+                self.mode[env_ids] = 1
+                self.delay_steps[env_ids] = 0
+                self.delay_buffer[env_ids] = 0.0
             self.scene.write_data_to_sim()
 
         def step_residual(self, raw_action: Any) -> tuple[Any, Any, Any, Any, Any]:
@@ -1816,6 +1906,18 @@ def environment_canary(args: argparse.Namespace, env: Any, contract: Mapping[str
     bilateral_median = float(torch.median(bilateral_fraction).item())
     fall_rate = float(torch.mean(fall_flags.float()).item())
     leave_rate = float(torch.mean(leave_flags.float()).item())
+    fixed_count = min(256, int(env.num_envs))
+    fixed_slice = slice(0, fixed_count)
+    fixed_random_256 = {
+        "env_count": fixed_count,
+        "env_id_policy": "fixed env ids [0,256)",
+        "seed": int(args.seed),
+        "median_box_sigma_progress_m": float(torch.median(sigma_progress[fixed_slice]).item()),
+        "median_bilateral_contact_fraction": float(torch.median(bilateral_fraction[fixed_slice]).item()),
+        "fall_rate": float(torch.mean(fall_flags[fixed_slice].float()).item()),
+        "robot_leave_rate": float(torch.mean(leave_flags[fixed_slice].float()).item()),
+        "all_envs_finite": bool(finite_all[fixed_slice].all().item()),
+    }
     pass_gate = bool(
         median_progress > 0.30
         and bilateral_median >= 0.70
@@ -1852,6 +1954,7 @@ def environment_canary(args: argparse.Namespace, env: Any, contract: Mapping[str
         "fall_rate": fall_rate,
         "robot_leave_rate": leave_rate,
         "all_envs_finite": bool(finite_all.all().item()),
+        "fixed_random_256_stats": fixed_random_256,
         "training_started": False,
         "ppo_updates": 0,
         "gate_policy": {
