@@ -1,0 +1,35 @@
+#usda 1.0
+(
+    defaultPrim = "g1_29dof"
+    metersPerUnit = 1
+    subLayers = [
+        @g1_29dof_rubberhand_back_current_filtered.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "g1_29dof"
+{
+    over "left_rubber_hand"
+    {
+        quatd xformOp:orient = (0.7582065397639662, 0.48766168927281106, -0.31007555886339144, -0.30193056763152837)
+    }
+
+    over "joints"
+    {
+        over "left_hand_palm_joint"
+        {
+            quatf physics:localRot0 = (0.75820655, -0.4876617, 0.31007555, 0.30193058)
+        }
+
+        over "right_hand_palm_joint"
+        {
+            quatf physics:localRot0 = (0.7552474, 0.49212548, 0.31191653, -0.30020317)
+        }
+    }
+
+    over "right_rubber_hand"
+    {
+        quatd xformOp:orient = (0.755247414106526, -0.49212547776457655, -0.3119165205025203, 0.30020316763484356)
+    }
+}
