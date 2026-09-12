@@ -27,6 +27,9 @@ EXPECTED = {
     "provenance/SCENES_FROZEN.json": "a5f88c22d82fca8ff028811dcf2e4029b37090f2aa82142d3c09ce6e3408a257",
     "provenance/historical_resolved_config.json": "b8714c3085aefa8b3a4ac2fcc79ec4be24c1caa277bc06c7268a6cffb2460ea3",
     "provenance/FIG3_CONTINUOUS_FINAL_REPORT.json": "83bb6c162ba61dca796c661b79a6d172f450985d5d581601363f6ced88b17a1e",
+    "provenance/reference_inputs/Z_REPOSITION_DYNAMIC_ENVELOPE.json": "c0bc46e49c3af4aa831dd146a5fd1776bdff3e198ab5ffa64bf79ca68a84475e",
+    "provenance/reference_inputs/Z_FIG3_GLOBAL_EXECUTION_TRACE.csv": "553aa94cceed2975df8810438b4ec0cdc1c57f7577dc7e5d452469879e4ad722",
+    "provenance/reference_inputs/PHYSICAL_INTERACTION_TEMPLATE_V1.json": "4cb57df30d69b8772d21efa55be785d3dfe465e66646ea34fb723eb8696be0b3",
 }
 
 

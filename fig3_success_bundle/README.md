@@ -25,7 +25,7 @@ The historical result is `FIG3_CONTINUOUS_EXECUTION_PASS=true`, `3/3`; the episo
 - `src/falcon_g1/`: complete historical Python package snapshot used by the runner.
 - `configs/`: q_upper and General-SE(2) configuration files.
 - `artifacts/`: Palm/hand USD layers and the box asset bank used by the historical code.
-- `provenance/`: frozen scenes, P1 plans, resolved configuration, source audit, and successful FIG3/FIG4 reports.
+- `provenance/`: frozen scenes, P1 plans, resolved configuration, source audit, successful FIG3/FIG4 reports, and the small reference inputs required by the historical scene builder.
 - `evidence/fig3_videos/`: four actual Isaac RGB FIG3 videos from the successful run.
 - `evidence/FIG3_GLOBAL_EXECUTION_TRACE.csv`: source trajectory telemetry; the accompanying MP4/PNG are trace-rendered overview artifacts.
 
@@ -48,7 +48,7 @@ python scripts/run_planner_conditioned_object_residual_ppo.py \
 
 For actual Isaac RGB recording, add `--fig3-record-video --live-camera`. Use the shared GPU lock required by the host deployment workflow before launching Isaac. Do not use the trace MP4 as a substitute for a physics rollout.
 
-The planner-stage builder is included for provenance, but its historical Z dynamic-envelope and interaction-template inputs are external and are listed in `MODEL_INPUTS.md`; the frozen P1 plan is already included for an exact replay.
+The planner-stage builder is included byte-for-byte for provenance. Its small historical Z dynamic-envelope, Z trace, and interaction-template inputs are archived under `provenance/reference_inputs/`; the builder still retains its original absolute-path defaults, while the frozen P1 plan is already included for an exact replay.
 
 ## Integrity audit
 

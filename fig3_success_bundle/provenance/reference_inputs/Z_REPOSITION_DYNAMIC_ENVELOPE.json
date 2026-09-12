@@ -1,0 +1,718 @@
+{
+  "FULL_G1_REPLAY_REQUIREMENTS": {
+    "must_measure_filtered_box_contact_force": true,
+    "must_not_reduce_margin_after_failure": true,
+    "must_reject_edge_on_any_body_obstacle_contact": true,
+    "must_replan_or_delete_edge_on_replay_failure": true,
+    "must_replay_actual_body_waypoints": true,
+    "must_use_same_falcon_and_q_upper": true,
+    "must_use_same_physics_dt_and_control_rate": true,
+    "required_before_reposition_edge_valid": true
+  },
+  "NO_C1_BATCH": true,
+  "NO_C2_BATCH": true,
+  "NO_NEW_B2_BATCH": true,
+  "NO_TRAINING": true,
+  "Z_DYNAMIC_REPOSITION_PASS": true,
+  "body_swept_position_contract": {
+    "body_center_offset_max_m": 0.30503462028254147,
+    "body_count": 32,
+    "body_names": [
+      "left_ankle_pitch_link",
+      "left_ankle_roll_link",
+      "left_elbow_link",
+      "left_hip_pitch_link",
+      "left_hip_roll_link",
+      "left_hip_yaw_link",
+      "left_knee_link",
+      "left_rubber_hand",
+      "left_shoulder_pitch_link",
+      "left_shoulder_roll_link",
+      "left_shoulder_yaw_link",
+      "left_wrist_pitch_link",
+      "left_wrist_roll_link",
+      "left_wrist_yaw_link",
+      "pelvis",
+      "right_ankle_pitch_link",
+      "right_ankle_roll_link",
+      "right_elbow_link",
+      "right_hip_pitch_link",
+      "right_hip_roll_link",
+      "right_hip_yaw_link",
+      "right_knee_link",
+      "right_rubber_hand",
+      "right_shoulder_pitch_link",
+      "right_shoulder_roll_link",
+      "right_shoulder_yaw_link",
+      "right_wrist_pitch_link",
+      "right_wrist_roll_link",
+      "right_wrist_yaw_link",
+      "torso_link",
+      "waist_roll_link",
+      "waist_yaw_link"
+    ],
+    "body_position_field": "robot_body_positions_local_m"
+  },
+  "cases": {
+    "Q1_REAR_TO_RIGHT": {
+      "route": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          -0.025000000000000133
+        ],
+        [
+          1.0,
+          -0.050000000000000044
+        ],
+        [
+          1.0,
+          -0.07499999999999996
+        ],
+        [
+          1.0,
+          -0.10000000000000009
+        ],
+        [
+          1.0,
+          -0.125
+        ],
+        [
+          1.0,
+          -0.15000000000000013
+        ],
+        [
+          1.0,
+          -0.17500000000000004
+        ],
+        [
+          1.0,
+          -0.19999999999999996
+        ],
+        [
+          1.0,
+          -0.2250000000000001
+        ],
+        [
+          1.0,
+          -0.25
+        ],
+        [
+          1.0,
+          -0.27500000000000013
+        ],
+        [
+          1.0,
+          -0.30000000000000004
+        ],
+        [
+          1.0,
+          -0.32499999999999996
+        ],
+        [
+          1.0,
+          -0.3500000000000001
+        ],
+        [
+          1.0,
+          -0.375
+        ],
+        [
+          1.0250000000000001,
+          -0.40000000000000013
+        ],
+        [
+          1.0250000000000001,
+          -0.42500000000000004
+        ],
+        [
+          1.0250000000000001,
+          -0.4500000000000002
+        ],
+        [
+          1.0250000000000001,
+          -0.4750000000000001
+        ],
+        [
+          1.05,
+          -0.5
+        ],
+        [
+          1.05,
+          -0.5250000000000001
+        ],
+        [
+          1.0750000000000002,
+          -0.55
+        ],
+        [
+          1.1,
+          -0.5750000000000001
+        ],
+        [
+          1.1250000000000002,
+          -0.6000000000000001
+        ],
+        [
+          1.1500000000000001,
+          -0.6000000000000001
+        ],
+        [
+          1.175,
+          -0.6250000000000001
+        ],
+        [
+          1.2000000000000002,
+          -0.6250000000000001
+        ],
+        [
+          1.225,
+          -0.6250000000000001
+        ],
+        [
+          1.2500000000000002,
+          -0.6250000000000001
+        ],
+        [
+          1.2750000000000001,
+          -0.6250000000000001
+        ],
+        [
+          1.3000000000000003,
+          -0.6250000000000001
+        ],
+        [
+          1.3250000000000002,
+          -0.6250000000000001
+        ],
+        [
+          1.35,
+          -0.6250000000000001
+        ],
+        [
+          1.3750000000000002,
+          -0.6250000000000001
+        ],
+        [
+          1.4000000000000001,
+          -0.6250000000000001
+        ],
+        [
+          1.4250000000000003,
+          -0.6250000000000001
+        ],
+        [
+          1.4500000000000002,
+          -0.6250000000000001
+        ],
+        [
+          1.475,
+          -0.6250000000000001
+        ],
+        [
+          1.5000000000000002,
+          -0.6250000000000001
+        ],
+        [
+          1.5250000000000001,
+          -0.6250000000000001
+        ],
+        [
+          1.5500000000000003,
+          -0.6250000000000001
+        ],
+        [
+          1.5750000000000002,
+          -0.6250000000000001
+        ],
+        [
+          1.6,
+          -0.6250000000000001
+        ],
+        [
+          1.6250000000000002,
+          -0.6250000000000001
+        ],
+        [
+          1.6500000000000001,
+          -0.6250000000000001
+        ],
+        [
+          1.6750000000000003,
+          -0.6250000000000001
+        ],
+        [
+          1.7000000000000002,
+          -0.6250000000000001
+        ],
+        [
+          1.725,
+          -0.6250000000000001
+        ],
+        [
+          1.7500000000000002,
+          -0.6250000000000001
+        ],
+        [
+          1.7750000000000001,
+          -0.6250000000000001
+        ],
+        [
+          1.8000000000000003,
+          -0.6250000000000001
+        ],
+        [
+          1.8250000000000002,
+          -0.6250000000000001
+        ],
+        [
+          1.85,
+          -0.6250000000000001
+        ],
+        [
+          1.8750000000000002,
+          -0.6250000000000001
+        ],
+        [
+          1.9000000000000001,
+          -0.6250000000000001
+        ],
+        [
+          1.9250000000000003,
+          -0.6250000000000001
+        ],
+        [
+          1.9500000000000002,
+          -0.6250000000000001
+        ],
+        [
+          1.975,
+          -0.6250000000000001
+        ],
+        [
+          2.0,
+          -0.6500000000000001
+        ]
+      ],
+      "summary": {
+        "base_route_tracking_error_max_m": 0.08920371532440174,
+        "base_route_tracking_error_p95_m": 0.08603060245513905,
+        "body_center_offset_p95_m": 0.2905490498118611,
+        "max_body_center_offset_from_root_m": 0.30390273798733475,
+        "min_body_center_clearance_body": "left_rubber_hand",
+        "min_body_center_clearance_by_body_m": {
+          "left_ankle_pitch_link": 0.2114700205009602,
+          "left_ankle_roll_link": 0.21175869500172673,
+          "left_elbow_link": 0.16511857298781085,
+          "left_hip_pitch_link": 0.25414360367017974,
+          "left_hip_roll_link": 0.20222797715251006,
+          "left_hip_yaw_link": 0.17620115773463696,
+          "left_knee_link": 0.11780102965522832,
+          "left_rubber_hand": 0.03386471113079026,
+          "left_shoulder_pitch_link": 0.2186025574529291,
+          "left_shoulder_roll_link": 0.17893071579243114,
+          "left_shoulder_yaw_link": 0.17244896344553384,
+          "left_wrist_pitch_link": 0.08169366152403368,
+          "left_wrist_roll_link": 0.10709522749753597,
+          "left_wrist_yaw_link": 0.055162329398950716,
+          "pelvis": 0.295240267632928,
+          "right_ankle_pitch_link": 0.2591115174020848,
+          "right_ankle_roll_link": 0.25913121260691896,
+          "right_elbow_link": 0.1956565314666351,
+          "right_hip_pitch_link": 0.2991664015332546,
+          "right_hip_roll_link": 0.28958163143562066,
+          "right_hip_yaw_link": 0.19449104880862444,
+          "right_knee_link": 0.14847988309675308,
+          "right_rubber_hand": 0.06759018383913318,
+          "right_shoulder_pitch_link": 0.30579323609342524,
+          "right_shoulder_roll_link": 0.30215359072579573,
+          "right_shoulder_yaw_link": 0.2486732242075339,
+          "right_wrist_pitch_link": 0.11277120474626579,
+          "right_wrist_roll_link": 0.13751228522662362,
+          "right_wrist_yaw_link": 0.08696733282557523,
+          "torso_link": 0.3000880419208849,
+          "waist_roll_link": 0.29979291790378637,
+          "waist_yaw_link": 0.295240267632928
+        },
+        "min_body_center_clearance_by_phase_m": {
+          "PRE_ATTACH": 0.14196680147092333,
+          "RELEASE": 0.03386471113079026,
+          "TRANSIT": 0.14255956888733945
+        },
+        "min_body_center_clearance_time_s": 9.4,
+        "min_body_center_clearance_to_box_footprint_m": 0.03386471113079026,
+        "nearest_body_by_phase": {
+          "PRE_ATTACH": [
+            "left_rubber_hand",
+            30.0
+          ],
+          "RELEASE": [
+            "left_rubber_hand",
+            9.4
+          ],
+          "TRANSIT": [
+            "left_rubber_hand",
+            26.5
+          ]
+        },
+        "route_waypoint_count": 60,
+        "row_count": 234,
+        "runtime_box_contact_max_N": 0.0,
+        "runtime_box_contact_samples_gt_threshold": 0,
+        "transit_row_count": 81
+      }
+    },
+    "Q2_RIGHT_TO_REAR": {
+      "route": [
+        [
+          2.0,
+          0.85
+        ],
+        [
+          1.975,
+          0.85
+        ],
+        [
+          1.9500000000000002,
+          0.85
+        ],
+        [
+          1.9250000000000003,
+          0.85
+        ],
+        [
+          1.9000000000000001,
+          0.85
+        ],
+        [
+          1.8750000000000002,
+          0.85
+        ],
+        [
+          1.85,
+          0.85
+        ],
+        [
+          1.8250000000000002,
+          0.85
+        ],
+        [
+          1.8000000000000003,
+          0.85
+        ],
+        [
+          1.7750000000000001,
+          0.85
+        ],
+        [
+          1.7500000000000002,
+          0.85
+        ],
+        [
+          1.725,
+          0.85
+        ],
+        [
+          1.7000000000000002,
+          0.85
+        ],
+        [
+          1.6750000000000003,
+          0.85
+        ],
+        [
+          1.6500000000000001,
+          0.85
+        ],
+        [
+          1.6250000000000002,
+          0.85
+        ],
+        [
+          1.6,
+          0.85
+        ],
+        [
+          1.5750000000000002,
+          0.85
+        ],
+        [
+          1.5500000000000003,
+          0.85
+        ],
+        [
+          1.5250000000000001,
+          0.85
+        ],
+        [
+          1.5000000000000002,
+          0.85
+        ],
+        [
+          1.475,
+          0.85
+        ],
+        [
+          1.4500000000000002,
+          0.85
+        ],
+        [
+          1.4250000000000003,
+          0.85
+        ],
+        [
+          1.4000000000000001,
+          0.85
+        ],
+        [
+          1.3750000000000002,
+          0.85
+        ],
+        [
+          1.35,
+          0.85
+        ],
+        [
+          1.3250000000000002,
+          0.85
+        ],
+        [
+          1.3000000000000003,
+          0.85
+        ],
+        [
+          1.2750000000000001,
+          0.85
+        ],
+        [
+          1.2500000000000002,
+          0.875
+        ],
+        [
+          1.225,
+          0.875
+        ],
+        [
+          1.2000000000000002,
+          0.875
+        ],
+        [
+          1.175,
+          0.875
+        ],
+        [
+          1.1500000000000001,
+          0.9
+        ],
+        [
+          1.1250000000000002,
+          0.9
+        ],
+        [
+          1.1,
+          0.925
+        ],
+        [
+          1.0750000000000002,
+          0.95
+        ],
+        [
+          1.05,
+          0.9750000000000001
+        ],
+        [
+          1.05,
+          1.0
+        ],
+        [
+          1.0250000000000001,
+          1.025
+        ],
+        [
+          1.0250000000000001,
+          1.05
+        ],
+        [
+          1.0250000000000001,
+          1.075
+        ],
+        [
+          1.0250000000000001,
+          1.1
+        ],
+        [
+          1.0,
+          1.125
+        ],
+        [
+          1.0,
+          1.1500000000000001
+        ],
+        [
+          1.0,
+          1.175
+        ],
+        [
+          1.0,
+          1.2
+        ],
+        [
+          1.0,
+          1.225
+        ],
+        [
+          1.0,
+          1.25
+        ],
+        [
+          1.0,
+          1.2750000000000001
+        ],
+        [
+          1.0,
+          1.3
+        ],
+        [
+          1.0,
+          1.325
+        ],
+        [
+          1.0,
+          1.35
+        ],
+        [
+          1.0,
+          1.375
+        ],
+        [
+          1.0,
+          1.4000000000000001
+        ],
+        [
+          1.0,
+          1.425
+        ],
+        [
+          1.0,
+          1.45
+        ],
+        [
+          1.0,
+          1.475
+        ],
+        [
+          1.0,
+          1.5
+        ]
+      ],
+      "summary": {
+        "base_route_tracking_error_max_m": 0.07368099689483643,
+        "base_route_tracking_error_p95_m": 0.057778436521313904,
+        "body_center_offset_p95_m": 0.2901898353584476,
+        "max_body_center_offset_from_root_m": 0.30503462028254147,
+        "min_body_center_clearance_body": "left_rubber_hand",
+        "min_body_center_clearance_by_body_m": {
+          "left_ankle_pitch_link": 0.21486091434487575,
+          "left_ankle_roll_link": 0.2148635498703707,
+          "left_elbow_link": 0.1716651387021355,
+          "left_hip_pitch_link": 0.28723903418728347,
+          "left_hip_roll_link": 0.2719747900747841,
+          "left_hip_yaw_link": 0.17902377535398084,
+          "left_knee_link": 0.12073308324777665,
+          "left_rubber_hand": 0.03920889809169509,
+          "left_shoulder_pitch_link": 0.2901688243845536,
+          "left_shoulder_roll_link": 0.2809613802659279,
+          "left_shoulder_yaw_link": 0.22602396584036022,
+          "left_wrist_pitch_link": 0.08679448250400512,
+          "left_wrist_roll_link": 0.11216499087810328,
+          "left_wrist_yaw_link": 0.060151528787370956,
+          "pelvis": 0.2927734048693226,
+          "right_ankle_pitch_link": 0.21088130290536733,
+          "right_ankle_roll_link": 0.2110113336689178,
+          "right_elbow_link": 0.15965223060498934,
+          "right_hip_pitch_link": 0.2541876409922727,
+          "right_hip_roll_link": 0.2037727914593083,
+          "right_hip_yaw_link": 0.18330239947288973,
+          "right_knee_link": 0.13072448799099884,
+          "right_rubber_hand": 0.05585582837231645,
+          "right_shoulder_pitch_link": 0.20698423606796632,
+          "right_shoulder_roll_link": 0.16684663288130006,
+          "right_shoulder_yaw_link": 0.1679181781986208,
+          "right_wrist_pitch_link": 0.101769315100036,
+          "right_wrist_roll_link": 0.12683844055832078,
+          "right_wrist_yaw_link": 0.07580124958973283,
+          "torso_link": 0.2978838736116378,
+          "waist_roll_link": 0.2974856139522891,
+          "waist_yaw_link": 0.2927734048693226
+        },
+        "min_body_center_clearance_by_phase_m": {
+          "PRE_ATTACH": 0.11637644666729086,
+          "RELEASE": 0.03920889809169509,
+          "TRANSIT": 0.1369158929369288
+        },
+        "min_body_center_clearance_time_s": 41.900000000000006,
+        "min_body_center_clearance_to_box_footprint_m": 0.03920889809169509,
+        "nearest_body_by_phase": {
+          "PRE_ATTACH": [
+            "right_rubber_hand",
+            62.1
+          ],
+          "RELEASE": [
+            "left_rubber_hand",
+            41.900000000000006
+          ],
+          "TRANSIT": [
+            "right_rubber_hand",
+            52.900000000000006
+          ]
+        },
+        "route_waypoint_count": 60,
+        "row_count": 224,
+        "runtime_box_contact_max_N": 0.0,
+        "runtime_box_contact_samples_gt_threshold": 0,
+        "transit_row_count": 73
+      }
+    }
+  },
+  "derived": {
+    "PLANNER_EFFECTIVE_G1_DISC_RADIUS_M": 0.3942383356069432,
+    "PLANNER_TRACKING_MARGIN_M": 0.08920371532440174,
+    "base_route_tracking_error_max_m": 0.08920371532440174,
+    "base_route_tracking_error_p95_max_m": 0.08603060245513905,
+    "derivation": "max measured root-to-route error; full-G1 center sweep is reported separately and added for effective disc-radius sizing",
+    "starting_abstraction_delta_m": 0.015,
+    "starting_abstraction_is_final": false,
+    "starting_abstraction_rB_m": 0.26
+  },
+  "frozen_replay": {
+    "box_dimensions_m": [
+      1.4,
+      0.7,
+      0.8
+    ],
+    "checkpoint": {
+      "label": "U300",
+      "path": "/root/autodl-tmp/robotics/runs/falcon_fixed_ground_dr_u100_20260906/continuation_u100_to_u500_20260906/training_u300/checkpoint_300.pt",
+      "sha256": "a37001f950737594a8621f1bd60b4da7a4e71d19b17da284263223cdf827cc6c",
+      "update": 300
+    },
+    "continuous_no_reanchor": true,
+    "control_rate_hz": 10.0,
+    "falcon_sha256": "8ac8f51875b878a79d9b5782e702b66572697e204ed262e2002b55631f3105d0",
+    "formal_ee": "RUBBER_HAND_PALM_FORWARD_DOWN_V2",
+    "physics_dt_s": 0.005,
+    "q_upper_sha256": "35a1078c9b72aed52dbe33764dd63f5834d62cfed369e1155271fee7fdae1453"
+  },
+  "schema": "Z_REPOSITION_DYNAMIC_ENVELOPE.v1",
+  "source": {
+    "continuous_report": "/root/autodl-tmp/robotics/runs/access_aware_semantics_recovery_20260907/z_successful_replay_enhanced/FIG3_CONTINUOUS_FINAL_REPORT.json",
+    "measurement": "Isaac Articulation.data.body_pos_w local positions plus runtime filtered contact force channels",
+    "raw_telemetry_csv": "/root/autodl-tmp/robotics/runs/access_aware_semantics_recovery_20260907/z_successful_replay_enhanced/FIG3_GLOBAL_EXECUTION_TRACE.csv",
+    "raw_telemetry_csv_sha256": "553aa94cceed2975df8810438b4ec0cdc1c57f7577dc7e5d452469879e4ad722",
+    "transitions": "/root/autodl-tmp/robotics/runs/access_aware_semantics_recovery_20260907/z_successful_replay_enhanced/FIG3_STATE_TRANSITION_TIMELINE.json",
+    "video_used_for_margin": false
+  }
+}

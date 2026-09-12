@@ -1,0 +1,1553 @@
+{
+  "PHYSICAL_FACE_TEMPLATE_VALID": true,
+  "T_OB_initial_source": "measured box-frame robot-root transform; canonical face transform persisted separately",
+  "allowed_families_for_training": [
+    "rear_straight",
+    "rear_left_arc",
+    "rear_right_arc",
+    "front_straight",
+    "right_straight",
+    "left_straight"
+  ],
+  "families": {
+    "front_straight": {
+      "all_pass": true,
+      "pass_count": 10,
+      "rows": [
+        {
+          "box_cross_track_max_abs_m": 0.004195387475192547,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 0.5154743766608623,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/front_straight/trial_00",
+          "face": "front",
+          "fall": false,
+          "family": "front_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              -0.9980507313882648,
+              -0.06240783264422445,
+              0.0,
+              0.9630739493106587
+            ],
+            [
+              0.06240783264422445,
+              -0.9980507313882648,
+              0.0,
+              0.032752219086856924
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 36.027076721191406,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.3019285202026367,
+          "separation": false,
+          "source_snapshot_index": 10,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 14,
+          "trial": 0
+        },
+        {
+          "box_cross_track_max_abs_m": 0.01628943346440792,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 0.371739875767114,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/front_straight/trial_01",
+          "face": "front",
+          "fall": false,
+          "family": "front_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              -0.999698309691505,
+              -0.02456195431857574,
+              0.0,
+              0.9668082927881091
+            ],
+            [
+              0.02456195431857574,
+              -0.999698309691505,
+              0.0,
+              -0.014430779961561899
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 9.53703498840332,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.3153095245361328,
+          "separation": false,
+          "source_snapshot_index": 1,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 13,
+          "trial": 1
+        },
+        {
+          "box_cross_track_max_abs_m": 0.011561831459403038,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 0.893457045329368,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/front_straight/trial_02",
+          "face": "front",
+          "fall": false,
+          "family": "front_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              -0.999999902001502,
+              -0.0004427154687945557,
+              0.0,
+              0.9546762247986031
+            ],
+            [
+              0.0004427154687945557,
+              -0.999999902001502,
+              0.0,
+              0.028849455006262202
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 8.411273002624512,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.2908306121826172,
+          "separation": false,
+          "source_snapshot_index": 8,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 13,
+          "trial": 2
+        },
+        {
+          "box_cross_track_max_abs_m": 0.0025021054316312075,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 0.26625443422543704,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/front_straight/trial_03",
+          "face": "front",
+          "fall": false,
+          "family": "front_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              -0.9980783893313179,
+              -0.06196393103896994,
+              0.0,
+              0.9603312993500203
+            ],
+            [
+              0.06196393103896994,
+              -0.9980783893313179,
+              0.0,
+              0.054853291187726305
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 9.408385276794434,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.30071496963500977,
+          "separation": false,
+          "source_snapshot_index": 15,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 14,
+          "trial": 3
+        },
+        {
+          "box_cross_track_max_abs_m": 0.00604578573256731,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 0.10435163013945481,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/front_straight/trial_04",
+          "face": "front",
+          "fall": false,
+          "family": "front_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              -0.9997146783567953,
+              -0.023886437113334987,
+              0.0,
+              0.9632154603688051
+            ],
+            [
+              0.023886437113334987,
+              -0.9997146783567953,
+              0.0,
+              0.024662633888655056
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 30.898481369018555,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.31326961517333984,
+          "separation": false,
+          "source_snapshot_index": 6,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 13,
+          "trial": 4
+        },
+        {
+          "box_cross_track_max_abs_m": 0.00957607850432396,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 0.7917691889662181,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/front_straight/trial_05",
+          "face": "front",
+          "fall": false,
+          "family": "front_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              -0.9999977734499321,
+              -0.0021102358110512013,
+              0.0,
+              0.9576024462098961
+            ],
+            [
+              0.0021102358110512013,
+              -0.9999977734499321,
+              0.0,
+              0.06306726748673236
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 11.628617286682129,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.29969120025634766,
+          "separation": false,
+          "source_snapshot_index": 13,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 13,
+          "trial": 5
+        },
+        {
+          "box_cross_track_max_abs_m": 0.004757162649184465,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 1.1256834771098014,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/front_straight/trial_06",
+          "face": "front",
+          "fall": false,
+          "family": "front_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              -0.9987304985573082,
+              -0.050372524767679575,
+              0.0,
+              0.9586446632009797
+            ],
+            [
+              0.050372524767679575,
+              -0.9987304985573082,
+              0.0,
+              -0.006406899343035597
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 13.3119535446167,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.31063002347946167,
+          "separation": false,
+          "source_snapshot_index": 4,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 14,
+          "trial": 6
+        },
+        {
+          "box_cross_track_max_abs_m": 0.006574931554496288,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 1.4954425980176118,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/front_straight/trial_07",
+          "face": "front",
+          "fall": false,
+          "family": "front_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              -0.9982959381706009,
+              -0.05835426147317617,
+              0.0,
+              0.9639334907581177
+            ],
+            [
+              0.05835426147317617,
+              -0.9982959381706009,
+              0.0,
+              0.04855421167264629
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 13.292930603027344,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.29986488819122314,
+          "separation": false,
+          "source_snapshot_index": 11,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 13,
+          "trial": 7
+        },
+        {
+          "box_cross_track_max_abs_m": 0.005835395772010088,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 1.7838541659105702,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/front_straight/trial_08",
+          "face": "front",
+          "fall": false,
+          "family": "front_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              -0.9999708866883373,
+              -0.007630581612195472,
+              0.0,
+              0.9613529072337486
+            ],
+            [
+              0.007630581612195472,
+              -0.9999708866883373,
+              0.0,
+              -0.007957329109858562
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 11.998677253723145,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.3059348464012146,
+          "separation": false,
+          "source_snapshot_index": 2,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 13,
+          "trial": 8
+        },
+        {
+          "box_cross_track_max_abs_m": 0.0039832270704209805,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 0.8407826264502296,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/front_straight/trial_09",
+          "face": "front",
+          "fall": false,
+          "family": "front_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              -0.9991745704323125,
+              -0.04062238054821179,
+              0.0,
+              0.9581989320494139
+            ],
+            [
+              0.04062238054821179,
+              -0.9991745704323125,
+              0.0,
+              0.02405672198252703
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 22.47616195678711,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.29578137397766113,
+          "separation": false,
+          "source_snapshot_index": 9,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 13,
+          "trial": 9
+        }
+      ],
+      "trial_count": 10
+    },
+    "left_straight": {
+      "all_pass": true,
+      "pass_count": 10,
+      "rows": [
+        {
+          "box_cross_track_max_abs_m": 0.02222341299057007,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 3.282957745323309,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/left_straight/trial_00",
+          "face": "left",
+          "fall": false,
+          "family": "left_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              -0.07582206567326606,
+              0.9971213639056375,
+              0.0,
+              0.035024575989620506
+            ],
+            [
+              -0.9971213639056375,
+              -0.07582206567326606,
+              0.0,
+              0.6124139845938312
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 12.183290481567383,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.30855369567871094,
+          "separation": false,
+          "source_snapshot_index": 0,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 13,
+          "trial": 0
+        },
+        {
+          "box_cross_track_max_abs_m": 0.004104951396584511,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 0.9639992390772596,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/left_straight/trial_01",
+          "face": "left",
+          "fall": false,
+          "family": "left_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              -0.004574669340448414,
+              0.9999895361454667,
+              0.0,
+              -0.0322223292873137
+            ],
+            [
+              -0.9999895361454667,
+              -0.004574669340448414,
+              0.0,
+              0.6091085199202502
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 9.917792320251465,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.3094996511936188,
+          "separation": false,
+          "source_snapshot_index": 7,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 14,
+          "trial": 1
+        },
+        {
+          "box_cross_track_max_abs_m": 0.007426353637129068,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 0.3468096852965674,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/left_straight/trial_02",
+          "face": "left",
+          "fall": false,
+          "family": "left_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              -0.028499684166473277,
+              0.999593801502596,
+              0.0,
+              -0.05305061089841773
+            ],
+            [
+              -0.999593801502596,
+              -0.028499684166473277,
+              0.0,
+              0.602850293881232
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 12.914268493652344,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.29151153564453125,
+          "separation": false,
+          "source_snapshot_index": 14,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 15,
+          "trial": 2
+        },
+        {
+          "box_cross_track_max_abs_m": 0.0076055885292589664,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 1.4751022946693138,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/left_straight/trial_03",
+          "face": "left",
+          "fall": false,
+          "family": "left_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              -0.06259852622581695,
+              0.9980387890830474,
+              0.0,
+              -0.004865058915971711
+            ],
+            [
+              -0.9980387890830474,
+              -0.06259852622581695,
+              0.0,
+              0.6130761059094311
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 12.662537574768066,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.2971367835998535,
+          "separation": false,
+          "source_snapshot_index": 5,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 13,
+          "trial": 3
+        },
+        {
+          "box_cross_track_max_abs_m": 0.0060524106957018375,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 0.5793776265355016,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/left_straight/trial_04",
+          "face": "left",
+          "fall": false,
+          "family": "left_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              -0.010241455109941332,
+              0.9999475549233725,
+              0.0,
+              -0.061850359805817844
+            ],
+            [
+              -0.9999475549233725,
+              -0.010241455109941332,
+              0.0,
+              0.6120340979927467
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 11.963906288146973,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.30668723583221436,
+          "separation": false,
+          "source_snapshot_index": 12,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 14,
+          "trial": 4
+        },
+        {
+          "box_cross_track_max_abs_m": 0.018946396186947823,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 3.881336958129786,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/left_straight/trial_05",
+          "face": "left",
+          "fall": false,
+          "family": "left_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              -0.029750310688499555,
+              0.9995573615425669,
+              0.0,
+              0.013430014363233145
+            ],
+            [
+              -0.9995573615425669,
+              -0.029750310688499555,
+              0.0,
+              0.6029247468687534
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 10.06467056274414,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.3026316165924072,
+          "separation": false,
+          "source_snapshot_index": 3,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 17,
+          "trial": 5
+        },
+        {
+          "box_cross_track_max_abs_m": 0.0031543713994324207,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 0.7573586959276939,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/left_straight/trial_06",
+          "face": "left",
+          "fall": false,
+          "family": "left_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              -0.06224591613906054,
+              0.998060842796675,
+              0.0,
+              -0.03275224831668011
+            ],
+            [
+              -0.998060842796675,
+              -0.06224591613906054,
+              0.0,
+              0.6130743255134707
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 13.141119956970215,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.31058406829833984,
+          "separation": false,
+          "source_snapshot_index": 10,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 14,
+          "trial": 6
+        },
+        {
+          "box_cross_track_max_abs_m": 0.009794306941330433,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 2.7380725740963716,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/left_straight/trial_07",
+          "face": "left",
+          "fall": false,
+          "family": "left_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              -0.023752771403679505,
+              0.9997178631247141,
+              0.0,
+              0.014430806078760221
+            ],
+            [
+              -0.9997178631247141,
+              -0.023752771403679505,
+              0.0,
+              0.616808560514886
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 9.301689147949219,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.3129054605960846,
+          "separation": false,
+          "source_snapshot_index": 1,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 14,
+          "trial": 7
+        },
+        {
+          "box_cross_track_max_abs_m": 0.009189692325890064,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 0.6544140847572617,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/left_straight/trial_08",
+          "face": "left",
+          "fall": false,
+          "family": "left_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              -0.00042746860605581265,
+              0.9999999086352912,
+              0.0,
+              -0.028849228504357612
+            ],
+            [
+              -0.9999999086352912,
+              -0.00042746860605581265,
+              0.0,
+              0.6046764414193004
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 8.560805320739746,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.2881755828857422,
+          "separation": false,
+          "source_snapshot_index": 8,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 15,
+          "trial": 8
+        },
+        {
+          "box_cross_track_max_abs_m": 0.0025930055417120457,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 0.423717615350911,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/left_straight/trial_09",
+          "face": "left",
+          "fall": false,
+          "family": "left_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              -0.06208435046794045,
+              0.9980709060116791,
+              0.0,
+              -0.05485345876988767
+            ],
+            [
+              -0.9980709060116791,
+              -0.06208435046794045,
+              0.0,
+              0.6103319864424712
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 9.816115379333496,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.28532934188842773,
+          "separation": false,
+          "source_snapshot_index": 15,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 13,
+          "trial": 9
+        }
+      ],
+      "trial_count": 10
+    },
+    "right_straight": {
+      "all_pass": true,
+      "pass_count": 10,
+      "rows": [
+        {
+          "box_cross_track_max_abs_m": 0.007651740685105324,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 0.8133799075001384,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/right_straight/trial_00",
+          "face": "right",
+          "fall": false,
+          "family": "right_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              0.001820720718348686,
+              -0.9999983424866592,
+              0.0,
+              0.06306716871117427
+            ],
+            [
+              0.9999983424866592,
+              0.001820720718348686,
+              0.0,
+              -0.607602087480694
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 9.027026176452637,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.3020467758178711,
+          "separation": false,
+          "source_snapshot_index": 13,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 13,
+          "trial": 0
+        },
+        {
+          "box_cross_track_max_abs_m": 0.0069839078933000565,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 1.6101487949388058,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/right_straight/trial_01",
+          "face": "right",
+          "fall": false,
+          "family": "right_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              0.05049698359320475,
+              -0.9987242135084078,
+              0.0,
+              -0.006406607891867388
+            ],
+            [
+              0.9987242135084078,
+              0.05049698359320475,
+              0.0,
+              -0.6086449533413106
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 12.8184814453125,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.30310341715812683,
+          "separation": false,
+          "source_snapshot_index": 4,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 14,
+          "trial": 1
+        },
+        {
+          "box_cross_track_max_abs_m": 0.010041216388344765,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 1.4867819181500357,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/right_straight/trial_02",
+          "face": "right",
+          "fall": false,
+          "family": "right_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              0.05780722510719541,
+              -0.9983277641763781,
+              0.0,
+              0.04855423296347439
+            ],
+            [
+              0.9983277641763781,
+              0.05780722510719541,
+              0.0,
+              -0.6139334861374772
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 11.6737642288208,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.30530762672424316,
+          "separation": false,
+          "source_snapshot_index": 11,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 16,
+          "trial": 2
+        },
+        {
+          "box_cross_track_max_abs_m": 0.005059762857854366,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 2.0791095833518813,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/right_straight/trial_03",
+          "face": "right",
+          "fall": false,
+          "family": "right_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              0.0073532330916202295,
+              -0.9999729646160942,
+              0.0,
+              -0.007957341269286933
+            ],
+            [
+              0.9999729646160942,
+              0.0073532330916202295,
+              0.0,
+              -0.6113526305179602
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 10.943039894104004,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.31345629692077637,
+          "separation": false,
+          "source_snapshot_index": 2,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 14,
+          "trial": 3
+        },
+        {
+          "box_cross_track_max_abs_m": 0.002498684450984001,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 0.6879503135820243,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/right_straight/trial_04",
+          "face": "right",
+          "fall": false,
+          "family": "right_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              0.040809665828957155,
+              -0.9991669385918095,
+              0.0,
+              0.02405655043965208
+            ],
+            [
+              0.9991669385918095,
+              0.040809665828957155,
+              0.0,
+              -0.6081987643993024
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 20.97039031982422,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.29281488060951233,
+          "separation": false,
+          "source_snapshot_index": 9,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 13,
+          "trial": 4
+        },
+        {
+          "box_cross_track_max_abs_m": 0.016073184087872505,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 1.5359592801741273,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/right_straight/trial_05",
+          "face": "right",
+          "fall": false,
+          "family": "right_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              0.07582185963601341,
+              -0.9971213795728866,
+              0.0,
+              -0.03502409936340237
+            ],
+            [
+              0.9971213795728866,
+              0.07582185963601341,
+              0.0,
+              -0.6124139704120253
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 9.579103469848633,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.3169820308685303,
+          "separation": false,
+          "source_snapshot_index": 0,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 16,
+          "trial": 5
+        },
+        {
+          "box_cross_track_max_abs_m": 0.0065008122473955154,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 0.5631490970675513,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/right_straight/trial_06",
+          "face": "right",
+          "fall": false,
+          "family": "right_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              0.0045744627105409295,
+              -0.9999895370907187,
+              0.0,
+              0.03222200769095607
+            ],
+            [
+              0.9999895370907187,
+              0.0045744627105409295,
+              0.0,
+              -0.6091086229272039
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 11.881559371948242,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.30704259872436523,
+          "separation": false,
+          "source_snapshot_index": 7,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 13,
+          "trial": 6
+        },
+        {
+          "box_cross_track_max_abs_m": 0.007416837848722935,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 0.5823009475002671,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/right_straight/trial_07",
+          "face": "right",
+          "fall": false,
+          "family": "right_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              0.028499477618336752,
+              -0.9995938073915234,
+              0.0,
+              0.05305079293719892
+            ],
+            [
+              0.9995938073915234,
+              0.028499477618336752,
+              0.0,
+              -0.6028503282563885
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 10.117734909057617,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.28374433517456055,
+          "separation": false,
+          "source_snapshot_index": 14,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 13,
+          "trial": 7
+        },
+        {
+          "box_cross_track_max_abs_m": 0.0035514230839908123,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 0.6002233638823805,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/right_straight/trial_08",
+          "face": "right",
+          "fall": false,
+          "family": "right_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              0.06259831999899512,
+              -0.9980388020178892,
+              0.0,
+              0.004864984553857988
+            ],
+            [
+              0.9980388020178892,
+              0.06259831999899512,
+              0.0,
+              -0.6130761105344895
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 10.142217636108398,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.31555914878845215,
+          "separation": false,
+          "source_snapshot_index": 5,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 15,
+          "trial": 8
+        },
+        {
+          "box_cross_track_max_abs_m": 0.006337975151836872,
+          "box_forward_displacement_m": 0.30000001192092896,
+          "box_yaw_max_abs_deg": 1.7341167283745373,
+          "catastrophic_body_penetration": false,
+          "delivery": "/root/autodl-tmp/robotics/runs/se2_reference_executor_base_ablation_v2_20260903_190000/right_straight/trial_09",
+          "face": "right",
+          "fall": false,
+          "family": "right_straight",
+          "finite": true,
+          "initial_T_OB": [
+            [
+              0.010240890879594152,
+              -0.9999475607020561,
+              0.0,
+              0.06185036666143
+            ],
+            [
+              0.9999475607020561,
+              0.010240890879594152,
+              0.0,
+              -0.6120341843340014
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "left_contact_fraction": 0.0,
+          "max_nonhand_box_force_N": 10.550491333007812,
+          "pass": true,
+          "right_contact_fraction": 0.0,
+          "root_forward_displacement_m": 0.30997586250305176,
+          "separation": false,
+          "source_snapshot_index": 12,
+          "stop_reason": "TARGET_REACHED",
+          "target_length_m": 0.3,
+          "trace_steps": 13,
+          "trial": 9
+        }
+      ],
+      "trial_count": 10
+    }
+  },
+  "frozen": {
+    "base_commit": "7938e34bacd2648fec60b6e739b7cf25a4eaad51",
+    "branch": "feat/se2-reference-executor-base-ablation-context-adapter-v2",
+    "ee": {
+      "expected": "539f5818df16b43c34a45989706967a2e01c888d48af314522f3bd3ea056b7db",
+      "formal": "RUBBER_HAND_PALM_FORWARD_DOWN_V2",
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_golden_frozen_se2_adapter/artifacts/ee_ablation_sixway/g1_usd/g1_29dof_rubberhand_palm_forward_down_v2.usda",
+      "rubber_hand_mass_per_side_kg": 0.17,
+      "sha256": "539f5818df16b43c34a45989706967a2e01c888d48af314522f3bd3ea056b7db"
+    },
+    "forbidden_legacy_paths": [
+      "old residual actor/checkpoint",
+      "old reward",
+      "attach",
+      "Approach",
+      "lookup",
+      "CEM/MPPI",
+      "dynamic upper",
+      "force controller"
+    ],
+    "low_level_immutable": {
+      "action_scale": 0.25,
+      "actor_frame_dim": 29,
+      "actor_history_frames": 10,
+      "box_dims_m": [
+        1.4,
+        0.7,
+        0.8
+      ],
+      "box_friction": 0.15,
+      "box_mass_kg": 5.0,
+      "falcon_history_frames": 5,
+      "falcon_hz": 50.0,
+      "physics_dt_s": 0.005,
+      "policy_hz": 10.0,
+      "unified_actor_dim": 410,
+      "unified_actor_frame_dim": 41,
+      "walking_flag": 1.0
+    },
+    "official_falcon": {
+      "expected": "8ac8f51875b878a79d9b5782e702b66572697e204ed262e2002b55631f3105d0",
+      "path": "/root/autodl-tmp/robotics/falcon_sandbox/FALCON/sim2real/models/falcon/g1_29dof.onnx",
+      "sha256": "8ac8f51875b878a79d9b5782e702b66572697e204ed262e2002b55631f3105d0"
+    },
+    "q_upper": {
+      "expected": "35a1078c9b72aed52dbe33764dd63f5834d62cfed369e1155271fee7fdae1453",
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_golden_frozen_se2_adapter/configs/push_feedback/old_sphere_reference.json",
+      "sha256": "35a1078c9b72aed52dbe33764dd63f5834d62cfed369e1155271fee7fdae1453",
+      "values": [
+        -0.6032373905181885,
+        0.03662461042404175,
+        0.6094324588775635,
+        1.3572834730148315,
+        0.06328465044498444,
+        0.09808133542537689,
+        0.13999402523040771,
+        -0.6004514694213867,
+        -0.03673123940825462,
+        -0.6004274487495422,
+        1.3540984392166138,
+        -0.07171958684921265,
+        0.0994172990322113,
+        -0.13994388282299042
+      ]
+    },
+    "scope": "rear straight push edge only; approach/attach/doorway/arc/side not run"
+  },
+  "no_ik": true,
+  "no_perturbations": true,
+  "no_q_upper_change": true,
+  "nominal_command": [
+    0.3,
+    0.0,
+    0.0
+  ],
+  "schema": "PHYSICAL_INTERACTION_TEMPLATE_V1.v1",
+  "source": "verified rear moving snapshot bank + rigid canonical face transform + zero perturbation nominal replay",
+  "template_name": "PHYSICAL_INTERACTION_TEMPLATE_V1"
+}
