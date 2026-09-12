@@ -1,0 +1,120 @@
+{
+  "schema": "GENERAL_SE2_OBJECT_ONLY_DR_FIXED_GROUND_V1",
+  "base_method": "FALCON_PLANNER_CONDITIONED_OBJECT_RESIDUAL_PPO_GENERAL_SE2",
+  "design": "PRE_SIMULATION_PER_ENV_CONTINUOUS_SCALE_RANDOMIZATION",
+  "runtime_geometry_mutation": false,
+  "replicate_physics": false,
+  "tuple_lifetime": "one_env_for_one_100_update_block",
+  "randomization_write_scope": {
+    "box_mass": true,
+    "box_com": true,
+    "box_inertia": true,
+    "box_startup_dimensions": true,
+    "box_collision_material": true,
+    "box_material_only": true,
+    "ground_material": false,
+    "ground_patch_material": false,
+    "robot_material": false,
+    "robot_mass_com_pd": false
+  },
+  "ground_contact_contract": {
+    "static_friction": 1.0,
+    "dynamic_friction": 1.0,
+    "combine_mode": "multiply",
+    "restitution": 0.0,
+    "randomized": false,
+    "geometry": "stock global TerrainImporter plane retained; no replacement GroundPatch in active contract"
+  },
+  "nominal": {
+    "mass_kg": 5.0,
+    "box_ground_mu_target": 0.15,
+    "static_friction": 0.15,
+    "dynamic_friction": 0.15,
+    "restitution": 0.0,
+    "dimensions_m": [1.4, 0.7, 0.8],
+    "com_offset_m": [0.0, 0.0, 0.0]
+  },
+  "full_target": {
+    "mass_kg": [1.0, 8.0],
+    "box_ground_mu_target": [0.1, 1.0],
+    "com_x_m": [-0.05, 0.05],
+    "com_y_m": [-0.05, 0.05],
+    "com_z_m": [-0.03, 0.03],
+    "length_m": [1.35, 1.45],
+    "width_m": [0.65, 0.75],
+    "height_m": [0.75, 0.85]
+  },
+  "curriculum": {
+    "nominal_anchor_fraction": 0.2,
+    "U0_U100": {
+      "mass_kg": [3.0, 6.0],
+      "box_ground_mu_target": [0.1, 0.3],
+      "com_abs_m": [0.02, 0.02, 0.01],
+      "dimension_abs_m": [0.02, 0.02, 0.02]
+    },
+    "U100_U200": {
+      "mass_kg": [2.0, 7.0],
+      "box_ground_mu_target": [0.1, 0.6],
+      "com_abs_m": [0.035, 0.035, 0.02],
+      "dimension_abs_m": [0.035, 0.035, 0.035]
+    },
+    "U200_U300": {
+      "mass_kg": [1.0, 8.0],
+      "box_ground_mu_target": [0.1, 1.0],
+      "com_abs_m": [0.05, 0.05, 0.03],
+      "dimension_abs_m": [0.05, 0.05, 0.05]
+    },
+    "U300_U500": "same_as_U200_U300"
+  },
+  "startup_scale": {
+    "formula": "sx=L/1.40; sy=W/0.70; sz=H/0.80",
+    "stage_boundary": "before_sim_play_and_before_PhysX_view_creation",
+    "collision_geometry": "same_concrete_geometry_mesh_as_visual",
+    "per_environment_tuple": true
+  },
+  "face_templates": {
+    "rear": "x=-L/2-gap",
+    "front": "x=+L/2+gap",
+    "right": "y=-W/2-gap",
+    "left": "y=+W/2+gap",
+    "upper_posture": "Golden_q_upper_exact",
+    "ik": false
+  },
+  "arc_schedule": {
+    "U0_U100": {"radii_m": [6.0, 8.0, 10.0], "probabilities": [0.25, 0.4, 0.35]},
+    "U100_U200": {"radii_m": [5.0, 6.0, 8.0, 10.0], "probabilities": [0.1, 0.3, 0.3, 0.3]},
+    "U200_plus": {"radii_m": [5.0, 6.0, 8.0, 10.0], "probabilities": [0.25, 0.25, 0.25, 0.25]},
+    "R4": "diagnostic_only",
+    "R2": "historical_aggressive_diagnostic_only",
+    "left_right_balance": "50/50"
+  },
+  "preflight": {
+    "environment_counts": [64, 256, 1024, 4096],
+    "minimum_physics_steps": 500,
+    "domain_feasibility_envs": 256,
+    "domain_feasibility_path_m": 0.5,
+    "domain_feasibility_faces": ["rear", "front", "right", "left"],
+    "minimum_positive_finite_fraction": 0.9,
+    "checkpoint_roundtrip_required": true,
+    "training_allowed_before_pass": false
+  },
+  "actor_critic": {
+    "actor_input_dim": 320,
+    "actor_sees_true_physics": false,
+    "critic_privileged_fields": ["mass_kg", "box_ground_mu_target", "com_offset_m", "dimensions_m", "diagonal_inertia"],
+    "unique_critic_schema_builder": "build_general_critic_from_obs_schema"
+  },
+  "frozen": {
+    "falcon_sha256": "8ac8f51875b878a79d9b5782e702b66572697e204ed262e2002b55631f3105d0",
+    "q_upper_sha256": "35a1078c9b72aed52dbe33764dd63f5834d62cfed369e1155271fee7fdae1453",
+    "palm_v2_sha256": "539f5818df16b43c34a45989706967a2e01c888d48af314522f3bd3ea056b7db"
+  },
+  "training": {
+    "lineage": "fresh_U0_to_U100_fixed_ground_object_only",
+    "updates": [0, 100],
+    "scene_rebuild_boundary": "each_100_updates",
+    "episode_physics_randomization": false,
+    "task_reference_randomization_per_episode": true,
+    "resume_from_contaminated_dr_u100": false
+  }
+}

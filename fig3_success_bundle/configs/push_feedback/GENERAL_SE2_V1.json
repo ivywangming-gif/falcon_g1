@@ -1,0 +1,69 @@
+{
+  "schema": "FALCON_PLANNER_CONDITIONED_OBJECT_RESIDUAL_PPO_GENERAL_SE2_CONFIG.v1",
+  "task": "OVERNIGHT_FALCON_PLANNER_CONDITIONED_OBJECT_RESIDUAL_PPO_GENERAL_SE2_4096_100_BLOCKS_TO_500_AND_ACCESS_AWARE_INTEGRATION",
+  "actor": {
+    "frame_dim": 32,
+    "history_length": 10,
+    "input_dim": 320,
+    "fields": [
+      "e_parallel_m", "e_cross_m", "e_theta_sin", "e_theta_cos",
+      "box_v_parallel_mps", "box_v_cross_mps", "box_yaw_rate_radps",
+      "robot_box_normal_error_m", "robot_box_tangent_error_m",
+      "robot_box_relative_yaw_sin", "robot_box_relative_yaw_cos",
+      "root_vx_mps", "root_vy_mps", "root_wz_radps",
+      "gravity_x", "gravity_y", "gravity_z",
+      "left_contact", "right_contact", "left_force_norm", "right_force_norm",
+      "previous_residual_vx", "previous_residual_vy", "previous_residual_wz",
+      "gait_phase_sin", "gait_phase_cos", "remaining_reference_m",
+      "reference_curvature_m_inv", "face_rear", "face_front", "face_right", "face_left"
+    ],
+    "architecture": "320-256-128-64-3",
+    "activation": "ELU",
+    "final_mean_zero_initialized": true,
+    "logstd_init": -1.6,
+    "arc_one_hot": false
+  },
+  "reference": {
+    "straight_length_m": 2.0,
+    "arc_length_m": 2.0,
+    "arc_radii_m": [2.0, 3.0, 4.0, 5.0],
+    "arc_curvature_abs_m_inv": [0.5, 0.3333333333333333, 0.25, 0.2],
+    "progress_source": "actual_box_pose_projection",
+    "lookahead_m": 0.5,
+    "family_names": ["rear_straight", "rear_left_arc", "rear_right_arc", "front_straight", "right_straight", "left_straight"],
+    "face_one_hot": ["rear", "front", "right", "left"]
+  },
+  "frozen_command": {
+    "nominal_vx_mps": 0.3,
+    "vy_nominal_mps": 0.0,
+    "wz_nominal_radps": 0.0,
+    "walking_flag": 1.0,
+    "physics_dt_s": 0.005,
+    "falcon_hz": 50.0,
+    "high_level_hz": 10.0,
+    "rate_limits": [0.03, 0.04, 0.08]
+  },
+  "ppo": {
+    "envs": 4096,
+    "horizon": 32,
+    "updates_first_block": 100,
+    "blocks_max": 5,
+    "learning_rate": 0.0003,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "clip": 0.2,
+    "entropy_coef": 0.003,
+    "value_coef": 1.0,
+    "max_grad_norm": 1.0,
+    "epochs": 5,
+    "minibatches": 4,
+    "desired_kl": 0.01
+  },
+  "box": {"dims_m": [1.4, 0.7, 0.8], "mass_kg": 5.0, "friction": 0.15},
+  "ee_variants": [
+    {"name": "WRIST_ONLY"},
+    {"name": "RUBBER_HAND_NATURAL", "mass_per_side_kg": 0.17},
+    {"name": "RUBBER_HAND_PALM_FORWARD_DOWN_V2", "mass_per_side_kg": 0.17}
+  ],
+  "forbidden": ["FALCON retraining", "q_upper change", "PD/history/joint mapping change", "per-face actor", "per-arc actor", "old 410-D/context adapter", "Box-P", "E1/E2", "CEM", "MPPI", "force controller"]
+}

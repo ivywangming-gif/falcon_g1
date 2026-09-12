@@ -1,0 +1,1172 @@
+{
+  "BOX_ASSET_BANK_PASS": true,
+  "asset_count": 27,
+  "assets": [
+    {
+      "asset_id": "box_L1p35_W0p65_H0p75",
+      "dimensions_m": [
+        1.35,
+        0.65,
+        0.75
+      ],
+      "filename": "L1p35_W0p65_H0p75.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p35_W0p65_H0p75.usda",
+      "sha256": "fdc939c360a77587918480c93ab4797da3d319b6311e96a8b2aa86630d5bf9f7"
+    },
+    {
+      "asset_id": "box_L1p35_W0p65_H0p80",
+      "dimensions_m": [
+        1.35,
+        0.65,
+        0.8
+      ],
+      "filename": "L1p35_W0p65_H0p80.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p35_W0p65_H0p80.usda",
+      "sha256": "64c6cc4c36a93dbbd2c0cdf12669c8d58fd5ca8dacb774bef7bd72ed01d1e8c4"
+    },
+    {
+      "asset_id": "box_L1p35_W0p65_H0p85",
+      "dimensions_m": [
+        1.35,
+        0.65,
+        0.85
+      ],
+      "filename": "L1p35_W0p65_H0p85.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p35_W0p65_H0p85.usda",
+      "sha256": "d3132598831ae874defbdcdd53cac3693c2ce8c265369e85b104857856e63dba"
+    },
+    {
+      "asset_id": "box_L1p35_W0p70_H0p75",
+      "dimensions_m": [
+        1.35,
+        0.7,
+        0.75
+      ],
+      "filename": "L1p35_W0p70_H0p75.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p35_W0p70_H0p75.usda",
+      "sha256": "4372d1b9ccafe2c82f98a5a1a8ba2645d57abb0540c35ffcb844ed1824c03a34"
+    },
+    {
+      "asset_id": "box_L1p35_W0p70_H0p80",
+      "dimensions_m": [
+        1.35,
+        0.7,
+        0.8
+      ],
+      "filename": "L1p35_W0p70_H0p80.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p35_W0p70_H0p80.usda",
+      "sha256": "34df6ff96bff97dabd5f73d05f32adc47e284c5278e2e708f814075b3adcdaad"
+    },
+    {
+      "asset_id": "box_L1p35_W0p70_H0p85",
+      "dimensions_m": [
+        1.35,
+        0.7,
+        0.85
+      ],
+      "filename": "L1p35_W0p70_H0p85.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p35_W0p70_H0p85.usda",
+      "sha256": "62cdce4da985cc75be44b1e866820a0706a6ccc95ef1e21b77e65c43239027b8"
+    },
+    {
+      "asset_id": "box_L1p35_W0p75_H0p75",
+      "dimensions_m": [
+        1.35,
+        0.75,
+        0.75
+      ],
+      "filename": "L1p35_W0p75_H0p75.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p35_W0p75_H0p75.usda",
+      "sha256": "e15350b58f160223932618c742de7d0da94c035594c2f2083f52a339a85b21c0"
+    },
+    {
+      "asset_id": "box_L1p35_W0p75_H0p80",
+      "dimensions_m": [
+        1.35,
+        0.75,
+        0.8
+      ],
+      "filename": "L1p35_W0p75_H0p80.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p35_W0p75_H0p80.usda",
+      "sha256": "f6ade025b405bff080e86d15b08d0e38fa4fbd0c0ffa28e4524ecbcb13aadc7e"
+    },
+    {
+      "asset_id": "box_L1p35_W0p75_H0p85",
+      "dimensions_m": [
+        1.35,
+        0.75,
+        0.85
+      ],
+      "filename": "L1p35_W0p75_H0p85.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p35_W0p75_H0p85.usda",
+      "sha256": "3e21cfda5f68e7a10c7924474c8ea2a0c467bd0dd7eef891c5d8ae6e0c76e3fb"
+    },
+    {
+      "asset_id": "box_L1p40_W0p65_H0p75",
+      "dimensions_m": [
+        1.4,
+        0.65,
+        0.75
+      ],
+      "filename": "L1p40_W0p65_H0p75.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p40_W0p65_H0p75.usda",
+      "sha256": "379c275f90864f621fc69023d10abb229e6a7d9c24f93909c3205a315b10ef47"
+    },
+    {
+      "asset_id": "box_L1p40_W0p65_H0p80",
+      "dimensions_m": [
+        1.4,
+        0.65,
+        0.8
+      ],
+      "filename": "L1p40_W0p65_H0p80.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p40_W0p65_H0p80.usda",
+      "sha256": "f108a16f72faf86ee9164112a5bfd7c6188ccda7f990964f0764afa567fdeb98"
+    },
+    {
+      "asset_id": "box_L1p40_W0p65_H0p85",
+      "dimensions_m": [
+        1.4,
+        0.65,
+        0.85
+      ],
+      "filename": "L1p40_W0p65_H0p85.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p40_W0p65_H0p85.usda",
+      "sha256": "9cac67e8054ddeb3156f2c6d310ae04ee25b6d22a8ec238b480baa2f48c4a50e"
+    },
+    {
+      "asset_id": "box_L1p40_W0p70_H0p75",
+      "dimensions_m": [
+        1.4,
+        0.7,
+        0.75
+      ],
+      "filename": "L1p40_W0p70_H0p75.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p40_W0p70_H0p75.usda",
+      "sha256": "047591796d9af72453f8c6e02a6970ea31382ba9ad474ed990ea9256cdaad8f3"
+    },
+    {
+      "asset_id": "box_L1p40_W0p70_H0p80",
+      "dimensions_m": [
+        1.4,
+        0.7,
+        0.8
+      ],
+      "filename": "L1p40_W0p70_H0p80.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p40_W0p70_H0p80.usda",
+      "sha256": "6ca0642e1086171afcf7521a9740c932d579376dd2a5677bf5c524fb3a749043"
+    },
+    {
+      "asset_id": "box_L1p40_W0p70_H0p85",
+      "dimensions_m": [
+        1.4,
+        0.7,
+        0.85
+      ],
+      "filename": "L1p40_W0p70_H0p85.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p40_W0p70_H0p85.usda",
+      "sha256": "ab92489a8f61f2d6984fd077e6aced746b893cd4843d52d08fdf6fc194d1011e"
+    },
+    {
+      "asset_id": "box_L1p40_W0p75_H0p75",
+      "dimensions_m": [
+        1.4,
+        0.75,
+        0.75
+      ],
+      "filename": "L1p40_W0p75_H0p75.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p40_W0p75_H0p75.usda",
+      "sha256": "8dc017b2ddbff87f730e9ea4686bad5fb81b6e7d852dcb83322507e7ad72a534"
+    },
+    {
+      "asset_id": "box_L1p40_W0p75_H0p80",
+      "dimensions_m": [
+        1.4,
+        0.75,
+        0.8
+      ],
+      "filename": "L1p40_W0p75_H0p80.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p40_W0p75_H0p80.usda",
+      "sha256": "084837c8228d198f4ecbffdc3acd0d5d7a36aad8b81b0a86ca9b7ad2cf4ecc47"
+    },
+    {
+      "asset_id": "box_L1p40_W0p75_H0p85",
+      "dimensions_m": [
+        1.4,
+        0.75,
+        0.85
+      ],
+      "filename": "L1p40_W0p75_H0p85.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p40_W0p75_H0p85.usda",
+      "sha256": "18d382c989942511d3c4d65eccfd25d1344cb299e8bf0ab1238db7439348e508"
+    },
+    {
+      "asset_id": "box_L1p45_W0p65_H0p75",
+      "dimensions_m": [
+        1.45,
+        0.65,
+        0.75
+      ],
+      "filename": "L1p45_W0p65_H0p75.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p45_W0p65_H0p75.usda",
+      "sha256": "c8588630ad47073eb675c851a975cea678216f0c118a5d653dd12a5a2e30d64e"
+    },
+    {
+      "asset_id": "box_L1p45_W0p65_H0p80",
+      "dimensions_m": [
+        1.45,
+        0.65,
+        0.8
+      ],
+      "filename": "L1p45_W0p65_H0p80.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p45_W0p65_H0p80.usda",
+      "sha256": "947ed0c87df24856d182a30fe6488e9ac92dfd84667000ad315fe73cd787b726"
+    },
+    {
+      "asset_id": "box_L1p45_W0p65_H0p85",
+      "dimensions_m": [
+        1.45,
+        0.65,
+        0.85
+      ],
+      "filename": "L1p45_W0p65_H0p85.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p45_W0p65_H0p85.usda",
+      "sha256": "ab36a7c5933cdd4dc99200398e3772359714deec8ffbf8001354c829dad99730"
+    },
+    {
+      "asset_id": "box_L1p45_W0p70_H0p75",
+      "dimensions_m": [
+        1.45,
+        0.7,
+        0.75
+      ],
+      "filename": "L1p45_W0p70_H0p75.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p45_W0p70_H0p75.usda",
+      "sha256": "80622a79d1928965eb9de3fd3c91d704534c034e5e9ac2592b6c8960f311fc8b"
+    },
+    {
+      "asset_id": "box_L1p45_W0p70_H0p80",
+      "dimensions_m": [
+        1.45,
+        0.7,
+        0.8
+      ],
+      "filename": "L1p45_W0p70_H0p80.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p45_W0p70_H0p80.usda",
+      "sha256": "6bca6f471e802b80c02b660ba22f0089f23054fea01ab64d0f15e911620758cb"
+    },
+    {
+      "asset_id": "box_L1p45_W0p70_H0p85",
+      "dimensions_m": [
+        1.45,
+        0.7,
+        0.85
+      ],
+      "filename": "L1p45_W0p70_H0p85.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p45_W0p70_H0p85.usda",
+      "sha256": "56aa253a41cce25a8dc940db02d5c2b2275b37cf3606cd22ac756d0a870175e9"
+    },
+    {
+      "asset_id": "box_L1p45_W0p75_H0p75",
+      "dimensions_m": [
+        1.45,
+        0.75,
+        0.75
+      ],
+      "filename": "L1p45_W0p75_H0p75.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p45_W0p75_H0p75.usda",
+      "sha256": "3fba676841303c393b74ba745a98460dbc219ce9ee41abd5000235cb1bc3bbad"
+    },
+    {
+      "asset_id": "box_L1p45_W0p75_H0p80",
+      "dimensions_m": [
+        1.45,
+        0.75,
+        0.8
+      ],
+      "filename": "L1p45_W0p75_H0p80.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p45_W0p75_H0p80.usda",
+      "sha256": "b2f51abd5b59f58952c14e8653c69fb29f45d5bd3d3e450660a6a917212c134b"
+    },
+    {
+      "asset_id": "box_L1p45_W0p75_H0p85",
+      "dimensions_m": [
+        1.45,
+        0.75,
+        0.85
+      ],
+      "filename": "L1p45_W0p75_H0p85.usda",
+      "geometry_mutable_at_runtime": false,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p45_W0p75_H0p85.usda",
+      "sha256": "e5d8dc4cbc2b414dd7ffa7e286d1004b12870b4227282a85df71614c11c532aa"
+    }
+  ],
+  "assets_audited": [
+    {
+      "asset_id": "box_L1p35_W0p65_H0p75",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.350000023841858,
+        0.6499999761581421,
+        0.75
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.4104166666666667,
+        0.99375,
+        0.9354166666666668
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.35,
+        0.65,
+        0.75
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p35_W0p65_H0p75.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p35_W0p65_H0p80",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.350000023841858,
+        0.6499999761581421,
+        0.800000011920929
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.4427083333333334,
+        1.0260416666666667,
+        0.9354166666666668
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.35,
+        0.65,
+        0.8
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p35_W0p65_H0p80.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p35_W0p65_H0p85",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.350000023841858,
+        0.6499999761581421,
+        0.8500000238418579
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.4770833333333333,
+        1.0604166666666666,
+        0.9354166666666668
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.35,
+        0.65,
+        0.85
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p35_W0p65_H0p85.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p35_W0p70_H0p75",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.350000023841858,
+        0.699999988079071,
+        0.75
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.43854166666666666,
+        0.99375,
+        0.9635416666666666
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.35,
+        0.7,
+        0.75
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p35_W0p70_H0p75.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p35_W0p70_H0p80",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.350000023841858,
+        0.699999988079071,
+        0.800000011920929
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.4708333333333334,
+        1.0260416666666667,
+        0.9635416666666666
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.35,
+        0.7,
+        0.8
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p35_W0p70_H0p80.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p35_W0p70_H0p85",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.350000023841858,
+        0.699999988079071,
+        0.8500000238418579
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.5052083333333334,
+        1.0604166666666666,
+        0.9635416666666666
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.35,
+        0.7,
+        0.85
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p35_W0p70_H0p85.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p35_W0p75_H0p75",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.350000023841858,
+        0.75,
+        0.75
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.46875,
+        0.99375,
+        0.99375
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.35,
+        0.75,
+        0.75
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p35_W0p75_H0p75.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p35_W0p75_H0p80",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.350000023841858,
+        0.75,
+        0.800000011920929
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.5010416666666667,
+        1.0260416666666667,
+        0.99375
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.35,
+        0.75,
+        0.8
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p35_W0p75_H0p80.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p35_W0p75_H0p85",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.350000023841858,
+        0.75,
+        0.8500000238418579
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.5354166666666667,
+        1.0604166666666666,
+        0.99375
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.35,
+        0.75,
+        0.85
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p35_W0p75_H0p85.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p40_W0p65_H0p75",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.399999976158142,
+        0.6499999761581421,
+        0.75
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.4104166666666667,
+        1.0510416666666667,
+        0.9927083333333333
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.4,
+        0.65,
+        0.75
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p40_W0p65_H0p75.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p40_W0p65_H0p80",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.399999976158142,
+        0.6499999761581421,
+        0.800000011920929
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.4427083333333334,
+        1.0833333333333333,
+        0.9927083333333333
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.4,
+        0.65,
+        0.8
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p40_W0p65_H0p80.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p40_W0p65_H0p85",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.399999976158142,
+        0.6499999761581421,
+        0.8500000238418579
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.4770833333333333,
+        1.117708333333333,
+        0.9927083333333333
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.4,
+        0.65,
+        0.85
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p40_W0p65_H0p85.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p40_W0p70_H0p75",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.399999976158142,
+        0.699999988079071,
+        0.75
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.43854166666666666,
+        1.0510416666666667,
+        1.0208333333333333
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.4,
+        0.7,
+        0.75
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p40_W0p70_H0p75.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p40_W0p70_H0p80",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.399999976158142,
+        0.699999988079071,
+        0.800000011920929
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.4708333333333334,
+        1.0833333333333333,
+        1.0208333333333333
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.4,
+        0.7,
+        0.8
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p40_W0p70_H0p80.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p40_W0p70_H0p85",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.399999976158142,
+        0.699999988079071,
+        0.8500000238418579
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.5052083333333334,
+        1.117708333333333,
+        1.0208333333333333
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.4,
+        0.7,
+        0.85
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p40_W0p70_H0p85.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p40_W0p75_H0p75",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.399999976158142,
+        0.75,
+        0.75
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.46875,
+        1.0510416666666667,
+        1.0510416666666667
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.4,
+        0.75,
+        0.75
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p40_W0p75_H0p75.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p40_W0p75_H0p80",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.399999976158142,
+        0.75,
+        0.800000011920929
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.5010416666666667,
+        1.0833333333333333,
+        1.0510416666666667
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.4,
+        0.75,
+        0.8
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p40_W0p75_H0p80.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p40_W0p75_H0p85",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.399999976158142,
+        0.75,
+        0.8500000238418579
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.5354166666666667,
+        1.117708333333333,
+        1.0510416666666667
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.4,
+        0.75,
+        0.85
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p40_W0p75_H0p85.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p45_W0p65_H0p75",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.4500000476837158,
+        0.6499999761581421,
+        0.75
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.4104166666666667,
+        1.1104166666666666,
+        1.0520833333333333
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.45,
+        0.65,
+        0.75
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p45_W0p65_H0p75.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p45_W0p65_H0p80",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.4500000476837158,
+        0.6499999761581421,
+        0.800000011920929
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.4427083333333334,
+        1.1427083333333334,
+        1.0520833333333333
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.45,
+        0.65,
+        0.8
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p45_W0p65_H0p80.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p45_W0p65_H0p85",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.4500000476837158,
+        0.6499999761581421,
+        0.8500000238418579
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.4770833333333333,
+        1.1770833333333333,
+        1.0520833333333333
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.45,
+        0.65,
+        0.85
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p45_W0p65_H0p85.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p45_W0p70_H0p75",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.4500000476837158,
+        0.699999988079071,
+        0.75
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.43854166666666666,
+        1.1104166666666666,
+        1.0802083333333332
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.45,
+        0.7,
+        0.75
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p45_W0p70_H0p75.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p45_W0p70_H0p80",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.4500000476837158,
+        0.699999988079071,
+        0.800000011920929
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.4708333333333334,
+        1.1427083333333334,
+        1.0802083333333332
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.45,
+        0.7,
+        0.8
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p45_W0p70_H0p80.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p45_W0p70_H0p85",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.4500000476837158,
+        0.699999988079071,
+        0.8500000238418579
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.5052083333333334,
+        1.1770833333333333,
+        1.0802083333333332
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.45,
+        0.7,
+        0.85
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p45_W0p70_H0p85.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p45_W0p75_H0p75",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.4500000476837158,
+        0.75,
+        0.75
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.46875,
+        1.1104166666666666,
+        1.1104166666666666
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.45,
+        0.75,
+        0.75
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p45_W0p75_H0p75.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p45_W0p75_H0p80",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.4500000476837158,
+        0.75,
+        0.800000011920929
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.5010416666666667,
+        1.1427083333333334,
+        1.1104166666666666
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.45,
+        0.75,
+        0.8
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p45_W0p75_H0p80.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    },
+    {
+      "asset_id": "box_L1p45_W0p75_H0p85",
+      "asset_schema_pass": true,
+      "authored_scale_m": [
+        1.4500000476837158,
+        0.75,
+        0.8500000238418579
+      ],
+      "collision_api_present": true,
+      "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial",
+      "contact_report_api_present": true,
+      "diagonal_inertia_metadata_kg_m2": [
+        0.5354166666666667,
+        1.1770833333333333,
+        1.1104166666666666
+      ],
+      "dimension_geometry_pass": true,
+      "dimensions_m": [
+        1.45,
+        0.75,
+        0.85
+      ],
+      "mass_api_present": true,
+      "mass_metadata_kg": 5.0,
+      "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/box_asset_bank_v1/L1p45_W0p75_H0p85.usda",
+      "physx_rigid_body_api_present": true,
+      "rigid_body_api_present": true,
+      "runtime_geometry_mutation": false,
+      "visual_mesh_present": true
+    }
+  ],
+  "dimension_grid_m": {
+    "height_m": [
+      0.75,
+      0.8,
+      0.85
+    ],
+    "length_m": [
+      1.35,
+      1.4,
+      1.45
+    ],
+    "width_m": [
+      0.65,
+      0.7,
+      0.75
+    ]
+  },
+  "generator": "scripts/build_box_asset_bank.py",
+  "mass_inertia_metadata_per_asset": true,
+  "nominal_asset_id": "box_L1p40_W0p70_H0p80",
+  "nominal_dimensions_m": [
+    1.4,
+    0.7,
+    0.8
+  ],
+  "rigid_body_per_asset": true,
+  "runtime_geometry_mutation": false,
+  "schema": "BOX_ASSET_BANK_V1",
+  "version": "V1",
+  "visual_mesh_and_collision_geometry_prebuilt": true
+}

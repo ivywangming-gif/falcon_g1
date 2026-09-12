@@ -1,0 +1,66 @@
+#usda 1.0
+(
+    "BOX_ASSET_BANK_V1 immutable prebuilt visual and collision geometry"
+    defaultPrim = "Box"
+    metersPerUnit = 1
+)
+
+def Xform "Box" (
+    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysxContactReportAPI", "PhysicsMassAPI"]
+    customData = {
+        string box_asset_bank_schema = "BOX_ASSET_BANK_V1"
+        string box_asset_id = "box_L1p40_W0p65_H0p85"
+        string box_asset_metadata = '{"asset_id": "box_L1p40_W0p65_H0p85", "collision_geometry_prim": "/Box/geometry/mesh", "collision_material_prim": "/Box/Looks/BoxPhysicsMaterial", "com_metadata_m": [0.0, 0.0, 0.0], "contact_offset_m": 0.002, "diagonal_inertia_metadata_kg_m2": [0.4770833333333333, 1.117708333333333, 0.9927083333333333], "dimensions_m": [1.4, 0.65, 0.85], "mass_metadata_kg": 5.0, "principal_axes_metadata": [1.0, 0.0, 0.0, 0.0], "rest_offset_m": 0.0, "rigid_body_prim": "/Box", "root_prim": "/Box", "runtime_geometry_mutation": false, "visual_mesh_prim": "/Box/geometry/mesh"}'
+        float3 box_dimensions_m = (1.4, 0.65, 0.85)
+        string geometry_source = "prebuilt_asset_file"
+        bool runtime_geometry_mutation = 0
+    }
+)
+{
+    point3f physics:centerOfMass = (0, 0, 0)
+    float3 physics:diagonalInertia = (0.47708333, 1.1177083, 0.9927083)
+    bool physics:kinematicEnabled = 0
+    float physics:mass = 5
+    quatf physics:principalAxes = (1, 0, 0, 0)
+    bool physics:rigidBodyEnabled = 1
+    bool physxRigidBody:disableGravity = 0
+
+    def "geometry"
+    {
+        def Cube "mesh" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI"]
+            customData = {
+                bool is_collision_geometry = 1
+                bool is_visual_mesh = 1
+            }
+        )
+        {
+            rel material:binding:physics = </Box/Looks/BoxPhysicsMaterial> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            bool physics:collisionEnabled = 1
+            float physxCollision:contactOffset = 0.002
+            float physxCollision:restOffset = 0
+            color3f[] primvars:displayColor = [(0.58, 0.31, 0.12)]
+            float[] primvars:displayOpacity = [1]
+            double size = 1
+            float3 xformOp:scale = (1.4, 0.65, 0.85)
+            uniform token[] xformOpOrder = ["xformOp:scale"]
+        }
+    }
+
+    def "Looks"
+    {
+        def Material "BoxPhysicsMaterial" (
+            prepend apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:dynamicFriction = 0.15
+            float physics:restitution = 0
+            float physics:staticFriction = 0.15
+            uniform token physxMaterial:frictionCombineMode = "average"
+            uniform token physxMaterial:restitutionCombineMode = "average"
+        }
+    }
+}
+

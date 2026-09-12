@@ -1,0 +1,10 @@
+# Runtime outputs must stay outside the reproducibility source snapshot.
+run*/
+results*/
+videos_generated*/
+*.pt
+*.onnx
+*.npz
+*.log
+__pycache__/
+*.pyc

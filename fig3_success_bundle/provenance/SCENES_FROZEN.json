@@ -1,0 +1,132 @@
+{
+  "box_dimensions_m": [
+    1.4,
+    0.7,
+    0.8
+  ],
+  "door_clear_width_m": 1.4,
+  "frozen_before_planner_search": true,
+  "initial_template": "rear",
+  "initial_template_mode": "FIXED_INITIAL_TEMPLATE",
+  "planner_not_reverse_engineered_from_z_path": true,
+  "scenes": {
+    "FIG3": {
+      "design_frozen_before_search": true,
+      "goal_box_se2": [
+        8.0,
+        0.7,
+        0.0
+      ],
+      "initial_base_xy": null,
+      "initial_template": "rear",
+      "initial_template_mode": "FIXED_INITIAL_TEMPLATE",
+      "obstacles": [
+        {
+          "center_xy_m": [
+            5.15,
+            -1.5
+          ],
+          "name": "door_wall_lower",
+          "size_xy_m": [
+            0.3,
+            3.0
+          ]
+        },
+        {
+          "center_xy_m": [
+            5.15,
+            2.7
+          ],
+          "name": "door_wall_upper",
+          "size_xy_m": [
+            0.3,
+            2.6
+          ]
+        },
+        {
+          "center_xy_m": [
+            1.8,
+            -0.75
+          ],
+          "name": "fig3_lower_shelf",
+          "size_xy_m": [
+            1.8,
+            0.45
+          ]
+        }
+      ],
+      "scene_id": "FIG3_PHYSICAL_ACCESS_AWARE",
+      "scientific_role": "box-first path is free but late required stance is invalid; P1 checks stance during search",
+      "start_box_se2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "FIG4": {
+      "design_frozen_before_search": true,
+      "goal_box_se2": [
+        8.0,
+        0.7,
+        0.0
+      ],
+      "initial_base_xy": null,
+      "initial_template": "rear",
+      "initial_template_mode": "FIXED_INITIAL_TEMPLATE",
+      "obstacles": [
+        {
+          "center_xy_m": [
+            5.15,
+            -1.5
+          ],
+          "name": "door_wall_lower",
+          "size_xy_m": [
+            0.3,
+            3.0
+          ]
+        },
+        {
+          "center_xy_m": [
+            5.15,
+            2.7
+          ],
+          "name": "door_wall_upper",
+          "size_xy_m": [
+            0.3,
+            2.6
+          ]
+        },
+        {
+          "center_xy_m": [
+            0.55,
+            -1.55
+          ],
+          "name": "fig4_connectivity_shelf",
+          "size_xy_m": [
+            4.0,
+            0.9
+          ]
+        }
+      ],
+      "scene_id": "FIG4_PHYSICAL_CONNECTIVITY_COUNTEREXAMPLE",
+      "scientific_role": "target stance is valid at q_a but robot-base connectivity fails; P1 must stage before switching",
+      "start_box_se2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "schema": "FIG3_FIG4_PHYSICAL_SCENE_FREEZE.v1",
+  "z_reference": {
+    "envelope": "/root/autodl-tmp/robotics/runs/access_aware_semantics_recovery_20260907/Z_REPOSITION_DYNAMIC_ENVELOPE.json",
+    "envelope_sha256": "c0bc46e49c3af4aa831dd146a5fd1776bdff3e198ab5ffa64bf79ca68a84475e",
+    "q1_max_tracking_error_m": 0.08920371532440174,
+    "q2_max_tracking_error_m": 0.07368099689483643,
+    "recomputed_effective_g1_disc_radius_m": 0.3942383356069432,
+    "recomputed_max_body_center_offset_m": 0.30503462028254147,
+    "recomputed_tracking_margin_m": 0.08920371532440174,
+    "trace": "/root/autodl-tmp/robotics/runs/access_aware_semantics_recovery_20260907/z_successful_replay_enhanced/FIG3_GLOBAL_EXECUTION_TRACE.csv",
+    "trace_sha256": "553aa94cceed2975df8810438b4ec0cdc1c57f7577dc7e5d452469879e4ad722"
+  }
+}

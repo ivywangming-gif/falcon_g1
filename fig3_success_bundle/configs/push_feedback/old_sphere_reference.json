@@ -1,0 +1,27 @@
+{
+  "label": "OLD_SPHERE_REFERENCE",
+  "upper_q_14d": [
+    -0.6032374172165866,
+    0.03662461221100069,
+    0.6094324661997796,
+    1.3572834792309012,
+    0.06328465357932608,
+    0.09808133359995064,
+    0.13999402920254658,
+    -0.6004514950150219,
+    -0.03673124123668847,
+    -0.600427458872711,
+    1.3540984476612221,
+    -0.07171958521797506,
+    0.09941730025480283,
+    -0.1399438830183716
+  ],
+  "source_capsule_reference": "/root/autodl-tmp/robotics/runs/s2u_g_realistic_pusher_precontact_preview_20260823/POSITION_ONLY_IK_PRECONTACT.json",
+  "geometry_mapping": {
+    "sphere_radius_m": 0.032,
+    "old_capsule_tip_x_m": 0.13,
+    "sphere_center_x_m": 0.098,
+    "effective_front_surface_preserved": true,
+    "orientation_constraint": "none"
+  }
+}

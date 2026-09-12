@@ -1,0 +1,34 @@
+#usda 1.0
+(
+    defaultPrim = "g1_29dof"
+    metersPerUnit = 1
+    subLayers = [
+        @g1_29dof_rubberhand_back_current.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "g1_29dof"
+{
+    over "left_rubber_hand" (
+        prepend apiSchemas = ["PhysicsFilteredPairsAPI"]
+    )
+    {
+        prepend rel physics:filteredPairs = [
+            </g1_29dof/left_wrist_yaw_link>,
+            </g1_29dof/left_wrist_pitch_link>,
+            </g1_29dof/left_wrist_roll_link>,
+        ]
+    }
+
+    over "right_rubber_hand" (
+        prepend apiSchemas = ["PhysicsFilteredPairsAPI"]
+    )
+    {
+        prepend rel physics:filteredPairs = [
+            </g1_29dof/right_wrist_yaw_link>,
+            </g1_29dof/right_wrist_pitch_link>,
+            </g1_29dof/right_wrist_roll_link>,
+        ]
+    }
+}

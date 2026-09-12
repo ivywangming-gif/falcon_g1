@@ -1,0 +1,71 @@
+{
+  "base_commit": "7938e34bacd2648fec60b6e739b7cf25a4eaad51",
+  "branch": "feat/overnight-general-se2-ppo-4096",
+  "ee": {
+    "expected": "539f5818df16b43c34a45989706967a2e01c888d48af314522f3bd3ea056b7db",
+    "formal": "RUBBER_HAND_PALM_FORWARD_DOWN_V2",
+    "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/artifacts/ee_ablation_sixway/g1_usd/g1_29dof_rubberhand_palm_forward_down_v2.usda",
+    "rubber_hand_mass_per_side_kg": 0.17,
+    "sha256": "539f5818df16b43c34a45989706967a2e01c888d48af314522f3bd3ea056b7db"
+  },
+  "forbidden_legacy_paths": [
+    "old residual actor/checkpoint",
+    "old reward",
+    "attach",
+    "Approach",
+    "lookup",
+    "CEM/MPPI",
+    "dynamic upper",
+    "force controller"
+  ],
+  "low_level_immutable": {
+    "action_scale": 0.25,
+    "actor_frame_dim": 29,
+    "actor_history_frames": 10,
+    "box_dims_m": [
+      1.4,
+      0.7,
+      0.8
+    ],
+    "box_friction": 0.15,
+    "box_mass_kg": 5.0,
+    "falcon_history_frames": 5,
+    "falcon_hz": 50.0,
+    "general_actor_dim": 320,
+    "general_actor_frame_dim": 32,
+    "physics_dt_s": 0.005,
+    "policy_hz": 10.0,
+    "walking_flag": 1.0
+  },
+  "official_falcon": {
+    "expected": "8ac8f51875b878a79d9b5782e702b66572697e204ed262e2002b55631f3105d0",
+    "path": "/root/autodl-tmp/robotics/falcon_sandbox/FALCON/sim2real/models/falcon/g1_29dof.onnx",
+    "sha256": "8ac8f51875b878a79d9b5782e702b66572697e204ed262e2002b55631f3105d0"
+  },
+  "physx_capacity_only": {
+    "changes_physical_dynamics": false,
+    "gpu_max_rigid_patch_count": 1048576
+  },
+  "q_upper": {
+    "expected": "35a1078c9b72aed52dbe33764dd63f5834d62cfed369e1155271fee7fdae1453",
+    "path": "/root/autodl-tmp/robotics/worktrees/falcon_overnight_general_se2/configs/push_feedback/old_sphere_reference.json",
+    "sha256": "35a1078c9b72aed52dbe33764dd63f5834d62cfed369e1155271fee7fdae1453",
+    "values": [
+      -0.6032373905181885,
+      0.03662461042404175,
+      0.6094324588775635,
+      1.3572834730148315,
+      0.06328465044498444,
+      0.09808133542537689,
+      0.13999402523040771,
+      -0.6004514694213867,
+      -0.03673123940825462,
+      -0.6004274487495422,
+      1.3540984392166138,
+      -0.07171958684921265,
+      0.0994172990322113,
+      -0.13994388282299042
+    ]
+  },
+  "scope": "rear straight push edge only; approach/attach/doorway/arc/side not run"
+}
