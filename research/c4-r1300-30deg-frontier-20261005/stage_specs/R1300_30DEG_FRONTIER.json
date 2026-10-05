@@ -1,0 +1,30 @@
+{
+  "schema": "ARC_AUTONOMOUS_CURRICULUM_STAGE_SPEC.v1",
+  "stage": "B_OPT_RESET_DR1",
+  "logical_stage": "R1300_30DEG_FRONTIER_SAME_POLICY",
+  "label": "R1300_30DEG_FRONTIER_15_30_DERIVED_KAPPA",
+  "angle_range_deg": [15.0, 30.0],
+  "kappa_abs_range_m_inv": [0.02, 0.20],
+  "evaluation_kappa_abs_range_m_inv": [0.02, 0.20],
+  "sampling_bands": [
+    {"name": "RETENTION_15_25", "angle_range_deg": [15.0, 25.0], "kappa_abs_range_m_inv": [0.02, 0.20], "arc_path_length_range_m": [2.20, 2.80], "weight": 0.30},
+    {"name": "FRONTIER_25_28", "angle_range_deg": [25.0, 28.0], "kappa_abs_range_m_inv": [0.02, 0.20], "arc_path_length_range_m": [2.50, 2.95], "weight": 0.20},
+    {"name": "FRONTIER_28_30", "angle_range_deg": [28.0, 30.0], "kappa_abs_range_m_inv": [0.02, 0.20], "arc_path_length_range_m": [2.65, 3.00], "weight": 0.30},
+    {"name": "FRONTIER_29P5_30", "angle_range_deg": [29.5, 30.0], "kappa_abs_range_m_inv": [0.02, 0.20], "arc_path_length_range_m": [2.75, 3.00], "weight": 0.20}
+  ],
+  "physics_mixture": {"P_OLD": 0.20, "P_D1": 0.80},
+  "continuous_derived_kappa": true,
+  "arc_path_length_range_m": [2.20, 3.00],
+  "dr_level": "DR1",
+  "dr_alpha": 0.50,
+  "optimizer_reset": true,
+  "min_new_valid_updates": 25,
+  "max_new_valid_updates": 150,
+  "block_update_size": 25,
+  "checkpoint_interval": 25,
+  "tasks_per_manifest": 80,
+  "evaluation_bins": [[15.0, 15.0], [20.0, 20.0], [25.0, 25.0], [30.0, 30.0]],
+  "rows_per_sign_per_bin": 10,
+  "holdout_opened": false,
+  "current_canonical_role": "R1300_BEST_SO_FAR"
+}
